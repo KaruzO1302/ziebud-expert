@@ -1,0 +1,222 @@
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  images: {
+    formats: ["image/avif", "image/webp"],
+    deviceSizes: [320, 420, 640, 768, 1024, 1280, 1536, 1920, 2560, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000,
+    remotePatterns: [
+      { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "plus.unsplash.com" },
+      { protocol: "https", hostname: "images.pexels.com" },
+      { protocol: "https", hostname: "media.istockphoto.com" },
+      { protocol: "https", hostname: "stock.adobe.com" },
+      { protocol: "https", hostname: "as1.ftcdn.net" },
+      { protocol: "https", hostname: "as2.ftcdn.net" },
+      { protocol: "https", hostname: "image.shutterstock.com" },
+      { protocol: "https", hostname: "*.r2.cloudflarestorage.com" },
+      { protocol: "https", hostname: "*.r2.dev" },
+      { protocol: "https", hostname: "pogotowie-kanalizacyjne-wroclaw.com" },
+      { protocol: "https", hostname: "www.pogotowie-kanalizacyjne-wroclaw.com" },
+      { protocol: "https", hostname: "ziebud-expert.pl" },
+      { protocol: "https", hostname: "cdn.ziebud-expert.pl" },
+    ],
+  },
+  experimental: {
+    optimizePackageImports: ["lucide-react", "framer-motion"],
+  },
+  compress: true,
+  poweredByHeader: false,
+  reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: "/blog",
+        has: [{ type: "host", value: "ziebud-expert.pl" }],
+        destination: "https://pogotowie-kanalizacyjne-wroclaw.com/blog",
+        permanent: true,
+      },
+      {
+        source: "/blog",
+        has: [{ type: "host", value: "www.ziebud-expert.pl" }],
+        destination: "https://pogotowie-kanalizacyjne-wroclaw.com/blog",
+        permanent: true,
+      },
+      {
+        source: "/blog/:slug*",
+        has: [{ type: "host", value: "ziebud-expert.pl" }],
+        destination: "https://pogotowie-kanalizacyjne-wroclaw.com/blog",
+        permanent: true,
+      },
+      {
+        source: "/blog/:slug*",
+        has: [{ type: "host", value: "www.ziebud-expert.pl" }],
+        destination: "https://pogotowie-kanalizacyjne-wroclaw.com/blog",
+        permanent: true,
+      },
+      {
+        source: "/kanalizacja",
+        has: [{ type: "host", value: "ziebud-expert.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/pogotowie-kanalizacyjne",
+        permanent: true,
+      },
+      {
+        source: "/kanalizacja",
+        has: [{ type: "host", value: "www.ziebud-expert.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/pogotowie-kanalizacyjne",
+        permanent: true,
+      },
+      {
+        source: "/kanalizacja/:slug*",
+        has: [{ type: "host", value: "ziebud-expert.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/pogotowie-kanalizacyjne",
+        permanent: true,
+      },
+      {
+        source: "/kanalizacja/:slug*",
+        has: [{ type: "host", value: "www.ziebud-expert.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/pogotowie-kanalizacyjne",
+        permanent: true,
+      },
+      {
+        source: "/nasza-oferta",
+        has: [{ type: "host", value: "ziebud-expert.pl" }],
+        destination: "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi",
+        permanent: true,
+      },
+      {
+        source: "/nasza-oferta",
+        has: [{ type: "host", value: "www.ziebud-expert.pl" }],
+        destination: "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi",
+        permanent: true,
+      },
+      {
+        source: "/nasza-oferta/:slug*",
+        has: [{ type: "host", value: "ziebud-expert.pl" }],
+        destination: "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi",
+        permanent: true,
+      },
+      {
+        source: "/nasza-oferta/:slug*",
+        has: [{ type: "host", value: "www.ziebud-expert.pl" }],
+        destination: "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "ziebud-expert.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.ziebud-expert.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "pogotowie-kanalizacyjne-wroclaw.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.pogotowie-kanalizacyjne-wroclaw.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/:path*",
+        permanent: true,
+      },
+      {
+        source: "/uslugi/kanalizacja",
+        destination: "/uslugi/udraznianie-rur",
+        permanent: true,
+      },
+      {
+        source: "/awarie-:slug",
+        destination: "/pogotowie-kanalizacyjne",
+        permanent: true,
+      },
+      {
+        source: "/awaria-wody",
+        destination: "/uslugi/naprawa-sieci-wodociagowych",
+        permanent: true,
+      },
+      {
+        source: "/kanalizacja/pogotowie-kanalizacyjne-wroclaw-247",
+        destination: "/pogotowie-kanalizacyjne",
+        permanent: true,
+      },
+      {
+        source: "/kanalizacja/inspekcja-tv-kanalizacji",
+        destination: "/uslugi/inspekcja-tv-kanalizacji",
+        permanent: true,
+      },
+      {
+        source: "/kanalizacja/przepychanie-rur-cennik-ziebud-expert-wuko",
+        destination: "/cennik",
+        permanent: true,
+      },
+      {
+        source: "/nasza-oferta/awarie-wodkan",
+        destination: "/pogotowie-kanalizacyjne",
+        permanent: true,
+      },
+      {
+        source: "/blog/awarie-hydrauliczne-wroclaw",
+        destination: "/pogotowie-kanalizacyjne",
+        permanent: true,
+      },
+      {
+        source: "/pogotowie-kanalizacyjne-24h",
+        destination: "/pogotowie-kanalizacyjne",
+        permanent: true,
+      },
+      {
+        source: "/dla-wspolnot-i-spoldzielni",
+        destination: "/dla-wspolnot-i-firm",
+        permanent: true,
+      },
+      {
+        source: "/kalkulator",
+        destination: "/cennik",
+        permanent: true,
+      },
+      {
+        source: "/uslugi/bezwykopowe",
+        destination: "/uslugi/wuko-wroclaw",
+        permanent: true,
+      },
+      {
+        source: "/miasta",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/miasta/:slug",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/wojewodztwa",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/wojewodztwa/:slug",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
+};
+
+export default nextConfig;

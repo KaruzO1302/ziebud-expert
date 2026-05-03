@@ -1,0 +1,255 @@
+import Link from "next/link";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Building2,
+  Camera,
+  Factory,
+  Flame,
+  Phone,
+  TriangleAlert,
+} from "lucide-react";
+import { Container } from "@/components/site/container";
+import { LinkButton } from "@/components/site/link-button";
+import { HeroPhoto } from "@/components/site/hero-photo";
+import { SlaBadge } from "@/components/site/sla-badge";
+import { photos } from "@/lib/photos";
+
+const quickLinks = [
+  { label: "Usługi kanalizacyjne", href: "/uslugi/uslugi-kanalizacyjne" },
+  { label: "WUKO Wrocław", href: "/uslugi/wuko-wroclaw" },
+  { label: "Udrażnianie rur", href: "/uslugi/udraznianie-rur" },
+  { label: "Awarie wodociągowe", href: "/uslugi/naprawa-sieci-wodociagowych" },
+  { label: "Inspekcja TV", href: "/uslugi/inspekcja-tv-kanalizacji" },
+  { label: "Separatory tłuszczu", href: "/uslugi/separatory-tluszczu" },
+  {
+    label: "Separatory ropopochodne",
+    href: "/uslugi/separatory-ropopochodne",
+  },
+  { label: "Serwis przepompowni", href: "/uslugi/serwis-przepompowni" },
+];
+
+const clientTypes = [
+  {
+    label: "Wspólnoty i spółdzielnie",
+    icon: Building2,
+    desc: "Piony, poziomy, piwnice, separatory i przeglądy okresowe.",
+  },
+  {
+    label: "Firmy i gastronomia",
+    icon: Factory,
+    desc: "Lokale, zaplecza kuchenne, obiekty techniczne i place.",
+  },
+  {
+    label: "Domy i osiedla",
+    icon: Flame,
+    desc: "Udrażnianie, inspekcje TV i szybkie interwencje na miejscu.",
+  },
+  {
+    label: "Inwestorzy i obiekty",
+    icon: TriangleAlert,
+    desc: "Przyłącza, przepompownie i stała obsługa serwisowa.",
+  },
+];
+
+export function Hero() {
+  return (
+    <section className="relative overflow-hidden bg-navy-900 text-white">
+      <HeroPhoto
+        photo={photos.heroHomepageZiebud}
+        priority
+        overlay="navy-soft"
+      />
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(0,212,255,0.18),transparent_65%)]"
+      />
+      <Container className="relative py-20 sm:py-28 lg:py-32">
+        <div className="grid gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:items-end">
+          <div className="max-w-3xl">
+            <span className="inline-flex items-center gap-2 rounded-full border border-aqua-400/30 bg-aqua-500/10 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-aqua-200">
+              ZIEBUD Expert · Wrocław i okolice
+            </span>
+            <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.03] tracking-tight text-white sm:text-5xl lg:text-[60px]">
+              Pogotowie kanalizacyjne Wrocław.
+              {" "}
+              <span className="text-white">WUKO, czyszczenie kanalizacji</span>
+              {" "}
+              i udrażnianie rur
+            </h1>
+
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-100">
+              Profesjonalne usługi kanalizacyjne we Wrocławiu i okolicach.
+              Obsługujemy WUKO, inspekcję TV, separatory i przepompownie.
+              Pracujemy w oparciu o doświadczenie od 1991 roku.
+            </p>
+
+            <div className="mt-6">
+              <SlaBadge variant="hero" />
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-3 text-sm text-navy-100">
+              {["WUKO", "kamera TV", "wspólnoty", "gastronomia", "przepompownie"].map(
+                (item) => (
+                  <span
+                    key={item}
+                    className="rounded-full border border-white/15 bg-white/8 px-3 py-1.5"
+                  >
+                    {item}
+                  </span>
+                ),
+              )}
+            </div>
+
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+              <LinkButton
+                href="tel:+48602481688"
+                size="lg"
+                className="group bg-aqua-500 text-navy-900 hover:bg-aqua-400 shadow-[0_10px_40px_-12px_rgba(0,212,255,0.55)]"
+              >
+                <Phone className="h-4 w-4" />
+                Zadzwoń: 602 481 688
+              </LinkButton>
+              <LinkButton
+                href="/zapytanie"
+                size="lg"
+                variant="outline"
+                className="border-white/20 bg-white/5 text-white hover:bg-white/10"
+              >
+                Zgłoś awarię
+                <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
+              </LinkButton>
+            </div>
+
+            <div className="mt-8 grid gap-3 sm:grid-cols-3">
+              <HeroStat value="Od 1991" label="wieloletnia praktyka na rynku wrocławskim" />
+              <HeroStat value="WUKO + TV" label="nowoczesne pojazdy i diagnostyka kamerowa" />
+              <HeroStat value="Faktura VAT" label="pełna dokumentacja na każdą usługę" />
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-2">
+              {quickLinks.map((link, index) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={[
+                    "inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/6 px-3.5 py-2 text-sm font-medium text-white/88 transition hover:border-aqua-400/40 hover:bg-aqua-500/12 hover:text-white",
+                    index > 3 ? "hidden md:inline-flex" : "",
+                    index > 5 ? "md:hidden xl:inline-flex" : "",
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
+                >
+                  {link.label}
+                  <ArrowUpRight className="h-3.5 w-3.5" />
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="relative overflow-hidden rounded-[34px] border border-white/12 bg-white/7 p-6 shadow-[0_30px_80px_-38px_rgba(0,0,0,0.75)] backdrop-blur-md">
+              <div
+                aria-hidden
+                className="absolute inset-x-0 top-0 h-24 bg-[radial-gradient(ellipse_65%_90%_at_50%_0%,rgba(0,212,255,0.28),transparent_75%)]"
+              />
+              <div className="relative rounded-[28px] border border-white/10 bg-navy-950/50 p-6">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-aqua-300">
+                      Jak działamy
+                    </p>
+                    <h2 className="mt-3 font-display text-2xl font-semibold leading-tight text-white">
+                      Zgłoszenie, diagnoza, akceptacja zakresu i wykonanie
+                      usługi bez zbędnego chaosu.
+                    </h2>
+                  </div>
+                  <Camera className="h-6 w-6 shrink-0 text-aqua-300" />
+                </div>
+
+                <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                  {[
+                    "1. Zgłoszenie awarii telefonicznie lub przez formularz.",
+                    "2. Dojazd i diagnoza na miejscu, w razie potrzeby z kamerą TV.",
+                    "3. Przedstawienie zakresu prac i ceny przed wejściem w usługę.",
+                    "4. Realizacja, raport i faktura po zakończeniu prac.",
+                  ].map((item) => (
+                    <div
+                      key={item}
+                      className="rounded-2xl border border-white/10 bg-white/6 px-4 py-4 text-sm leading-relaxed text-white/82"
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-6 border-t border-white/10 pt-6">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-aqua-300">
+                    Główne segmenty klientów
+                  </p>
+                  <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                    {clientTypes.map((item) => (
+                      <div
+                        key={item.label}
+                        className="rounded-2xl border border-white/10 bg-white/5 p-4"
+                      >
+                        <div className="flex items-center gap-3">
+                          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/8 text-aqua-300">
+                            <item.icon className="h-4.5 w-4.5" />
+                          </span>
+                          <div>
+                            <p className="text-sm font-semibold text-white">
+                              {item.label}
+                            </p>
+                            <p className="mt-1 text-xs leading-relaxed text-white/68">
+                              {item.desc}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-14 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-white/10 pt-8 text-xs font-medium uppercase tracking-wider text-navy-300">
+          <span>Krzyki</span>
+          <span className="text-aqua-500">·</span>
+          <span>Fabryczna</span>
+          <span className="text-aqua-500">·</span>
+          <span>Śródmieście</span>
+          <span className="text-aqua-500">·</span>
+          <span>Psie Pole</span>
+          <span className="text-aqua-500">·</span>
+          <span>Stare Miasto</span>
+          <span className="text-aqua-500">·</span>
+          <span>Nadodrze</span>
+          <span className="text-aqua-500">·</span>
+          <span>WUKO</span>
+          <span className="text-aqua-500">·</span>
+          <span>Udrażnianie rur</span>
+          <span className="text-aqua-500">·</span>
+          <span>Inspekcja TV</span>
+          <span className="text-aqua-500">·</span>
+          <span>Separatory tłuszczu</span>
+          <span className="text-aqua-500">·</span>
+          <span>Separatory ropopochodne</span>
+          <span className="text-aqua-500">·</span>
+          <span>Przepompownie</span>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+function HeroStat({ value, label }: { value: string; label: string }) {
+  return (
+    <div className="rounded-2xl border border-white/12 bg-white/7 p-4 backdrop-blur-sm">
+      <p className="font-display text-2xl font-semibold text-white">{value}</p>
+      <p className="mt-1 text-sm leading-relaxed text-navy-200">{label}</p>
+    </div>
+  );
+}
