@@ -34,7 +34,7 @@ export function HeroPhoto({
     >
       <Image
         src={photo.src}
-        alt=""
+        alt={photo.alt}
         fill
         priority={priority}
         loading={priority ? "eager" : undefined}
