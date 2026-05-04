@@ -32,6 +32,142 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/blog/cennik-orientacyjny-uslug",
+        has: [{ type: "host", value: "ziebud-expert.pl" }],
+        destination: "https://pogotowie-kanalizacyjne-wroclaw.com/cennik",
+        permanent: true,
+      },
+      {
+        source: "/blog/cennik-orientacyjny-uslug",
+        has: [{ type: "host", value: "www.ziebud-expert.pl" }],
+        destination: "https://pogotowie-kanalizacyjne-wroclaw.com/cennik",
+        permanent: true,
+      },
+      {
+        source: "/blog/firmy-kanalizacyjne--budowa-sieci",
+        has: [{ type: "host", value: "ziebud-expert.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/uslugi-kanalizacyjne",
+        permanent: true,
+      },
+      {
+        source: "/blog/firmy-kanalizacyjne--budowa-sieci",
+        has: [{ type: "host", value: "www.ziebud-expert.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/uslugi-kanalizacyjne",
+        permanent: true,
+      },
+      {
+        source: "/blog/ziebud--uslugi-wodnokanalizacyjne--cennik",
+        has: [{ type: "host", value: "ziebud-expert.pl" }],
+        destination: "https://pogotowie-kanalizacyjne-wroclaw.com/cennik",
+        permanent: true,
+      },
+      {
+        source: "/blog/ziebud--uslugi-wodnokanalizacyjne--cennik",
+        has: [{ type: "host", value: "www.ziebud-expert.pl" }],
+        destination: "https://pogotowie-kanalizacyjne-wroclaw.com/cennik",
+        permanent: true,
+      },
+      {
+        source: "/blog/udraznianie-rur-wroclaw--cennik-uslug-ziebud",
+        has: [{ type: "host", value: "ziebud-expert.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/udraznianie-rur",
+        permanent: true,
+      },
+      {
+        source: "/blog/udraznianie-rur-wroclaw--cennik-uslug-ziebud",
+        has: [{ type: "host", value: "www.ziebud-expert.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/udraznianie-rur",
+        permanent: true,
+      },
+      {
+        source: "/blog/separator-tluszczu-w-gastronomii--obowiazek",
+        has: [{ type: "host", value: "ziebud-expert.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/separatory-tluszczu",
+        permanent: true,
+      },
+      {
+        source: "/blog/separator-tluszczu-w-gastronomii--obowiazek",
+        has: [{ type: "host", value: "www.ziebud-expert.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/separatory-tluszczu",
+        permanent: true,
+      },
+      {
+        source: "/blog/pogotowie-kanalizacyjne-wroclaw",
+        has: [{ type: "host", value: "ziebud-expert.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/pogotowie-kanalizacyjne",
+        permanent: true,
+      },
+      {
+        source: "/blog/pogotowie-kanalizacyjne-wroclaw",
+        has: [{ type: "host", value: "www.ziebud-expert.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/pogotowie-kanalizacyjne",
+        permanent: true,
+      },
+      {
+        source: "/blog/inspekcja-kamera-kanalizacji-kiedy-warto-ja",
+        has: [{ type: "host", value: "ziebud-expert.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/inspekcja-tv-kanalizacji",
+        permanent: true,
+      },
+      {
+        source: "/blog/inspekcja-kamera-kanalizacji-kiedy-warto-ja",
+        has: [{ type: "host", value: "www.ziebud-expert.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/inspekcja-tv-kanalizacji",
+        permanent: true,
+      },
+      {
+        source: "/blog/czyszczenie-separatorow-tluszczu-serwis",
+        has: [{ type: "host", value: "ziebud-expert.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/separatory-tluszczu",
+        permanent: true,
+      },
+      {
+        source: "/blog/czyszczenie-separatorow-tluszczu-serwis",
+        has: [{ type: "host", value: "www.ziebud-expert.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/separatory-tluszczu",
+        permanent: true,
+      },
+      {
+        source: "/blog/konserwacja-i-naprawa-przepompowni-sciekow-",
+        has: [{ type: "host", value: "ziebud-expert.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/serwis-przepompowni",
+        permanent: true,
+      },
+      {
+        source: "/blog/konserwacja-i-naprawa-przepompowni-sciekow-",
+        has: [{ type: "host", value: "www.ziebud-expert.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/serwis-przepompowni",
+        permanent: true,
+      },
+      {
+        source: "/blog/wuko-czyszczenie-kanalizacji-kraking",
+        has: [{ type: "host", value: "ziebud-expert.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/wuko-wroclaw",
+        permanent: true,
+      },
+      {
+        source: "/blog/wuko-czyszczenie-kanalizacji-kraking",
+        has: [{ type: "host", value: "www.ziebud-expert.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/wuko-wroclaw",
+        permanent: true,
+      },
+      {
         source: "/blog",
         has: [{ type: "host", value: "ziebud-expert.pl" }],
         destination: "https://pogotowie-kanalizacyjne-wroclaw.com/blog",
