@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { articles } from "@/lib/articles-data";
 import { localServices } from "@/lib/local-services-data";
 import { SITE_URL } from "@/lib/site";
 
@@ -73,6 +74,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.86,
     },
     {
+      url: `${SITE_URL}/blog`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.76,
+    },
+    {
       url: `${SITE_URL}/polityka-prywatnosci`,
       lastModified: now,
       changeFrequency: "yearly",
@@ -105,8 +112,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.82,
   }));
 
+  const articleRoutes: MetadataRoute.Sitemap = articles.map((article) => ({
+    url: `${SITE_URL}/blog/${article.slug}`,
+    lastModified: new Date(article.publishedAt),
+    changeFrequency: "monthly",
+    priority: 0.68,
+  }));
+
   return [
     ...staticRoutes,
     ...serviceRoutes,
+    ...articleRoutes,
   ];
 }

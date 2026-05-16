@@ -389,6 +389,273 @@ export const articles: Article[] = [
       secondaryHref: "/zapytanie",
     },
   },
+  {
+    slug: "ile-kosztuje-udraznianie-rur-we-wroclawiu",
+    title: "Ile kosztuje udrażnianie rur we Wrocławiu i od czego zależy cena?",
+    category: "Udrażnianie rur i WUKO",
+    metaTitle:
+      "Ile kosztuje udrażnianie rur we Wrocławiu? Cena, zakres i WUKO",
+    metaDescription:
+      "Sprawdź, od czego zależy cena udrażniania rur we Wrocławiu: lokalizacja zatoru, metoda, WUKO, kamera i tryb awaryjny.",
+    excerpt:
+      "Cena udrażniania rur zależy od miejsca zatoru, rodzaju instalacji i metody pracy. Inaczej wygląda proste udrożnienie odpływu, a inaczej awaria wymagająca WUKO lub kamery.",
+    lead:
+      "Klienci najczęściej pytają o cenę jeszcze przed opisaniem problemu. To zrozumiałe, ale w kanalizacji koszt zależy od kilku konkretnych rzeczy: gdzie jest zator, jak długo trwa problem, czy dotyczy domu, lokalu, wspólnoty, czy potrzebne jest WUKO oraz czy warto wykonać inspekcję kamerą.",
+    publishedAt: "2026-05-16",
+    readTime: "7 min",
+    photoKey: "ziebudUdraznianieKuchnia",
+    serviceSlugs: ["udraznianie-rur", "wuko-wroclaw", "uslugi-kanalizacyjne"],
+    citySlugs: ["wroclaw"],
+    sections: [
+      {
+        title: "Co najbardziej wpływa na koszt udrażniania",
+        bullets: [
+          "miejsce zatoru: zlew, pion, poziom, przyłącze albo kanalizacja zewnętrzna",
+          "dostęp do instalacji i możliwość pracy przez rewizję lub studzienkę",
+          "rodzaj zanieczyszczenia: tłuszcz, osad, korzenie, piasek, chusteczki, materiały budowlane",
+          "metoda pracy: spirala, WUKO, odsysanie, kamera TV",
+          "tryb realizacji: standardowy termin albo pilna awaria",
+        ],
+        paragraphs: [
+          "Najtańsze są zwykle proste zatory w instalacji wewnętrznej, gdy dostęp do odpływu jest łatwy, a problem nie wraca cyklicznie. Droższe są sytuacje, w których trzeba pracować na dłuższym odcinku, użyć samochodu WUKO albo najpierw zlokalizować problem kamerą.",
+          "Dlatego przy pierwszym kontakcie warto powiedzieć, gdzie występuje cofka, od kiedy trwa problem i czy podobna awaria pojawiała się wcześniej. To pozwala szybciej dobrać ekipę i sprzęt.",
+        ],
+        inlineCta: {
+          title: "Chcesz szybką wycenę telefoniczną?",
+          text: "Opisz objawy i lokalizację zatoru. Powiemy, czy wystarczy spirala, czy lepiej od razu planować WUKO albo kamerę.",
+          primaryLabel: "Zadzwoń: 602 481 688",
+          primaryHref: "tel:+48602481688",
+        },
+      },
+      {
+        title: "Spirala czy WUKO — kiedy cena jest wyższa",
+        paragraphs: [
+          "Spirala mechaniczna dobrze sprawdza się przy lokalnych zatorach, szczególnie w kuchni, łazience albo krótkich odcinkach instalacji. WUKO jest droższe, ale mocniejsze: czyści przewód wodą pod wysokim ciśnieniem i daje lepszy efekt przy tłuszczu, piasku, osadach oraz dłuższych odcinkach.",
+          "Jeśli zator wraca co kilka tygodni albo kilka miesięcy, samo doraźne udrażnianie może być pozorną oszczędnością. Wtedy lepiej policzyć koszt dokładnego czyszczenia i diagnostyki, bo problem często leży dalej niż przy samym odpływie.",
+        ],
+        table: {
+          headers: ["Sytuacja", "Typowa metoda", "Komentarz"],
+          rows: [
+            ["Zatkany zlew lub odpływ", "spirala", "szybka interwencja przy lokalnym problemie"],
+            ["Nawracający zator w pionie", "spirala + kamera", "warto sprawdzić, dlaczego problem wraca"],
+            ["Tłuszcz i osady w kanalizacji", "WUKO", "lepsze czyszczenie całej średnicy przewodu"],
+            ["Przyłącze lub kanalizacja zewnętrzna", "WUKO + kamera", "często potrzebna jest diagnostyka odcinka"],
+          ],
+        },
+      },
+      {
+        title: "Kiedy kamera obniża ryzyko niepotrzebnych kosztów",
+        paragraphs: [
+          "Inspekcja TV nie zawsze jest potrzebna przy pierwszym prostym zatorze. Jest jednak bardzo przydatna, gdy awarie się powtarzają, odpływ pracuje wolno mimo czyszczenia albo zachodzi podejrzenie uszkodzenia przewodu.",
+          "Kamera pozwala uniknąć pracy na ślepo. Zamiast zgadywać, czy problemem jest tłuszcz, korzenie, zapadnięcie rury albo błąd spadku, można zobaczyć wnętrze przewodu i zaplanować rozsądny zakres działań.",
+        ],
+      },
+      {
+        title: "Jak przygotować się do zgłoszenia",
+        bullets: [
+          "podaj adres i rodzaj obiektu",
+          "opisz, które odpływy nie działają",
+          "powiedz, czy woda cofa się w kilku miejscach",
+          "sprawdź, czy jest dostęp do rewizji lub studzienki",
+          "jeśli masz zdjęcia albo nagranie, zachowaj je do rozmowy",
+        ],
+        paragraphs: [
+          "Im lepszy opis na starcie, tym mniej nieporozumień przy doborze sprzętu. Przy firmach, wspólnotach i lokalach usługowych warto od razu wskazać, czy awaria blokuje pracę obiektu.",
+        ],
+      },
+    ],
+    cta: {
+      title: "Potrzebujesz udrożnienia rur we Wrocławiu?",
+      text: "Zadzwoń i opisz problem. Dobierzemy właściwą metodę: spirala, WUKO, kamera albo szersza diagnostyka kanalizacji.",
+      primaryLabel: "Zadzwoń: 602 481 688",
+      primaryHref: "tel:+48602481688",
+      secondaryLabel: "Zgłoś zapotrzebowanie",
+      secondaryHref: "/zapytanie",
+    },
+  },
+  {
+    slug: "lokalizacja-wycieku-wody-kiedy-wezwac-fachowca",
+    title: "Lokalizacja wycieku wody — kiedy wezwać fachowca?",
+    category: "Lokalizacja wycieków",
+    metaTitle:
+      "Lokalizacja wycieku wody Wrocław — objawy, metody i diagnostyka",
+    metaDescription:
+      "Lokalizacja wycieku wody we Wrocławiu. Sprawdź objawy awarii, kiedy reagować i jak diagnostyka ogranicza kucie oraz koszty naprawy.",
+    excerpt:
+      "Wilgoć, spadek ciśnienia, mokra posadzka albo pracujący wodomierz mogą oznaczać wyciek. Szybka diagnostyka ogranicza zakres kucia i ryzyko większej szkody.",
+    lead:
+      "Wyciek wody nie zawsze zaczyna się od widocznej kałuży. Czasem pierwszym objawem jest wilgotna ściana, zapach stęchlizny, pracujący wodomierz albo spadek ciśnienia. Im szybciej zawęzisz miejsce awarii, tym mniejsze ryzyko kucia na ślepo i kosztownego remontu.",
+    publishedAt: "2026-05-16",
+    readTime: "7 min",
+    photoKey: "ziebudLokalizacjaWyciekow",
+    serviceSlugs: [
+      "lokalizacja-nieszczelnosci",
+      "naprawa-sieci-wodociagowych",
+      "uslugi-kanalizacyjne",
+    ],
+    citySlugs: ["wroclaw"],
+    sections: [
+      {
+        title: "Najczęstsze objawy wycieku",
+        bullets: [
+          "mokre plamy na ścianie, suficie lub posadzce",
+          "zapach wilgoci bez oczywistego źródła",
+          "spadek ciśnienia w instalacji",
+          "wodomierz obraca się mimo zakręconych punktów poboru",
+          "puchnące panele, odpadająca farba albo zacieki",
+          "lokalne zapadanie gruntu przy instalacji zewnętrznej",
+        ],
+        paragraphs: [
+          "Nie każdy objaw oznacza dużą awarię, ale każdy warto szybko sprawdzić. Wyciek ukryty w ścianie, pod posadzką albo w ziemi potrafi przez dłuższy czas niszczyć konstrukcję i generować coraz większe koszty.",
+        ],
+        inlineCta: {
+          title: "Podejrzewasz wyciek?",
+          text: "Zadzwoń i opisz objawy. Podpowiemy, czy zacząć od diagnostyki, odcięcia wody czy pilnej naprawy.",
+          primaryLabel: "Zadzwoń: 602 481 688",
+          primaryHref: "tel:+48602481688",
+        },
+      },
+      {
+        title: "Dlaczego nie warto kuć na ślepo",
+        paragraphs: [
+          "Kucie bez wcześniejszego rozpoznania często powiększa koszt naprawy. Jeżeli miejsce wycieku zostanie źle ocenione, trzeba otwierać kolejne fragmenty ściany, podłogi albo terenu.",
+          "Diagnostyka pozwala zawęzić obszar działań. W praktyce oznacza mniej zniszczeń, szybszą naprawę i łatwiejsze przygotowanie dokumentacji dla właściciela, zarządcy albo ubezpieczyciela.",
+        ],
+      },
+      {
+        title: "Jakie metody pomagają znaleźć wyciek",
+        bullets: [
+          "oględziny i analiza objawów na miejscu",
+          "kontrola wodomierza oraz pracy instalacji",
+          "pomiar wilgotności przegród",
+          "badanie akustyczne przy instalacjach wodnych",
+          "kamera lub diagnostyka przewodów tam, gdzie problem dotyczy kanalizacji",
+        ],
+        paragraphs: [
+          "Dobór metody zależy od rodzaju instalacji i objawów. Inaczej szuka się wycieku wody pod ciśnieniem, inaczej nieszczelności kanalizacji, a jeszcze inaczej problemu przy przyłączu lub sieci zewnętrznej.",
+        ],
+      },
+      {
+        title: "Kiedy zgłaszać problem natychmiast",
+        bullets: [
+          "gdy woda aktywnie zalewa pomieszczenie",
+          "gdy wilgoć pojawia się przy instalacji elektrycznej",
+          "gdy problem dotyczy pionu albo części wspólnej budynku",
+          "gdy wyciek może uszkadzać konstrukcję albo lokal sąsiada",
+          "gdy wodomierz wskazuje stały pobór bez używania wody",
+        ],
+      },
+    ],
+    cta: {
+      title: "Umów lokalizację wycieku we Wrocławiu",
+      text: "Pomagamy przy podejrzeniu wycieku wody, nieszczelności instalacji i awariach wod-kan w domach, lokalach, wspólnotach i obiektach firmowych.",
+      primaryLabel: "Zadzwoń: 602 481 688",
+      primaryHref: "tel:+48602481688",
+      secondaryLabel: "Wyślij zgłoszenie",
+      secondaryHref: "/zapytanie",
+    },
+  },
+  {
+    slug: "pogotowie-kanalizacyjne-dla-wspolnot-i-firm",
+    title: "Pogotowie kanalizacyjne dla wspólnot i firm — jak ograniczyć awarie?",
+    category: "Obsługa firm i wspólnot",
+    metaTitle:
+      "Pogotowie kanalizacyjne dla wspólnot i firm Wrocław — WUKO 24h",
+    metaDescription:
+      "Pogotowie kanalizacyjne dla wspólnot, zarządców i firm we Wrocławiu. Sprawdź, jak ograniczyć cofki, zatory i przestoje dzięki serwisowi WUKO.",
+    excerpt:
+      "Wspólnoty, restauracje, biura i obiekty usługowe potrzebują nie tylko reakcji po awarii, ale też planu serwisowego. Stała obsługa kanalizacji zmniejsza ryzyko cofek i kosztownych przestojów.",
+    lead:
+      "Dla wspólnot mieszkaniowych i firm awaria kanalizacji to nie tylko problem techniczny. To zalane piwnice, skargi mieszkańców, przestój lokalu, utrata obrotu i szybkie decyzje podejmowane pod presją. Dlatego najlepszy model obsługi łączy pogotowie kanalizacyjne z profilaktyką: WUKO, inspekcją kamerową i cyklicznym czyszczeniem newralgicznych odcinków.",
+    publishedAt: "2026-05-16",
+    readTime: "8 min",
+    photoKey: "ziebudWukoBlok",
+    serviceSlugs: [
+      "uslugi-kanalizacyjne",
+      "wuko-wroclaw",
+      "inspekcja-tv-kanalizacji",
+    ],
+    citySlugs: ["wroclaw"],
+    sections: [
+      {
+        title: "Dlaczego awarie w budynkach wracają",
+        bullets: [
+          "tłuszcz i osady odkładają się na długich poziomach kanalizacyjnych",
+          "mieszkańcy wrzucają do odpływów chusteczki, ręczniki i odpady",
+          "starsze przewody mają nierówności, załamania lub słabe spadki",
+          "korzenie mogą wchodzić w kanalizację zewnętrzną",
+          "brakuje regularnego czyszczenia pionów, poziomów i studzienek",
+        ],
+        paragraphs: [
+          "Jednorazowe udrożnienie pomaga w danym momencie, ale nie zawsze usuwa przyczynę. Jeżeli instalacja pracuje pod dużym obciążeniem, problem może wracać w tym samym miejscu, dopóki przewód nie zostanie wyczyszczony dokładniej albo sprawdzony kamerą.",
+          "W budynkach wielorodzinnych i firmach liczy się szybka reakcja, ale jeszcze bardziej liczy się przewidywalność. Zarządca powinien wiedzieć, które odcinki są ryzykowne i jak często wymagają obsługi.",
+        ],
+        inlineCta: {
+          title: "Obsługujesz wspólnotę lub lokal?",
+          text: "Możemy sprawdzić problematyczne odcinki i ustawić plan czyszczenia, zanim awaria wróci w najmniej wygodnym momencie.",
+          primaryLabel: "Zadzwoń: 602 481 688",
+          primaryHref: "tel:+48602481688",
+        },
+      },
+      {
+        title: "Co powinien obejmować serwis dla wspólnoty",
+        bullets: [
+          "awaryjne udrażnianie kanalizacji",
+          "czyszczenie hydrodynamiczne WUKO",
+          "inspekcję TV przy nawracających problemach",
+          "czyszczenie studzienek i newralgicznych poziomów",
+          "opis wykonanych prac dla administratora",
+          "rekomendację dalszych działań technicznych",
+        ],
+        paragraphs: [
+          "Najlepsze efekty daje połączenie reakcji awaryjnej z dokumentowaniem problemów. Po kilku interwencjach widać, czy awaria wynika z eksploatacji, z uszkodzenia przewodu, czy z błędu konstrukcyjnego instalacji.",
+        ],
+      },
+      {
+        title: "Firmy i gastronomia — koszt przestoju jest większy niż serwis",
+        paragraphs: [
+          "Restauracja, hotel, zakład usługowy albo obiekt produkcyjny nie może pozwolić sobie na długą blokadę odpływów. Nawet krótka cofka potrafi zatrzymać kuchnię, zaplecze lub sanitariaty i wygenerować straty większe niż planowy serwis.",
+          "W gastronomii warto łączyć czyszczenie odpływów z obsługą separatora tłuszczu. Jeżeli separator jest przepełniony albo tłuszcz przeszedł dalej w instalację, awarie będą wracały mimo doraźnych interwencji.",
+        ],
+      },
+      {
+        title: "Jak wygląda dobry plan profilaktyki",
+        table: {
+          headers: ["Obiekt", "Ryzyko", "Rekomendacja"],
+          rows: [
+            ["Wspólnota mieszkaniowa", "cofki w piwnicach i pionach", "okresowe WUKO oraz kamera przy powtarzalnych awariach"],
+            ["Restauracja", "tłuszcz i zatory odpływów", "czyszczenie odpływów plus regularny serwis separatora"],
+            ["Biurowiec", "blokada sanitariatów", "przegląd newralgicznych poziomów i szybki kontakt awaryjny"],
+            ["Zakład usługowy", "przestój pracy obiektu", "plan reakcji i cykliczne czyszczenie kanalizacji technologicznej"],
+          ],
+        },
+        afterTableParagraphs: [
+          "Harmonogram powinien wynikać z realnej pracy obiektu. Inaczej planuje się wspólnotę z kilkoma klatkami, inaczej lokal gastronomiczny, a inaczej budynek usługowy z dużym ruchem klientów.",
+        ],
+      },
+      {
+        title: "Kiedy warto podpisać stałą obsługę",
+        bullets: [
+          "awarie wracają w tym samym pionie lub odpływie",
+          "obiekt nie może pozwolić sobie na przestój",
+          "zarządca chce mieć jednego wykonawcę od awarii i profilaktyki",
+          "potrzebne są opisy wykonanych prac i zdjęcia z interwencji",
+          "instalacja jest stara albo mocno obciążona",
+        ],
+        paragraphs: [
+          "Stała obsługa nie musi oznaczać skomplikowanej umowy. Czasem wystarczy ustalony kontakt, historia interwencji i regularne przeglądy tych odcinków, które powodują najwięcej problemów.",
+        ],
+      },
+    ],
+    cta: {
+      title: "Ustaw obsługę kanalizacji dla firmy lub wspólnoty",
+      text: "ZIEBUD Expert obsługuje awarie, WUKO, inspekcje kamerowe i czyszczenie kanalizacji dla wspólnot, zarządców, lokali i obiektów firmowych we Wrocławiu.",
+      primaryLabel: "Zadzwoń: 602 481 688",
+      primaryHref: "tel:+48602481688",
+      secondaryLabel: "Wyślij zapytanie",
+      secondaryHref: "/zapytanie",
+    },
+  },
 ];
 
 export function getArticle(slug: string) {
