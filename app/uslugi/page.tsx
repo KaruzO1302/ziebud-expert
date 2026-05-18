@@ -27,6 +27,9 @@ export default function UslugiIndexPage() {
       "naprawa-sieci-wodociagowych",
       "inspekcja-tv-kanalizacji",
       "lokalizacja-nieszczelnosci",
+      "bezwykopowe-naprawy-kanalizacji",
+      "frezowanie-kanalizacji",
+      "regulacja-studzienek-i-wlazow",
     ].includes(service.slug),
   );
 
@@ -35,6 +38,7 @@ export default function UslugiIndexPage() {
       "separatory-tluszczu",
       "separatory-ropopochodne",
       "serwis-przepompowni",
+      "przydomowe-oczyszczalnie-sciekow",
     ].includes(service.slug),
   );
 

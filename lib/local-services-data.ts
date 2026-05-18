@@ -605,6 +605,461 @@ export const localServices: LocalService[] = [
     ],
     related: ["inspekcja-tv-kanalizacji", "udraznianie-rur", "wuko-wroclaw"],
   },
+  {
+    slug: "bezwykopowe-naprawy-kanalizacji",
+    title: "Bezwykopowe naprawy kanalizacji",
+    heroTitle:
+      "Bezwykopowa naprawa kanalizacji we Wrocławiu — pakery, rękawy CIPP, renowacja studni",
+    eyebrow: "Naprawy bez wykopu",
+    tagline:
+      "Awaria nie musi oznaczać rozkucia drogi. Naprawiamy kanalizację bez wykopu: pakerami, rękawami CIPP i renowacją studni rewizyjnych.",
+    metaTitle:
+      "Bezwykopowe naprawy kanalizacji Wrocław | Pakery, rękawy CIPP | ZIEBUD Expert",
+    metaDescription:
+      "Bezwykopowa naprawa kanalizacji we Wrocławiu. Pakery, rękawy CIPP DN 80–600, renowacja studni rewizyjnych. Tańsza i szybsza od wykopu. Tel: 602 481 688.",
+    keywords: [
+      "bezwykopowe naprawy kanalizacji wrocław",
+      "renowacja kanalizacji wrocław",
+      "pakerowanie rur wrocław",
+      "rękawy cipp wrocław",
+      "naprawa kanalizacji bez wykopu",
+    ],
+    icon: Construction,
+    trenchless: true,
+    overview: [
+      "Awaria kanalizacji nie musi oznaczać rozkucia drogi, parkingu czy chodnika. ZIEBUD Expert wykonuje bezwykopowe naprawy kanalizacji we Wrocławiu i okolicach metodami, które są tańsze, szybsze i mniej uciążliwe od tradycyjnego wykopu.",
+      "Metody bezwykopowe sprawdzają się szczególnie tam, gdzie pod ziemią biegnie gęsta sieć przewodów, w drogach o wysokim natężeniu ruchu, na parkingach obiektów i w centrach miast. Dobieramy technologię po inspekcji TV, żeby naprawić dokładnie ten odcinek, który tego wymaga.",
+      "Wykonujemy pakerowanie punktowe, naprawy liniowe rękawami CIPP oraz renowację studni rewizyjnych. Po naprawie potwierdzamy efekt kamerą i przekazujemy materiał, który może zostać w dokumentacji wspólnoty, firmy albo zarządcy drogi.",
+    ],
+    variants: [
+      {
+        name: "Pakerowanie punktowe",
+        desc: "Naprawa miejscowych pęknięć, nieszczelności i ubytków bez odkopywania całego odcinka.",
+        specs: "najczęściej DN 150+",
+      },
+      {
+        name: "Rękawy CIPP",
+        desc: "Renowacja liniowa przyłączy i kanałów głównych rękawem nasączonym żywicą, utwardzanym po instalacji.",
+        specs: "DN 80–600",
+      },
+      {
+        name: "Renowacja studni rewizyjnych",
+        desc: "Naprawa korozji, ubytków, nieszczelnych połączeń kręgów, spoczników i kinet.",
+      },
+      {
+        name: "Naprawy dla obiektów i dróg",
+        desc: "Prace w pasie drogowym, na parkingach, przy wspólnotach, firmach i obiektach komercyjnych.",
+      },
+    ],
+    whenToUse: [
+      "gdy pęknięcie lub załamanie rury znajduje się pod drogą, parkingiem albo chodnikiem",
+      "gdy nieszczelność występuje na połączeniach rur w obrębie posesji wspólnoty lub firmy",
+      "gdy po usunięciu korzeni trzeba szczelnie zamknąć ubytki w rurze",
+      "gdy przyłącze ma zostać odnowione bez zatrzymywania pracy budynku",
+      "gdy studnia rewizyjna ma ubytki, korozję albo dynamiczny wyciek wody gruntowej",
+    ],
+    costs: [
+      {
+        scope: "Inspekcja TV i kwalifikacja naprawy",
+        range: "400–900 zł",
+        note: "diagnoza, lokalizacja usterki i dobór metody",
+      },
+      {
+        scope: "Pakerowanie punktowe",
+        range: "1200–3500 zł",
+        note: "zależnie od średnicy, dostępu i liczby uszkodzeń",
+      },
+      {
+        scope: "Rękaw CIPP lub naprawa liniowa",
+        range: "3500–12000 zł",
+        note: "wycena po długości, średnicy i warunkach technicznych",
+      },
+      {
+        scope: "Renowacja studni rewizyjnej",
+        range: "1800–6500 zł",
+        note: "zależnie od głębokości, ubytków i przecieków",
+      },
+    ],
+    costNote:
+      "Metoda bezwykopowa bywa znacząco tańsza od wykopu, szczególnie gdy trzeba byłoby odtwarzać asfalt, kostkę, parking albo chodnik. Dokładną wycenę robimy po inspekcji TV.",
+    process: [
+      {
+        title: "Inspekcja TV",
+        desc: "Diagnozujemy przyczynę i zakres awarii, mierzymy odcinek oraz sprawdzamy, czy naprawa bezwykopowa ma sens techniczny.",
+      },
+      {
+        title: "Dobór technologii",
+        desc: "Wybieramy paker, rękaw CIPP, renowację studni albo kombinację metod i przedstawiamy wycenę.",
+      },
+      {
+        title: "Naprawa bez wykopu",
+        desc: "Realizujemy prace z minimalnym wpływem na drogę, parking, piwnicę lub działający obiekt.",
+      },
+      {
+        title: "Kontrola i protokół",
+        desc: "Po naprawie wykonujemy inspekcję TV, przekazujemy materiał cyfrowy, protokół prac i fakturę VAT.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Kiedy bezwykopowa naprawa kanalizacji jest lepsza od wykopu?",
+        a: "Gdy uszkodzenie jest możliwe do naprawy od środka, a wykop oznaczałby rozbieranie drogi, parkingu, chodnika albo pracę w trudnym otoczeniu obiektu.",
+      },
+      {
+        q: "Czy przed naprawą bezwykopową potrzebna jest kamera?",
+        a: "Tak. Inspekcja TV potwierdza miejsce, długość i typ uszkodzenia. Bez kamery nie da się odpowiedzialnie dobrać pakera, rękawa albo zakresu renowacji.",
+      },
+      {
+        q: "Czy pakerowanie nadaje się do każdej rury?",
+        a: "Nie do każdej. Sprawdza się przy punktowych usterkach, gdy ogólny stan odcinka jest dobry. Przy większym zużyciu rozważamy rękaw CIPP albo inną metodę.",
+      },
+      {
+        q: "Czy po naprawie dostanę nagranie z kanalizacji?",
+        a: "Tak. Po wykonaniu naprawy robimy kontrolną inspekcję TV i przekazujemy materiał, który pokazuje efekt prac.",
+      },
+      {
+        q: "Czy wykonujecie bezwykopowe naprawy dla wspólnot i firm?",
+        a: "Tak. To jeden z najczęstszych scenariuszy: wspólnoty, parkingi, obiekty komercyjne, zakłady i zarządcy terenów utwardzonych.",
+      },
+    ],
+    related: ["inspekcja-tv-kanalizacji", "frezowanie-kanalizacji", "lokalizacja-nieszczelnosci"],
+  },
+  {
+    slug: "frezowanie-kanalizacji",
+    title: "Frezowanie kanalizacji",
+    heroTitle:
+      "Frezowanie kanalizacji we Wrocławiu — robot frezujący do twardych przeszkód",
+    eyebrow: "Robot frezujący",
+    tagline:
+      "Korzenie, beton, stwardniały tłuszcz i twarde osady. Tam, gdzie WUKO i spirala nie dają rady, wjeżdża robot frezujący.",
+    metaTitle:
+      "Frezowanie kanalizacji Wrocław | Robot frezujący DN 90–150 | ZIEBUD Expert",
+    metaDescription:
+      "Frezowanie kanalizacji we Wrocławiu — robot frezujący usuwa korzenie, beton, twarde osady. DN 90–150 mm. Faktura VAT, 24/7. Tel: 602 481 688.",
+    keywords: [
+      "frezowanie kanalizacji wrocław",
+      "robot frezujący kanalizacja",
+      "usuwanie korzeni z kanalizacji wrocław",
+      "frezowanie rur kanalizacyjnych",
+      "beton w kanalizacji usuwanie",
+    ],
+    icon: RefreshCw,
+    trenchless: true,
+    overview: [
+      "Czasem WUKO i spirala to za mało. Kiedy w kanalizacji utknęły korzenie, beton, kamień albo stwardniały tłuszcz, jedyną skuteczną metodą jest frezowanie.",
+      "ZIEBUD Expert wykonuje frezowanie kanalizacji we Wrocławiu i okolicach robotem frezującym z kamerą i sterowaniem przez operatora. Pracujemy precyzyjnie, tylko w miejscu przeszkody, bez niepotrzebnego uszkadzania rury od wewnątrz.",
+      "Często łączymy frezowanie z inspekcją TV i WUKO: kamera potwierdza przyczynę, robot usuwa twardą przeszkodę, a hydrodynamiczne czyszczenie domywa przewód po pracy.",
+    ],
+    variants: [
+      {
+        name: "Korzenie w kanalizacji",
+        desc: "Wycinanie korzeni drzew i krzewów wrastających w złącza, pęknięcia i stare przyłącza.",
+      },
+      {
+        name: "Beton, zaprawa i progi",
+        desc: "Usuwanie złogów zaprawy betonowej, progów po remoncie i twardych błędów montażowych.",
+      },
+      {
+        name: "Twarde tłuszcze i osady",
+        desc: "Frezowanie skamielin, osadów mineralnych i stwardniałych tłuszczów w gastronomii oraz kuchniach zbiorowych.",
+      },
+      {
+        name: "Otwieranie przykanalików",
+        desc: "Udostępnienie zaślepionych lub zarośniętych przykanalików przed dalszą renowacją.",
+        specs: "DN 90–150",
+      },
+    ],
+    whenToUse: [
+      "gdy kamera pokazuje korzenie, beton, kamień albo przeszkodę mechaniczną",
+      "gdy WUKO usuwa wodę i miękki osad, ale twardy zator zostaje w przewodzie",
+      "gdy po remoncie w rurze zostały zaprawa, gruz albo próg betonowy",
+      "gdy trzeba przygotować rurę do bezwykopowej naprawy lub rękawa",
+    ],
+    costs: [
+      {
+        scope: "Diagnoza kamerą przed frezowaniem",
+        range: "400–800 zł",
+        note: "potwierdzenie przeszkody i punktu pracy",
+      },
+      {
+        scope: "Frezowanie punktowe",
+        range: "900–2200 zł",
+        note: "korzeń, próg, osad lub pojedyncza przeszkoda",
+      },
+      {
+        scope: "Frezowanie z WUKO i kontrolą TV",
+        range: "1800–4200 zł",
+        note: "typowy pakiet dla trudnych zatorów",
+      },
+      {
+        scope: "Rozbudowana praca operatorska",
+        range: "4200–8500 zł",
+        note: "kilka przeszkód albo trudniejszy dostęp",
+      },
+    ],
+    costNote:
+      "Cena zależy od średnicy rury, dostępu, typu przeszkody i czasu pracy operatora. Przy twardych zatorach dokładną wycenę potwierdza kamera.",
+    process: [
+      {
+        title: "Kamera i kwalifikacja",
+        desc: "Sprawdzamy, czy problemem jest przeszkoda twarda, którą da się bezpiecznie frezować.",
+      },
+      {
+        title: "Praca robota",
+        desc: "Operator prowadzi robot frezujący z podglądem i usuwa tylko element blokujący przepływ.",
+      },
+      {
+        title: "Usunięcie materiału",
+        desc: "Wyfrezowane elementy usuwamy pompą ssącą lub domywamy układ metodą WUKO.",
+      },
+      {
+        title: "Kontrola efektu",
+        desc: "Po pracy wykonujemy inspekcję TV i pokazujemy drożność oraz stan odcinka.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Czym frezowanie różni się od WUKO?",
+        a: "WUKO wypłukuje miękkie osady i zatory wodą pod ciśnieniem. Frezowanie usuwa twarde przeszkody: korzenie, beton, zaprawę, kamień albo skamieniałe tłuszcze.",
+      },
+      {
+        q: "Czy robot frezujący może uszkodzić rurę?",
+        a: "Praca odbywa się pod kontrolą operatora i kamery. Najpierw oceniamy stan rury, a potem frezujemy tylko przeszkodę, nie cały przewód.",
+      },
+      {
+        q: "Czy frezowanie wykonuje się od razu po inspekcji TV?",
+        a: "Często tak. Jeśli kamera potwierdzi przeszkodę i mamy dostęp techniczny, można połączyć diagnozę, frezowanie i kontrolne WUKO w jednej wizycie.",
+      },
+      {
+        q: "Jakie średnice rur obsługujecie przy frezowaniu?",
+        a: "Typowo pracujemy w zakresie DN 90–150, zależnie od dostępu, geometrii przewodu i typu przeszkody.",
+      },
+    ],
+    related: ["wuko-wroclaw", "inspekcja-tv-kanalizacji", "udraznianie-rur"],
+  },
+  {
+    slug: "regulacja-studzienek-i-wlazow",
+    title: "Regulacja studzienek i włazów kanalizacyjnych",
+    heroTitle:
+      "Regulacja i wymiana studzienek oraz włazów kanalizacyjnych we Wrocławiu",
+    eyebrow: "Studzienki i włazy",
+    tagline:
+      "Wyrównanie do poziomu jezdni nawet z dokładnością do 1 mm. Naprawa jednej studzienki zwykle trwa 1–2 godziny.",
+    metaTitle:
+      "Regulacja studzienek i włazów kanalizacyjnych Wrocław | Naprawa w 1–2 h | ZIEBUD Expert",
+    metaDescription:
+      "Regulacja i wymiana studzienek oraz włazów kanalizacyjnych we Wrocławiu. Szybkowiążące masy, naprawa 1 studzienki w 1–2 h. Tel: 602 481 688.",
+    keywords: [
+      "regulacja studzienek wrocław",
+      "wymiana włazów kanalizacyjnych wrocław",
+      "naprawa studzienki kanalizacyjnej",
+      "zapadnięta studzienka wrocław",
+      "regulacja włazów kanalizacyjnych",
+    ],
+    icon: ArrowDownToLine,
+    trenchless: false,
+    overview: [
+      "ZIEBUD Expert wykonuje regulację i wymianę studzienek oraz włazów kanalizacyjnych we Wrocławiu i okolicach. Pracujemy na drogach, parkingach, chodnikach, terenach wspólnot i obiektach firmowych.",
+      "Stosujemy szybkowiążące, elastyczne masy wyrównawczo-naprawcze na bazie cementów oraz pneumatyczne szalunki, dzięki czemu naprawa jednej studzienki trwa zwykle od 1 do 2 godzin.",
+      "Celem jest równa, trwała i szczelna regulacja zwieńczenia: bez stukających włazów, zapadnięć, niszczenia żeliwa i ponownej naprawy po pierwszym sezonie zimowym.",
+    ],
+    variants: [
+      {
+        name: "Zapadnięte włazy",
+        desc: "Podniesienie włazu do poziomu nawierzchni drogi, parkingu lub chodnika.",
+      },
+      {
+        name: "Wystające i hałasujące włazy",
+        desc: "Korekta rzędnej oraz stabilizacja elementów, które powodują uderzenia kół i hałas.",
+      },
+      {
+        name: "Wymiana zwieńczeń",
+        desc: "Prace przy pękniętych, skorodowanych albo niedopasowanych elementach zwieńczenia studni.",
+      },
+      {
+        name: "Naprawy po robotach drogowych",
+        desc: "Dopasowanie studzienek do nowej rzędnej nawierzchni po pracach asfaltowych lub brukarskich.",
+      },
+    ],
+    whenToUse: [
+      "gdy właz zapadł się w pasie drogowym, na parkingu albo chodniku",
+      "gdy właz wystaje, hałasuje i powoduje uderzenia kół",
+      "gdy elementy zwieńczenia są pęknięte, skorodowane lub źle spasowane",
+      "gdy po pracach drogowych zmienił się poziom nawierzchni",
+    ],
+    costs: [
+      {
+        scope: "Regulacja pojedynczej studzienki",
+        range: "900–1800 zł",
+        note: "typowa naprawa z materiałem szybkowiążącym",
+      },
+      {
+        scope: "Wymiana lub naprawa zwieńczenia",
+        range: "1500–3200 zł",
+        note: "zależnie od stanu elementów i nawierzchni",
+      },
+      {
+        scope: "Pakiet kilku studzienek",
+        range: "3200–9000 zł",
+        note: "parking, droga wewnętrzna, teren wspólnoty lub obiektu",
+      },
+    ],
+    costNote:
+      "Na cenę wpływa rodzaj nawierzchni, stan komina włazowego, liczba studzienek, dostęp i to, czy trzeba odtwarzać asfalt, beton czy kostkę.",
+    process: [
+      {
+        title: "Demontaż włazu",
+        desc: "Zdejmujemy pokrywę lub właz; przy asfalcie i betonie używamy piły, młota albo osprzętu pneumatycznego.",
+      },
+      {
+        title: "Kontrola konstrukcji",
+        desc: "Rozbieramy górną część, oczyszczamy elementy i uzupełniamy ubytki zaprawami szybkowiążącymi.",
+      },
+      {
+        title: "Poziomowanie",
+        desc: "Ustawiamy komin włazowy i zwieńczenie w jednej rzędnej z nawierzchnią, ograniczając liczbę spoin.",
+      },
+      {
+        title: "Uszczelnienie i odtworzenie",
+        desc: "Uszczelniamy elementy masą odporną na mróz, sole, paliwa i temperatury, a potem odtwarzamy nawierzchnię.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Ile trwa regulacja jednej studzienki?",
+        a: "Typowa naprawa jednej studzienki trwa zwykle od 1 do 2 godzin, zależnie od nawierzchni i stanu zwieńczenia.",
+      },
+      {
+        q: "Czy po regulacji można od razu dopuścić ruch?",
+        a: "Używamy materiałów szybkowiążących, ale czas dopuszczenia ruchu zależy od konkretnej masy, temperatury i obciążenia. Informujemy o tym po wykonaniu prac.",
+      },
+      {
+        q: "Czy regulujecie studzienki na parkingach wspólnot?",
+        a: "Tak. Obsługujemy wspólnoty, spółdzielnie, zarządców dróg wewnętrznych, parkingi firmowe i tereny utwardzone.",
+      },
+      {
+        q: "Czy wymieniacie też uszkodzone włazy?",
+        a: "Tak. Jeżeli właz lub elementy zwieńczenia są zniszczone albo niedopasowane, możemy wykonać wymianę w ramach zlecenia.",
+      },
+    ],
+    related: ["bezwykopowe-naprawy-kanalizacji", "inspekcja-tv-kanalizacji", "lokalizacja-nieszczelnosci"],
+  },
+  {
+    slug: "przydomowe-oczyszczalnie-sciekow",
+    title: "Przydomowe oczyszczalnie ścieków",
+    heroTitle:
+      "Przydomowe oczyszczalnie ścieków we Wrocławiu — sprzedaż, montaż i serwis",
+    eyebrow: "Oczyszczalnie ścieków",
+    tagline:
+      "Doradzimy, dobierzemy, zamontujemy i serwisujemy oczyszczalnię dopasowaną do działki, liczby mieszkańców i warunków gruntowych.",
+    metaTitle:
+      "Przydomowe oczyszczalnie ścieków Wrocław — sprzedaż, montaż, serwis | ZIEBUD Expert",
+    metaDescription:
+      "Przydomowe oczyszczalnie ścieków we Wrocławiu i okolicach. Sprzedaż, montaż, serwis i przeglądy. Dobór do warunków gruntowych. Tel: 602 481 688.",
+    keywords: [
+      "przydomowe oczyszczalnie ścieków wrocław",
+      "montaż oczyszczalni ścieków wrocław",
+      "serwis oczyszczalni ścieków",
+      "biologiczna oczyszczalnia ścieków wrocław",
+      "oczyszczalnia przydomowa dolny śląsk",
+    ],
+    icon: Droplets,
+    trenchless: false,
+    overview: [
+      "ZIEBUD Expert sprzedaje, montuje i serwisuje przydomowe oraz przyzakładowe oczyszczalnie ścieków we Wrocławiu i okolicach.",
+      "Pracujemy zarówno z klientami indywidualnymi, jak i z firmami, gospodarstwami agroturystycznymi oraz obiektami przy drogach. Dobieramy rozwiązanie do typu gruntu, poziomu wód gruntowych, liczby użytkowników i obciążenia hydraulicznego.",
+      "Po montażu zostajemy przy instalacji serwisowo: robimy przeglądy, czyszczenie zbiorników, regulację natlenienia, kontrolę osadu i wymianę elementów eksploatacyjnych.",
+    ],
+    variants: [
+      {
+        name: "Sprzedaż i dobór",
+        desc: "Dobieramy oczyszczalnię do warunków działki, liczby mieszkańców i przewidywanego obciążenia.",
+      },
+      {
+        name: "Montaż kompletnej instalacji",
+        desc: "Prace ziemne, posadowienie zbiornika, podłączenia, drenaż, rozruch i przekazanie do użytkowania.",
+      },
+      {
+        name: "Serwis i przeglądy",
+        desc: "Kontrola osadu, czyszczenie, regulacja natlenienia, sprawdzenie sterowania, alarmów i drożności.",
+      },
+      {
+        name: "Naprawy eksploatacyjne",
+        desc: "Pompy, dmuchawy, dyfuzory, drenaże, zatory, kolmatacja gruntu i rozszczelnienia instalacji.",
+      },
+    ],
+    whenToUse: [
+      "gdy działka nie ma dostępu do kanalizacji sanitarnej",
+      "gdy szambo generuje za wysokie koszty wywozu",
+      "gdy istniejąca oczyszczalnia alarmuje, śmierdzi albo traci wydajność",
+      "gdy potrzebny jest roczny przegląd i potwierdzenie stanu instalacji",
+    ],
+    costs: [
+      {
+        scope: "Przegląd lub serwis okresowy",
+        range: "400–900 zł",
+        note: "kontrola, czyszczenie i podstawowa regulacja",
+      },
+      {
+        scope: "Naprawa eksploatacyjna",
+        range: "900–3500 zł",
+        note: "pompy, dmuchawy, dyfuzory, zatory lub drobne rozszczelnienia",
+      },
+      {
+        scope: "Montaż przydomowej oczyszczalni",
+        range: "12000–35000 zł",
+        note: "zależnie od typu oczyszczalni, gruntu i zakresu ziemnego",
+      },
+      {
+        scope: "Rozwiązanie przyzakładowe",
+        range: "od 35000 zł",
+        note: "wycena indywidualna po obciążeniu i warunkach terenu",
+      },
+    ],
+    costNote:
+      "Montaż oczyszczalni zawsze wymaga dopasowania do działki, gruntu, poziomu wód i wymagań użytkowników. Podane widełki są orientacyjne.",
+    process: [
+      {
+        title: "Dobór rozwiązania",
+        desc: "Analizujemy działkę, grunt, liczbę użytkowników i sposób użytkowania obiektu.",
+      },
+      {
+        title: "Montaż lub serwis",
+        desc: "Wykonujemy instalację od prac ziemnych po rozruch albo serwisujemy istniejący układ.",
+      },
+      {
+        title: "Kontrola pracy",
+        desc: "Sprawdzamy odpływ, osad, drenaż, sterowanie, alarmy, dyfuzory i drożność przewodów.",
+      },
+      {
+        title: "Plan przeglądów",
+        desc: "Ustalamy harmonogram obsługi, żeby oczyszczalnia działała bezawaryjnie i zgodnie z wymaganiami.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Czy przydomowa oczyszczalnia wymaga przeglądu co roku?",
+        a: "Tak, roczny przegląd jest dobrą praktyką i pozwala wykryć osad, problemy z natlenieniem, sterowaniem albo drożnością drenażu zanim pojawi się awaria.",
+      },
+      {
+        q: "Czy dobieracie oczyszczalnię do warunków gruntowych?",
+        a: "Tak. Typ gruntu i poziom wód gruntowych są kluczowe. Bez tego dobór oczyszczalni może skończyć się problemami z rozsączaniem.",
+      },
+      {
+        q: "Czy serwisujecie oczyszczalnie montowane przez inne firmy?",
+        a: "Tak. Możemy wykonać przegląd, czyszczenie, regulację i naprawę eksploatacyjną także przy instalacjach wykonanych przez innego wykonawcę.",
+      },
+      {
+        q: "Co najczęściej psuje się w oczyszczalni?",
+        a: "Najczęściej widzimy zużyte pompy, dmuchawy, dyfuzory, zapchane drenaże, nadmiar osadu, kolmatację gruntu i rozszczelnienia elementów instalacji.",
+      },
+      {
+        q: "Czy klienci po montażu mają serwis gwarancyjny?",
+        a: "Tak. Klienci, którzy kupili i zamontowali oczyszczalnię u nas, korzystają z serwisu gwarancyjnego zgodnie z warunkami producenta i zakresem usługi montażowej.",
+      },
+    ],
+    related: ["serwis-przepompowni", "naprawa-sieci-wodociagowych", "lokalizacja-nieszczelnosci"],
+  },
 ];
 
 export function getLocalService(slug: string): LocalService | undefined {
