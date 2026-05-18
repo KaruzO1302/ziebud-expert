@@ -30,6 +30,7 @@ export default function UslugiIndexPage() {
       "bezwykopowe-naprawy-kanalizacji",
       "frezowanie-kanalizacji",
       "regulacja-studzienek-i-wlazow",
+      "odwodnienia-budynkow",
     ].includes(service.slug),
   );
 
@@ -39,6 +40,8 @@ export default function UslugiIndexPage() {
       "separatory-ropopochodne",
       "serwis-przepompowni",
       "przydomowe-oczyszczalnie-sciekow",
+      "montaz-separatorow",
+      "montaz-przepompowni-sciekow",
     ].includes(service.slug),
   );
 

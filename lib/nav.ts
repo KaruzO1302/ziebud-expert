@@ -61,6 +61,21 @@ export const primaryNav: NavItem[] = [
         description: "Sprzedaż, montaż, serwis i przeglądy",
       },
       {
+        label: "Odwodnienia budynków",
+        href: "/uslugi/odwodnienia-budynkow",
+        description: "Drenaż opaskowy, liniowy i odprowadzenie deszczówki",
+      },
+      {
+        label: "Montaż separatorów",
+        href: "/uslugi/montaz-separatorow",
+        description: "Separatory tłuszczu, skrobi i substancji ropopochodnych",
+      },
+      {
+        label: "Montaż przepompowni",
+        href: "/uslugi/montaz-przepompowni-sciekow",
+        description: "Sanitarne, deszczowe i drenażowe układy pompowe",
+      },
+      {
         label: "Separatory tłuszczu",
         href: "/uslugi/separatory-tluszczu",
         description: "Gastronomia, retail i kuchnie zbiorowe",
@@ -94,6 +109,9 @@ export const footerNav = {
     { label: "Frezowanie kanalizacji", href: "/uslugi/frezowanie-kanalizacji" },
     { label: "Regulacja studzienek", href: "/uslugi/regulacja-studzienek-i-wlazow" },
     { label: "Przydomowe oczyszczalnie", href: "/uslugi/przydomowe-oczyszczalnie-sciekow" },
+    { label: "Odwodnienia budynków", href: "/uslugi/odwodnienia-budynkow" },
+    { label: "Montaż separatorów", href: "/uslugi/montaz-separatorow" },
+    { label: "Montaż przepompowni", href: "/uslugi/montaz-przepompowni-sciekow" },
     { label: "Separatory tłuszczu", href: "/uslugi/separatory-tluszczu" },
     { label: "Separatory ropopochodne", href: "/uslugi/separatory-ropopochodne" },
     { label: "Serwis przepompowni", href: "/uslugi/serwis-przepompowni" },

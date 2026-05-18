@@ -1060,6 +1060,357 @@ export const localServices: LocalService[] = [
     ],
     related: ["serwis-przepompowni", "naprawa-sieci-wodociagowych", "lokalizacja-nieszczelnosci"],
   },
+  {
+    slug: "odwodnienia-budynkow",
+    title: "Odwodnienia budynków",
+    heroTitle:
+      "Odwodnienia budynków, garaży i posesji we Wrocławiu — drenaż opaskowy i liniowy",
+    eyebrow: "Drenaże i odwodnienia",
+    tagline:
+      "Zalewane piwnice, namokłe fundamenty, niedrożny system rynnowy. Diagnozujemy, dobieramy metodę i wykonujemy odwodnienie, które naprawdę działa.",
+    metaTitle:
+      "Odwodnienia budynków Wrocław | Drenaż opaskowy i liniowy | ZIEBUD Expert",
+    metaDescription:
+      "Odwadnianie budynków, garaży, parkingów, posesji. Drenaż opaskowy i liniowy, renowacja drenaży poniemieckich. Wrocław i okolice. Tel: 602 481 688.",
+    keywords: [
+      "odwodnienia budynków wrocław",
+      "drenaż opaskowy wrocław",
+      "drenaż liniowy wrocław",
+      "zalewana piwnica wrocław",
+      "odprowadzanie wody z rynien wrocław",
+    ],
+    icon: Waves,
+    trenchless: false,
+    overview: [
+      "Jeżeli masz powracający problem z zalewanymi piwnicami, namokłymi fundamentami, podtopionym garażem albo parkingiem po opadach — ZIEBUD Expert rozwiąże to systemowo.",
+      "Specjalizujemy się w odwadnianiu budynków, garaży, parkingów, posesji oraz w odprowadzaniu wody z rynien w przypadku niedrożności systemu. Pracujemy również przy poszukiwaniu i renowacji starych drenaży, w tym instalacji poniemieckich i pokomunistycznych.",
+      "Najpierw diagnozujemy, czy problem wynika z wód gruntowych, wód opadowych, ukształtowania terenu czy błędnego odprowadzenia deszczówki. Dopiero potem dobieramy drenaż opaskowy, liniowy, studnię chłonną albo kombinację rozwiązań.",
+    ],
+    variants: [
+      {
+        name: "Drenaż opaskowy",
+        desc: "Rury drenarskie wokół budynku odbierające nadmiar wody z gruntu i odprowadzające ją do właściwego punktu zrzutu.",
+      },
+      {
+        name: "Drenaż liniowy",
+        desc: "Korytka i ruszty zbierające wodę z powierzchni parkingu, garażu, podjazdu lub drogi wewnętrznej.",
+      },
+      {
+        name: "Renowacja starych drenaży",
+        desc: "Poszukiwanie, czyszczenie i odtwarzanie starych instalacji drenażowych, również poniemieckich i pokomunistycznych.",
+      },
+      {
+        name: "Odwodnienia terenów utwardzonych",
+        desc: "Drenaże i odwodnienia placów, parkingów, dróg wewnętrznych, garaży oraz terenów przy budynkach.",
+      },
+    ],
+    whenToUse: [
+      "gdy piwnica lub garaż zalewa się po opadach",
+      "gdy fundamenty i ściany przy gruncie są stale zawilgocone",
+      "gdy rynny nie odprowadzają wody skutecznie i zalewają teren przy budynku",
+      "gdy teren ma nieprzepuszczalny grunt albo wysoki poziom wód gruntowych",
+      "gdy parking, podjazd lub droga wewnętrzna tworzy zastoiska wody",
+    ],
+    costs: [
+      {
+        scope: "Wizja lokalna i koncepcja odwodnienia",
+        range: "400–900 zł",
+        note: "ocena przyczyny, warianty i zakres prac",
+      },
+      {
+        scope: "Drenaż liniowy punktowy",
+        range: "2500–8000 zł",
+        note: "garaż, podjazd, krótki odcinek przy budynku",
+      },
+      {
+        scope: "Drenaż opaskowy budynku",
+        range: "12000–45000 zł",
+        note: "zależnie od długości, głębokości i warunków gruntu",
+      },
+      {
+        scope: "Odwodnienie parkingu lub placu",
+        range: "od 18000 zł",
+        note: "wycena indywidualna po terenie i punkcie odbioru wody",
+      },
+    ],
+    costNote:
+      "Odwodnienie zależy od gruntu, spadków, długości wykopów, odbiornika wody i kolizji z istniejącą infrastrukturą. Dlatego podajemy warianty po rozpoznaniu terenu.",
+    process: [
+      {
+        title: "Wizja lokalna",
+        desc: "Sprawdzamy teren, poziom wód, ukształtowanie, zabudowę i obecny sposób odprowadzania deszczówki.",
+      },
+      {
+        title: "Diagnoza przyczyny",
+        desc: "Ustalamy, czy problem robią wody gruntowe, opadowe, niedrożny odpływ, stary drenaż czy kilka czynników naraz.",
+      },
+      {
+        title: "Warianty i wycena",
+        desc: "Przedstawiamy kilka wariantów z różną opłacalnością, zakresem robót, materiałami i terminem.",
+      },
+      {
+        title: "Realizacja i protokół",
+        desc: "Wykonujemy prace ziemne, montaż, próby działania, przekazanie z protokołem i fakturą VAT.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Kiedy potrzebny jest drenaż opaskowy?",
+        a: "Gdy fundamenty lub piwnice są zawilgocone przez wysoki poziom wód gruntowych albo grunt słabo przepuszcza wodę. Drenaż opaskowy odbiera wodę wokół budynku.",
+      },
+      {
+        q: "Czym drenaż liniowy różni się od opaskowego?",
+        a: "Drenaż liniowy zbiera wodę z powierzchni, na przykład z parkingu, garażu albo podjazdu. Drenaż opaskowy pracuje w gruncie przy fundamentach.",
+      },
+      {
+        q: "Czy odprowadzacie wodę z rynien?",
+        a: "Tak. Robimy odprowadzenie wody z rynien, studnie chłonne, wpięcia do kanalizacji deszczowej i korekty niedrożnych układów.",
+      },
+      {
+        q: "Czy zajmujecie się starymi drenażami?",
+        a: "Tak. Szukamy, czyścimy i renowujemy stare drenaże, także instalacje poniemieckie i pokomunistyczne.",
+      },
+      {
+        q: "Czy odwodnienie zawsze wymaga dużych wykopów?",
+        a: "Nie zawsze. Zakres zależy od przyczyny problemu. Czasem wystarczy korekta odpływu, punktowe odwodnienie liniowe albo udrożnienie istniejącego drenażu.",
+      },
+    ],
+    related: ["przydomowe-oczyszczalnie-sciekow", "montaz-przepompowni-sciekow", "inspekcja-tv-kanalizacji"],
+  },
+  {
+    slug: "montaz-separatorow",
+    title: "Montaż separatorów tłuszczu i ropopochodnych",
+    heroTitle:
+      "Sprzedaż i montaż separatorów tłuszczu i ropopochodnych we Wrocławiu",
+    eyebrow: "Separatory od projektu",
+    tagline:
+      "Dobierzemy separator do Twojego obiektu, dostarczymy, zamontujemy, uruchomimy i obejmiemy serwisem. Pełna obsługa od projektu do faktury.",
+    metaTitle:
+      "Montaż separatorów tłuszczu i ropopochodnych Wrocław | KESSEL, ACO, DELFIN | ZIEBUD Expert",
+    metaDescription:
+      "Sprzedaż i montaż separatorów tłuszczu, skrobi i substancji ropopochodnych we Wrocławiu. Marki: KESSEL, ACO, DELFIN, HAURATON, ECOL-UNICON. Tel: 602 481 688.",
+    keywords: [
+      "montaż separatorów wrocław",
+      "separator tłuszczu montaż wrocław",
+      "separator ropopochodny montaż wrocław",
+      "separatory kessel aco delfin wrocław",
+      "sprzedaż separatorów wrocław",
+    ],
+    icon: Container,
+    trenchless: false,
+    overview: [
+      "ZIEBUD Expert dostarcza, montuje i serwisuje separatory tłuszczu, skrobi i substancji ropopochodnych w obiektach we Wrocławiu i na Dolnym Śląsku.",
+      "Pracujemy z gastronomią, stacjami paliw, myjniami, warsztatami, parkingami i obiektami przemysłowymi. Współpracujemy z renomowanymi producentami, między innymi KESSEL, ACO, DELFIN, HAURATON i ECOL-UNICON.",
+      "Pełna usługa obejmuje dobór, dostawę, transport, prace ziemne, posadowienie separatora, wpięcie w instalację, rozruch próbny i przekazanie do użytkowania. Po montażu możemy przejąć regularny serwis i dokumentację.",
+    ],
+    variants: [
+      {
+        name: "Separatory tłuszczu",
+        desc: "Restauracje, hotele, bary, kuchnie zbiorowe, stołówki, szpitale i obiekty gastronomiczne.",
+      },
+      {
+        name: "Separatory ropopochodne",
+        desc: "Stacje paliw, parkingi, warsztaty, myjnie samochodowe, garaże i płyty techniczne.",
+      },
+      {
+        name: "Separatory skrobi i neutralizatory",
+        desc: "Zakłady spożywcze, przetwórstwo ziemniaków, laboratoria i obiekty z nietypowymi ściekami.",
+      },
+      {
+        name: "Serwis po montażu",
+        desc: "Czyszczenie, przeglądy, wymiana materiałów filtracyjnych, pobór próbek i dokumentacja dla obiektu.",
+      },
+    ],
+    whenToUse: [
+      "gdy otwierasz lokal gastronomiczny albo modernizujesz kuchnię",
+      "gdy obiekt ma parking, myjnię, warsztat lub stację paliw",
+      "gdy kontrola wymaga uporządkowania gospodarki ściekowej",
+      "gdy separator trzeba dobrać do przepustowości i typu ścieków",
+      "gdy chcesz połączyć montaż z późniejszą umową serwisową",
+    ],
+    costs: [
+      {
+        scope: "Dobór i wycena separatora",
+        range: "0–900 zł",
+        note: "często wliczane w realizację po akceptacji oferty",
+      },
+      {
+        scope: "Montaż małego separatora tłuszczu",
+        range: "3500–12000 zł",
+        note: "lokal gastronomiczny lub mały obiekt",
+      },
+      {
+        scope: "Separator ropopochodny z posadowieniem",
+        range: "12000–45000 zł",
+        note: "parking, warsztat, myjnia lub stacja paliw",
+      },
+      {
+        scope: "Rozbudowany układ z osadnikiem lub by-passem",
+        range: "od 45000 zł",
+        note: "wycena indywidualna po projekcie i warunkach terenu",
+      },
+    ],
+    costNote:
+      "Cena zależy od typu separatora, przepustowości, głębokości posadowienia, zakresu prac ziemnych, producenta i wymagań dokumentacyjnych.",
+    process: [
+      {
+        title: "Doradztwo i dobór",
+        desc: "Dobieramy separator do rodzaju obiektu, przepustowości, typu ścieków i wymogów środowiskowych.",
+      },
+      {
+        title: "Dostawa i montaż",
+        desc: "Organizujemy urządzenie, transport, prace ziemne, posadowienie i wpięcie separatora w instalację.",
+      },
+      {
+        title: "Rozruch i przekazanie",
+        desc: "Wykonujemy rozruch próbny, przywracamy teren do stanu pierwotnego i przekazujemy instalację do użytkowania.",
+      },
+      {
+        title: "Serwis pogwarancyjny",
+        desc: "Ustawiamy czyszczenie, przeglądy, dokumentację, pobór próbek i wymiany materiałów filtracyjnych.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Jakie separatory montujecie?",
+        a: "Montujemy separatory tłuszczu, ropopochodne, skrobi oraz neutralizatory kwasowe. Dobieramy je do rodzaju obiektu i ścieków.",
+      },
+      {
+        q: "Czy separator jest wymagany przepisami?",
+        a: "W wielu obiektach tak, szczególnie w gastronomii, stacjach paliw, warsztatach, myjniach i parkingach. Separator chroni kanalizację i środowisko przed zanieczyszczeniami.",
+      },
+      {
+        q: "Czy po montażu możecie serwisować separator?",
+        a: "Tak. Po montażu możemy objąć separator umową serwisową: czyszczenie, przeglądy, materiały filtracyjne, próbki i dokumentacja.",
+      },
+      {
+        q: "Z jakimi markami separatorów pracujecie?",
+        a: "Pracujemy między innymi z markami KESSEL, ACO, DELFIN, HAURATON, ECOL-UNICON, PURATOR, PASSAVANT i innymi producentami.",
+      },
+      {
+        q: "Czy montaż separatora wymaga prac ziemnych?",
+        a: "Często tak. Zakres zależy od typu urządzenia, głębokości posadowienia, miejsca montażu i sposobu wpięcia w instalację.",
+      },
+    ],
+    related: ["separatory-tluszczu", "separatory-ropopochodne", "serwis-przepompowni"],
+  },
+  {
+    slug: "montaz-przepompowni-sciekow",
+    title: "Montaż przepompowni ścieków",
+    heroTitle:
+      "Sprzedaż i montaż przepompowni ścieków we Wrocławiu — sanitarne i deszczowe",
+    eyebrow: "Przepompownie od doboru",
+    tagline:
+      "Dobierzemy przepompownię do warunków, zamontujemy, uruchomimy i obejmiemy serwisem. Sanitarne, deszczowe, drenażowe — komplet usług w jednej firmie.",
+    metaTitle:
+      "Montaż przepompowni ścieków Wrocław | Sprzedaż i serwis | ZIEBUD Expert",
+    metaDescription:
+      "Sprzedaż i montaż przepompowni ścieków sanitarnych i deszczowych we Wrocławiu. Dobór, dostawa, instalacja, rozruch i serwis. Tel: 602 481 688.",
+    keywords: [
+      "montaż przepompowni ścieków wrocław",
+      "przepompownie sanitarne wrocław",
+      "przepompownie deszczowe wrocław",
+      "sprzedaż przepompowni wrocław",
+      "serwis przepompowni ścieków wrocław",
+    ],
+    icon: Compass,
+    trenchless: false,
+    overview: [
+      "Dostarczamy, montujemy i serwisujemy przepompownie ścieków komunalnych, wód opadowych i drenażowych we Wrocławiu oraz na Dolnym Śląsku.",
+      "Pracujemy z prywatnymi inwestorami, gospodarstwami rolnymi, firmami, deweloperami i samorządami. Oferujemy przepompownie sanitarne i deszczowe, które są dobrane do warunków technicznych konkretnego obiektu.",
+      "Przepompownia jest potrzebna tam, gdzie obiekt nie może być podłączony grawitacyjnie do sieci: przez rozproszoną zabudowę, ukształtowanie terenu, różnicę poziomów albo konieczność transportu wód opadowych z niżej położonego miejsca.",
+    ],
+    variants: [
+      {
+        name: "Przepompownie sanitarne",
+        desc: "Transport ścieków bytowych z budynków, osiedli, firm i obiektów, gdzie grawitacja nie wystarcza.",
+      },
+      {
+        name: "Przepompownie deszczowe",
+        desc: "Odprowadzenie wód opadowych z terenów niżej położonych, parkingów, placów i układów retencyjnych.",
+      },
+      {
+        name: "Przepompownie drenażowe",
+        desc: "Wsparcie systemów odwodnienia, drenażu i ochrony budynków przed wodą gruntową lub opadową.",
+      },
+      {
+        name: "Rozruch i serwis",
+        desc: "Automatyka, szafa sterownicza, próby szczelności, próby ciśnieniowe, szkolenie i późniejsza obsługa.",
+      },
+    ],
+    whenToUse: [
+      "gdy nie da się odprowadzić ścieków grawitacyjnie do kolektora",
+      "gdy obiekt leży niżej niż sieć kanalizacyjna",
+      "gdy trzeba transportować ścieki lub deszczówkę na większą odległość",
+      "gdy inwestycja wymaga kanalizacji ciśnieniowej lub grawitacyjno-ciśnieniowej",
+      "gdy istniejąca przepompownia jest za mała albo awaryjna",
+    ],
+    costs: [
+      {
+        scope: "Dobór techniczny i wycena",
+        range: "0–1200 zł",
+        note: "często rozliczane w realizacji po akceptacji oferty",
+      },
+      {
+        scope: "Mała przepompownia przydomowa",
+        range: "8000–22000 zł",
+        note: "komora, pompa, podstawowe sterowanie i montaż",
+      },
+      {
+        scope: "Przepompownia dla firmy lub obiektu",
+        range: "22000–75000 zł",
+        note: "większa komora, automatyka, armatura i próby",
+      },
+      {
+        scope: "Przepompownia sieciowa lub deweloperska",
+        range: "od 75000 zł",
+        note: "wycena indywidualna po dokumentacji i warunkach terenu",
+      },
+    ],
+    costNote:
+      "Koszt zależy od wielkości komory, liczby pomp, sterowania, głębokości posadowienia, rurociągu tłocznego, armatury i zakresu prac ziemnych.",
+    process: [
+      {
+        title: "Dobór przepompowni",
+        desc: "Analizujemy poziomy, odległości, rodzaj ścieków, wydajność pomp, komorę, sterowanie i wymagania eksploatacyjne.",
+      },
+      {
+        title: "Montaż w terenie",
+        desc: "Wykonujemy transport, prace ziemne, posadowienie komory, wpięcie w kanalizację i montaż rurociągów tłocznych.",
+      },
+      {
+        title: "Automatyka i próby",
+        desc: "Montujemy sterowanie, zasuwy, zawory zwrotne, wykonujemy próby szczelności, ciśnienia i rozruch.",
+      },
+      {
+        title: "Szkolenie i serwis",
+        desc: "Przekazujemy przepompownię użytkownikowi, szkolimy obsługę i możemy objąć układ długoterminowym serwisem.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Kiedy potrzebna jest przepompownia ścieków?",
+        a: "Gdy ścieków nie da się odprowadzić grawitacyjnie do sieci, na przykład przez różnicę poziomów, odległość od kolektora albo ukształtowanie terenu.",
+      },
+      {
+        q: "Czy montujecie przepompownie sanitarne i deszczowe?",
+        a: "Tak. Montujemy przepompownie ścieków sanitarnych, wód opadowych i układów drenażowych.",
+      },
+      {
+        q: "Czy dobieracie pompy i automatykę?",
+        a: "Tak. Dobieramy komorę, pompy, rurociąg tłoczny, zasuwy, zawory, szafę sterowniczą, pływaki lub sondę hydrostatyczną.",
+      },
+      {
+        q: "Czy po montażu robicie serwis przepompowni?",
+        a: "Tak. Możemy prowadzić czyszczenie zbiornika, kontrolę pomp, pływaków, armatury, automatyki i dokumentację okresową.",
+      },
+      {
+        q: "Czy montujecie przepompownie dla deweloperów i gmin?",
+        a: "Tak. Obsługujemy małe układy przydomowe, obiekty firmowe, deweloperskie i większe systemy dla samorządów.",
+      },
+    ],
+    related: ["serwis-przepompowni", "przydomowe-oczyszczalnie-sciekow", "odwodnienia-budynkow"],
+  },
 ];
 
 export function getLocalService(slug: string): LocalService | undefined {
