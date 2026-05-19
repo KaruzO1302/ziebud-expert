@@ -385,6 +385,33 @@ export function ServicePage({ service }: { service: LocalService }) {
           </Container>
         </section>
       ) : null}
+
+      {service.trustLinks?.length ? (
+        <section className="bg-white py-20">
+          <Container>
+            <div className="max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+                Marki i zaplecze
+              </p>
+              <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
+                Zobacz, jakie urządzenia i marki obsługujemy
+              </h2>
+            </div>
+            <div className="mt-10 grid gap-4 sm:grid-cols-3">
+              {service.trustLinks.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="group rounded-2xl border border-border bg-muted p-5 text-sm font-semibold text-navy-900 transition hover:border-aqua-300 hover:bg-white"
+                >
+                  {item.label}
+                  <ArrowRight className="mt-4 h-4 w-4 text-aqua-700 transition group-hover:translate-x-0.5" />
+                </Link>
+              ))}
+            </div>
+          </Container>
+        </section>
+      ) : null}
     </>
   );
 }

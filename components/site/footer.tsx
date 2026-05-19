@@ -18,7 +18,7 @@ export function Footer() {
   return (
     <footer className="mt-auto border-t border-navy-800 bg-navy-900 text-navy-100">
       <Container className="py-16">
-        <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
+        <div className="grid gap-12 lg:grid-cols-3 xl:grid-cols-[1.4fr_0.9fr_0.9fr_0.9fr_0.8fr]">
           <div>
             <Logo variant="light" />
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-navy-200">
@@ -96,6 +96,7 @@ export function Footer() {
 
           <FooterColumn title="Usługi" items={footerNav.uslugi} />
           <FooterColumn title="Firma" items={footerNav.firma} />
+          <FooterColumn title="Marki i sprzęt" items={footerNav.marki} />
           <FooterColumn title="Prawne" items={footerNav.prawne} />
         </div>
 

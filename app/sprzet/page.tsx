@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   ArrowRight,
   Camera,
   Droplets,
+  ExternalLink,
   ShieldCheck,
   Truck,
   Wrench,
@@ -14,9 +16,12 @@ import { CtaPanel } from "@/components/site/sections/cta-panel";
 import { getPagePhoto } from "@/lib/photos";
 
 export const metadata: Metadata = {
-  title: "Sprzęt WUKO i kamera kanalizacyjna Wrocław",
+  title: {
+    absolute:
+      "Sprzęt do kanalizacji we Wrocławiu | Pojazdy WUKO, kamery TV, roboty frezujące | ZIEBUD Expert",
+  },
   description:
-    "Zobacz jakim sprzętem ZIEBUD Expert obsługuje Wrocław i okolice: WUKO, kamera do kanalizacji, udrażnianie punktowe, separatory i przepompownie.",
+    "Pojazdy WUKO, kamery samojezdne i wpychane do inspekcji TV, roboty frezujące DN 90–150. Profesjonalny park sprzętowy ZIEBUD Expert we Wrocławiu.",
   alternates: { canonical: "/sprzet" },
 };
 
@@ -65,9 +70,67 @@ const scenarios = [
   },
 ];
 
+const detailedEquipment = [
+  {
+    title: "Pojazdy WUKO",
+    text: "Specjalistyczny sprzęt wysokociśnieniowy do czyszczenia hydrodynamicznego rurociągów, wysysania urobku, pracy przy studniach, wpustach, kanalizacji deszczowej i większych odcinkach wspólnot oraz firm.",
+    bullets: [
+      "czyszczenie hydrodynamiczne rurociągów pod wysokim ciśnieniem",
+      "jednoczesne wypłukiwanie i odbiór urobku z kanałów",
+      "praca przy osadzie, piasku, tłuszczu, korzeniach i odpadach",
+      "oświetlenie robocze i organizacja pracy przy zgłoszeniach awaryjnych",
+    ],
+    href: "/uslugi/wuko-wroclaw",
+  },
+  {
+    title: "Kamery do inspekcji TV",
+    text: "Kamery wpychane i samojezdne pozwalają sprawdzić przyłącza, piony, poziomy, kolektory i miejsca, w których zator wraca mimo czyszczenia. Kamera jest etapem diagnozy, nie zgadywania.",
+    bullets: [
+      "inspekcja przykanalików i instalacji wewnętrznych",
+      "kontrola pęknięć, korzeni, złych spadków i załamań",
+      "zapis cyfrowy obrazu i materiał do decyzji zarządcy",
+      "kamera po czyszczeniu WUKO lub frezowaniu twardych przeszkód",
+    ],
+    href: "/uslugi/inspekcja-tv-kanalizacji",
+  },
+  {
+    title: "Roboty frezujące",
+    text: "Przenośny sprzęt do pracy w rurach DN 90–150, kiedy w środku zostaje coś, czego woda nie ruszy: korzenie, beton, zaprawa, twarde osady albo skamieniały tłuszcz.",
+    bullets: [
+      "wbudowana kamera przed głowicą tnącą",
+      "sterowanie przez operatora w czasie rzeczywistym",
+      "wymienne głowice do różnych typów przeszkód",
+      "po frezowaniu kontrola kamerą i domycie odcinka WUKO",
+    ],
+    href: "/uslugi/frezowanie-kanalizacji",
+  },
+];
+
+const brandLinks = [
+  { label: "Marki separatorów", href: "/marki-separatorow" },
+  { label: "Marki przepompowni", href: "/marki-przepompowni" },
+  { label: "Marki oczyszczalni", href: "/marki-oczyszczalni" },
+];
+
+const equipmentJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  name: "Sprzęt ZIEBUD Expert — pojazdy WUKO, kamery TV, roboty frezujące",
+  url: "https://pogotowie-kanalizacyjne-wroclaw.com/sprzet",
+  about: {
+    "@type": "LocalBusiness",
+    name: "ZIEBUD Expert Sp. z o.o.",
+    telephone: "+48602481688",
+  },
+};
+
 export default function SprzetPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(equipmentJsonLd) }}
+      />
       <section className="relative overflow-hidden bg-navy-900 text-white">
         <HeroPhoto photo={getPagePhoto("sprzet")} priority overlay="navy-soft" />
         <div
@@ -166,6 +229,55 @@ export default function SprzetPage() {
 
       <section className="bg-white py-20">
         <Container>
+          <div className="max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              Park sprzętowy
+            </p>
+            <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
+              Pojazdy WUKO, kamery TV i roboty frezujące w jednym procesie
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-navy-700">
+              Najważniejsze jest połączenie metod. Przy zatorze najpierw
+              udrażniamy i czyścimy, potem diagnozujemy kamerą, a przy twardych
+              przeszkodach dokładamy frezowanie.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+            {detailedEquipment.map((item) => (
+              <article
+                key={item.title}
+                className="rounded-[28px] border border-border bg-muted p-6 shadow-soft"
+              >
+                <h2 className="font-display text-2xl font-semibold text-navy-900">
+                  {item.title}
+                </h2>
+                <p className="mt-4 text-sm leading-relaxed text-navy-700">
+                  {item.text}
+                </p>
+                <ul className="mt-5 space-y-3 text-sm text-navy-800">
+                  {item.bullets.map((bullet) => (
+                    <li key={bullet} className="flex gap-2.5">
+                      <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-aqua-600" />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href={item.href}
+                  className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-navy-900 transition hover:text-aqua-700"
+                >
+                  Powiązana usługa
+                  <ArrowRight className="h-4 w-4" aria-hidden />
+                </Link>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-white py-20">
+        <Container>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
             Dobór metody
           </p>
@@ -186,6 +298,38 @@ export default function SprzetPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-muted py-20">
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-start">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+                Marki i urządzenia
+              </p>
+              <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
+                Sprzęt serwisowy łączymy z wiedzą o urządzeniach w obiektach
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-navy-700">
+                Separatory, przepompownie i oczyszczalnie mają różne wymagania
+                serwisowe. Dlatego obok własnego sprzętu opisujemy też marki,
+                które najczęściej spotykamy przy pracy.
+              </p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {brandLinks.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="group rounded-2xl border border-border bg-white p-5 text-sm font-semibold text-navy-900 shadow-soft transition hover:border-aqua-300"
+                >
+                  {item.label}
+                  <ExternalLink className="mt-4 h-4 w-4 text-aqua-700 transition group-hover:translate-x-0.5" />
+                </Link>
+              ))}
+            </div>
           </div>
         </Container>
       </section>

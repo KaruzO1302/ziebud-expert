@@ -56,6 +56,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.78,
     },
     {
+      url: `${SITE_URL}/marki-separatorow`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.74,
+    },
+    {
+      url: `${SITE_URL}/marki-przepompowni`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.74,
+    },
+    {
+      url: `${SITE_URL}/marki-oczyszczalni`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.74,
+    },
+    {
       url: `${SITE_URL}/kontakt`,
       lastModified: now,
       changeFrequency: "monthly",

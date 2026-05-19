@@ -126,6 +126,12 @@ export const footerNav = {
     { label: "Zgłoś awarię", href: "/zapytanie" },
     { label: "Kontakt", href: "/kontakt" },
   ],
+  marki: [
+    { label: "Marki separatorów", href: "/marki-separatorow" },
+    { label: "Marki przepompowni", href: "/marki-przepompowni" },
+    { label: "Marki oczyszczalni", href: "/marki-oczyszczalni" },
+    { label: "Sprzęt ZIEBUD Expert", href: "/sprzet" },
+  ],
   prawne: [
     { label: "Polityka prywatności", href: "/polityka-prywatnosci" },
     { label: "Regulamin", href: "/regulamin" },

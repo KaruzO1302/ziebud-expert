@@ -42,6 +42,7 @@ export type LocalService = {
   process: { title: string; desc: string }[];
   faqs: FaqItem[];
   related: string[];
+  trustLinks?: { label: string; href: string }[];
 };
 
 export const localServices: LocalService[] = [
@@ -451,6 +452,11 @@ export const localServices: LocalService[] = [
       { q: "Czy serwis separatora jest tylko dla gastronomii?", a: "Najczęściej tak, ale obsługujemy też inne obiekty, w których tłuszcz trafia do instalacji." },
     ],
     related: ["wuko-wroclaw", "udraznianie-rur", "inspekcja-tv-kanalizacji"],
+    trustLinks: [
+      { label: "Marki separatorów", href: "/marki-separatorow" },
+      { label: "Montaż separatorów", href: "/uslugi/montaz-separatorow" },
+      { label: "Umowy serwisowe", href: "/umowy-serwisowe" },
+    ],
   },
   {
     slug: "separatory-ropopochodne",
@@ -502,6 +508,11 @@ export const localServices: LocalService[] = [
       { q: "Czy po czyszczeniu oceniacie też stan odpływu?", a: "Tak. Jeśli separator jest czysty, a woda dalej nie schodzi, szukamy problemu dalej w układzie." },
     ],
     related: ["wuko-wroclaw", "inspekcja-tv-kanalizacji", "lokalizacja-nieszczelnosci"],
+    trustLinks: [
+      { label: "Marki separatorów", href: "/marki-separatorow" },
+      { label: "Montaż separatorów", href: "/uslugi/montaz-separatorow" },
+      { label: "Umowy serwisowe", href: "/umowy-serwisowe" },
+    ],
   },
   {
     slug: "serwis-przepompowni",
@@ -553,6 +564,14 @@ export const localServices: LocalService[] = [
       { q: "Czy serwis przepompowni łączy się z kamerą albo WUKO?", a: "Bardzo często tak. W praktyce te usługi zwykle wspierają się nawzajem." },
     ],
     related: ["wuko-wroclaw", "inspekcja-tv-kanalizacji", "lokalizacja-nieszczelnosci"],
+    trustLinks: [
+      { label: "Marki przepompowni", href: "/marki-przepompowni" },
+      {
+        label: "Montaż przepompowni",
+        href: "/uslugi/montaz-przepompowni-sciekow",
+      },
+      { label: "Umowy serwisowe", href: "/umowy-serwisowe" },
+    ],
   },
   {
     slug: "lokalizacja-nieszczelnosci",
@@ -1059,6 +1078,11 @@ export const localServices: LocalService[] = [
       },
     ],
     related: ["serwis-przepompowni", "naprawa-sieci-wodociagowych", "lokalizacja-nieszczelnosci"],
+    trustLinks: [
+      { label: "Marki oczyszczalni", href: "/marki-oczyszczalni" },
+      { label: "Odwodnienia budynków", href: "/uslugi/odwodnienia-budynkow" },
+      { label: "Umowy serwisowe", href: "/umowy-serwisowe" },
+    ],
   },
   {
     slug: "odwodnienia-budynkow",
