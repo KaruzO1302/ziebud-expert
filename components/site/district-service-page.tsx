@@ -1,89 +1,148 @@
+import Image from "next/image";
 import Link from "next/link";
 import { DistrictService } from "@/lib/district-services-data";
 import { SITE_URL } from "@/lib/site";
 
 interface Props {
   service: DistrictService;
+  hero: {
+    src: string;
+    alt: string;
+  };
 }
 
 export function buildDistrictServiceJsonLd(service: DistrictService) {
   return {
     "@context": "https://schema.org",
-    "@type": "Service",
-    serviceType: service.serviceType,
-    name: `${service.serviceName} ${service.districtName} Wrocław`,
-    description: service.metaDescription,
-    url: `${SITE_URL}/wroclaw/${service.districtSlug}/${service.serviceSlug}`,
-    provider: {
-      "@type": "LocalBusiness",
-      name: "ZIEBUD Expert Sp. z o.o.",
-      url: SITE_URL,
-      telephone: "+48 602 481 688",
-    },
-    areaServed: {
-      "@type": "Place",
-      name: service.areaServed,
-      containedInPlace: {
-        "@type": "City",
-        name: "Wrocław",
+    "@graph": [
+      {
+        "@type": "Service",
+        serviceType: service.serviceType,
+        name: `${service.serviceName} ${service.districtName} Wrocław`,
+        description: service.metaDescription,
+        url: `${SITE_URL}/wroclaw/${service.districtSlug}/${service.serviceSlug}`,
+        provider: {
+          "@type": "LocalBusiness",
+          name: "ZIEBUD Expert Sp. z o.o.",
+          url: SITE_URL,
+          telephone: "+48 602 481 688",
+        },
+        areaServed: {
+          "@type": "City",
+          name: service.areaServed,
+        },
+        offers: {
+          "@type": "AggregateOffer",
+          priceCurrency: "PLN",
+          lowPrice: service.priceLow,
+          highPrice: service.priceHigh,
+        },
       },
-    },
-    offers: {
-      "@type": "AggregateOffer",
-      priceCurrency: "PLN",
-      lowPrice: service.priceLow,
-      highPrice: service.priceHigh,
-    },
+      {
+        "@type": "FAQPage",
+        mainEntity: service.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.a,
+          },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Strona główna", item: SITE_URL },
+          { "@type": "ListItem", position: 2, name: "Wrocław", item: `${SITE_URL}/wroclaw` },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: service.districtName,
+            item: `${SITE_URL}/wroclaw/${service.districtSlug}`,
+          },
+          {
+            "@type": "ListItem",
+            position: 4,
+            name: service.serviceName,
+            item: `${SITE_URL}/wroclaw/${service.districtSlug}/${service.serviceSlug}`,
+          },
+        ],
+      },
+    ],
   };
 }
 
-export function DistrictServicePage({ service }: Props) {
+export function DistrictServicePage({ service, hero }: Props) {
   return (
-    <main className="pt-24 pb-16">
-      <div className="max-w-3xl mx-auto px-4">
-        {/* Breadcrumb */}
-        <nav className="text-sm text-gray-500 mb-6 flex gap-2 flex-wrap">
-          <Link href="/" className="hover:underline">Strona główna</Link>
-          <span>/</span>
-          <Link href="/wroclaw" className="hover:underline">Wrocław</Link>
-          <span>/</span>
-          <span className="capitalize">{service.districtName}</span>
-          <span>/</span>
-          <span>{service.serviceName}</span>
-        </nav>
-
-        {/* Hero */}
-        <div className="mb-10">
-          <p className="text-sm font-medium uppercase tracking-widest text-gray-500 mb-2">
+    <main className="pb-16">
+      <section className="relative min-h-[520px] overflow-hidden bg-navy-950 text-white">
+        <Image
+          src={hero.src}
+          alt={hero.alt}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-45"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-900/90 to-navy-900/50"
+        />
+        <div className="relative mx-auto flex min-h-[520px] max-w-5xl flex-col justify-end px-4 py-14">
+          <nav className="mb-8 flex flex-wrap gap-2 text-sm text-white/75">
+            <Link href="/" className="hover:text-white">Strona główna</Link>
+            <span>/</span>
+            <Link href="/wroclaw" className="hover:text-white">Wrocław</Link>
+            <span>/</span>
+            <span>{service.districtName}</span>
+            <span>/</span>
+            <span>{service.serviceName}</span>
+          </nav>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-aqua-200">
             ZIEBUD Expert · Wrocław · {service.districtName}
           </p>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">{service.h1}</h1>
-          <p className="text-lg text-gray-700 mb-6">{service.lead}</p>
-          <div className="flex gap-3 flex-wrap">
+          <h1 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight md:text-5xl">
+            {service.h1}
+          </h1>
+          <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="tel:+48602481688"
-              className="inline-flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-gray-800 transition"
+              className="inline-flex items-center gap-2 rounded-full bg-aqua-400 px-5 py-3 text-sm font-semibold text-navy-950 transition hover:bg-aqua-300"
             >
               Zadzwoń: 602 481 688
             </a>
             <Link
               href="/zapytanie"
-              className="inline-flex items-center gap-2 border border-black text-black px-5 py-2.5 rounded-full text-sm font-medium hover:bg-gray-50 transition"
+              className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/15"
             >
               Zgłoś awarię →
             </Link>
           </div>
         </div>
+      </section>
 
-        {/* Sections */}
-        <div className="space-y-10 mb-12">
-          {service.sections.map((section, i) => (
-            <section key={i}>
-              <h2 className="text-xl font-semibold mb-3">{section.h2}</h2>
-              <p className="text-gray-700 leading-relaxed">{section.body}</p>
-            </section>
+      <div className="mx-auto max-w-3xl px-4 pt-14">
+        {/* Breadcrumb */}
+        <div className="mb-12 space-y-5 text-lg leading-relaxed text-gray-700">
+          {service.intro.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
+
+        {/* Sections */}
+        <section className="mb-12 rounded-2xl border border-gray-200 bg-gray-50 p-6">
+          <h2 className="mb-5 text-xl font-semibold">
+            Co zyskujesz przy tej usłudze
+          </h2>
+          <ul className="space-y-3">
+            {service.zalety.map((item) => (
+              <li key={item} className="flex gap-3 text-sm leading-relaxed text-gray-700">
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua-600" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
 
         {/* FAQ */}
         <section className="mb-12">
@@ -121,9 +180,9 @@ export function DistrictServicePage({ service }: Props) {
         </section>
 
         {/* CTA */}
-        <div className="bg-gray-50 rounded-xl p-6 text-center">
+        <div className="rounded-xl bg-gray-50 p-6 text-center">
           <p className="font-semibold text-lg mb-2">Masz pytanie lub chcesz umówić usługę?</p>
-          <p className="text-gray-600 text-sm mb-4">Oddzwaniamy w 15 minut. Dojazd do 120 min na terenie Wrocławia.</p>
+          <p className="text-gray-600 text-sm mb-4">{service.cta}</p>
           <div className="flex gap-3 justify-center flex-wrap">
             <a
               href="tel:+48602481688"

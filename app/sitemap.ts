@@ -1,10 +1,12 @@
 import type { MetadataRoute } from "next";
 import { articles } from "@/lib/articles-data";
+import { districtServices } from "@/lib/district-services-data";
 import { localServices } from "@/lib/local-services-data";
 import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+  const task04LastModified = new Date("2026-05-19");
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
@@ -137,9 +139,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.68,
   }));
 
+  const districtServiceRoutes: MetadataRoute.Sitemap = districtServices.map(
+    (service) => ({
+      url: `${SITE_URL}/wroclaw/${service.districtSlug}/${service.serviceSlug}`,
+      lastModified: task04LastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    }),
+  );
+
   return [
     ...staticRoutes,
     ...serviceRoutes,
+    ...districtServiceRoutes,
     ...articleRoutes,
   ];
 }
