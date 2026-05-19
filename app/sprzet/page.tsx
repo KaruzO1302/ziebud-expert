@@ -13,6 +13,8 @@ import {
 import { Container } from "@/components/site/container";
 import { LinkButton } from "@/components/site/link-button";
 import { CtaPanel } from "@/components/site/sections/cta-panel";
+import { jsonLdBreadcrumb, jsonLdScript } from "@/lib/jsonld";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: {
@@ -143,7 +145,16 @@ export default function SprzetPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(equipmentJsonLd) }}
+        dangerouslySetInnerHTML={jsonLdScript(equipmentJsonLd)}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLdScript(
+          jsonLdBreadcrumb([
+            { name: "Strona główna", url: SITE_URL },
+            { name: "Sprzęt", url: `${SITE_URL}/sprzet` },
+          ]),
+        )}
       />
       <section className="relative overflow-hidden bg-navy-900 text-white">
         <Image

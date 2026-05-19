@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ServicePage, buildServiceJsonLd } from "@/components/site/service-page";
 import { CtaPanel } from "@/components/site/sections/cta-panel";
 import { getLocalService, localServices } from "@/lib/local-services-data";
+import { jsonLdBreadcrumb, jsonLdScript } from "@/lib/jsonld";
 import { SITE_URL } from "@/lib/site";
 
 type Params = Promise<{ slug: string }>;
@@ -52,14 +53,24 @@ export default async function ServiceDetailPage({
   const service = getLocalService(slug);
   if (!service) notFound();
 
-  const jsonLd = buildServiceJsonLd(service);
+  const jsonLd = [
+    ...buildServiceJsonLd(service),
+    jsonLdBreadcrumb([
+      { name: "Strona główna", url: SITE_URL },
+      { name: "Usługi", url: `${SITE_URL}/uslugi` },
+      { name: service.title, url: `${SITE_URL}/uslugi/${service.slug}` },
+    ]),
+  ];
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      {jsonLd.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(schema)}
+        />
+      ))}
       <ServicePage service={service} />
       <CtaPanel />
     </>

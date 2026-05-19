@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/site/container";
 import { branzePages } from "@/lib/branze-data";
+import { jsonLdBreadcrumb, jsonLdScript } from "@/lib/jsonld";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -27,6 +28,15 @@ export const metadata: Metadata = {
 export default function DlaBranzPage() {
   return (
     <main className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLdScript(
+          jsonLdBreadcrumb([
+            { name: "Strona główna", url: SITE_URL },
+            { name: "Dla branż", url: `${SITE_URL}/dla-branz` },
+          ]),
+        )}
+      />
       <section className="bg-navy-950 py-20 text-white">
         <Container>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-200">

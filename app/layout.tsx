@@ -9,9 +9,8 @@ import { MobileStickyCta } from "@/components/site/mobile-sticky-cta";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import {
-  localBusinessSchema,
-  organizationSchema,
-  websiteSchema,
+  jsonLdOrganization,
+  jsonLdWebSite,
   jsonLdScript,
 } from "@/lib/jsonld";
 import { ORG_NAME, ORG_SHORT_NAME, SITE_URL } from "@/lib/site";
@@ -31,7 +30,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "ZIĘBUD Expert Wrocław — WUKO, pogotowie kanalizacyjne i inspekcja TV",
+    default: "ZIEBUD Expert — Pogotowie Kanalizacyjne Wrocław 24/7",
     template: "%s | ZIEBUD Expert",
   },
   description:
@@ -42,13 +41,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pl_PL",
     url: SITE_URL,
-    siteName: ORG_SHORT_NAME,
-    title: "ZIĘBUD Expert Wrocław — WUKO, pogotowie kanalizacyjne i inspekcja TV",
+    siteName: "ZIEBUD Expert",
+    title: "ZIEBUD Expert — Pogotowie Kanalizacyjne Wrocław 24/7",
     description:
       "WUKO, czyszczenie kanalizacji, udrażnianie rur, inspekcja TV, separatory i serwis przepompowni dla Wrocławia oraz Dolnego Śląska.",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "ZIĘBUD Expert Wrocław — WUKO i serwis kanalizacji",
@@ -73,7 +72,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: SITE_URL,
+    canonical: "/",
   },
   verification: {
     google: "_x6oqCy5gdJslLfaWrPWVJn5WrvUmoj4c2c3vvdig9I",
@@ -104,19 +103,17 @@ export default function RootLayout({
         spaceGrotesk.variable,
       )}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(jsonLdOrganization())}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(jsonLdWebSite())}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={jsonLdScript(organizationSchema)}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={jsonLdScript(websiteSchema)}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={jsonLdScript(localBusinessSchema)}
-        />
         <Header />
         <main className="flex-1 pb-20 md:pb-0">{children}</main>
         <Footer />

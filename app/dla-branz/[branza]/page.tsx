@@ -6,6 +6,12 @@ import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import { Container } from "@/components/site/container";
 import { CtaPanel } from "@/components/site/sections/cta-panel";
 import { branzePages, getBranzaPage } from "@/lib/branze-data";
+import {
+  jsonLdBreadcrumb,
+  jsonLdFAQ,
+  jsonLdScript,
+  jsonLdService,
+} from "@/lib/jsonld";
 import { SITE_URL } from "@/lib/site";
 
 type Params = Promise<{ branza: string }>;
@@ -39,52 +45,20 @@ export async function generateMetadata({
 }
 
 function buildIndustryJsonLd(page: NonNullable<ReturnType<typeof getBranzaPage>>) {
-  return {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        name: page.h1,
-        serviceType: page.serviceType,
-        description: page.meta_description,
-        url: `${SITE_URL}/dla-branz/${page.slug}`,
-        provider: {
-          "@type": "LocalBusiness",
-          name: "ZIEBUD Expert Sp. z o.o.",
-          telephone: page.cta_telefon,
-          url: SITE_URL,
-        },
-        areaServed: {
-          "@type": "City",
-          name: "Wrocław",
-        },
-      },
-      {
-        "@type": "FAQPage",
-        mainEntity: page.faq.map((faq) => ({
-          "@type": "Question",
-          name: faq.q,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: faq.a,
-          },
-        })),
-      },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Strona główna", item: SITE_URL },
-          { "@type": "ListItem", position: 2, name: "Dla branż", item: `${SITE_URL}/dla-branz` },
-          {
-            "@type": "ListItem",
-            position: 3,
-            name: page.branza_name,
-            item: `${SITE_URL}/dla-branz/${page.slug}`,
-          },
-        ],
-      },
-    ],
-  };
+  return [
+    jsonLdService({
+      name: page.h1,
+      description: page.meta_description,
+      serviceType: page.serviceType,
+      url: `${SITE_URL}/dla-branz/${page.slug}`,
+    }),
+    jsonLdFAQ(page.faq),
+    jsonLdBreadcrumb([
+      { name: "Strona główna", url: SITE_URL },
+      { name: "Dla branż", url: `${SITE_URL}/dla-branz` },
+      { name: page.branza_name, url: `${SITE_URL}/dla-branz/${page.slug}` },
+    ]),
+  ];
 }
 
 export default async function BranzaPage({
@@ -95,15 +69,17 @@ export default async function BranzaPage({
   const { branza } = await params;
   const page = getBranzaPage(branza);
   if (!page) notFound();
+  const schemas = buildIndustryJsonLd(page);
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(buildIndustryJsonLd(page)),
-        }}
-      />
+      {schemas.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(schema)}
+        />
+      ))}
       <main className="bg-white">
         <section className="relative min-h-[560px] overflow-hidden bg-navy-950 text-white">
           <Image

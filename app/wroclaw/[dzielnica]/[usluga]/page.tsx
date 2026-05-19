@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { DistrictServicePage, buildDistrictServiceJsonLd } from "@/components/site/district-service-page";
 import { CtaPanel } from "@/components/site/sections/cta-panel";
 import { districtServices, getDistrictService } from "@/lib/district-services-data";
+import { jsonLdScript } from "@/lib/jsonld";
 import { SITE_URL } from "@/lib/site";
 
 type Params = Promise<{ dzielnica: string; usluga: string }>;
@@ -81,10 +82,13 @@ export default async function DistrictServiceRoute({
 
   return (
     <>
-      <script
-        type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      {jsonLd.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(schema)}
+        />
+      ))}
       <DistrictServicePage service={service} hero={hero} />
       <CtaPanel />
     </>

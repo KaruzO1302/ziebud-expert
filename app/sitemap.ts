@@ -1,14 +1,15 @@
 import type { MetadataRoute } from "next";
 import { articles } from "@/lib/articles-data";
 import { branzePages } from "@/lib/branze-data";
+import { caseStudies } from "@/lib/case-studies-data";
 import { districtServices } from "@/lib/district-services-data";
+import { cityPages, voivodeshipPages } from "@/lib/locations-data";
 import { localServices } from "@/lib/local-services-data";
 import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const task04LastModified = new Date("2026-05-19");
-  const task05LastModified = new Date("2026-05-19");
+  const seoLastModified = new Date("2026-05-19");
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
@@ -49,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${SITE_URL}/dla-branz`,
-      lastModified: task05LastModified,
+      lastModified: seoLastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },
@@ -61,27 +62,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${SITE_URL}/sprzet`,
-      lastModified: now,
+      lastModified: seoLastModified,
       changeFrequency: "monthly",
-      priority: 0.78,
+      priority: 0.6,
     },
     {
       url: `${SITE_URL}/marki-separatorow`,
-      lastModified: now,
+      lastModified: seoLastModified,
       changeFrequency: "monthly",
-      priority: 0.74,
+      priority: 0.6,
     },
     {
       url: `${SITE_URL}/marki-przepompowni`,
-      lastModified: now,
+      lastModified: seoLastModified,
       changeFrequency: "monthly",
-      priority: 0.74,
+      priority: 0.6,
     },
     {
       url: `${SITE_URL}/marki-oczyszczalni`,
-      lastModified: now,
+      lastModified: seoLastModified,
       changeFrequency: "monthly",
-      priority: 0.74,
+      priority: 0.6,
     },
     {
       url: `${SITE_URL}/kontakt`,
@@ -135,9 +136,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const serviceRoutes: MetadataRoute.Sitemap = localServices.map((service) => ({
     url: `${SITE_URL}/uslugi/${service.slug}`,
-    lastModified: now,
+    lastModified: seoLastModified,
     changeFrequency: "weekly",
-    priority: 0.82,
+    priority: 0.8,
   }));
 
   const articleRoutes: MetadataRoute.Sitemap = articles.map((article) => ({
@@ -150,7 +151,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const districtServiceRoutes: MetadataRoute.Sitemap = districtServices.map(
     (service) => ({
       url: `${SITE_URL}/wroclaw/${service.districtSlug}/${service.serviceSlug}`,
-      lastModified: task04LastModified,
+      lastModified: seoLastModified,
       changeFrequency: "monthly",
       priority: 0.7,
     }),
@@ -158,9 +159,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const industryRoutes: MetadataRoute.Sitemap = branzePages.map((page) => ({
     url: `${SITE_URL}/dla-branz/${page.slug}`,
-    lastModified: task05LastModified,
+    lastModified: seoLastModified,
     changeFrequency: "monthly",
     priority: 0.7,
+  }));
+
+  const locationRoutes: MetadataRoute.Sitemap = [
+    ...cityPages.map((page) => ({
+      url: `${SITE_URL}/miasta/${page.slug}`,
+      lastModified: seoLastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.62,
+    })),
+    ...voivodeshipPages.map((page) => ({
+      url: `${SITE_URL}/wojewodztwa/${page.slug}`,
+      lastModified: seoLastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.58,
+    })),
+  ];
+
+  const caseStudyRoutes: MetadataRoute.Sitemap = caseStudies.map((caseStudy) => ({
+    url: `${SITE_URL}/realizacje/${caseStudy.slug}`,
+    lastModified: seoLastModified,
+    changeFrequency: "monthly",
+    priority: 0.56,
   }));
 
   return [
@@ -168,6 +191,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...serviceRoutes,
     ...districtServiceRoutes,
     ...industryRoutes,
+    ...locationRoutes,
+    ...caseStudyRoutes,
     ...articleRoutes,
   ];
 }

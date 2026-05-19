@@ -14,8 +14,9 @@ import {
   type LocalService,
   localServices,
 } from "@/lib/local-services-data";
+import { jsonLdFAQ, jsonLdService } from "@/lib/jsonld";
 import { getServicePhoto } from "@/lib/photos";
-import { ORG_NAME, SITE_URL } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
 
 export function ServicePage({ service }: { service: LocalService }) {
   const Icon = service.icon;
@@ -418,54 +419,12 @@ export function ServicePage({ service }: { service: LocalService }) {
 
 export function buildServiceJsonLd(service: LocalService) {
   return [
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      serviceType: service.title,
+    jsonLdService({
       name: service.title,
       description: service.metaDescription,
       url: `${SITE_URL}/uslugi/${service.slug}`,
-      keywords: service.keywords.join(", "),
-      provider: {
-        "@type": "LocalBusiness",
-        name: ORG_NAME,
-        url: SITE_URL,
-        telephone: "+48 602 481 688",
-      },
-      areaServed: [
-        { "@type": "City", name: "Wrocław" },
-        { "@type": "AdministrativeArea", name: "Dolny Śląsk" },
-      ],
-      offers: {
-        "@type": "AggregateOffer",
-        priceCurrency: "PLN",
-        lowPrice: parsePrice(service.costs[0]?.range).low,
-        highPrice: parsePrice(service.costs[service.costs.length - 1]?.range)
-          .high,
-        offerCount: service.costs.length,
-      },
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: service.faqs.map((item) => ({
-        "@type": "Question",
-        name: item.q,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: item.a,
-        },
-      })),
-    },
+      serviceType: service.schemaServiceType ?? service.title,
+    }),
+    jsonLdFAQ(service.faqs),
   ];
-}
-
-function parsePrice(range?: string) {
-  if (!range) return { low: 0, high: 0 };
-  const nums = range.match(/\d+/g) || [];
-
-  return {
-    low: Number(nums[0] ?? 0),
-    high: Number(nums[nums.length - 1] ?? 0),
-  };
 }

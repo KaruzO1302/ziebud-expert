@@ -1,6 +1,7 @@
 import type { LucideIcon } from "lucide-react";
 import {
   ArrowDownToLine,
+  CloudRain,
   Compass,
   Construction,
   Container,
@@ -42,6 +43,7 @@ export type LocalService = {
   process: { title: string; desc: string }[];
   faqs: FaqItem[];
   related: string[];
+  schemaServiceType?: string;
   trustLinks?: { label: string; href: string }[];
 };
 
@@ -1436,6 +1438,411 @@ export const localServices: LocalService[] = [
     related: ["serwis-przepompowni", "przydomowe-oczyszczalnie-sciekow", "odwodnienia-budynkow"],
   },
 ];
+
+type InfrastructureServiceConfig = {
+  slug: string;
+  title: string;
+  eyebrow: string;
+  tagline: string;
+  metaTitle: string;
+  metaDescription: string;
+  keywords: string[];
+  icon: LucideIcon;
+  trenchless: boolean;
+  serviceType: string;
+  context: string;
+  primaryUse: string;
+  variants: ServiceVariant[];
+  related: string[];
+};
+
+function makeInfrastructureService(
+  config: InfrastructureServiceConfig,
+): LocalService {
+  return {
+    slug: config.slug,
+    title: config.title,
+    heroTitle: `${config.title} Wrocław`,
+    eyebrow: config.eyebrow,
+    tagline: config.tagline,
+    metaTitle: config.metaTitle,
+    metaDescription: config.metaDescription,
+    keywords: config.keywords,
+    icon: config.icon,
+    trenchless: config.trenchless,
+    schemaServiceType: config.serviceType,
+    overview: [
+      `${config.context} To strona dla inwestorów, zarządców i firm, które potrzebują wykonawcy od wod-kan, a nie tylko awaryjnego udrożnienia. Zaczynamy od rozpoznania warunków, dostępu, dokumentacji i ryzyk technicznych.`,
+      `Najważniejsze jest dobranie zakresu do celu inwestycji: ${config.primaryUse}. Przy większych tematach pracujemy na dokumentacji, a przy modernizacjach łączymy wykonawstwo z diagnostyką i planem dalszych prac.`,
+      "Wycena zależy od średnic, długości odcinków, gruntu, kolizji, dostępności studni oraz tego, czy prace można wykonać klasycznie, czy lepiej wejść metodą bezwykopową.",
+    ],
+    variants: config.variants,
+    whenToUse: [
+      config.primaryUse,
+      "gdy inwestor potrzebuje jednego wykonawcy do rozpoznania, wyceny i realizacji",
+      "gdy zakres wymaga koordynacji z istniejącą infrastrukturą i odbiorami",
+      "gdy trzeba ograniczyć wykopy, przestoje lub ingerencję w działający obiekt",
+    ],
+    costs: [
+      {
+        scope: "Rozpoznanie i wycena zakresu",
+        range: "0-1500 zł",
+        note: "często rozliczane w realizacji po akceptacji oferty",
+      },
+      {
+        scope: "Mały zakres lokalny",
+        range: "2500-15000 zł",
+        note: "krótkie odcinki, punktowe prace lub przygotowanie pod większy etap",
+      },
+      {
+        scope: "Realizacja obiektowa",
+        range: "15000-90000 zł",
+        note: "wycena po dokumentacji, dostępie i warunkach terenu",
+      },
+      {
+        scope: "Zakres inwestycyjny",
+        range: "od 90000 zł",
+        note: "sieci, większe modernizacje, prace wieloetapowe",
+      },
+    ],
+    costNote:
+      "To widełki orientacyjne. Przy usługach infrastrukturalnych cena zawsze zależy od dokumentacji, warunków terenowych, kolizji, organizacji ruchu i odbiorów.",
+    process: [
+      {
+        title: "Analiza zakresu",
+        desc: "Sprawdzamy opis problemu, dokumentację, lokalizację, dostęp i wymagania odbiorowe.",
+      },
+      {
+        title: "Dobór technologii",
+        desc: "Porównujemy wariant klasyczny, bezwykopowy lub mieszany i wskazujemy najbardziej rozsądny zakres.",
+      },
+      {
+        title: "Realizacja",
+        desc: "Wykonujemy prace z kontrolą dostępu, bezpieczeństwa i uzgodnionych etapów.",
+      },
+      {
+        title: "Odbiór i zalecenia",
+        desc: "Przekazujemy wnioski, dokumentację po pracach i rekomendacje eksploatacyjne.",
+      },
+    ],
+    faqs: [
+      {
+        q: `Czy realizujecie ${config.title.toLowerCase()} we Wrocławiu?`,
+        a: "Tak. Obsługujemy Wrocław, okolice i Dolny Śląsk, a większe zakresy inwestycyjne wyceniamy po dokumentacji.",
+      },
+      {
+        q: "Czy możecie przygotować wycenę na podstawie dokumentacji?",
+        a: "Tak. Najlepiej przesłać rysunki, opis zakresu, mapę, zdjęcia miejsca i informację o terminie.",
+      },
+      {
+        q: "Czy dobieracie metodę bezwykopową?",
+        a: "Tak, jeśli warunki i cel prac za tym przemawiają. Nie każda sytuacja wymaga wykopu ani nie każda nadaje się do bezwykopu.",
+      },
+      {
+        q: "Czy obsługujecie firmy, deweloperów i zarządców?",
+        a: "Tak. To główni odbiorcy usług infrastrukturalnych i modernizacyjnych.",
+      },
+      {
+        q: "Czy po pracach dostanę dokumentację?",
+        a: "Tak. Zakres dokumentacji dobieramy do typu usługi, odbiorów i wymagań inwestora.",
+      },
+    ],
+    related: config.related,
+  };
+}
+
+localServices.push(
+  ...[
+    makeInfrastructureService({
+      slug: "wodociagi",
+      title: "Budowa i modernizacja sieci wodociągowych",
+      eyebrow: "Sieci wod-kan",
+      tagline:
+        "Przyłącza, rozbudowy i modernizacje wodociągów dla inwestycji, firm i zarządców we Wrocławiu oraz na Dolnym Śląsku.",
+      metaTitle: "Budowa sieci wodociągowych Wrocław — ZIEBUD Expert",
+      metaDescription:
+        "Budowa i modernizacja sieci wodociągowych we Wrocławiu. Przyłącza, rozbudowy, odbiory, dokumentacja i wycena po zakresie.",
+      keywords: ["budowa wodociągu wrocław", "sieci wodociągowe", "przyłącze wodociągowe"],
+      icon: Droplets,
+      trenchless: false,
+      serviceType: "Budowa sieci wodociągowych",
+      context:
+        "Sieci wodociągowe wymagają uporządkowania formalności, punktów wpięcia, materiałów i odbiorów.",
+      primaryUse:
+        "nowe przyłącza, rozbudowy sieci, modernizacje i prace przy inwestycjach wymagających zasilania w wodę",
+      variants: [
+        { name: "Przyłącza wodociągowe", desc: "Odcinki od sieci do budynku z armaturą i przygotowaniem do odbioru." },
+        { name: "Modernizacje sieci", desc: "Wymiana lub przebudowa istniejących odcinków wodociągowych." },
+        { name: "Obsługa inwestycji", desc: "Zakresy dla deweloperów, firm i obiektów technicznych." },
+      ],
+      related: ["kanalizacja-sanitarna", "hdd-przewiert-sterowany", "naprawa-sieci-wodociagowych"],
+    }),
+    makeInfrastructureService({
+      slug: "kanalizacja-sanitarna",
+      title: "Budowa kanalizacji sanitarnej",
+      eyebrow: "Sieci zewnętrzne",
+      tagline:
+        "Kanalizacja sanitarna grawitacyjna i tłoczna: przyłącza, studnie, odcinki zbiorcze, odbiory i inspekcja.",
+      metaTitle: "Budowa kanalizacji sanitarnej Wrocław — ZIEBUD Expert",
+      metaDescription:
+        "Budowa kanalizacji sanitarnej we Wrocławiu. Przyłącza, studnie, kanalizacja tłoczna, odbiory, inspekcja TV i dokumentacja.",
+      keywords: ["kanalizacja sanitarna wrocław", "budowa kanalizacji", "przyłącze kanalizacyjne"],
+      icon: Waves,
+      trenchless: false,
+      serviceType: "Budowa kanalizacji sanitarnej",
+      context:
+        "Kanalizacja sanitarna musi działać przewidywalnie od pierwszego dnia eksploatacji.",
+      primaryUse:
+        "przyłącza, sieci osiedlowe, kanalizacja tłoczna i przygotowanie odcinków do odbiorów technicznych",
+      variants: [
+        { name: "Kanalizacja grawitacyjna", desc: "Studnie, spadki, odcinki przyłączeniowe i sieci osiedlowe." },
+        { name: "Kanalizacja tłoczna", desc: "Odcinki współpracujące z przepompowniami i armaturą." },
+        { name: "Odbiór i kamera", desc: "Czyszczenie oraz inspekcja TV przed przekazaniem instalacji." },
+      ],
+      related: ["przepompownie-sciekow", "inspekcja-tv-kanalizacji", "wuko-wroclaw"],
+    }),
+    makeInfrastructureService({
+      slug: "kanalizacja-deszczowa",
+      title: "Kanalizacja deszczowa i odwodnienia",
+      eyebrow: "Deszczówka",
+      tagline:
+        "Odwodnienia placów, parkingów, dachów i terenów utwardzonych dla obiektów we Wrocławiu.",
+      metaTitle: "Kanalizacja deszczowa Wrocław — odwodnienia",
+      metaDescription:
+        "Kanalizacja deszczowa i odwodnienia we Wrocławiu. Studnie, wpusty, place, parkingi, retencja i czyszczenie WUKO.",
+      keywords: ["kanalizacja deszczowa wrocław", "odwodnienia parkingów", "deszczówka wrocław"],
+      icon: CloudRain,
+      trenchless: false,
+      serviceType: "Kanalizacja deszczowa",
+      context:
+        "Deszczówka wymaga dobrego spadku, retencji, drożnych wpustów i odporności na intensywne opady.",
+      primaryUse:
+        "odwodnienia parkingów, placów manewrowych, dachów, dróg wewnętrznych i terenów wokół obiektów",
+      variants: [
+        { name: "Wpusty i studnie", desc: "Elementy odbioru wody z powierzchni utwardzonych." },
+        { name: "Odwodnienia liniowe", desc: "Kraty i kanały dla placów, ramp i parkingów." },
+        { name: "Połączenie z retencją", desc: "Układy prowadzące wodę do zbiorników lub rozsączania." },
+      ],
+      related: ["retencja", "odwodnienia-budynkow", "wuko-wroclaw"],
+    }),
+    makeInfrastructureService({
+      slug: "hdd-przewiert-sterowany",
+      title: "Przewierty sterowane HDD",
+      eyebrow: "Bezwykopowo",
+      tagline:
+        "Przewierty sterowane pod drogami, przeszkodami i infrastrukturą, gdy wykop jest zbyt kosztowny lub uciążliwy.",
+      metaTitle: "Przewiert sterowany HDD Wrocław — bezwykopowo",
+      metaDescription:
+        "Przewierty sterowane HDD we Wrocławiu i na Dolnym Śląsku. Bezwykopowe przejścia pod drogami, wjazdami i przeszkodami.",
+      keywords: ["hdd wrocław", "przewiert sterowany", "bezwykopowo wrocław"],
+      icon: Compass,
+      trenchless: true,
+      serviceType: "Przewiert sterowany HDD",
+      context:
+        "HDD ogranicza rozkopy i pozwala przejść pod drogą, chodnikiem, wjazdem lub przeszkodą terenową.",
+      primaryUse:
+        "przejścia pod drogami, zjazdami, terenami zielonymi i działającą infrastrukturą bez klasycznego wykopu",
+      variants: [
+        { name: "Przejścia pod drogami", desc: "Odcinki bez naruszania nawierzchni lub ruchu." },
+        { name: "Przewierty dla przyłączy", desc: "Krótsze odcinki pod wjazdami i przeszkodami." },
+        { name: "HDD dla inwestycji", desc: "Element większego zakresu wod-kan." },
+      ],
+      related: ["bezwykopowe-naprawy-kanalizacji", "przeciski", "wodociagi"],
+    }),
+    makeInfrastructureService({
+      slug: "przeciski",
+      title: "Przeciski pod drogami i wjazdami",
+      eyebrow: "Bezwykopowo",
+      tagline:
+        "Przeciski dla krótszych przejść pod drogami, chodnikami i wjazdami, gdy trzeba ograniczyć rozbiórkę nawierzchni.",
+      metaTitle: "Przeciski pod drogami Wrocław — ZIEBUD Expert",
+      metaDescription:
+        "Przeciski pod drogami, chodnikami i wjazdami we Wrocławiu. Bezwykopowe przejścia dla przyłączy i instalacji wod-kan.",
+      keywords: ["przeciski wrocław", "przecisk pod drogą", "bezwykopowe przejście"],
+      icon: ArrowDownToLine,
+      trenchless: true,
+      serviceType: "Przeciski bezwykopowe",
+      context:
+        "Przecisk jest praktyczny przy krótszych odcinkach, gdzie ważne jest zachowanie nawierzchni.",
+      primaryUse:
+        "przejścia pod wjazdami, chodnikami, drogami wewnętrznymi i miejscami bez wygodnego wykopu",
+      variants: [
+        { name: "Przecisk pod wjazdem", desc: "Krótkie przejście bez rozbierania kostki lub asfaltu." },
+        { name: "Przecisk pod drogą", desc: "Przejście dla rury ochronnej lub przyłącza." },
+        { name: "Przygotowanie komór", desc: "Organizacja startu, odbioru i zabezpieczenia miejsca." },
+      ],
+      related: ["hdd-przewiert-sterowany", "wodociagi", "kanalizacja-sanitarna"],
+    }),
+    makeInfrastructureService({
+      slug: "kraking-rur",
+      title: "Kraking rur i wymiana bezwykopowa",
+      eyebrow: "Renowacja sieci",
+      tagline:
+        "Bezwykopowa wymiana uszkodzonych rur przez rozkruszanie starego przewodu i wciąganie nowego odcinka.",
+      metaTitle: "Kraking rur Wrocław — wymiana bezwykopowa",
+      metaDescription:
+        "Kraking rur i bezwykopowa wymiana przewodów we Wrocławiu. Modernizacja starych odcinków bez pełnego wykopu.",
+      keywords: ["kraking rur", "wymiana bezwykopowa", "renowacja kanalizacji wrocław"],
+      icon: RefreshCw,
+      trenchless: true,
+      serviceType: "Kraking rur",
+      context:
+        "Kraking ma sens, gdy stary przewód jest zniszczony, a celem jest wymiana po istniejącej trasie.",
+      primaryUse:
+        "wymiana starych odcinków wod-kan przy ograniczeniu rozkopów i utrudnień dla użytkowników terenu",
+      variants: [
+        { name: "Wymiana po trasie", desc: "Nowa rura w miejscu starego przewodu." },
+        { name: "Modernizacja przyłączy", desc: "Zakresy dla obiektów i osiedli." },
+        { name: "Połączenie z inspekcją", desc: "Kamera przed decyzją i po wykonaniu zakresu." },
+      ],
+      related: ["bezwykopowe-naprawy-kanalizacji", "cipp-renowacja", "inspekcja-tv-kanalizacji"],
+    }),
+    makeInfrastructureService({
+      slug: "cipp-renowacja",
+      title: "Renowacja kanalizacji CIPP",
+      eyebrow: "Rękaw żywiczny",
+      tagline:
+        "Renowacja przewodów kanalizacyjnych rękawem od środka, bez odkrywania całego odcinka.",
+      metaTitle: "Renowacja CIPP Wrocław — rękaw do kanalizacji",
+      metaDescription:
+        "Renowacja kanalizacji CIPP we Wrocławiu. Rękaw żywiczny, naprawa od środka, ograniczenie wykopów i inspekcja TV.",
+      keywords: ["cipp wrocław", "rękaw kanalizacyjny", "renowacja kanalizacji"],
+      icon: Container,
+      trenchless: true,
+      serviceType: "Renowacja CIPP",
+      context:
+        "CIPP pozwala odnowić odcinek od środka, gdy problemem są pęknięcia, nieszczelności lub zużycie przewodu.",
+      primaryUse:
+        "renowacja kanalizacji w budynkach, przyłączach i odcinkach, gdzie wykop byłby kosztowny albo uciążliwy",
+      variants: [
+        { name: "Rękaw na odcinku", desc: "Renowacja dłuższego fragmentu po czyszczeniu i kamerze." },
+        { name: "Naprawa nieszczelności", desc: "Uszczelnienie od środka bez pełnego odkrywania rury." },
+        { name: "Kontrola TV", desc: "Weryfikacja przed i po renowacji." },
+      ],
+      related: ["bezwykopowe-naprawy-kanalizacji", "kraking-rur", "inspekcja-tv-kanalizacji"],
+    }),
+    makeInfrastructureService({
+      slug: "mikrotunelowanie",
+      title: "Mikrotunelowanie i większe przejścia bezwykopowe",
+      eyebrow: "Bezwykopowo",
+      tagline:
+        "Technologia dla większych i bardziej wymagających przejść, gdzie liczy się precyzja trasy i ograniczenie prac odkrywkowych.",
+      metaTitle: "Mikrotunelowanie Wrocław — przejścia bezwykopowe",
+      metaDescription:
+        "Mikrotunelowanie i większe przejścia bezwykopowe we Wrocławiu. Analiza zakresu, technologia, ograniczenie wykopów.",
+      keywords: ["mikrotunelowanie", "bezwykopowe przejścia", "technologie bezwykopowe wrocław"],
+      icon: Construction,
+      trenchless: true,
+      serviceType: "Mikrotunelowanie",
+      context:
+        "Mikrotunelowanie jest technologią dla trudniejszych przejść, większej precyzji i miejsc, gdzie wykop generuje duże ryzyko.",
+      primaryUse:
+        "większe przejścia pod przeszkodami, drogami i zabudową wymagające dokładniejszej kontroli trasy",
+      variants: [
+        { name: "Przejścia pod infrastrukturą", desc: "Zakresy wymagające minimalizacji ingerencji w teren." },
+        { name: "Analiza technologii", desc: "Porównanie z HDD, przeciskiem i wykopem." },
+        { name: "Obsługa inwestycji", desc: "Współpraca z projektantem i inwestorem." },
+      ],
+      related: ["hdd-przewiert-sterowany", "przeciski", "kanalizacja-sanitarna"],
+    }),
+    makeInfrastructureService({
+      slug: "cieplownictwo",
+      title: "Roboty dla sieci ciepłowniczych",
+      eyebrow: "Sieci zewnętrzne",
+      tagline:
+        "Prace ziemne, odwodnienia i odcinki towarzyszące inwestycjom ciepłowniczym oraz technicznym.",
+      metaTitle: "Roboty ciepłownicze Wrocław — sieci zewnętrzne",
+      metaDescription:
+        "Wsparcie przy sieciach ciepłowniczych we Wrocławiu: wykopy, odwodnienia, przejścia, kolizje i prace towarzyszące.",
+      keywords: ["sieci ciepłownicze wrocław", "roboty ziemne ciepłownictwo", "odwodnienia wykopów"],
+      icon: Compass,
+      trenchless: false,
+      serviceType: "Roboty dla sieci ciepłowniczych",
+      context:
+        "Przy ciepłownictwie ważne są kolizje, terminy, bezpieczeństwo wykopów i koordynacja z innymi branżami.",
+      primaryUse:
+        "prace towarzyszące sieciom ciepłowniczym, odwodnienia, przejścia i roboty ziemne w pobliżu infrastruktury",
+      variants: [
+        { name: "Odwodnienia wykopów", desc: "Zabezpieczenie robót przy wodzie gruntowej." },
+        { name: "Przejścia i kolizje", desc: "Wsparcie techniczne przy trudnych fragmentach trasy." },
+        { name: "Prace towarzyszące", desc: "Zakresy pomocnicze przy inwestycjach liniowych." },
+      ],
+      related: ["odwodnienie-wykopow", "hdd-przewiert-sterowany", "wodociagi"],
+    }),
+    makeInfrastructureService({
+      slug: "retencja",
+      title: "Retencja wody deszczowej",
+      eyebrow: "Deszczówka",
+      tagline:
+        "Zbiorniki, rozsączanie i układy zagospodarowania wody opadowej dla obiektów oraz terenów utwardzonych.",
+      metaTitle: "Retencja wody deszczowej Wrocław — zbiorniki",
+      metaDescription:
+        "Retencja wody deszczowej we Wrocławiu. Zbiorniki, rozsączanie, odwodnienia, kanalizacja deszczowa i dobór układu.",
+      keywords: ["retencja wody deszczowej", "zbiornik retencyjny", "deszczówka wrocław"],
+      icon: CloudRain,
+      trenchless: false,
+      serviceType: "Retencja wody deszczowej",
+      context:
+        "Retencja ogranicza przeciążenie kanalizacji deszczowej i pomaga zarządzać wodą na działce lub obiekcie.",
+      primaryUse:
+        "zbiorniki, układy rozsączające, odwodnienia i zagospodarowanie deszczówki przy inwestycjach",
+      variants: [
+        { name: "Zbiorniki retencyjne", desc: "Gromadzenie wody z dachów i powierzchni utwardzonych." },
+        { name: "Rozsączanie", desc: "Układy dopasowane do gruntu i poziomu wód." },
+        { name: "Połączenie z deszczówką", desc: "Wpusty, studnie i kanały prowadzące do retencji." },
+      ],
+      related: ["kanalizacja-deszczowa", "odwodnienia-budynkow", "odwodnienie-wykopow"],
+    }),
+    makeInfrastructureService({
+      slug: "odwodnienie-wykopow",
+      title: "Odwodnienie wykopów",
+      eyebrow: "Roboty ziemne",
+      tagline:
+        "Odwodnienie wykopów i kontrola wody gruntowej przy robotach wod-kan, budowlanych oraz liniowych.",
+      metaTitle: "Odwodnienie wykopów Wrocław — roboty wod-kan",
+      metaDescription:
+        "Odwodnienie wykopów we Wrocławiu. Kontrola wody gruntowej, zabezpieczenie robót, pompowanie i prace przy sieciach.",
+      keywords: ["odwodnienie wykopów", "woda gruntowa wykop", "odwodnienia wrocław"],
+      icon: ArrowDownToLine,
+      trenchless: false,
+      serviceType: "Odwodnienie wykopów",
+      context:
+        "Odwodnienie wykopu decyduje o bezpieczeństwie robót, stabilności gruntu i możliwości wykonania sieci.",
+      primaryUse:
+        "roboty wod-kan, fundamenty, prace liniowe i miejsca, gdzie woda gruntowa blokuje realizację",
+      variants: [
+        { name: "Pompowanie z wykopu", desc: "Obsługa prostszych zakresów z kontrolą odpływu." },
+        { name: "Odwodnienie odcinka", desc: "Organizacja prac przy dłuższych robotach liniowych." },
+        { name: "Wsparcie budowy", desc: "Dopasowanie rozwiązania do gruntu i harmonogramu." },
+      ],
+      related: ["odwodnienia-budynkow", "retencja", "kanalizacja-deszczowa"],
+    }),
+    makeInfrastructureService({
+      slug: "przepompownie-sciekow",
+      title: "Przepompownie ścieków",
+      eyebrow: "Kanalizacja ciśnieniowa",
+      tagline:
+        "Dobór, montaż i modernizacja przepompowni ścieków dla domów, firm, deweloperów i obiektów technicznych.",
+      metaTitle: "Przepompownie ścieków Wrocław — montaż i dobór",
+      metaDescription:
+        "Przepompownie ścieków we Wrocławiu. Dobór pomp, komory, automatyki, montaż, modernizacja i serwis układów sanitarnych.",
+      keywords: ["przepompownie ścieków wrocław", "montaż przepompowni", "kanalizacja ciśnieniowa"],
+      icon: RefreshCw,
+      trenchless: false,
+      serviceType: "Przepompownie ścieków",
+      context:
+        "Przepompownia jest potrzebna tam, gdzie ścieków nie da się odprowadzić grawitacyjnie albo teren wymaga układu tłocznego.",
+      primaryUse:
+        "dobór komory, pomp, automatyki i rurociągu tłocznego dla domu, firmy, osiedla lub inwestycji",
+      variants: [
+        { name: "Przepompownie przydomowe", desc: "Małe układy dla domów i posesji bez korzystnego spadku." },
+        { name: "Przepompownie obiektowe", desc: "Rozwiązania dla firm, garaży, magazynów i budynków usługowych." },
+        { name: "Przepompownie deweloperskie", desc: "Układy dla osiedli, kanalizacji tłocznej i większych inwestycji." },
+      ],
+      related: ["montaz-przepompowni-sciekow", "serwis-przepompowni", "kanalizacja-sanitarna"],
+    }),
+  ],
+);
 
 export function getLocalService(slug: string): LocalService | undefined {
   return localServices.find((service) => service.slug === slug);

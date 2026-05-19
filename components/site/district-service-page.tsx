@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { DistrictService } from "@/lib/district-services-data";
+import { jsonLdBreadcrumb, jsonLdFAQ, jsonLdService } from "@/lib/jsonld";
 import { SITE_URL } from "@/lib/site";
 
 interface Props {
@@ -12,64 +13,25 @@ interface Props {
 }
 
 export function buildDistrictServiceJsonLd(service: DistrictService) {
-  return {
-    "@context": "https://schema.org",
-    "@graph": [
+  return [
+    jsonLdService({
+      name: `${service.serviceName} ${service.districtName} Wrocław`,
+      description: service.metaDescription,
+      serviceType: service.serviceType,
+      areaName: service.areaServed,
+      url: `${SITE_URL}/wroclaw/${service.districtSlug}/${service.serviceSlug}`,
+    }),
+    jsonLdFAQ(service.faqs),
+    jsonLdBreadcrumb([
+      { name: "Strona główna", url: SITE_URL },
+      { name: "Wrocław", url: `${SITE_URL}/wroclaw` },
+      { name: service.districtName, url: `${SITE_URL}/wroclaw/${service.districtSlug}` },
       {
-        "@type": "Service",
-        serviceType: service.serviceType,
-        name: `${service.serviceName} ${service.districtName} Wrocław`,
-        description: service.metaDescription,
+        name: service.serviceName,
         url: `${SITE_URL}/wroclaw/${service.districtSlug}/${service.serviceSlug}`,
-        provider: {
-          "@type": "LocalBusiness",
-          name: "ZIEBUD Expert Sp. z o.o.",
-          url: SITE_URL,
-          telephone: "+48 602 481 688",
-        },
-        areaServed: {
-          "@type": "City",
-          name: service.areaServed,
-        },
-        offers: {
-          "@type": "AggregateOffer",
-          priceCurrency: "PLN",
-          lowPrice: service.priceLow,
-          highPrice: service.priceHigh,
-        },
       },
-      {
-        "@type": "FAQPage",
-        mainEntity: service.faqs.map((faq) => ({
-          "@type": "Question",
-          name: faq.q,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: faq.a,
-          },
-        })),
-      },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Strona główna", item: SITE_URL },
-          { "@type": "ListItem", position: 2, name: "Wrocław", item: `${SITE_URL}/wroclaw` },
-          {
-            "@type": "ListItem",
-            position: 3,
-            name: service.districtName,
-            item: `${SITE_URL}/wroclaw/${service.districtSlug}`,
-          },
-          {
-            "@type": "ListItem",
-            position: 4,
-            name: service.serviceName,
-            item: `${SITE_URL}/wroclaw/${service.districtSlug}/${service.serviceSlug}`,
-          },
-        ],
-      },
-    ],
-  };
+    ]),
+  ];
 }
 
 export function DistrictServicePage({ service, hero }: Props) {

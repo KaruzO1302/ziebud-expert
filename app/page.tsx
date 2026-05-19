@@ -20,8 +20,9 @@ import { CtaPanel } from "@/components/site/sections/cta-panel";
 import { Hero } from "@/components/site/sections/hero";
 import { ProcessSteps } from "@/components/site/sections/process-steps";
 import { ServicesGrid } from "@/components/site/sections/services-grid";
-import { homeFaqSchema, jsonLdScript } from "@/lib/jsonld";
+import { homeFaqSchema, jsonLdBreadcrumb, jsonLdScript } from "@/lib/jsonld";
 import { getPhoto } from "@/lib/photos";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: {
@@ -128,6 +129,12 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={jsonLdScript(homeFaqSchema)}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLdScript(
+          jsonLdBreadcrumb([{ name: "Strona główna", url: SITE_URL }]),
+        )}
       />
       <Hero />
 
