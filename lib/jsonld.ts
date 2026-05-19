@@ -2,6 +2,7 @@ import type { Article } from "@/lib/articles-data";
 import type { CaseStudy } from "@/lib/case-studies-data";
 import { homeFaqs } from "@/lib/home-faqs";
 import type { LocationPage } from "@/lib/locations-data";
+import type { TrustPage } from "@/lib/trust-pages-data";
 import {
   COMPANY_AREAS_SERVED,
   COMPANY_COUNTRY_CODE,
@@ -33,19 +34,24 @@ const coreServiceNames = [
   "Naprawa sieci wodociągowych",
 ];
 
-export const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
+const ORG_BASE = {
+  "@type": "Plumber",
   "@id": `${SITE_URL}/#organization`,
   name: ORG_NAME,
-  alternateName: ORG_SHORT_NAME,
+  alternateName: "ZIEBUD Expert — Pogotowie Kanalizacyjne Wrocław",
   url: SITE_URL,
-  logo: `${SITE_URL}/photos/logo-ziebud.jpg`,
+  logo: `${SITE_URL}/logo.png`,
+  image: `${SITE_URL}/og-image.jpg`,
   email: COMPANY_EMAIL,
   telephone: COMPANY_PHONE,
   taxID: COMPANY_NIP,
   vatID: COMPANY_VAT_ID,
   identifier: [
+    {
+      "@type": "PropertyValue",
+      propertyID: "NIP",
+      value: COMPANY_NIP,
+    },
     {
       "@type": "PropertyValue",
       propertyID: "KRS",
@@ -59,8 +65,36 @@ export const organizationSchema = {
   ],
   description:
     "Pogotowie kanalizacyjne, WUKO, inspekcja TV, separatory i serwis przepompowni dla Wrocławia, Dolnego Śląska i pobliskich miejscowości.",
-  areaServed: COMPANY_AREAS_SERVED,
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: COMPANY_COUNTRY_CODE,
+    addressLocality: "Wrocław",
+    addressRegion: "Dolnośląskie",
+    postalCode: COMPANY_POSTAL_CODE,
+    streetAddress: COMPANY_STREET_ADDRESS,
+  },
+  areaServed: [
+    { "@type": "City", name: "Wrocław" },
+    { "@type": "AdministrativeArea", name: "województwo dolnośląskie" },
+  ],
   knowsAbout: coreServiceNames,
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+      opens: "00:00",
+      closes: "23:59",
+    },
+  ],
+  priceRange: "PLN",
   contactPoint: [
     {
       "@type": "ContactPoint",
@@ -86,75 +120,81 @@ export const organizationSchema = {
   ...(COMPANY_SAME_AS_URLS.length ? { sameAs: COMPANY_SAME_AS_URLS } : {}),
 };
 
-export const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": `${SITE_URL}/#website`,
-  name: ORG_NAME,
-  url: SITE_URL,
-  inLanguage: "pl-PL",
-};
+export function jsonLdOrganization() {
+  return { "@context": "https://schema.org", ...ORG_BASE };
+}
+
+export function jsonLdWebSite() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    url: SITE_URL,
+    name: "ZIEBUD Expert — Pogotowie Kanalizacyjne Wrocław 24/7",
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    inLanguage: "pl-PL",
+  };
+}
+
+export function jsonLdBreadcrumb(items: Array<{ name: string; url: string }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}
+
+export function jsonLdService({
+  name,
+  description,
+  serviceType,
+  areaName,
+  url,
+}: {
+  name: string;
+  description: string;
+  serviceType: string;
+  areaName?: string;
+  url: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name,
+    description,
+    serviceType,
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: { "@type": "City", name: areaName ?? "Wrocław" },
+    url,
+  };
+}
+
+export function jsonLdFAQ(faq: Array<{ q: string; a: string }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map(({ q, a }) => ({
+      "@type": "Question",
+      name: q,
+      acceptedAnswer: { "@type": "Answer", text: a },
+    })),
+  };
+}
+
+export const organizationSchema = jsonLdOrganization();
+
+export const websiteSchema = jsonLdWebSite();
 
 export const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": `${SITE_URL}/#organization`,
-  name: ORG_NAME,
-  alternateName: ORG_SHORT_NAME,
-  url: SITE_URL,
-  telephone: COMPANY_PHONE,
-  email: COMPANY_EMAIL,
-  taxID: COMPANY_NIP,
-  vatID: COMPANY_VAT_ID,
-  image: `${SITE_URL}/og-image.png`,
-  logo: `${SITE_URL}/photos/logo-ziebud.jpg`,
-  description:
-    "WUKO, pogotowie kanalizacyjne, udrażnianie rur, inspekcja TV, separatory tłuszczu i ropopochodne oraz serwis przepompowni. Wrocław i Dolny Śląsk.",
-  address: {
-    "@type": "PostalAddress",
-    addressCountry: COMPANY_COUNTRY_CODE,
-    addressLocality: COMPANY_LOCALITY,
-    addressRegion: "dolnośląskie",
-    postalCode: COMPANY_POSTAL_CODE,
-    streetAddress: COMPANY_STREET_ADDRESS,
-  },
-  areaServed: COMPANY_AREAS_SERVED,
+  ...ORG_BASE,
   serviceArea: COMPANY_AREAS_SERVED,
-  knowsAbout: coreServiceNames,
   foundingDate: "1991",
-  identifier: [
-    {
-      "@type": "PropertyValue",
-      propertyID: "KRS",
-      value: COMPANY_KRS,
-    },
-    {
-      "@type": "PropertyValue",
-      propertyID: "REGON",
-      value: COMPANY_REGON,
-    },
-  ],
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "07:00",
-      closes: "18:00",
-    },
-  ],
-  makesOffer: coreServiceNames.map((name) => ({
-    "@type": "Offer",
-    itemOffered: {
-      "@type": "Service",
-      name,
-      areaServed: COMPANY_AREAS_SERVED,
-      provider: {
-        "@id": `${SITE_URL}/#organization`,
-      },
-    },
-  })),
-  ...(COMPANY_SAME_AS_URLS.length ? { sameAs: COMPANY_SAME_AS_URLS } : {}),
-  priceRange: "$$",
 };
 
 export const generalContractorSchema = {
@@ -194,19 +234,42 @@ export function jsonLdScript(data: object) {
   };
 }
 
+export function trustCollectionPageSchema(page: TrustPage) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: page.h1,
+    description: page.description,
+    url: `${SITE_URL}/${page.slug}`,
+    image: `${SITE_URL}${page.image.src}`,
+    about: {
+      "@type": "LocalBusiness",
+      name: ORG_NAME,
+      telephone: COMPANY_PHONE,
+      url: SITE_URL,
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: page.brands.map((brand, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "Brand",
+          name: brand.name,
+          url: brand.url,
+          description: brand.summary,
+        },
+      })),
+    },
+  };
+}
+
 export function breadcrumbSchema(
   items: Array<{ name: string; path: string }>,
 ) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: items.map((item, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: item.name,
-      item: `${SITE_URL}${item.path}`,
-    })),
-  };
+  return jsonLdBreadcrumb(
+    items.map((item) => ({ name: item.name, url: `${SITE_URL}${item.path}` })),
+  );
 }
 
 export function articleSchema(article: Article) {

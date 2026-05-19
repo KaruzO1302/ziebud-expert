@@ -18,7 +18,7 @@ export function Footer() {
   return (
     <footer className="mt-auto border-t border-navy-800 bg-navy-900 text-navy-100">
       <Container className="py-16">
-        <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
+        <div className="grid gap-12 lg:grid-cols-3 xl:grid-cols-[1.4fr_0.9fr_0.9fr_0.9fr_0.8fr]">
           <div>
             <Logo variant="light" />
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-navy-200">
@@ -72,10 +72,31 @@ export function Footer() {
                 24 / 7 / 365
               </p>
             </div>
+            <div className="mt-6 rounded-2xl border border-aqua-400/20 bg-aqua-400/5 p-5 text-sm leading-relaxed text-navy-200">
+              <p className="font-semibold text-white">Powiązane serwisy ZIEBUD</p>
+              <p className="mt-2">
+                Dla pilnych awarii lokalnych sprawdź{" "}
+                <a
+                  href="https://www.kanalizacja-wroclaw.pl/"
+                  className="font-semibold text-aqua-300 underline-offset-4 hover:underline"
+                >
+                  pogotowie kanalizacyjne Wrocław
+                </a>
+                , a przy większych inwestycjach i sieciach zewnętrznych zobacz{" "}
+                <a
+                  href="https://wodociagi-kanalizacja.com/"
+                  className="font-semibold text-aqua-300 underline-offset-4 hover:underline"
+                >
+                  wykonawstwo wodociągów i kanalizacji
+                </a>
+                .
+              </p>
+            </div>
           </div>
 
           <FooterColumn title="Usługi" items={footerNav.uslugi} />
           <FooterColumn title="Firma" items={footerNav.firma} />
+          <FooterColumn title="Marki i sprzęt" items={footerNav.marki} />
           <FooterColumn title="Prawne" items={footerNav.prawne} />
         </div>
 

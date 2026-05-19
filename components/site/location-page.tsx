@@ -8,7 +8,7 @@ import { LinkButton } from "@/components/site/link-button";
 import { HeroPhoto } from "@/components/site/hero-photo";
 import { getPhoto } from "@/lib/photos";
 import { ArticleCard, CaseStudyCard } from "@/components/site/content-cards";
-import { getService } from "@/lib/services-data";
+import { getLocalService } from "@/lib/local-services-data";
 
 type Props = {
   location: LocationPageData;
@@ -128,7 +128,7 @@ export function LocationPage({ location, articles, caseStudies }: Props) {
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {location.serviceSlugs.map((slug) => {
-              const service = getService(slug);
+              const service = getLocalService(slug);
               if (!service) return null;
 
               return (

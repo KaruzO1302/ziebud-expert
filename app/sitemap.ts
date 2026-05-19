@@ -1,9 +1,15 @@
 import type { MetadataRoute } from "next";
+import { articles } from "@/lib/articles-data";
+import { branzePages } from "@/lib/branze-data";
+import { caseStudies } from "@/lib/case-studies-data";
+import { districtServices } from "@/lib/district-services-data";
+import { cityPages, voivodeshipPages } from "@/lib/locations-data";
 import { localServices } from "@/lib/local-services-data";
 import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+  const seoLastModified = new Date("2026-05-19");
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
@@ -43,6 +49,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.84,
     },
     {
+      url: `${SITE_URL}/dla-branz`,
+      lastModified: seoLastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${SITE_URL}/umowy-serwisowe`,
       lastModified: now,
       changeFrequency: "monthly",
@@ -50,9 +62,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${SITE_URL}/sprzet`,
-      lastModified: now,
+      lastModified: seoLastModified,
       changeFrequency: "monthly",
-      priority: 0.78,
+      priority: 0.6,
+    },
+    {
+      url: `${SITE_URL}/marki-separatorow`,
+      lastModified: seoLastModified,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${SITE_URL}/marki-przepompowni`,
+      lastModified: seoLastModified,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${SITE_URL}/marki-oczyszczalni`,
+      lastModified: seoLastModified,
+      changeFrequency: "monthly",
+      priority: 0.6,
     },
     {
       url: `${SITE_URL}/kontakt`,
@@ -71,6 +101,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.86,
+    },
+    {
+      url: `${SITE_URL}/blog`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.76,
     },
     {
       url: `${SITE_URL}/polityka-prywatnosci`,
@@ -100,13 +136,63 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const serviceRoutes: MetadataRoute.Sitemap = localServices.map((service) => ({
     url: `${SITE_URL}/uslugi/${service.slug}`,
-    lastModified: now,
+    lastModified: seoLastModified,
     changeFrequency: "weekly",
-    priority: 0.82,
+    priority: 0.8,
+  }));
+
+  const articleRoutes: MetadataRoute.Sitemap = articles.map((article) => ({
+    url: `${SITE_URL}/blog/${article.slug}`,
+    lastModified: new Date(article.publishedAt),
+    changeFrequency: "monthly",
+    priority: 0.68,
+  }));
+
+  const districtServiceRoutes: MetadataRoute.Sitemap = districtServices.map(
+    (service) => ({
+      url: `${SITE_URL}/wroclaw/${service.districtSlug}/${service.serviceSlug}`,
+      lastModified: seoLastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    }),
+  );
+
+  const industryRoutes: MetadataRoute.Sitemap = branzePages.map((page) => ({
+    url: `${SITE_URL}/dla-branz/${page.slug}`,
+    lastModified: seoLastModified,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  const locationRoutes: MetadataRoute.Sitemap = [
+    ...cityPages.map((page) => ({
+      url: `${SITE_URL}/miasta/${page.slug}`,
+      lastModified: seoLastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.62,
+    })),
+    ...voivodeshipPages.map((page) => ({
+      url: `${SITE_URL}/wojewodztwa/${page.slug}`,
+      lastModified: seoLastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.58,
+    })),
+  ];
+
+  const caseStudyRoutes: MetadataRoute.Sitemap = caseStudies.map((caseStudy) => ({
+    url: `${SITE_URL}/realizacje/${caseStudy.slug}`,
+    lastModified: seoLastModified,
+    changeFrequency: "monthly",
+    priority: 0.56,
   }));
 
   return [
     ...staticRoutes,
     ...serviceRoutes,
+    ...districtServiceRoutes,
+    ...industryRoutes,
+    ...locationRoutes,
+    ...caseStudyRoutes,
+    ...articleRoutes,
   ];
 }

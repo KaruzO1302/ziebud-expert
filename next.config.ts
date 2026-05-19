@@ -329,7 +329,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/uslugi/bezwykopowe",
-        destination: "/uslugi/wuko-wroclaw",
+        destination: "/uslugi/bezwykopowe-naprawy-kanalizacji",
         permanent: true,
       },
       {

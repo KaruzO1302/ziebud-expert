@@ -14,8 +14,9 @@ import {
   type LocalService,
   localServices,
 } from "@/lib/local-services-data";
+import { jsonLdFAQ, jsonLdService } from "@/lib/jsonld";
 import { getServicePhoto } from "@/lib/photos";
-import { ORG_NAME, SITE_URL } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
 
 export function ServicePage({ service }: { service: LocalService }) {
   const Icon = service.icon;
@@ -385,60 +386,45 @@ export function ServicePage({ service }: { service: LocalService }) {
           </Container>
         </section>
       ) : null}
+
+      {service.trustLinks?.length ? (
+        <section className="bg-white py-20">
+          <Container>
+            <div className="max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+                Marki i zaplecze
+              </p>
+              <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
+                Zobacz, jakie urządzenia i marki obsługujemy
+              </h2>
+            </div>
+            <div className="mt-10 grid gap-4 sm:grid-cols-3">
+              {service.trustLinks.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="group rounded-2xl border border-border bg-muted p-5 text-sm font-semibold text-navy-900 transition hover:border-aqua-300 hover:bg-white"
+                >
+                  {item.label}
+                  <ArrowRight className="mt-4 h-4 w-4 text-aqua-700 transition group-hover:translate-x-0.5" />
+                </Link>
+              ))}
+            </div>
+          </Container>
+        </section>
+      ) : null}
     </>
   );
 }
 
 export function buildServiceJsonLd(service: LocalService) {
   return [
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      serviceType: service.title,
+    jsonLdService({
       name: service.title,
       description: service.metaDescription,
       url: `${SITE_URL}/uslugi/${service.slug}`,
-      keywords: service.keywords.join(", "),
-      provider: {
-        "@type": "LocalBusiness",
-        name: ORG_NAME,
-        url: SITE_URL,
-        telephone: "+48 602 481 688",
-      },
-      areaServed: [
-        { "@type": "City", name: "Wrocław" },
-        { "@type": "AdministrativeArea", name: "Dolny Śląsk" },
-      ],
-      offers: {
-        "@type": "AggregateOffer",
-        priceCurrency: "PLN",
-        lowPrice: parsePrice(service.costs[0]?.range).low,
-        highPrice: parsePrice(service.costs[service.costs.length - 1]?.range)
-          .high,
-        offerCount: service.costs.length,
-      },
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: service.faqs.map((item) => ({
-        "@type": "Question",
-        name: item.q,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: item.a,
-        },
-      })),
-    },
+      serviceType: service.schemaServiceType ?? service.title,
+    }),
+    jsonLdFAQ(service.faqs),
   ];
-}
-
-function parsePrice(range?: string) {
-  if (!range) return { low: 0, high: 0 };
-  const nums = range.match(/\d+/g) || [];
-
-  return {
-    low: Number(nums[0] ?? 0),
-    high: Number(nums[nums.length - 1] ?? 0),
-  };
 }

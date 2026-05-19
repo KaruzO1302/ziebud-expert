@@ -1,6 +1,7 @@
 import type { LucideIcon } from "lucide-react";
 import {
   ArrowDownToLine,
+  CloudRain,
   Compass,
   Construction,
   Container,
@@ -42,6 +43,8 @@ export type LocalService = {
   process: { title: string; desc: string }[];
   faqs: FaqItem[];
   related: string[];
+  schemaServiceType?: string;
+  trustLinks?: { label: string; href: string }[];
 };
 
 export const localServices: LocalService[] = [
@@ -451,6 +454,11 @@ export const localServices: LocalService[] = [
       { q: "Czy serwis separatora jest tylko dla gastronomii?", a: "Najczęściej tak, ale obsługujemy też inne obiekty, w których tłuszcz trafia do instalacji." },
     ],
     related: ["wuko-wroclaw", "udraznianie-rur", "inspekcja-tv-kanalizacji"],
+    trustLinks: [
+      { label: "Marki separatorów", href: "/marki-separatorow" },
+      { label: "Montaż separatorów", href: "/uslugi/montaz-separatorow" },
+      { label: "Umowy serwisowe", href: "/umowy-serwisowe" },
+    ],
   },
   {
     slug: "separatory-ropopochodne",
@@ -502,6 +510,11 @@ export const localServices: LocalService[] = [
       { q: "Czy po czyszczeniu oceniacie też stan odpływu?", a: "Tak. Jeśli separator jest czysty, a woda dalej nie schodzi, szukamy problemu dalej w układzie." },
     ],
     related: ["wuko-wroclaw", "inspekcja-tv-kanalizacji", "lokalizacja-nieszczelnosci"],
+    trustLinks: [
+      { label: "Marki separatorów", href: "/marki-separatorow" },
+      { label: "Montaż separatorów", href: "/uslugi/montaz-separatorow" },
+      { label: "Umowy serwisowe", href: "/umowy-serwisowe" },
+    ],
   },
   {
     slug: "serwis-przepompowni",
@@ -553,6 +566,14 @@ export const localServices: LocalService[] = [
       { q: "Czy serwis przepompowni łączy się z kamerą albo WUKO?", a: "Bardzo często tak. W praktyce te usługi zwykle wspierają się nawzajem." },
     ],
     related: ["wuko-wroclaw", "inspekcja-tv-kanalizacji", "lokalizacja-nieszczelnosci"],
+    trustLinks: [
+      { label: "Marki przepompowni", href: "/marki-przepompowni" },
+      {
+        label: "Montaż przepompowni",
+        href: "/uslugi/montaz-przepompowni-sciekow",
+      },
+      { label: "Umowy serwisowe", href: "/umowy-serwisowe" },
+    ],
   },
   {
     slug: "lokalizacja-nieszczelnosci",
@@ -605,7 +626,1223 @@ export const localServices: LocalService[] = [
     ],
     related: ["inspekcja-tv-kanalizacji", "udraznianie-rur", "wuko-wroclaw"],
   },
+  {
+    slug: "bezwykopowe-naprawy-kanalizacji",
+    title: "Bezwykopowe naprawy kanalizacji",
+    heroTitle:
+      "Bezwykopowa naprawa kanalizacji we Wrocławiu — pakery, rękawy CIPP, renowacja studni",
+    eyebrow: "Naprawy bez wykopu",
+    tagline:
+      "Awaria nie musi oznaczać rozkucia drogi. Naprawiamy kanalizację bez wykopu: pakerami, rękawami CIPP i renowacją studni rewizyjnych.",
+    metaTitle:
+      "Bezwykopowe naprawy kanalizacji Wrocław | Pakery, rękawy CIPP | ZIEBUD Expert",
+    metaDescription:
+      "Bezwykopowa naprawa kanalizacji we Wrocławiu. Pakery, rękawy CIPP DN 80–600, renowacja studni rewizyjnych. Tańsza i szybsza od wykopu. Tel: 602 481 688.",
+    keywords: [
+      "bezwykopowe naprawy kanalizacji wrocław",
+      "renowacja kanalizacji wrocław",
+      "pakerowanie rur wrocław",
+      "rękawy cipp wrocław",
+      "naprawa kanalizacji bez wykopu",
+    ],
+    icon: Construction,
+    trenchless: true,
+    overview: [
+      "Awaria kanalizacji nie musi oznaczać rozkucia drogi, parkingu czy chodnika. ZIEBUD Expert wykonuje bezwykopowe naprawy kanalizacji we Wrocławiu i okolicach metodami, które są tańsze, szybsze i mniej uciążliwe od tradycyjnego wykopu.",
+      "Metody bezwykopowe sprawdzają się szczególnie tam, gdzie pod ziemią biegnie gęsta sieć przewodów, w drogach o wysokim natężeniu ruchu, na parkingach obiektów i w centrach miast. Dobieramy technologię po inspekcji TV, żeby naprawić dokładnie ten odcinek, który tego wymaga.",
+      "Wykonujemy pakerowanie punktowe, naprawy liniowe rękawami CIPP oraz renowację studni rewizyjnych. Po naprawie potwierdzamy efekt kamerą i przekazujemy materiał, który może zostać w dokumentacji wspólnoty, firmy albo zarządcy drogi.",
+    ],
+    variants: [
+      {
+        name: "Pakerowanie punktowe",
+        desc: "Naprawa miejscowych pęknięć, nieszczelności i ubytków bez odkopywania całego odcinka.",
+        specs: "najczęściej DN 150+",
+      },
+      {
+        name: "Rękawy CIPP",
+        desc: "Renowacja liniowa przyłączy i kanałów głównych rękawem nasączonym żywicą, utwardzanym po instalacji.",
+        specs: "DN 80–600",
+      },
+      {
+        name: "Renowacja studni rewizyjnych",
+        desc: "Naprawa korozji, ubytków, nieszczelnych połączeń kręgów, spoczników i kinet.",
+      },
+      {
+        name: "Naprawy dla obiektów i dróg",
+        desc: "Prace w pasie drogowym, na parkingach, przy wspólnotach, firmach i obiektach komercyjnych.",
+      },
+    ],
+    whenToUse: [
+      "gdy pęknięcie lub załamanie rury znajduje się pod drogą, parkingiem albo chodnikiem",
+      "gdy nieszczelność występuje na połączeniach rur w obrębie posesji wspólnoty lub firmy",
+      "gdy po usunięciu korzeni trzeba szczelnie zamknąć ubytki w rurze",
+      "gdy przyłącze ma zostać odnowione bez zatrzymywania pracy budynku",
+      "gdy studnia rewizyjna ma ubytki, korozję albo dynamiczny wyciek wody gruntowej",
+    ],
+    costs: [
+      {
+        scope: "Inspekcja TV i kwalifikacja naprawy",
+        range: "400–900 zł",
+        note: "diagnoza, lokalizacja usterki i dobór metody",
+      },
+      {
+        scope: "Pakerowanie punktowe",
+        range: "1200–3500 zł",
+        note: "zależnie od średnicy, dostępu i liczby uszkodzeń",
+      },
+      {
+        scope: "Rękaw CIPP lub naprawa liniowa",
+        range: "3500–12000 zł",
+        note: "wycena po długości, średnicy i warunkach technicznych",
+      },
+      {
+        scope: "Renowacja studni rewizyjnej",
+        range: "1800–6500 zł",
+        note: "zależnie od głębokości, ubytków i przecieków",
+      },
+    ],
+    costNote:
+      "Metoda bezwykopowa bywa znacząco tańsza od wykopu, szczególnie gdy trzeba byłoby odtwarzać asfalt, kostkę, parking albo chodnik. Dokładną wycenę robimy po inspekcji TV.",
+    process: [
+      {
+        title: "Inspekcja TV",
+        desc: "Diagnozujemy przyczynę i zakres awarii, mierzymy odcinek oraz sprawdzamy, czy naprawa bezwykopowa ma sens techniczny.",
+      },
+      {
+        title: "Dobór technologii",
+        desc: "Wybieramy paker, rękaw CIPP, renowację studni albo kombinację metod i przedstawiamy wycenę.",
+      },
+      {
+        title: "Naprawa bez wykopu",
+        desc: "Realizujemy prace z minimalnym wpływem na drogę, parking, piwnicę lub działający obiekt.",
+      },
+      {
+        title: "Kontrola i protokół",
+        desc: "Po naprawie wykonujemy inspekcję TV, przekazujemy materiał cyfrowy, protokół prac i fakturę VAT.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Kiedy bezwykopowa naprawa kanalizacji jest lepsza od wykopu?",
+        a: "Gdy uszkodzenie jest możliwe do naprawy od środka, a wykop oznaczałby rozbieranie drogi, parkingu, chodnika albo pracę w trudnym otoczeniu obiektu.",
+      },
+      {
+        q: "Czy przed naprawą bezwykopową potrzebna jest kamera?",
+        a: "Tak. Inspekcja TV potwierdza miejsce, długość i typ uszkodzenia. Bez kamery nie da się odpowiedzialnie dobrać pakera, rękawa albo zakresu renowacji.",
+      },
+      {
+        q: "Czy pakerowanie nadaje się do każdej rury?",
+        a: "Nie do każdej. Sprawdza się przy punktowych usterkach, gdy ogólny stan odcinka jest dobry. Przy większym zużyciu rozważamy rękaw CIPP albo inną metodę.",
+      },
+      {
+        q: "Czy po naprawie dostanę nagranie z kanalizacji?",
+        a: "Tak. Po wykonaniu naprawy robimy kontrolną inspekcję TV i przekazujemy materiał, który pokazuje efekt prac.",
+      },
+      {
+        q: "Czy wykonujecie bezwykopowe naprawy dla wspólnot i firm?",
+        a: "Tak. To jeden z najczęstszych scenariuszy: wspólnoty, parkingi, obiekty komercyjne, zakłady i zarządcy terenów utwardzonych.",
+      },
+    ],
+    related: ["inspekcja-tv-kanalizacji", "frezowanie-kanalizacji", "lokalizacja-nieszczelnosci"],
+  },
+  {
+    slug: "frezowanie-kanalizacji",
+    title: "Frezowanie kanalizacji",
+    heroTitle:
+      "Frezowanie kanalizacji we Wrocławiu — robot frezujący do twardych przeszkód",
+    eyebrow: "Robot frezujący",
+    tagline:
+      "Korzenie, beton, stwardniały tłuszcz i twarde osady. Tam, gdzie WUKO i spirala nie dają rady, wjeżdża robot frezujący.",
+    metaTitle:
+      "Frezowanie kanalizacji Wrocław | Robot frezujący DN 90–150 | ZIEBUD Expert",
+    metaDescription:
+      "Frezowanie kanalizacji we Wrocławiu — robot frezujący usuwa korzenie, beton, twarde osady. DN 90–150 mm. Faktura VAT, 24/7. Tel: 602 481 688.",
+    keywords: [
+      "frezowanie kanalizacji wrocław",
+      "robot frezujący kanalizacja",
+      "usuwanie korzeni z kanalizacji wrocław",
+      "frezowanie rur kanalizacyjnych",
+      "beton w kanalizacji usuwanie",
+    ],
+    icon: RefreshCw,
+    trenchless: true,
+    overview: [
+      "Czasem WUKO i spirala to za mało. Kiedy w kanalizacji utknęły korzenie, beton, kamień albo stwardniały tłuszcz, jedyną skuteczną metodą jest frezowanie.",
+      "ZIEBUD Expert wykonuje frezowanie kanalizacji we Wrocławiu i okolicach robotem frezującym z kamerą i sterowaniem przez operatora. Pracujemy precyzyjnie, tylko w miejscu przeszkody, bez niepotrzebnego uszkadzania rury od wewnątrz.",
+      "Często łączymy frezowanie z inspekcją TV i WUKO: kamera potwierdza przyczynę, robot usuwa twardą przeszkodę, a hydrodynamiczne czyszczenie domywa przewód po pracy.",
+    ],
+    variants: [
+      {
+        name: "Korzenie w kanalizacji",
+        desc: "Wycinanie korzeni drzew i krzewów wrastających w złącza, pęknięcia i stare przyłącza.",
+      },
+      {
+        name: "Beton, zaprawa i progi",
+        desc: "Usuwanie złogów zaprawy betonowej, progów po remoncie i twardych błędów montażowych.",
+      },
+      {
+        name: "Twarde tłuszcze i osady",
+        desc: "Frezowanie skamielin, osadów mineralnych i stwardniałych tłuszczów w gastronomii oraz kuchniach zbiorowych.",
+      },
+      {
+        name: "Otwieranie przykanalików",
+        desc: "Udostępnienie zaślepionych lub zarośniętych przykanalików przed dalszą renowacją.",
+        specs: "DN 90–150",
+      },
+    ],
+    whenToUse: [
+      "gdy kamera pokazuje korzenie, beton, kamień albo przeszkodę mechaniczną",
+      "gdy WUKO usuwa wodę i miękki osad, ale twardy zator zostaje w przewodzie",
+      "gdy po remoncie w rurze zostały zaprawa, gruz albo próg betonowy",
+      "gdy trzeba przygotować rurę do bezwykopowej naprawy lub rękawa",
+    ],
+    costs: [
+      {
+        scope: "Diagnoza kamerą przed frezowaniem",
+        range: "400–800 zł",
+        note: "potwierdzenie przeszkody i punktu pracy",
+      },
+      {
+        scope: "Frezowanie punktowe",
+        range: "900–2200 zł",
+        note: "korzeń, próg, osad lub pojedyncza przeszkoda",
+      },
+      {
+        scope: "Frezowanie z WUKO i kontrolą TV",
+        range: "1800–4200 zł",
+        note: "typowy pakiet dla trudnych zatorów",
+      },
+      {
+        scope: "Rozbudowana praca operatorska",
+        range: "4200–8500 zł",
+        note: "kilka przeszkód albo trudniejszy dostęp",
+      },
+    ],
+    costNote:
+      "Cena zależy od średnicy rury, dostępu, typu przeszkody i czasu pracy operatora. Przy twardych zatorach dokładną wycenę potwierdza kamera.",
+    process: [
+      {
+        title: "Kamera i kwalifikacja",
+        desc: "Sprawdzamy, czy problemem jest przeszkoda twarda, którą da się bezpiecznie frezować.",
+      },
+      {
+        title: "Praca robota",
+        desc: "Operator prowadzi robot frezujący z podglądem i usuwa tylko element blokujący przepływ.",
+      },
+      {
+        title: "Usunięcie materiału",
+        desc: "Wyfrezowane elementy usuwamy pompą ssącą lub domywamy układ metodą WUKO.",
+      },
+      {
+        title: "Kontrola efektu",
+        desc: "Po pracy wykonujemy inspekcję TV i pokazujemy drożność oraz stan odcinka.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Czym frezowanie różni się od WUKO?",
+        a: "WUKO wypłukuje miękkie osady i zatory wodą pod ciśnieniem. Frezowanie usuwa twarde przeszkody: korzenie, beton, zaprawę, kamień albo skamieniałe tłuszcze.",
+      },
+      {
+        q: "Czy robot frezujący może uszkodzić rurę?",
+        a: "Praca odbywa się pod kontrolą operatora i kamery. Najpierw oceniamy stan rury, a potem frezujemy tylko przeszkodę, nie cały przewód.",
+      },
+      {
+        q: "Czy frezowanie wykonuje się od razu po inspekcji TV?",
+        a: "Często tak. Jeśli kamera potwierdzi przeszkodę i mamy dostęp techniczny, można połączyć diagnozę, frezowanie i kontrolne WUKO w jednej wizycie.",
+      },
+      {
+        q: "Jakie średnice rur obsługujecie przy frezowaniu?",
+        a: "Typowo pracujemy w zakresie DN 90–150, zależnie od dostępu, geometrii przewodu i typu przeszkody.",
+      },
+    ],
+    related: ["wuko-wroclaw", "inspekcja-tv-kanalizacji", "udraznianie-rur"],
+  },
+  {
+    slug: "regulacja-studzienek-i-wlazow",
+    title: "Regulacja studzienek i włazów kanalizacyjnych",
+    heroTitle:
+      "Regulacja i wymiana studzienek oraz włazów kanalizacyjnych we Wrocławiu",
+    eyebrow: "Studzienki i włazy",
+    tagline:
+      "Wyrównanie do poziomu jezdni nawet z dokładnością do 1 mm. Naprawa jednej studzienki zwykle trwa 1–2 godziny.",
+    metaTitle:
+      "Regulacja studzienek i włazów kanalizacyjnych Wrocław | Naprawa w 1–2 h | ZIEBUD Expert",
+    metaDescription:
+      "Regulacja i wymiana studzienek oraz włazów kanalizacyjnych we Wrocławiu. Szybkowiążące masy, naprawa 1 studzienki w 1–2 h. Tel: 602 481 688.",
+    keywords: [
+      "regulacja studzienek wrocław",
+      "wymiana włazów kanalizacyjnych wrocław",
+      "naprawa studzienki kanalizacyjnej",
+      "zapadnięta studzienka wrocław",
+      "regulacja włazów kanalizacyjnych",
+    ],
+    icon: ArrowDownToLine,
+    trenchless: false,
+    overview: [
+      "ZIEBUD Expert wykonuje regulację i wymianę studzienek oraz włazów kanalizacyjnych we Wrocławiu i okolicach. Pracujemy na drogach, parkingach, chodnikach, terenach wspólnot i obiektach firmowych.",
+      "Stosujemy szybkowiążące, elastyczne masy wyrównawczo-naprawcze na bazie cementów oraz pneumatyczne szalunki, dzięki czemu naprawa jednej studzienki trwa zwykle od 1 do 2 godzin.",
+      "Celem jest równa, trwała i szczelna regulacja zwieńczenia: bez stukających włazów, zapadnięć, niszczenia żeliwa i ponownej naprawy po pierwszym sezonie zimowym.",
+    ],
+    variants: [
+      {
+        name: "Zapadnięte włazy",
+        desc: "Podniesienie włazu do poziomu nawierzchni drogi, parkingu lub chodnika.",
+      },
+      {
+        name: "Wystające i hałasujące włazy",
+        desc: "Korekta rzędnej oraz stabilizacja elementów, które powodują uderzenia kół i hałas.",
+      },
+      {
+        name: "Wymiana zwieńczeń",
+        desc: "Prace przy pękniętych, skorodowanych albo niedopasowanych elementach zwieńczenia studni.",
+      },
+      {
+        name: "Naprawy po robotach drogowych",
+        desc: "Dopasowanie studzienek do nowej rzędnej nawierzchni po pracach asfaltowych lub brukarskich.",
+      },
+    ],
+    whenToUse: [
+      "gdy właz zapadł się w pasie drogowym, na parkingu albo chodniku",
+      "gdy właz wystaje, hałasuje i powoduje uderzenia kół",
+      "gdy elementy zwieńczenia są pęknięte, skorodowane lub źle spasowane",
+      "gdy po pracach drogowych zmienił się poziom nawierzchni",
+    ],
+    costs: [
+      {
+        scope: "Regulacja pojedynczej studzienki",
+        range: "900–1800 zł",
+        note: "typowa naprawa z materiałem szybkowiążącym",
+      },
+      {
+        scope: "Wymiana lub naprawa zwieńczenia",
+        range: "1500–3200 zł",
+        note: "zależnie od stanu elementów i nawierzchni",
+      },
+      {
+        scope: "Pakiet kilku studzienek",
+        range: "3200–9000 zł",
+        note: "parking, droga wewnętrzna, teren wspólnoty lub obiektu",
+      },
+    ],
+    costNote:
+      "Na cenę wpływa rodzaj nawierzchni, stan komina włazowego, liczba studzienek, dostęp i to, czy trzeba odtwarzać asfalt, beton czy kostkę.",
+    process: [
+      {
+        title: "Demontaż włazu",
+        desc: "Zdejmujemy pokrywę lub właz; przy asfalcie i betonie używamy piły, młota albo osprzętu pneumatycznego.",
+      },
+      {
+        title: "Kontrola konstrukcji",
+        desc: "Rozbieramy górną część, oczyszczamy elementy i uzupełniamy ubytki zaprawami szybkowiążącymi.",
+      },
+      {
+        title: "Poziomowanie",
+        desc: "Ustawiamy komin włazowy i zwieńczenie w jednej rzędnej z nawierzchnią, ograniczając liczbę spoin.",
+      },
+      {
+        title: "Uszczelnienie i odtworzenie",
+        desc: "Uszczelniamy elementy masą odporną na mróz, sole, paliwa i temperatury, a potem odtwarzamy nawierzchnię.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Ile trwa regulacja jednej studzienki?",
+        a: "Typowa naprawa jednej studzienki trwa zwykle od 1 do 2 godzin, zależnie od nawierzchni i stanu zwieńczenia.",
+      },
+      {
+        q: "Czy po regulacji można od razu dopuścić ruch?",
+        a: "Używamy materiałów szybkowiążących, ale czas dopuszczenia ruchu zależy od konkretnej masy, temperatury i obciążenia. Informujemy o tym po wykonaniu prac.",
+      },
+      {
+        q: "Czy regulujecie studzienki na parkingach wspólnot?",
+        a: "Tak. Obsługujemy wspólnoty, spółdzielnie, zarządców dróg wewnętrznych, parkingi firmowe i tereny utwardzone.",
+      },
+      {
+        q: "Czy wymieniacie też uszkodzone włazy?",
+        a: "Tak. Jeżeli właz lub elementy zwieńczenia są zniszczone albo niedopasowane, możemy wykonać wymianę w ramach zlecenia.",
+      },
+    ],
+    related: ["bezwykopowe-naprawy-kanalizacji", "inspekcja-tv-kanalizacji", "lokalizacja-nieszczelnosci"],
+  },
+  {
+    slug: "przydomowe-oczyszczalnie-sciekow",
+    title: "Przydomowe oczyszczalnie ścieków",
+    heroTitle:
+      "Przydomowe oczyszczalnie ścieków we Wrocławiu — sprzedaż, montaż i serwis",
+    eyebrow: "Oczyszczalnie ścieków",
+    tagline:
+      "Doradzimy, dobierzemy, zamontujemy i serwisujemy oczyszczalnię dopasowaną do działki, liczby mieszkańców i warunków gruntowych.",
+    metaTitle:
+      "Przydomowe oczyszczalnie ścieków Wrocław — sprzedaż, montaż, serwis | ZIEBUD Expert",
+    metaDescription:
+      "Przydomowe oczyszczalnie ścieków we Wrocławiu i okolicach. Sprzedaż, montaż, serwis i przeglądy. Dobór do warunków gruntowych. Tel: 602 481 688.",
+    keywords: [
+      "przydomowe oczyszczalnie ścieków wrocław",
+      "montaż oczyszczalni ścieków wrocław",
+      "serwis oczyszczalni ścieków",
+      "biologiczna oczyszczalnia ścieków wrocław",
+      "oczyszczalnia przydomowa dolny śląsk",
+    ],
+    icon: Droplets,
+    trenchless: false,
+    overview: [
+      "ZIEBUD Expert sprzedaje, montuje i serwisuje przydomowe oraz przyzakładowe oczyszczalnie ścieków we Wrocławiu i okolicach.",
+      "Pracujemy zarówno z klientami indywidualnymi, jak i z firmami, gospodarstwami agroturystycznymi oraz obiektami przy drogach. Dobieramy rozwiązanie do typu gruntu, poziomu wód gruntowych, liczby użytkowników i obciążenia hydraulicznego.",
+      "Po montażu zostajemy przy instalacji serwisowo: robimy przeglądy, czyszczenie zbiorników, regulację natlenienia, kontrolę osadu i wymianę elementów eksploatacyjnych.",
+    ],
+    variants: [
+      {
+        name: "Sprzedaż i dobór",
+        desc: "Dobieramy oczyszczalnię do warunków działki, liczby mieszkańców i przewidywanego obciążenia.",
+      },
+      {
+        name: "Montaż kompletnej instalacji",
+        desc: "Prace ziemne, posadowienie zbiornika, podłączenia, drenaż, rozruch i przekazanie do użytkowania.",
+      },
+      {
+        name: "Serwis i przeglądy",
+        desc: "Kontrola osadu, czyszczenie, regulacja natlenienia, sprawdzenie sterowania, alarmów i drożności.",
+      },
+      {
+        name: "Naprawy eksploatacyjne",
+        desc: "Pompy, dmuchawy, dyfuzory, drenaże, zatory, kolmatacja gruntu i rozszczelnienia instalacji.",
+      },
+    ],
+    whenToUse: [
+      "gdy działka nie ma dostępu do kanalizacji sanitarnej",
+      "gdy szambo generuje za wysokie koszty wywozu",
+      "gdy istniejąca oczyszczalnia alarmuje, śmierdzi albo traci wydajność",
+      "gdy potrzebny jest roczny przegląd i potwierdzenie stanu instalacji",
+    ],
+    costs: [
+      {
+        scope: "Przegląd lub serwis okresowy",
+        range: "400–900 zł",
+        note: "kontrola, czyszczenie i podstawowa regulacja",
+      },
+      {
+        scope: "Naprawa eksploatacyjna",
+        range: "900–3500 zł",
+        note: "pompy, dmuchawy, dyfuzory, zatory lub drobne rozszczelnienia",
+      },
+      {
+        scope: "Montaż przydomowej oczyszczalni",
+        range: "12000–35000 zł",
+        note: "zależnie od typu oczyszczalni, gruntu i zakresu ziemnego",
+      },
+      {
+        scope: "Rozwiązanie przyzakładowe",
+        range: "od 35000 zł",
+        note: "wycena indywidualna po obciążeniu i warunkach terenu",
+      },
+    ],
+    costNote:
+      "Montaż oczyszczalni zawsze wymaga dopasowania do działki, gruntu, poziomu wód i wymagań użytkowników. Podane widełki są orientacyjne.",
+    process: [
+      {
+        title: "Dobór rozwiązania",
+        desc: "Analizujemy działkę, grunt, liczbę użytkowników i sposób użytkowania obiektu.",
+      },
+      {
+        title: "Montaż lub serwis",
+        desc: "Wykonujemy instalację od prac ziemnych po rozruch albo serwisujemy istniejący układ.",
+      },
+      {
+        title: "Kontrola pracy",
+        desc: "Sprawdzamy odpływ, osad, drenaż, sterowanie, alarmy, dyfuzory i drożność przewodów.",
+      },
+      {
+        title: "Plan przeglądów",
+        desc: "Ustalamy harmonogram obsługi, żeby oczyszczalnia działała bezawaryjnie i zgodnie z wymaganiami.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Czy przydomowa oczyszczalnia wymaga przeglądu co roku?",
+        a: "Tak, roczny przegląd jest dobrą praktyką i pozwala wykryć osad, problemy z natlenieniem, sterowaniem albo drożnością drenażu zanim pojawi się awaria.",
+      },
+      {
+        q: "Czy dobieracie oczyszczalnię do warunków gruntowych?",
+        a: "Tak. Typ gruntu i poziom wód gruntowych są kluczowe. Bez tego dobór oczyszczalni może skończyć się problemami z rozsączaniem.",
+      },
+      {
+        q: "Czy serwisujecie oczyszczalnie montowane przez inne firmy?",
+        a: "Tak. Możemy wykonać przegląd, czyszczenie, regulację i naprawę eksploatacyjną także przy instalacjach wykonanych przez innego wykonawcę.",
+      },
+      {
+        q: "Co najczęściej psuje się w oczyszczalni?",
+        a: "Najczęściej widzimy zużyte pompy, dmuchawy, dyfuzory, zapchane drenaże, nadmiar osadu, kolmatację gruntu i rozszczelnienia elementów instalacji.",
+      },
+      {
+        q: "Czy klienci po montażu mają serwis gwarancyjny?",
+        a: "Tak. Klienci, którzy kupili i zamontowali oczyszczalnię u nas, korzystają z serwisu gwarancyjnego zgodnie z warunkami producenta i zakresem usługi montażowej.",
+      },
+    ],
+    related: ["serwis-przepompowni", "naprawa-sieci-wodociagowych", "lokalizacja-nieszczelnosci"],
+    trustLinks: [
+      { label: "Marki oczyszczalni", href: "/marki-oczyszczalni" },
+      { label: "Odwodnienia budynków", href: "/uslugi/odwodnienia-budynkow" },
+      { label: "Umowy serwisowe", href: "/umowy-serwisowe" },
+    ],
+  },
+  {
+    slug: "odwodnienia-budynkow",
+    title: "Odwodnienia budynków",
+    heroTitle:
+      "Odwodnienia budynków, garaży i posesji we Wrocławiu — drenaż opaskowy i liniowy",
+    eyebrow: "Drenaże i odwodnienia",
+    tagline:
+      "Zalewane piwnice, namokłe fundamenty, niedrożny system rynnowy. Diagnozujemy, dobieramy metodę i wykonujemy odwodnienie, które naprawdę działa.",
+    metaTitle:
+      "Odwodnienia budynków Wrocław | Drenaż opaskowy i liniowy | ZIEBUD Expert",
+    metaDescription:
+      "Odwadnianie budynków, garaży, parkingów, posesji. Drenaż opaskowy i liniowy, renowacja drenaży poniemieckich. Wrocław i okolice. Tel: 602 481 688.",
+    keywords: [
+      "odwodnienia budynków wrocław",
+      "drenaż opaskowy wrocław",
+      "drenaż liniowy wrocław",
+      "zalewana piwnica wrocław",
+      "odprowadzanie wody z rynien wrocław",
+    ],
+    icon: Waves,
+    trenchless: false,
+    overview: [
+      "Jeżeli masz powracający problem z zalewanymi piwnicami, namokłymi fundamentami, podtopionym garażem albo parkingiem po opadach — ZIEBUD Expert rozwiąże to systemowo.",
+      "Specjalizujemy się w odwadnianiu budynków, garaży, parkingów, posesji oraz w odprowadzaniu wody z rynien w przypadku niedrożności systemu. Pracujemy również przy poszukiwaniu i renowacji starych drenaży, w tym instalacji poniemieckich i pokomunistycznych.",
+      "Najpierw diagnozujemy, czy problem wynika z wód gruntowych, wód opadowych, ukształtowania terenu czy błędnego odprowadzenia deszczówki. Dopiero potem dobieramy drenaż opaskowy, liniowy, studnię chłonną albo kombinację rozwiązań.",
+    ],
+    variants: [
+      {
+        name: "Drenaż opaskowy",
+        desc: "Rury drenarskie wokół budynku odbierające nadmiar wody z gruntu i odprowadzające ją do właściwego punktu zrzutu.",
+      },
+      {
+        name: "Drenaż liniowy",
+        desc: "Korytka i ruszty zbierające wodę z powierzchni parkingu, garażu, podjazdu lub drogi wewnętrznej.",
+      },
+      {
+        name: "Renowacja starych drenaży",
+        desc: "Poszukiwanie, czyszczenie i odtwarzanie starych instalacji drenażowych, również poniemieckich i pokomunistycznych.",
+      },
+      {
+        name: "Odwodnienia terenów utwardzonych",
+        desc: "Drenaże i odwodnienia placów, parkingów, dróg wewnętrznych, garaży oraz terenów przy budynkach.",
+      },
+    ],
+    whenToUse: [
+      "gdy piwnica lub garaż zalewa się po opadach",
+      "gdy fundamenty i ściany przy gruncie są stale zawilgocone",
+      "gdy rynny nie odprowadzają wody skutecznie i zalewają teren przy budynku",
+      "gdy teren ma nieprzepuszczalny grunt albo wysoki poziom wód gruntowych",
+      "gdy parking, podjazd lub droga wewnętrzna tworzy zastoiska wody",
+    ],
+    costs: [
+      {
+        scope: "Wizja lokalna i koncepcja odwodnienia",
+        range: "400–900 zł",
+        note: "ocena przyczyny, warianty i zakres prac",
+      },
+      {
+        scope: "Drenaż liniowy punktowy",
+        range: "2500–8000 zł",
+        note: "garaż, podjazd, krótki odcinek przy budynku",
+      },
+      {
+        scope: "Drenaż opaskowy budynku",
+        range: "12000–45000 zł",
+        note: "zależnie od długości, głębokości i warunków gruntu",
+      },
+      {
+        scope: "Odwodnienie parkingu lub placu",
+        range: "od 18000 zł",
+        note: "wycena indywidualna po terenie i punkcie odbioru wody",
+      },
+    ],
+    costNote:
+      "Odwodnienie zależy od gruntu, spadków, długości wykopów, odbiornika wody i kolizji z istniejącą infrastrukturą. Dlatego podajemy warianty po rozpoznaniu terenu.",
+    process: [
+      {
+        title: "Wizja lokalna",
+        desc: "Sprawdzamy teren, poziom wód, ukształtowanie, zabudowę i obecny sposób odprowadzania deszczówki.",
+      },
+      {
+        title: "Diagnoza przyczyny",
+        desc: "Ustalamy, czy problem robią wody gruntowe, opadowe, niedrożny odpływ, stary drenaż czy kilka czynników naraz.",
+      },
+      {
+        title: "Warianty i wycena",
+        desc: "Przedstawiamy kilka wariantów z różną opłacalnością, zakresem robót, materiałami i terminem.",
+      },
+      {
+        title: "Realizacja i protokół",
+        desc: "Wykonujemy prace ziemne, montaż, próby działania, przekazanie z protokołem i fakturą VAT.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Kiedy potrzebny jest drenaż opaskowy?",
+        a: "Gdy fundamenty lub piwnice są zawilgocone przez wysoki poziom wód gruntowych albo grunt słabo przepuszcza wodę. Drenaż opaskowy odbiera wodę wokół budynku.",
+      },
+      {
+        q: "Czym drenaż liniowy różni się od opaskowego?",
+        a: "Drenaż liniowy zbiera wodę z powierzchni, na przykład z parkingu, garażu albo podjazdu. Drenaż opaskowy pracuje w gruncie przy fundamentach.",
+      },
+      {
+        q: "Czy odprowadzacie wodę z rynien?",
+        a: "Tak. Robimy odprowadzenie wody z rynien, studnie chłonne, wpięcia do kanalizacji deszczowej i korekty niedrożnych układów.",
+      },
+      {
+        q: "Czy zajmujecie się starymi drenażami?",
+        a: "Tak. Szukamy, czyścimy i renowujemy stare drenaże, także instalacje poniemieckie i pokomunistyczne.",
+      },
+      {
+        q: "Czy odwodnienie zawsze wymaga dużych wykopów?",
+        a: "Nie zawsze. Zakres zależy od przyczyny problemu. Czasem wystarczy korekta odpływu, punktowe odwodnienie liniowe albo udrożnienie istniejącego drenażu.",
+      },
+    ],
+    related: ["przydomowe-oczyszczalnie-sciekow", "montaz-przepompowni-sciekow", "inspekcja-tv-kanalizacji"],
+  },
+  {
+    slug: "montaz-separatorow",
+    title: "Montaż separatorów tłuszczu i ropopochodnych",
+    heroTitle:
+      "Sprzedaż i montaż separatorów tłuszczu i ropopochodnych we Wrocławiu",
+    eyebrow: "Separatory od projektu",
+    tagline:
+      "Dobierzemy separator do Twojego obiektu, dostarczymy, zamontujemy, uruchomimy i obejmiemy serwisem. Pełna obsługa od projektu do faktury.",
+    metaTitle:
+      "Montaż separatorów tłuszczu i ropopochodnych Wrocław | KESSEL, ACO, DELFIN | ZIEBUD Expert",
+    metaDescription:
+      "Sprzedaż i montaż separatorów tłuszczu, skrobi i substancji ropopochodnych we Wrocławiu. Marki: KESSEL, ACO, DELFIN, HAURATON, ECOL-UNICON. Tel: 602 481 688.",
+    keywords: [
+      "montaż separatorów wrocław",
+      "separator tłuszczu montaż wrocław",
+      "separator ropopochodny montaż wrocław",
+      "separatory kessel aco delfin wrocław",
+      "sprzedaż separatorów wrocław",
+    ],
+    icon: Container,
+    trenchless: false,
+    overview: [
+      "ZIEBUD Expert dostarcza, montuje i serwisuje separatory tłuszczu, skrobi i substancji ropopochodnych w obiektach we Wrocławiu i na Dolnym Śląsku.",
+      "Pracujemy z gastronomią, stacjami paliw, myjniami, warsztatami, parkingami i obiektami przemysłowymi. Współpracujemy z renomowanymi producentami, między innymi KESSEL, ACO, DELFIN, HAURATON i ECOL-UNICON.",
+      "Pełna usługa obejmuje dobór, dostawę, transport, prace ziemne, posadowienie separatora, wpięcie w instalację, rozruch próbny i przekazanie do użytkowania. Po montażu możemy przejąć regularny serwis i dokumentację.",
+    ],
+    variants: [
+      {
+        name: "Separatory tłuszczu",
+        desc: "Restauracje, hotele, bary, kuchnie zbiorowe, stołówki, szpitale i obiekty gastronomiczne.",
+      },
+      {
+        name: "Separatory ropopochodne",
+        desc: "Stacje paliw, parkingi, warsztaty, myjnie samochodowe, garaże i płyty techniczne.",
+      },
+      {
+        name: "Separatory skrobi i neutralizatory",
+        desc: "Zakłady spożywcze, przetwórstwo ziemniaków, laboratoria i obiekty z nietypowymi ściekami.",
+      },
+      {
+        name: "Serwis po montażu",
+        desc: "Czyszczenie, przeglądy, wymiana materiałów filtracyjnych, pobór próbek i dokumentacja dla obiektu.",
+      },
+    ],
+    whenToUse: [
+      "gdy otwierasz lokal gastronomiczny albo modernizujesz kuchnię",
+      "gdy obiekt ma parking, myjnię, warsztat lub stację paliw",
+      "gdy kontrola wymaga uporządkowania gospodarki ściekowej",
+      "gdy separator trzeba dobrać do przepustowości i typu ścieków",
+      "gdy chcesz połączyć montaż z późniejszą umową serwisową",
+    ],
+    costs: [
+      {
+        scope: "Dobór i wycena separatora",
+        range: "0–900 zł",
+        note: "często wliczane w realizację po akceptacji oferty",
+      },
+      {
+        scope: "Montaż małego separatora tłuszczu",
+        range: "3500–12000 zł",
+        note: "lokal gastronomiczny lub mały obiekt",
+      },
+      {
+        scope: "Separator ropopochodny z posadowieniem",
+        range: "12000–45000 zł",
+        note: "parking, warsztat, myjnia lub stacja paliw",
+      },
+      {
+        scope: "Rozbudowany układ z osadnikiem lub by-passem",
+        range: "od 45000 zł",
+        note: "wycena indywidualna po projekcie i warunkach terenu",
+      },
+    ],
+    costNote:
+      "Cena zależy od typu separatora, przepustowości, głębokości posadowienia, zakresu prac ziemnych, producenta i wymagań dokumentacyjnych.",
+    process: [
+      {
+        title: "Doradztwo i dobór",
+        desc: "Dobieramy separator do rodzaju obiektu, przepustowości, typu ścieków i wymogów środowiskowych.",
+      },
+      {
+        title: "Dostawa i montaż",
+        desc: "Organizujemy urządzenie, transport, prace ziemne, posadowienie i wpięcie separatora w instalację.",
+      },
+      {
+        title: "Rozruch i przekazanie",
+        desc: "Wykonujemy rozruch próbny, przywracamy teren do stanu pierwotnego i przekazujemy instalację do użytkowania.",
+      },
+      {
+        title: "Serwis pogwarancyjny",
+        desc: "Ustawiamy czyszczenie, przeglądy, dokumentację, pobór próbek i wymiany materiałów filtracyjnych.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Jakie separatory montujecie?",
+        a: "Montujemy separatory tłuszczu, ropopochodne, skrobi oraz neutralizatory kwasowe. Dobieramy je do rodzaju obiektu i ścieków.",
+      },
+      {
+        q: "Czy separator jest wymagany przepisami?",
+        a: "W wielu obiektach tak, szczególnie w gastronomii, stacjach paliw, warsztatach, myjniach i parkingach. Separator chroni kanalizację i środowisko przed zanieczyszczeniami.",
+      },
+      {
+        q: "Czy po montażu możecie serwisować separator?",
+        a: "Tak. Po montażu możemy objąć separator umową serwisową: czyszczenie, przeglądy, materiały filtracyjne, próbki i dokumentacja.",
+      },
+      {
+        q: "Z jakimi markami separatorów pracujecie?",
+        a: "Pracujemy między innymi z markami KESSEL, ACO, DELFIN, HAURATON, ECOL-UNICON, PURATOR, PASSAVANT i innymi producentami.",
+      },
+      {
+        q: "Czy montaż separatora wymaga prac ziemnych?",
+        a: "Często tak. Zakres zależy od typu urządzenia, głębokości posadowienia, miejsca montażu i sposobu wpięcia w instalację.",
+      },
+    ],
+    related: ["separatory-tluszczu", "separatory-ropopochodne", "serwis-przepompowni"],
+  },
+  {
+    slug: "montaz-przepompowni-sciekow",
+    title: "Montaż przepompowni ścieków",
+    heroTitle:
+      "Sprzedaż i montaż przepompowni ścieków we Wrocławiu — sanitarne i deszczowe",
+    eyebrow: "Przepompownie od doboru",
+    tagline:
+      "Dobierzemy przepompownię do warunków, zamontujemy, uruchomimy i obejmiemy serwisem. Sanitarne, deszczowe, drenażowe — komplet usług w jednej firmie.",
+    metaTitle:
+      "Montaż przepompowni ścieków Wrocław | Sprzedaż i serwis | ZIEBUD Expert",
+    metaDescription:
+      "Sprzedaż i montaż przepompowni ścieków sanitarnych i deszczowych we Wrocławiu. Dobór, dostawa, instalacja, rozruch i serwis. Tel: 602 481 688.",
+    keywords: [
+      "montaż przepompowni ścieków wrocław",
+      "przepompownie sanitarne wrocław",
+      "przepompownie deszczowe wrocław",
+      "sprzedaż przepompowni wrocław",
+      "serwis przepompowni ścieków wrocław",
+    ],
+    icon: Compass,
+    trenchless: false,
+    overview: [
+      "Dostarczamy, montujemy i serwisujemy przepompownie ścieków komunalnych, wód opadowych i drenażowych we Wrocławiu oraz na Dolnym Śląsku.",
+      "Pracujemy z prywatnymi inwestorami, gospodarstwami rolnymi, firmami, deweloperami i samorządami. Oferujemy przepompownie sanitarne i deszczowe, które są dobrane do warunków technicznych konkretnego obiektu.",
+      "Przepompownia jest potrzebna tam, gdzie obiekt nie może być podłączony grawitacyjnie do sieci: przez rozproszoną zabudowę, ukształtowanie terenu, różnicę poziomów albo konieczność transportu wód opadowych z niżej położonego miejsca.",
+    ],
+    variants: [
+      {
+        name: "Przepompownie sanitarne",
+        desc: "Transport ścieków bytowych z budynków, osiedli, firm i obiektów, gdzie grawitacja nie wystarcza.",
+      },
+      {
+        name: "Przepompownie deszczowe",
+        desc: "Odprowadzenie wód opadowych z terenów niżej położonych, parkingów, placów i układów retencyjnych.",
+      },
+      {
+        name: "Przepompownie drenażowe",
+        desc: "Wsparcie systemów odwodnienia, drenażu i ochrony budynków przed wodą gruntową lub opadową.",
+      },
+      {
+        name: "Rozruch i serwis",
+        desc: "Automatyka, szafa sterownicza, próby szczelności, próby ciśnieniowe, szkolenie i późniejsza obsługa.",
+      },
+    ],
+    whenToUse: [
+      "gdy nie da się odprowadzić ścieków grawitacyjnie do kolektora",
+      "gdy obiekt leży niżej niż sieć kanalizacyjna",
+      "gdy trzeba transportować ścieki lub deszczówkę na większą odległość",
+      "gdy inwestycja wymaga kanalizacji ciśnieniowej lub grawitacyjno-ciśnieniowej",
+      "gdy istniejąca przepompownia jest za mała albo awaryjna",
+    ],
+    costs: [
+      {
+        scope: "Dobór techniczny i wycena",
+        range: "0–1200 zł",
+        note: "często rozliczane w realizacji po akceptacji oferty",
+      },
+      {
+        scope: "Mała przepompownia przydomowa",
+        range: "8000–22000 zł",
+        note: "komora, pompa, podstawowe sterowanie i montaż",
+      },
+      {
+        scope: "Przepompownia dla firmy lub obiektu",
+        range: "22000–75000 zł",
+        note: "większa komora, automatyka, armatura i próby",
+      },
+      {
+        scope: "Przepompownia sieciowa lub deweloperska",
+        range: "od 75000 zł",
+        note: "wycena indywidualna po dokumentacji i warunkach terenu",
+      },
+    ],
+    costNote:
+      "Koszt zależy od wielkości komory, liczby pomp, sterowania, głębokości posadowienia, rurociągu tłocznego, armatury i zakresu prac ziemnych.",
+    process: [
+      {
+        title: "Dobór przepompowni",
+        desc: "Analizujemy poziomy, odległości, rodzaj ścieków, wydajność pomp, komorę, sterowanie i wymagania eksploatacyjne.",
+      },
+      {
+        title: "Montaż w terenie",
+        desc: "Wykonujemy transport, prace ziemne, posadowienie komory, wpięcie w kanalizację i montaż rurociągów tłocznych.",
+      },
+      {
+        title: "Automatyka i próby",
+        desc: "Montujemy sterowanie, zasuwy, zawory zwrotne, wykonujemy próby szczelności, ciśnienia i rozruch.",
+      },
+      {
+        title: "Szkolenie i serwis",
+        desc: "Przekazujemy przepompownię użytkownikowi, szkolimy obsługę i możemy objąć układ długoterminowym serwisem.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Kiedy potrzebna jest przepompownia ścieków?",
+        a: "Gdy ścieków nie da się odprowadzić grawitacyjnie do sieci, na przykład przez różnicę poziomów, odległość od kolektora albo ukształtowanie terenu.",
+      },
+      {
+        q: "Czy montujecie przepompownie sanitarne i deszczowe?",
+        a: "Tak. Montujemy przepompownie ścieków sanitarnych, wód opadowych i układów drenażowych.",
+      },
+      {
+        q: "Czy dobieracie pompy i automatykę?",
+        a: "Tak. Dobieramy komorę, pompy, rurociąg tłoczny, zasuwy, zawory, szafę sterowniczą, pływaki lub sondę hydrostatyczną.",
+      },
+      {
+        q: "Czy po montażu robicie serwis przepompowni?",
+        a: "Tak. Możemy prowadzić czyszczenie zbiornika, kontrolę pomp, pływaków, armatury, automatyki i dokumentację okresową.",
+      },
+      {
+        q: "Czy montujecie przepompownie dla deweloperów i gmin?",
+        a: "Tak. Obsługujemy małe układy przydomowe, obiekty firmowe, deweloperskie i większe systemy dla samorządów.",
+      },
+    ],
+    related: ["serwis-przepompowni", "przydomowe-oczyszczalnie-sciekow", "odwodnienia-budynkow"],
+  },
 ];
+
+type InfrastructureServiceConfig = {
+  slug: string;
+  title: string;
+  eyebrow: string;
+  tagline: string;
+  metaTitle: string;
+  metaDescription: string;
+  keywords: string[];
+  icon: LucideIcon;
+  trenchless: boolean;
+  serviceType: string;
+  context: string;
+  primaryUse: string;
+  variants: ServiceVariant[];
+  related: string[];
+};
+
+function makeInfrastructureService(
+  config: InfrastructureServiceConfig,
+): LocalService {
+  return {
+    slug: config.slug,
+    title: config.title,
+    heroTitle: `${config.title} Wrocław`,
+    eyebrow: config.eyebrow,
+    tagline: config.tagline,
+    metaTitle: config.metaTitle,
+    metaDescription: config.metaDescription,
+    keywords: config.keywords,
+    icon: config.icon,
+    trenchless: config.trenchless,
+    schemaServiceType: config.serviceType,
+    overview: [
+      `${config.context} To strona dla inwestorów, zarządców i firm, które potrzebują wykonawcy od wod-kan, a nie tylko awaryjnego udrożnienia. Zaczynamy od rozpoznania warunków, dostępu, dokumentacji i ryzyk technicznych.`,
+      `Najważniejsze jest dobranie zakresu do celu inwestycji: ${config.primaryUse}. Przy większych tematach pracujemy na dokumentacji, a przy modernizacjach łączymy wykonawstwo z diagnostyką i planem dalszych prac.`,
+      "Wycena zależy od średnic, długości odcinków, gruntu, kolizji, dostępności studni oraz tego, czy prace można wykonać klasycznie, czy lepiej wejść metodą bezwykopową.",
+    ],
+    variants: config.variants,
+    whenToUse: [
+      config.primaryUse,
+      "gdy inwestor potrzebuje jednego wykonawcy do rozpoznania, wyceny i realizacji",
+      "gdy zakres wymaga koordynacji z istniejącą infrastrukturą i odbiorami",
+      "gdy trzeba ograniczyć wykopy, przestoje lub ingerencję w działający obiekt",
+    ],
+    costs: [
+      {
+        scope: "Rozpoznanie i wycena zakresu",
+        range: "0-1500 zł",
+        note: "często rozliczane w realizacji po akceptacji oferty",
+      },
+      {
+        scope: "Mały zakres lokalny",
+        range: "2500-15000 zł",
+        note: "krótkie odcinki, punktowe prace lub przygotowanie pod większy etap",
+      },
+      {
+        scope: "Realizacja obiektowa",
+        range: "15000-90000 zł",
+        note: "wycena po dokumentacji, dostępie i warunkach terenu",
+      },
+      {
+        scope: "Zakres inwestycyjny",
+        range: "od 90000 zł",
+        note: "sieci, większe modernizacje, prace wieloetapowe",
+      },
+    ],
+    costNote:
+      "To widełki orientacyjne. Przy usługach infrastrukturalnych cena zawsze zależy od dokumentacji, warunków terenowych, kolizji, organizacji ruchu i odbiorów.",
+    process: [
+      {
+        title: "Analiza zakresu",
+        desc: "Sprawdzamy opis problemu, dokumentację, lokalizację, dostęp i wymagania odbiorowe.",
+      },
+      {
+        title: "Dobór technologii",
+        desc: "Porównujemy wariant klasyczny, bezwykopowy lub mieszany i wskazujemy najbardziej rozsądny zakres.",
+      },
+      {
+        title: "Realizacja",
+        desc: "Wykonujemy prace z kontrolą dostępu, bezpieczeństwa i uzgodnionych etapów.",
+      },
+      {
+        title: "Odbiór i zalecenia",
+        desc: "Przekazujemy wnioski, dokumentację po pracach i rekomendacje eksploatacyjne.",
+      },
+    ],
+    faqs: [
+      {
+        q: `Czy realizujecie ${config.title.toLowerCase()} we Wrocławiu?`,
+        a: "Tak. Obsługujemy Wrocław, okolice i Dolny Śląsk, a większe zakresy inwestycyjne wyceniamy po dokumentacji.",
+      },
+      {
+        q: "Czy możecie przygotować wycenę na podstawie dokumentacji?",
+        a: "Tak. Najlepiej przesłać rysunki, opis zakresu, mapę, zdjęcia miejsca i informację o terminie.",
+      },
+      {
+        q: "Czy dobieracie metodę bezwykopową?",
+        a: "Tak, jeśli warunki i cel prac za tym przemawiają. Nie każda sytuacja wymaga wykopu ani nie każda nadaje się do bezwykopu.",
+      },
+      {
+        q: "Czy obsługujecie firmy, deweloperów i zarządców?",
+        a: "Tak. To główni odbiorcy usług infrastrukturalnych i modernizacyjnych.",
+      },
+      {
+        q: "Czy po pracach dostanę dokumentację?",
+        a: "Tak. Zakres dokumentacji dobieramy do typu usługi, odbiorów i wymagań inwestora.",
+      },
+    ],
+    related: config.related,
+  };
+}
+
+localServices.push(
+  ...[
+    makeInfrastructureService({
+      slug: "wodociagi",
+      title: "Budowa i modernizacja sieci wodociągowych",
+      eyebrow: "Sieci wod-kan",
+      tagline:
+        "Przyłącza, rozbudowy i modernizacje wodociągów dla inwestycji, firm i zarządców we Wrocławiu oraz na Dolnym Śląsku.",
+      metaTitle: "Budowa sieci wodociągowych Wrocław — ZIEBUD Expert",
+      metaDescription:
+        "Budowa i modernizacja sieci wodociągowych we Wrocławiu. Przyłącza, rozbudowy, odbiory, dokumentacja i wycena po zakresie.",
+      keywords: ["budowa wodociągu wrocław", "sieci wodociągowe", "przyłącze wodociągowe"],
+      icon: Droplets,
+      trenchless: false,
+      serviceType: "Budowa sieci wodociągowych",
+      context:
+        "Sieci wodociągowe wymagają uporządkowania formalności, punktów wpięcia, materiałów i odbiorów.",
+      primaryUse:
+        "nowe przyłącza, rozbudowy sieci, modernizacje i prace przy inwestycjach wymagających zasilania w wodę",
+      variants: [
+        { name: "Przyłącza wodociągowe", desc: "Odcinki od sieci do budynku z armaturą i przygotowaniem do odbioru." },
+        { name: "Modernizacje sieci", desc: "Wymiana lub przebudowa istniejących odcinków wodociągowych." },
+        { name: "Obsługa inwestycji", desc: "Zakresy dla deweloperów, firm i obiektów technicznych." },
+      ],
+      related: ["kanalizacja-sanitarna", "hdd-przewiert-sterowany", "naprawa-sieci-wodociagowych"],
+    }),
+    makeInfrastructureService({
+      slug: "kanalizacja-sanitarna",
+      title: "Budowa kanalizacji sanitarnej",
+      eyebrow: "Sieci zewnętrzne",
+      tagline:
+        "Kanalizacja sanitarna grawitacyjna i tłoczna: przyłącza, studnie, odcinki zbiorcze, odbiory i inspekcja.",
+      metaTitle: "Budowa kanalizacji sanitarnej Wrocław — ZIEBUD Expert",
+      metaDescription:
+        "Budowa kanalizacji sanitarnej we Wrocławiu. Przyłącza, studnie, kanalizacja tłoczna, odbiory, inspekcja TV i dokumentacja.",
+      keywords: ["kanalizacja sanitarna wrocław", "budowa kanalizacji", "przyłącze kanalizacyjne"],
+      icon: Waves,
+      trenchless: false,
+      serviceType: "Budowa kanalizacji sanitarnej",
+      context:
+        "Kanalizacja sanitarna musi działać przewidywalnie od pierwszego dnia eksploatacji.",
+      primaryUse:
+        "przyłącza, sieci osiedlowe, kanalizacja tłoczna i przygotowanie odcinków do odbiorów technicznych",
+      variants: [
+        { name: "Kanalizacja grawitacyjna", desc: "Studnie, spadki, odcinki przyłączeniowe i sieci osiedlowe." },
+        { name: "Kanalizacja tłoczna", desc: "Odcinki współpracujące z przepompowniami i armaturą." },
+        { name: "Odbiór i kamera", desc: "Czyszczenie oraz inspekcja TV przed przekazaniem instalacji." },
+      ],
+      related: ["przepompownie-sciekow", "inspekcja-tv-kanalizacji", "wuko-wroclaw"],
+    }),
+    makeInfrastructureService({
+      slug: "kanalizacja-deszczowa",
+      title: "Kanalizacja deszczowa i odwodnienia",
+      eyebrow: "Deszczówka",
+      tagline:
+        "Odwodnienia placów, parkingów, dachów i terenów utwardzonych dla obiektów we Wrocławiu.",
+      metaTitle: "Kanalizacja deszczowa Wrocław — odwodnienia",
+      metaDescription:
+        "Kanalizacja deszczowa i odwodnienia we Wrocławiu. Studnie, wpusty, place, parkingi, retencja i czyszczenie WUKO.",
+      keywords: ["kanalizacja deszczowa wrocław", "odwodnienia parkingów", "deszczówka wrocław"],
+      icon: CloudRain,
+      trenchless: false,
+      serviceType: "Kanalizacja deszczowa",
+      context:
+        "Deszczówka wymaga dobrego spadku, retencji, drożnych wpustów i odporności na intensywne opady.",
+      primaryUse:
+        "odwodnienia parkingów, placów manewrowych, dachów, dróg wewnętrznych i terenów wokół obiektów",
+      variants: [
+        { name: "Wpusty i studnie", desc: "Elementy odbioru wody z powierzchni utwardzonych." },
+        { name: "Odwodnienia liniowe", desc: "Kraty i kanały dla placów, ramp i parkingów." },
+        { name: "Połączenie z retencją", desc: "Układy prowadzące wodę do zbiorników lub rozsączania." },
+      ],
+      related: ["retencja", "odwodnienia-budynkow", "wuko-wroclaw"],
+    }),
+    makeInfrastructureService({
+      slug: "hdd-przewiert-sterowany",
+      title: "Przewierty sterowane HDD",
+      eyebrow: "Bezwykopowo",
+      tagline:
+        "Przewierty sterowane pod drogami, przeszkodami i infrastrukturą, gdy wykop jest zbyt kosztowny lub uciążliwy.",
+      metaTitle: "Przewiert sterowany HDD Wrocław — bezwykopowo",
+      metaDescription:
+        "Przewierty sterowane HDD we Wrocławiu i na Dolnym Śląsku. Bezwykopowe przejścia pod drogami, wjazdami i przeszkodami.",
+      keywords: ["hdd wrocław", "przewiert sterowany", "bezwykopowo wrocław"],
+      icon: Compass,
+      trenchless: true,
+      serviceType: "Przewiert sterowany HDD",
+      context:
+        "HDD ogranicza rozkopy i pozwala przejść pod drogą, chodnikiem, wjazdem lub przeszkodą terenową.",
+      primaryUse:
+        "przejścia pod drogami, zjazdami, terenami zielonymi i działającą infrastrukturą bez klasycznego wykopu",
+      variants: [
+        { name: "Przejścia pod drogami", desc: "Odcinki bez naruszania nawierzchni lub ruchu." },
+        { name: "Przewierty dla przyłączy", desc: "Krótsze odcinki pod wjazdami i przeszkodami." },
+        { name: "HDD dla inwestycji", desc: "Element większego zakresu wod-kan." },
+      ],
+      related: ["bezwykopowe-naprawy-kanalizacji", "przeciski", "wodociagi"],
+    }),
+    makeInfrastructureService({
+      slug: "przeciski",
+      title: "Przeciski pod drogami i wjazdami",
+      eyebrow: "Bezwykopowo",
+      tagline:
+        "Przeciski dla krótszych przejść pod drogami, chodnikami i wjazdami, gdy trzeba ograniczyć rozbiórkę nawierzchni.",
+      metaTitle: "Przeciski pod drogami Wrocław — ZIEBUD Expert",
+      metaDescription:
+        "Przeciski pod drogami, chodnikami i wjazdami we Wrocławiu. Bezwykopowe przejścia dla przyłączy i instalacji wod-kan.",
+      keywords: ["przeciski wrocław", "przecisk pod drogą", "bezwykopowe przejście"],
+      icon: ArrowDownToLine,
+      trenchless: true,
+      serviceType: "Przeciski bezwykopowe",
+      context:
+        "Przecisk jest praktyczny przy krótszych odcinkach, gdzie ważne jest zachowanie nawierzchni.",
+      primaryUse:
+        "przejścia pod wjazdami, chodnikami, drogami wewnętrznymi i miejscami bez wygodnego wykopu",
+      variants: [
+        { name: "Przecisk pod wjazdem", desc: "Krótkie przejście bez rozbierania kostki lub asfaltu." },
+        { name: "Przecisk pod drogą", desc: "Przejście dla rury ochronnej lub przyłącza." },
+        { name: "Przygotowanie komór", desc: "Organizacja startu, odbioru i zabezpieczenia miejsca." },
+      ],
+      related: ["hdd-przewiert-sterowany", "wodociagi", "kanalizacja-sanitarna"],
+    }),
+    makeInfrastructureService({
+      slug: "kraking-rur",
+      title: "Kraking rur i wymiana bezwykopowa",
+      eyebrow: "Renowacja sieci",
+      tagline:
+        "Bezwykopowa wymiana uszkodzonych rur przez rozkruszanie starego przewodu i wciąganie nowego odcinka.",
+      metaTitle: "Kraking rur Wrocław — wymiana bezwykopowa",
+      metaDescription:
+        "Kraking rur i bezwykopowa wymiana przewodów we Wrocławiu. Modernizacja starych odcinków bez pełnego wykopu.",
+      keywords: ["kraking rur", "wymiana bezwykopowa", "renowacja kanalizacji wrocław"],
+      icon: RefreshCw,
+      trenchless: true,
+      serviceType: "Kraking rur",
+      context:
+        "Kraking ma sens, gdy stary przewód jest zniszczony, a celem jest wymiana po istniejącej trasie.",
+      primaryUse:
+        "wymiana starych odcinków wod-kan przy ograniczeniu rozkopów i utrudnień dla użytkowników terenu",
+      variants: [
+        { name: "Wymiana po trasie", desc: "Nowa rura w miejscu starego przewodu." },
+        { name: "Modernizacja przyłączy", desc: "Zakresy dla obiektów i osiedli." },
+        { name: "Połączenie z inspekcją", desc: "Kamera przed decyzją i po wykonaniu zakresu." },
+      ],
+      related: ["bezwykopowe-naprawy-kanalizacji", "cipp-renowacja", "inspekcja-tv-kanalizacji"],
+    }),
+    makeInfrastructureService({
+      slug: "cipp-renowacja",
+      title: "Renowacja kanalizacji CIPP",
+      eyebrow: "Rękaw żywiczny",
+      tagline:
+        "Renowacja przewodów kanalizacyjnych rękawem od środka, bez odkrywania całego odcinka.",
+      metaTitle: "Renowacja CIPP Wrocław — rękaw do kanalizacji",
+      metaDescription:
+        "Renowacja kanalizacji CIPP we Wrocławiu. Rękaw żywiczny, naprawa od środka, ograniczenie wykopów i inspekcja TV.",
+      keywords: ["cipp wrocław", "rękaw kanalizacyjny", "renowacja kanalizacji"],
+      icon: Container,
+      trenchless: true,
+      serviceType: "Renowacja CIPP",
+      context:
+        "CIPP pozwala odnowić odcinek od środka, gdy problemem są pęknięcia, nieszczelności lub zużycie przewodu.",
+      primaryUse:
+        "renowacja kanalizacji w budynkach, przyłączach i odcinkach, gdzie wykop byłby kosztowny albo uciążliwy",
+      variants: [
+        { name: "Rękaw na odcinku", desc: "Renowacja dłuższego fragmentu po czyszczeniu i kamerze." },
+        { name: "Naprawa nieszczelności", desc: "Uszczelnienie od środka bez pełnego odkrywania rury." },
+        { name: "Kontrola TV", desc: "Weryfikacja przed i po renowacji." },
+      ],
+      related: ["bezwykopowe-naprawy-kanalizacji", "kraking-rur", "inspekcja-tv-kanalizacji"],
+    }),
+    makeInfrastructureService({
+      slug: "mikrotunelowanie",
+      title: "Mikrotunelowanie i większe przejścia bezwykopowe",
+      eyebrow: "Bezwykopowo",
+      tagline:
+        "Technologia dla większych i bardziej wymagających przejść, gdzie liczy się precyzja trasy i ograniczenie prac odkrywkowych.",
+      metaTitle: "Mikrotunelowanie Wrocław — przejścia bezwykopowe",
+      metaDescription:
+        "Mikrotunelowanie i większe przejścia bezwykopowe we Wrocławiu. Analiza zakresu, technologia, ograniczenie wykopów.",
+      keywords: ["mikrotunelowanie", "bezwykopowe przejścia", "technologie bezwykopowe wrocław"],
+      icon: Construction,
+      trenchless: true,
+      serviceType: "Mikrotunelowanie",
+      context:
+        "Mikrotunelowanie jest technologią dla trudniejszych przejść, większej precyzji i miejsc, gdzie wykop generuje duże ryzyko.",
+      primaryUse:
+        "większe przejścia pod przeszkodami, drogami i zabudową wymagające dokładniejszej kontroli trasy",
+      variants: [
+        { name: "Przejścia pod infrastrukturą", desc: "Zakresy wymagające minimalizacji ingerencji w teren." },
+        { name: "Analiza technologii", desc: "Porównanie z HDD, przeciskiem i wykopem." },
+        { name: "Obsługa inwestycji", desc: "Współpraca z projektantem i inwestorem." },
+      ],
+      related: ["hdd-przewiert-sterowany", "przeciski", "kanalizacja-sanitarna"],
+    }),
+    makeInfrastructureService({
+      slug: "cieplownictwo",
+      title: "Roboty dla sieci ciepłowniczych",
+      eyebrow: "Sieci zewnętrzne",
+      tagline:
+        "Prace ziemne, odwodnienia i odcinki towarzyszące inwestycjom ciepłowniczym oraz technicznym.",
+      metaTitle: "Roboty ciepłownicze Wrocław — sieci zewnętrzne",
+      metaDescription:
+        "Wsparcie przy sieciach ciepłowniczych we Wrocławiu: wykopy, odwodnienia, przejścia, kolizje i prace towarzyszące.",
+      keywords: ["sieci ciepłownicze wrocław", "roboty ziemne ciepłownictwo", "odwodnienia wykopów"],
+      icon: Compass,
+      trenchless: false,
+      serviceType: "Roboty dla sieci ciepłowniczych",
+      context:
+        "Przy ciepłownictwie ważne są kolizje, terminy, bezpieczeństwo wykopów i koordynacja z innymi branżami.",
+      primaryUse:
+        "prace towarzyszące sieciom ciepłowniczym, odwodnienia, przejścia i roboty ziemne w pobliżu infrastruktury",
+      variants: [
+        { name: "Odwodnienia wykopów", desc: "Zabezpieczenie robót przy wodzie gruntowej." },
+        { name: "Przejścia i kolizje", desc: "Wsparcie techniczne przy trudnych fragmentach trasy." },
+        { name: "Prace towarzyszące", desc: "Zakresy pomocnicze przy inwestycjach liniowych." },
+      ],
+      related: ["odwodnienie-wykopow", "hdd-przewiert-sterowany", "wodociagi"],
+    }),
+    makeInfrastructureService({
+      slug: "retencja",
+      title: "Retencja wody deszczowej",
+      eyebrow: "Deszczówka",
+      tagline:
+        "Zbiorniki, rozsączanie i układy zagospodarowania wody opadowej dla obiektów oraz terenów utwardzonych.",
+      metaTitle: "Retencja wody deszczowej Wrocław — zbiorniki",
+      metaDescription:
+        "Retencja wody deszczowej we Wrocławiu. Zbiorniki, rozsączanie, odwodnienia, kanalizacja deszczowa i dobór układu.",
+      keywords: ["retencja wody deszczowej", "zbiornik retencyjny", "deszczówka wrocław"],
+      icon: CloudRain,
+      trenchless: false,
+      serviceType: "Retencja wody deszczowej",
+      context:
+        "Retencja ogranicza przeciążenie kanalizacji deszczowej i pomaga zarządzać wodą na działce lub obiekcie.",
+      primaryUse:
+        "zbiorniki, układy rozsączające, odwodnienia i zagospodarowanie deszczówki przy inwestycjach",
+      variants: [
+        { name: "Zbiorniki retencyjne", desc: "Gromadzenie wody z dachów i powierzchni utwardzonych." },
+        { name: "Rozsączanie", desc: "Układy dopasowane do gruntu i poziomu wód." },
+        { name: "Połączenie z deszczówką", desc: "Wpusty, studnie i kanały prowadzące do retencji." },
+      ],
+      related: ["kanalizacja-deszczowa", "odwodnienia-budynkow", "odwodnienie-wykopow"],
+    }),
+    makeInfrastructureService({
+      slug: "odwodnienie-wykopow",
+      title: "Odwodnienie wykopów",
+      eyebrow: "Roboty ziemne",
+      tagline:
+        "Odwodnienie wykopów i kontrola wody gruntowej przy robotach wod-kan, budowlanych oraz liniowych.",
+      metaTitle: "Odwodnienie wykopów Wrocław — roboty wod-kan",
+      metaDescription:
+        "Odwodnienie wykopów we Wrocławiu. Kontrola wody gruntowej, zabezpieczenie robót, pompowanie i prace przy sieciach.",
+      keywords: ["odwodnienie wykopów", "woda gruntowa wykop", "odwodnienia wrocław"],
+      icon: ArrowDownToLine,
+      trenchless: false,
+      serviceType: "Odwodnienie wykopów",
+      context:
+        "Odwodnienie wykopu decyduje o bezpieczeństwie robót, stabilności gruntu i możliwości wykonania sieci.",
+      primaryUse:
+        "roboty wod-kan, fundamenty, prace liniowe i miejsca, gdzie woda gruntowa blokuje realizację",
+      variants: [
+        { name: "Pompowanie z wykopu", desc: "Obsługa prostszych zakresów z kontrolą odpływu." },
+        { name: "Odwodnienie odcinka", desc: "Organizacja prac przy dłuższych robotach liniowych." },
+        { name: "Wsparcie budowy", desc: "Dopasowanie rozwiązania do gruntu i harmonogramu." },
+      ],
+      related: ["odwodnienia-budynkow", "retencja", "kanalizacja-deszczowa"],
+    }),
+    makeInfrastructureService({
+      slug: "przepompownie-sciekow",
+      title: "Przepompownie ścieków",
+      eyebrow: "Kanalizacja ciśnieniowa",
+      tagline:
+        "Dobór, montaż i modernizacja przepompowni ścieków dla domów, firm, deweloperów i obiektów technicznych.",
+      metaTitle: "Przepompownie ścieków Wrocław — montaż i dobór",
+      metaDescription:
+        "Przepompownie ścieków we Wrocławiu. Dobór pomp, komory, automatyki, montaż, modernizacja i serwis układów sanitarnych.",
+      keywords: ["przepompownie ścieków wrocław", "montaż przepompowni", "kanalizacja ciśnieniowa"],
+      icon: RefreshCw,
+      trenchless: false,
+      serviceType: "Przepompownie ścieków",
+      context:
+        "Przepompownia jest potrzebna tam, gdzie ścieków nie da się odprowadzić grawitacyjnie albo teren wymaga układu tłocznego.",
+      primaryUse:
+        "dobór komory, pomp, automatyki i rurociągu tłocznego dla domu, firmy, osiedla lub inwestycji",
+      variants: [
+        { name: "Przepompownie przydomowe", desc: "Małe układy dla domów i posesji bez korzystnego spadku." },
+        { name: "Przepompownie obiektowe", desc: "Rozwiązania dla firm, garaży, magazynów i budynków usługowych." },
+        { name: "Przepompownie deweloperskie", desc: "Układy dla osiedli, kanalizacji tłocznej i większych inwestycji." },
+      ],
+      related: ["montaz-przepompowni-sciekow", "serwis-przepompowni", "kanalizacja-sanitarna"],
+    }),
+  ],
+);
 
 export function getLocalService(slug: string): LocalService | undefined {
   return localServices.find((service) => service.slug === slug);

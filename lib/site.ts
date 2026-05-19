@@ -27,8 +27,10 @@ export const COMPANY_AREAS_SERVED = [
   { "@type": "Place", name: "Nadodrze" },
   { "@type": "AdministrativeArea", name: "Dolny Śląsk" },
 ] as const;
-// TODO LESZEK: uzupełnij tu docelowe profile firmy, np. Google Business Profile i Facebook.
-export const COMPANY_SAME_AS_URLS: string[] = [];
+export const COMPANY_SAME_AS_URLS: string[] = [
+  "https://www.kanalizacja-wroclaw.pl/",
+  "https://wodociagi-kanalizacja.com/",
+];
 
 export const DEFAULT_TRANSFER_URL =
   process.env.NEXT_PUBLIC_TRANSFER_URL?.trim() || "";
