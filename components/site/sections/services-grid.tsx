@@ -45,10 +45,8 @@ export function ServicesGrid() {
               Oferta ustawiona pod lokalne zgłoszenia i obiekty do stałej obsługi
             </h2>
             <p className="mt-4 text-base leading-relaxed text-navy-700">
-              Zamiast rozlanej listy wszystkiego pokazujemy usługi, które mają
-              największą siłę sprzedażową we Wrocławiu: WUKO, zatory, awarie
-              wodociągowe, usługi kanalizacyjne, kamera, separatory,
-              przepompownie i diagnostykę kanalizacji.
+                          Obsługujemy zgłoszenia awaryjne i planowy serwis obiektów we Wrocławiu i okolicach.
+                              Pracujemy dla wspólnot, firm, gastronomii i klientów indywidualnych.
             </p>
           </div>
           <LinkButton
