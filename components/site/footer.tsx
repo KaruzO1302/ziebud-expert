@@ -77,14 +77,14 @@ export function Footer() {
               <p className="mt-2">
                 Dla pilnych awarii lokalnych sprawdź{" "}
                 <a
-                  href="https://www.kanalizacja-wroclaw.pl/"
+                  href="https://www.kanalizacja-wroclaw.pl/" target="_blank" rel="noopener noreferrer"
                   className="font-semibold text-aqua-300 underline-offset-4 hover:underline"
                 >
                   pogotowie kanalizacyjne Wrocław
                 </a>
                 , a przy większych inwestycjach i sieciach zewnętrznych zobacz{" "}
                 <a
-                  href="https://wodociagi-kanalizacja.com/"
+                  href="https://wodociagi-kanalizacja.com/" target="_blank" rel="noopener noreferrer"
                   className="font-semibold text-aqua-300 underline-offset-4 hover:underline"
                 >
                   wykonawstwo wodociągów i kanalizacji
