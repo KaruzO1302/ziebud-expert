@@ -332,26 +332,6 @@ const nextConfig: NextConfig = {
         destination: "/uslugi/bezwykopowe-naprawy-kanalizacji",
         permanent: true,
       },
-      {
-        source: "/miasta",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/miasta/:slug",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/wojewodztwa",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/wojewodztwa/:slug",
-        destination: "/",
-        permanent: true,
-      },
     ];
   },
 };
