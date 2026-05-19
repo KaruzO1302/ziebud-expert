@@ -295,9 +295,9 @@ function NavLink({ item }: { item: (typeof primaryNav)[number] }) {
                   <span className="inline-flex w-fit rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-aqua-200">
                     Zakres usługi
                   </span>
-                  <h3 className="mt-4 max-w-md font-display text-3xl font-semibold leading-tight">
+                  <p className="mt-4 max-w-md font-display text-3xl font-semibold leading-tight">
                     {activeItem.label}
-                  </h3>
+                  </p>
                   <p className="mt-3 max-w-md text-base leading-relaxed text-white/85">
                     {activeItem.tagline}
                   </p>
