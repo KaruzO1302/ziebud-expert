@@ -2,6 +2,7 @@ import type { Article } from "@/lib/articles-data";
 import type { CaseStudy } from "@/lib/case-studies-data";
 import { homeFaqs } from "@/lib/home-faqs";
 import type { LocationPage } from "@/lib/locations-data";
+import type { TrustPage } from "@/lib/trust-pages-data";
 import {
   COMPANY_AREAS_SERVED,
   COMPANY_COUNTRY_CODE,
@@ -191,6 +192,36 @@ export const homeFaqSchema = {
 export function jsonLdScript(data: object) {
   return {
     __html: JSON.stringify(data),
+  };
+}
+
+export function trustCollectionPageSchema(page: TrustPage) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: page.h1,
+    description: page.description,
+    url: `${SITE_URL}/${page.slug}`,
+    image: `${SITE_URL}${page.image.src}`,
+    about: {
+      "@type": "LocalBusiness",
+      name: ORG_NAME,
+      telephone: COMPANY_PHONE,
+      url: SITE_URL,
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: page.brands.map((brand, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "Brand",
+          name: brand.name,
+          url: brand.url,
+          description: brand.summary,
+        },
+      })),
+    },
   };
 }
 

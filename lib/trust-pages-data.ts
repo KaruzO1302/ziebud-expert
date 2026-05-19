@@ -1,6 +1,5 @@
 import type { LucideIcon } from "lucide-react";
 import { Droplets, Factory, Settings2 } from "lucide-react";
-import { ORG_NAME, SITE_URL } from "@/lib/site";
 
 export type BrandItem = {
   name: string;
@@ -16,6 +15,10 @@ export type TrustPage = {
   eyebrow: string;
   h1: string;
   lead: string;
+  image: {
+    src: string;
+    alt: string;
+  };
   icon: LucideIcon;
   brands: BrandItem[];
   scopeTitle: string;
@@ -34,6 +37,10 @@ export const trustPages: TrustPage[] = [
     h1: "Serwis separatorów we Wrocławiu — obsługujemy najważniejsze marki dostępne na polskim rynku",
     lead:
       "Serwisujemy, czyścimy, dobieramy i montujemy separatory tłuszczu, skrobi oraz substancji ropopochodnych. Pracujemy ostrożnie: bez obietnic na wyrost, z dokumentacją po usłudze i doborem zakresu do konkretnego obiektu.",
+    image: {
+      src: "/images/task03/hero-marki-separatorow.webp",
+      alt: "Separator tłuszczu w hali gastronomicznej — przegląd marek stosowanych przez ZIEBUD Expert",
+    },
     icon: Factory,
     brands: [
       {
@@ -99,6 +106,10 @@ export const trustPages: TrustPage[] = [
     h1: "Serwis i montaż przepompowni we Wrocławiu — KESSEL, Grundfos, Wilo, Sulzer i Xylem",
     lead:
       "Dobieramy, montujemy i serwisujemy przepompownie sanitarne, deszczowe i drenażowe. Nie deklarujemy parametrów bez rozpoznania: wydajność, automatyka i serwis zależą od wysokości podnoszenia, ilości ścieków, armatury i warunków terenowych.",
+    image: {
+      src: "/images/task03/hero-marki-przepompowni.webp",
+      alt: "Przepompownia z pompą zatapialną w studni betonowej — instalacje wykonywane przez ZIEBUD",
+    },
     icon: Settings2,
     brands: [
       {
@@ -153,7 +164,10 @@ export const trustPages: TrustPage[] = [
         label: "Serwis przepompowni",
         href: "/uslugi/serwis-przepompowni",
       },
-      { label: "Odwodnienia budynków", href: "/uslugi/odwodnienia-budynkow" },
+      {
+        label: "Przepompownie ścieków",
+        href: "/uslugi/przepompownie-sciekow",
+      },
       { label: "Umowy serwisowe", href: "/umowy-serwisowe" },
     ],
   },
@@ -167,6 +181,10 @@ export const trustPages: TrustPage[] = [
     h1: "Sprzedaż, montaż i serwis przydomowych oczyszczalni ścieków — marki, które obsługujemy",
     lead:
       "Pomagamy dobrać oczyszczalnię do gruntu, poziomu wód, liczby użytkowników i sposobu eksploatacji. Przy markach oczyszczalni nie zgadujemy: po wizji lokalnej mówimy, czy sens ma drenaż, biologiczna oczyszczalnia, studnia chłonna czy inny układ.",
+    image: {
+      src: "/images/task03/hero-marki-oczyszczalni.webp",
+      alt: "Przydomowa oczyszczalnia ścieków zainstalowana w ogrodzie domu jednorodzinnego",
+    },
     icon: Droplets,
     brands: [
       {
@@ -229,33 +247,4 @@ export const trustPages: TrustPage[] = [
 
 export function getTrustPage(slug: TrustPage["slug"]) {
   return trustPages.find((page) => page.slug === slug);
-}
-
-export function buildTrustPageJsonLd(page: TrustPage) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    name: page.h1,
-    description: page.description,
-    url: `${SITE_URL}/${page.slug}`,
-    about: {
-      "@type": "LocalBusiness",
-      name: ORG_NAME,
-      telephone: "+48602481688",
-      url: SITE_URL,
-    },
-    mainEntity: {
-      "@type": "ItemList",
-      itemListElement: page.brands.map((brand, index) => ({
-        "@type": "ListItem",
-        position: index + 1,
-        item: {
-          "@type": "Brand",
-          name: brand.name,
-          url: brand.url,
-          description: brand.summary,
-        },
-      })),
-    },
-  };
 }

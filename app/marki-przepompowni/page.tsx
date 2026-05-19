@@ -1,25 +1,25 @@
 import type { Metadata } from "next";
 import { TrustBrandPage } from "@/components/site/trust-brand-page";
-import {
-  buildTrustPageJsonLd,
-  getTrustPage,
-} from "@/lib/trust-pages-data";
+import { getTrustPage } from "@/lib/trust-pages-data";
+import { trustCollectionPageSchema } from "@/lib/jsonld";
 import { SITE_URL } from "@/lib/site";
 
 const page = getTrustPage("marki-przepompowni");
 
-export const metadata: Metadata = {
-  title: { absolute: page?.title ?? "Marki przepompowni | ZIEBUD Expert" },
-  description: page?.description,
-  alternates: { canonical: "/marki-przepompowni" },
-  openGraph: {
-    title: page?.title,
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: { absolute: page?.title ?? "Marki przepompowni | ZIEBUD Expert" },
     description: page?.description,
-    type: "website",
-    locale: "pl_PL",
-    url: `${SITE_URL}/marki-przepompowni`,
-  },
-};
+    alternates: { canonical: "/marki-przepompowni" },
+    openGraph: {
+      title: page?.title,
+      description: page?.description,
+      type: "website",
+      locale: "pl_PL",
+      url: `${SITE_URL}/marki-przepompowni`,
+    },
+  };
+}
 
 export default function MarkiPrzepompowniPage() {
   if (!page) return null;
@@ -29,7 +29,7 @@ export default function MarkiPrzepompowniPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(buildTrustPageJsonLd(page)),
+          __html: JSON.stringify(trustCollectionPageSchema(page)),
         }}
       />
       <TrustBrandPage page={page} />

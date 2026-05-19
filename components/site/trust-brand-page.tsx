@@ -1,10 +1,28 @@
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, ExternalLink } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Cog,
+  Droplet,
+  ExternalLink,
+  Factory,
+  Gauge,
+  ShieldCheck,
+} from "lucide-react";
 import { Container } from "@/components/site/container";
-import { HeroPhoto } from "@/components/site/hero-photo";
 import { LinkButton } from "@/components/site/link-button";
 import type { TrustPage } from "@/lib/trust-pages-data";
-import { getPagePhoto } from "@/lib/photos";
+
+const brandIcons = [Droplet, Gauge, Cog, Factory, ShieldCheck] as const;
+
+const brandGradients = [
+  "from-aqua-50 via-white to-navy-50",
+  "from-navy-50 via-white to-aqua-50",
+  "from-white via-aqua-50 to-muted",
+  "from-muted via-white to-navy-50",
+  "from-aqua-50 via-muted to-white",
+];
 
 export function TrustBrandPage({ page }: { page: TrustPage }) {
   const Icon = page.icon;
@@ -12,7 +30,18 @@ export function TrustBrandPage({ page }: { page: TrustPage }) {
   return (
     <>
       <section className="relative overflow-hidden bg-navy-900 text-white">
-        <HeroPhoto photo={getPagePhoto("sprzet")} priority overlay="navy-soft" />
+        <Image
+          src={page.image.src}
+          alt={page.image.alt}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-45"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-900/90 to-navy-900/55"
+        />
         <div
           aria-hidden
           className="absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_15%_-10%,rgba(0,212,255,0.18),transparent_70%)]"
@@ -78,19 +107,27 @@ export function TrustBrandPage({ page }: { page: TrustPage }) {
           </div>
 
           <div className="mt-12 grid gap-4 lg:grid-cols-2">
-            {page.brands.map((brand) => (
+            {page.brands.map((brand, index) => {
+              const BrandIcon = brandIcons[index % brandIcons.length];
+
+              return (
               <article
                 key={brand.name}
-                className="rounded-[26px] border border-border bg-muted p-6 shadow-soft"
+                className={`rounded-[26px] border border-border bg-gradient-to-br ${brandGradients[index % brandGradients.length]} p-6 shadow-soft`}
               >
                 <div className="flex flex-wrap items-start justify-between gap-4">
-                  <div>
+                  <div className="flex items-start gap-4">
+                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-navy-900 text-aqua-400">
+                      <BrandIcon className="h-5 w-5" aria-hidden />
+                    </span>
+                    <div>
                     <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-aqua-700">
                       Producent
                     </p>
                     <h2 className="mt-2 font-display text-2xl font-semibold text-navy-900">
                       {brand.name}
                     </h2>
+                    </div>
                   </div>
                   <a
                     href={brand.url}
@@ -109,7 +146,8 @@ export function TrustBrandPage({ page }: { page: TrustPage }) {
                   {brand.fit}
                 </p>
               </article>
-            ))}
+              );
+            })}
           </div>
         </Container>
       </section>

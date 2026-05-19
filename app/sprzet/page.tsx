@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -10,10 +11,8 @@ import {
   Wrench,
 } from "lucide-react";
 import { Container } from "@/components/site/container";
-import { HeroPhoto } from "@/components/site/hero-photo";
 import { LinkButton } from "@/components/site/link-button";
 import { CtaPanel } from "@/components/site/sections/cta-panel";
-import { getPagePhoto } from "@/lib/photos";
 
 export const metadata: Metadata = {
   title: {
@@ -73,6 +72,11 @@ const scenarios = [
 const detailedEquipment = [
   {
     title: "Pojazdy WUKO",
+    label: "Czyszczenie ciśnieniowe",
+    image: {
+      src: "/images/task03/sprzet-cisnieniowka.webp",
+      alt: "Głowica wysokociśnieniowa w trakcie czyszczenia kanału betonowego",
+    },
     text: "Specjalistyczny sprzęt wysokociśnieniowy do czyszczenia hydrodynamicznego rurociągów, wysysania urobku, pracy przy studniach, wpustach, kanalizacji deszczowej i większych odcinkach wspólnot oraz firm.",
     bullets: [
       "czyszczenie hydrodynamiczne rurociągów pod wysokim ciśnieniem",
@@ -84,6 +88,11 @@ const detailedEquipment = [
   },
   {
     title: "Kamery do inspekcji TV",
+    label: "Inspekcja TV",
+    image: {
+      src: "/images/task03/sprzet-kamera-tv.webp",
+      alt: "Kamera inspekcyjna z napędem na kołach z monitorem pokazującym wnętrze kanalizacji",
+    },
     text: "Kamery wpychane i samojezdne pozwalają sprawdzić przyłącza, piony, poziomy, kolektory i miejsca, w których zator wraca mimo czyszczenia. Kamera jest etapem diagnozy, nie zgadywania.",
     bullets: [
       "inspekcja przykanalików i instalacji wewnętrznych",
@@ -95,6 +104,11 @@ const detailedEquipment = [
   },
   {
     title: "Roboty frezujące",
+    label: "Frezowanie",
+    image: {
+      src: "/images/task03/sprzet-frezarka.webp",
+      alt: "Frezarka korzeniowa z łańcuchami w trakcie usuwania korzeni z rury kanalizacyjnej",
+    },
     text: "Przenośny sprzęt do pracy w rurach DN 90–150, kiedy w środku zostaje coś, czego woda nie ruszy: korzenie, beton, zaprawa, twarde osady albo skamieniały tłuszcz.",
     bullets: [
       "wbudowana kamera przed głowicą tnącą",
@@ -132,7 +146,18 @@ export default function SprzetPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(equipmentJsonLd) }}
       />
       <section className="relative overflow-hidden bg-navy-900 text-white">
-        <HeroPhoto photo={getPagePhoto("sprzet")} priority overlay="navy-soft" />
+        <Image
+          src="/images/task03/hero-sprzet-flota.webp"
+          alt="Samochód WUKO ZIEBUD Expert w Wrocławiu z ekipą pracującą przy otwartej studzience"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-45"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-900/90 to-navy-900/55"
+        />
         <div
           aria-hidden
           className="absolute inset-0 bg-[radial-gradient(ellipse_75%_55%_at_10%_-10%,rgba(0,212,255,0.18),transparent_70%)]"
@@ -231,10 +256,10 @@ export default function SprzetPage() {
         <Container>
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
-              Park sprzętowy
+              Co umiemy
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
-              Pojazdy WUKO, kamery TV i roboty frezujące w jednym procesie
+              Czyszczenie ciśnieniowe, inspekcja TV i frezowanie w jednym procesie
             </h2>
             <p className="mt-4 text-base leading-relaxed text-navy-700">
               Najważniejsze jest połączenie metod. Przy zatorze najpierw
@@ -247,29 +272,43 @@ export default function SprzetPage() {
             {detailedEquipment.map((item) => (
               <article
                 key={item.title}
-                className="rounded-[28px] border border-border bg-muted p-6 shadow-soft"
+                className="overflow-hidden rounded-[28px] border border-border bg-muted shadow-soft"
               >
-                <h2 className="font-display text-2xl font-semibold text-navy-900">
-                  {item.title}
-                </h2>
-                <p className="mt-4 text-sm leading-relaxed text-navy-700">
-                  {item.text}
-                </p>
-                <ul className="mt-5 space-y-3 text-sm text-navy-800">
-                  {item.bullets.map((bullet) => (
-                    <li key={bullet} className="flex gap-2.5">
-                      <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-aqua-600" />
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href={item.href}
-                  className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-navy-900 transition hover:text-aqua-700"
-                >
-                  Powiązana usługa
-                  <ArrowRight className="h-4 w-4" aria-hidden />
-                </Link>
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={item.image.src}
+                    alt={item.image.alt}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-aqua-700">
+                    {item.label}
+                  </p>
+                  <h2 className="mt-3 font-display text-2xl font-semibold text-navy-900">
+                    {item.title}
+                  </h2>
+                  <p className="mt-4 text-sm leading-relaxed text-navy-700">
+                    {item.text}
+                  </p>
+                  <ul className="mt-5 space-y-3 text-sm text-navy-800">
+                    {item.bullets.map((bullet) => (
+                      <li key={bullet} className="flex gap-2.5">
+                        <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-aqua-600" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href={item.href}
+                    className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-navy-900 transition hover:text-aqua-700"
+                  >
+                    Powiązana usługa
+                    <ArrowRight className="h-4 w-4" aria-hidden />
+                  </Link>
+                </div>
               </article>
             ))}
           </div>
