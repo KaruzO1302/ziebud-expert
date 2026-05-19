@@ -6,6 +6,22 @@ const APEX_HOST = "pogotowie-kanalizacyjne-wroclaw.com";
 
 export function proxy(request: NextRequest) {
   const host = request.headers.get("host");
+  const pathname = request.nextUrl.pathname;
+
+  if (
+    pathname === "/miasta" ||
+    pathname.startsWith("/miasta/") ||
+    pathname === "/wojewodztwa" ||
+    pathname.startsWith("/wojewodztwa/")
+  ) {
+    return new NextResponse("Gone", {
+      status: 410,
+      headers: {
+        "content-type": "text/plain; charset=utf-8",
+        "x-robots-tag": "noindex, nofollow",
+      },
+    });
+  }
 
   if (host === WWW_HOST) {
     const url = request.nextUrl.clone();
