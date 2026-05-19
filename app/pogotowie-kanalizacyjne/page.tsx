@@ -17,13 +17,13 @@ import { getPagePhoto } from "@/lib/photos";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Pogotowie kanalizacyjne Wrocław — udrażnianie i czyszczenie kanalizacji",
+  title: "Pogotowie kanalizacyjne Wrocław 24h 24h — szybki dojazd | ZIEBUD Expert",
   description:
     "Profesjonalna pomoc w awariach kanalizacji we Wrocławiu. Metoda WUKO, inspekcja TV, serwis separatorów i udrażnianie rur dla budynków, firm oraz wspólnot.",
   alternates: { canonical: "/pogotowie-kanalizacyjne" },
   openGraph: {
     title:
-      "Pogotowie kanalizacyjne Wrocław — udrażnianie i czyszczenie kanalizacji",
+      "Pogotowie kanalizacyjne Wrocław 24h 24h — szybki dojazd | ZIEBUD Expert",
     description:
       "Profesjonalna pomoc w awariach kanalizacji we Wrocławiu. Metoda WUKO, inspekcja TV, serwis separatorów i udrażnianie rur dla budynków, firm oraz wspólnot.",
     url: `${SITE_URL}/pogotowie-kanalizacyjne`,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Pogotowie kanalizacyjne Wrocław — udrażnianie i czyszczenie kanalizacji",
+      "Pogotowie kanalizacyjne Wrocław 24h 24h — szybki dojazd | ZIEBUD Expert",
     description:
       "Profesjonalna pomoc w awariach kanalizacji we Wrocławiu. Metoda WUKO, inspekcja TV, serwis separatorów i udrażnianie rur dla budynków, firm oraz wspólnot.",
     images: [`${SITE_URL}/pogotowie-kanalizacyjne/opengraph-image`],
@@ -104,7 +104,7 @@ export default function PogotowieKanalizacyjnePage() {
             Pogotowie kanalizacyjne
           </span>
           <h1 className="mt-5 max-w-4xl font-display text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-[56px]">
-            Pogotowie kanalizacyjne Wrocław
+            Pogotowie kanalizacyjne Wrocław 24h
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-navy-100">
             Szybka pomoc w awariach kanalizacji we Wrocławiu. Udrażnianie rur,
