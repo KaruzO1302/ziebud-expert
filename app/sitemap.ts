@@ -3,7 +3,6 @@ import { articles } from "@/lib/articles-data";
 import { branzePages } from "@/lib/branze-data";
 import { caseStudies } from "@/lib/case-studies-data";
 import { districtServices } from "@/lib/district-services-data";
-import { cityPages, voivodeshipPages } from "@/lib/locations-data";
 import { localServices } from "@/lib/local-services-data";
 import { SITE_URL } from "@/lib/site";
 
@@ -164,21 +163,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const locationRoutes: MetadataRoute.Sitemap = [
-    ...cityPages.map((page) => ({
-      url: `${SITE_URL}/miasta/${page.slug}`,
-      lastModified: seoLastModified,
-      changeFrequency: "monthly" as const,
-      priority: 0.62,
-    })),
-    ...voivodeshipPages.map((page) => ({
-      url: `${SITE_URL}/wojewodztwa/${page.slug}`,
-      lastModified: seoLastModified,
-      changeFrequency: "monthly" as const,
-      priority: 0.58,
-    })),
-  ];
-
   const caseStudyRoutes: MetadataRoute.Sitemap = caseStudies.map((caseStudy) => ({
     url: `${SITE_URL}/realizacje/${caseStudy.slug}`,
     lastModified: seoLastModified,
@@ -191,7 +175,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...serviceRoutes,
     ...districtServiceRoutes,
     ...industryRoutes,
-    ...locationRoutes,
     ...caseStudyRoutes,
     ...articleRoutes,
   ];
