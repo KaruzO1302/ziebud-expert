@@ -7,38 +7,97 @@ import {
   COMPANY_AREAS_SERVED,
   COMPANY_COUNTRY_CODE,
   COMPANY_EMAIL,
+  COMPANY_FEATURED_REVIEWS,
+  COMPANY_FOUNDING_DATE,
   COMPANY_KRS,
+  COMPANY_LATITUDE,
   COMPANY_LOCALITY,
+  COMPANY_LONGITUDE,
   COMPANY_NIP,
   COMPANY_POSTAL_CODE,
+  COMPANY_PRICE_RANGE,
+  COMPANY_RATING,
+  COMPANY_REGION,
   COMPANY_REGON,
   COMPANY_PHONE,
   COMPANY_SAME_AS_URLS,
+  COMPANY_SERVICE_RADIUS_METERS,
   COMPANY_STREET_ADDRESS,
   COMPANY_VAT_ID,
   FOUNDER_LINKEDIN_URL,
   FOUNDER_NAME,
+  ORG_ALTERNATE_NAMES,
   ORG_NAME,
   ORG_SHORT_NAME,
+  SERVICE_AREA_CENTER_LATITUDE,
+  SERVICE_AREA_CENTER_LONGITUDE,
   SITE_URL,
 } from "@/lib/site";
 
-const coreServiceNames = [
-  "Pogotowie kanalizacyjne",
-  "WUKO",
-  "Udrażnianie rur",
-  "Inspekcja TV kanalizacji",
-  "Czyszczenie separatorów tłuszczu",
-  "Czyszczenie separatorów ropopochodnych",
-  "Serwis przepompowni ścieków",
-  "Naprawa sieci wodociągowych",
+// Lista usług z cenami startowymi (PLN brutto) — używana w hasOfferCatalog
+const coreServices: Array<{
+  name: string;
+  description: string;
+  startingPrice?: number;
+  priceUnit?: string;
+}> = [
+  {
+    name: "Pogotowie kanalizacyjne 24/7",
+    description:
+      "Awaryjne udrażnianie kanalizacji 24h. Dojazd 45 min. Bez dopłat za nocne i weekendowe interwencje.",
+    startingPrice: 300,
+  },
+  {
+    name: "WUKO – hydrodynamiczne czyszczenie kanalizacji",
+    description:
+      "Ciśnieniowe czyszczenie kanalizacji wodą pod ciśnieniem 200 bar. Pionów, poziomów, przyłączy.",
+    startingPrice: 350,
+  },
+  {
+    name: "Udrażnianie rur kanalizacyjnych",
+    description:
+      "Mechaniczne i hydrodynamiczne udrażnianie spiralą i WUKO. Mieszkania, wspólnoty, firmy.",
+    startingPrice: 200,
+  },
+  {
+    name: "Inspekcja TV kanalizacji",
+    description:
+      "Diagnostyka kamerą HD z lokalizatorem GPS. Raport wideo + PDF.",
+    startingPrice: 300,
+  },
+  {
+    name: "Czyszczenie separatorów tłuszczu",
+    description:
+      "Czyszczenie separatorów tłuszczu w gastronomii. Faktura VAT, protokół.",
+    startingPrice: 500,
+  },
+  {
+    name: "Czyszczenie separatorów ropopochodnych",
+    description:
+      "Czyszczenie separatorów substancji ropopochodnych. Pełen protokół utylizacji odpadów.",
+    startingPrice: 600,
+  },
+  {
+    name: "Serwis przepompowni ścieków",
+    description:
+      "Konserwacja i serwis przepompowni ścieków. Umowy serwisowe dla wspólnot i firm.",
+    startingPrice: 400,
+  },
+  {
+    name: "Naprawa sieci wodociągowych",
+    description:
+      "Awaryjna naprawa wycieków, rozszczelnień i uszkodzeń przewodów wodociągowych.",
+    startingPrice: 500,
+  },
 ];
+
+const coreServiceNames = coreServices.map((s) => s.name);
 
 const ORG_BASE = {
   "@type": "Plumber",
   "@id": `${SITE_URL}/#organization`,
   name: ORG_NAME,
-  alternateName: "ZIEBUD Expert — Pogotowie Kanalizacyjne Wrocław",
+  alternateName: [...ORG_ALTERNATE_NAMES],
   url: SITE_URL,
   logo: `${SITE_URL}/logo.png`,
   image: `${SITE_URL}/og-image.jpg`,
@@ -46,6 +105,7 @@ const ORG_BASE = {
   telephone: COMPANY_PHONE,
   taxID: COMPANY_NIP,
   vatID: COMPANY_VAT_ID,
+  foundingDate: COMPANY_FOUNDING_DATE,
   identifier: [
     {
       "@type": "PropertyValue",
@@ -64,19 +124,30 @@ const ORG_BASE = {
     },
   ],
   description:
-    "Pogotowie kanalizacyjne, WUKO, inspekcja TV, separatory i serwis przepompowni dla Wrocławia, Dolnego Śląska i pobliskich miejscowości.",
+    "Pogotowie kanalizacyjne, WUKO, inspekcja TV, separatory i serwis przepompowni dla Wrocławia, Dolnego Śląska i pobliskich miejscowości. Działamy od 1991 r. — ponad 12 000 zleceń, 35 lat doświadczenia.",
   address: {
     "@type": "PostalAddress",
     addressCountry: COMPANY_COUNTRY_CODE,
-    addressLocality: "Wrocław",
-    addressRegion: "Dolnośląskie",
+    addressLocality: COMPANY_LOCALITY,
+    addressRegion: COMPANY_REGION,
     postalCode: COMPANY_POSTAL_CODE,
     streetAddress: COMPANY_STREET_ADDRESS,
   },
-  areaServed: [
-    { "@type": "City", name: "Wrocław" },
-    { "@type": "AdministrativeArea", name: "województwo dolnośląskie" },
-  ],
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: COMPANY_LATITUDE,
+    longitude: COMPANY_LONGITUDE,
+  },
+  areaServed: [...COMPANY_AREAS_SERVED],
+  serviceArea: {
+    "@type": "GeoCircle",
+    geoMidpoint: {
+      "@type": "GeoCoordinates",
+      latitude: SERVICE_AREA_CENTER_LATITUDE,
+      longitude: SERVICE_AREA_CENTER_LONGITUDE,
+    },
+    geoRadius: COMPANY_SERVICE_RADIUS_METERS,
+  },
   knowsAbout: coreServiceNames,
   openingHoursSpecification: [
     {
@@ -94,7 +165,7 @@ const ORG_BASE = {
       closes: "23:59",
     },
   ],
-  priceRange: "PLN",
+  priceRange: COMPANY_PRICE_RANGE,
   contactPoint: [
     {
       "@type": "ContactPoint",
@@ -103,19 +174,93 @@ const ORG_BASE = {
       availableLanguage: ["Polish"],
       areaServed: ["Wrocław", "Dolny Śląsk"],
     },
+    {
+      "@type": "ContactPoint",
+      telephone: COMPANY_PHONE,
+      contactType: "emergency",
+      availableLanguage: ["Polish"],
+      hoursAvailable: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: "00:00",
+        closes: "23:59",
+      },
+    },
   ],
   founder: {
     "@type": "Person",
     name: FOUNDER_NAME,
     sameAs: [FOUNDER_LINKEDIN_URL],
   },
-  makesOffer: coreServiceNames.map((name) => ({
+  makesOffer: coreServices.map((service) => ({
     "@type": "Offer",
     itemOffered: {
       "@type": "Service",
-      name,
-      areaServed: COMPANY_AREAS_SERVED,
+      name: service.name,
+      description: service.description,
+      areaServed: [...COMPANY_AREAS_SERVED],
     },
+    ...(service.startingPrice
+      ? {
+          priceSpecification: {
+            "@type": "PriceSpecification",
+            price: service.startingPrice,
+            priceCurrency: "PLN",
+            minPrice: service.startingPrice,
+            valueAddedTaxIncluded: false,
+          },
+        }
+      : {}),
+  })),
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Usługi kanalizacyjne i wodno-kanalizacyjne",
+    itemListElement: coreServices.map((service) => ({
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: service.name,
+        description: service.description,
+      },
+      ...(service.startingPrice
+        ? {
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              price: service.startingPrice,
+              priceCurrency: "PLN",
+              minPrice: service.startingPrice,
+            },
+          }
+        : {}),
+    })),
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: COMPANY_RATING.value,
+    reviewCount: COMPANY_RATING.count,
+    bestRating: COMPANY_RATING.best,
+    worstRating: COMPANY_RATING.worst,
+  },
+  review: COMPANY_FEATURED_REVIEWS.map((r) => ({
+    "@type": "Review",
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: r.rating,
+      bestRating: COMPANY_RATING.best,
+    },
+    author: {
+      "@type": "Person",
+      name: r.author,
+    },
+    reviewBody: r.text,
   })),
   ...(COMPANY_SAME_AS_URLS.length ? { sameAs: COMPANY_SAME_AS_URLS } : {}),
 };
@@ -130,7 +275,7 @@ export function jsonLdWebSite() {
     "@type": "WebSite",
     "@id": `${SITE_URL}/#website`,
     url: SITE_URL,
-    name: "ZIEBUD Expert — Pogotowie Kanalizacyjne Wrocław 24/7",
+    name: "ZIĘBUD Expert — Pogotowie Kanalizacyjne Wrocław 24/7",
     publisher: { "@id": `${SITE_URL}/#organization` },
     inLanguage: "pl-PL",
   };
@@ -193,8 +338,6 @@ export const websiteSchema = jsonLdWebSite();
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   ...ORG_BASE,
-  serviceArea: COMPANY_AREAS_SERVED,
-  foundingDate: "1991",
 };
 
 export const generalContractorSchema = {
