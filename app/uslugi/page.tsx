@@ -14,7 +14,7 @@ import { getServicePhoto, photos } from "@/lib/photos";
 export const metadata: Metadata = {
   title: "Usługi — usługi kanalizacyjne, WUKO, udrażnianie rur i awarie wodociągowe Wrocław",
   description:
-    "Zakres usług ZIEBUD Expert we Wrocławiu: usługi kanalizacyjne, WUKO, udrażnianie rur, naprawa sieci wodociągowych, inspekcja TV, separatory, przepompownie i diagnostyka kanalizacji.",
+    "Zakres usług ZIĘBUD Expert we Wrocławiu: usługi kanalizacyjne, WUKO, udrażnianie rur, naprawa sieci wodociągowych, inspekcja TV, separatory, przepompownie i diagnostyka kanalizacji.",
   alternates: { canonical: "/uslugi" },
 };
 
@@ -61,7 +61,7 @@ export default function UslugiIndexPage() {
             Usługi kanalizacyjne, WUKO, udrażnianie i awarie wodociągowe we Wrocławiu
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-navy-100">
-            Pokazujemy pełny zakres usług ZIEBUD Expert we Wrocławiu: szeroki
+            Pokazujemy pełny zakres usług ZIĘBUD Expert we Wrocławiu: szeroki
             serwis kanalizacji, awarie, zatory, wycieki, inspekcję TV,
             separatory i przepompownie dla wspólnot, firm, gastronomii i
             klientów indywidualnych.

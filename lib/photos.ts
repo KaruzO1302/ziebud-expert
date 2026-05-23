@@ -38,7 +38,7 @@ export const photos = {
 
   heroHomepageZiebud: {
     src: "/photos/ziebud-wuko-hero.jpg",
-    alt: "Samochód WUKO ZIEBUD Expert podczas serwisu kanalizacji we Wrocławiu",
+    alt: "Samochód WUKO ZIĘBUD Expert podczas serwisu kanalizacji we Wrocławiu",
     source: "owned",
   } satisfies Photo,
 
@@ -308,7 +308,7 @@ export const photos = {
 
   ziebudAwarieWodKan: {
     src: "/photos/ziebud-awarie-wod-kan.jpg",
-    alt: "Ekipa ZIEBUD podczas awaryjnych robót wod-kan w terenie miejskim",
+    alt: "Ekipa ZIĘBUD podczas awaryjnych robót wod-kan w terenie miejskim",
     source: "owned",
   } satisfies Photo,
 
@@ -345,7 +345,7 @@ export const photos = {
   // ── Zdjęcia własne ────────────────────────────────────────
   robotyZiemne: {
     src: "/photos/roboty-ziemne.jpg",
-    alt: "Koparki na budowie sieci zewnętrznej — roboty ziemne ZIEBUD Expert",
+    alt: "Koparki na budowie sieci zewnętrznej — roboty ziemne ZIĘBUD Expert",
     source: "owned",
   } satisfies Photo,
 
@@ -381,25 +381,25 @@ export const photos = {
 
   ekipaPlany: {
     src: "/photos/ekipa-plany.webp",
-    alt: "Zespół ZIEBUD analizuje dokumentację projektową przy stole roboczym",
+    alt: "Zespół ZIĘBUD analizuje dokumentację projektową przy stole roboczym",
     source: "owned",
   } satisfies Photo,
 
   leszekPortret: {
     src: "/photos/leszek.webp",
-    alt: "Leszek Zięba przy biurku — portret właściciela ZIEBUD Expert",
+    alt: "Leszek Zięba przy biurku — portret właściciela ZIĘBUD Expert",
     source: "owned",
   } satisfies Photo,
 
   siedzibaBiuro: {
     src: "/photos/siedziba.webp",
-    alt: "Siedziba ZIEBUD Expert — budynek firmy",
+    alt: "Siedziba ZIĘBUD Expert — budynek firmy",
     source: "owned",
   } satisfies Photo,
 
   biuroWycena: {
     src: "/photos/biuro-wycena.jpg",
-    alt: "Biuro ZIEBUD Expert podczas przygotowania wyceny inwestycji",
+    alt: "Biuro ZIĘBUD Expert podczas przygotowania wyceny inwestycji",
     source: "owned",
   } satisfies Photo,
 
@@ -423,13 +423,13 @@ export const photos = {
 
   ziebudWukoSerwis: {
     src: "/photos/ziebud-wuko-serwis.webp",
-    alt: "Samochody serwisowe ZIEBUD Expert przygotowane do obsługi kanalizacji i awarii",
+    alt: "Samochody serwisowe ZIĘBUD Expert przygotowane do obsługi kanalizacji i awarii",
     source: "owned",
   } satisfies Photo,
 
   ziebudWukoBlok: {
     src: "/photos/ziebud-wuko-blok.webp",
-    alt: "Serwis WUKO ZIEBUD Expert przy budynku wielorodzinnym",
+    alt: "Serwis WUKO ZIĘBUD Expert przy budynku wielorodzinnym",
     source: "owned",
   } satisfies Photo,
 
@@ -441,25 +441,25 @@ export const photos = {
 
   nagroda25Lat: {
     src: "/photos/nagroda-25lat.jpg",
-    alt: "Tablica i wyróżnienie za 25 lat działalności firmy ZIEBUD",
+    alt: "Tablica i wyróżnienie za 25 lat działalności firmy ZIĘBUD",
     source: "owned",
   } satisfies Photo,
 
   logoZiebud: {
     src: "/photos/logo-ziebud.jpg",
-    alt: "Logo ZIEBUD Expert",
+    alt: "Logo ZIĘBUD Expert",
     source: "owned",
   } satisfies Photo,
 
   realizacjaTeren01: {
     src: "/photos/realizacja-teren-01.jpg",
-    alt: "Zdjęcie terenowe z realizacji ZIEBUD po konwersji z HEIC",
+    alt: "Zdjęcie terenowe z realizacji ZIĘBUD po konwersji z HEIC",
     source: "owned",
   } satisfies Photo,
 
   realizacjaTeren02: {
     src: "/photos/realizacja-teren-02.jpg",
-    alt: "Drugie zdjęcie terenowe z realizacji ZIEBUD po konwersji z HEIC",
+    alt: "Drugie zdjęcie terenowe z realizacji ZIĘBUD po konwersji z HEIC",
     source: "owned",
   } satisfies Photo,
 } as const;

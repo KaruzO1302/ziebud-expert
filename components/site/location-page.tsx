@@ -158,7 +158,7 @@ export function LocationPage({ location, articles, caseStudies }: Props) {
                 Dlaczego my
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
-                Co wnosi ZIEBUD Expert
+                Co wnosi ZIĘBUD Expert
               </h2>
             </div>
             <div className="grid gap-4 md:grid-cols-2">

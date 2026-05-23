@@ -19,12 +19,12 @@ import {
 export const metadata: Metadata = {
   title: "Kontakt — pogotowie kanalizacyjne Wrocław",
   description:
-    "Kontakt do ZIEBUD Expert we Wrocławiu w sprawie WUKO, udrażniania rur, inspekcji TV, separatorów i przepompowni.",
+    "Kontakt do ZIĘBUD Expert we Wrocławiu w sprawie WUKO, udrażniania rur, inspekcji TV, separatorów i przepompowni.",
   alternates: { canonical: "/kontakt" },
   openGraph: {
     title: "Kontakt — pogotowie kanalizacyjne Wrocław",
     description:
-      "Kontakt do ZIEBUD Expert we Wrocławiu w sprawie WUKO, udrażniania rur, inspekcji TV, separatorów i przepompowni.",
+      "Kontakt do ZIĘBUD Expert we Wrocławiu w sprawie WUKO, udrażniania rur, inspekcji TV, separatorów i przepompowni.",
     url: `${SITE_URL}/kontakt`,
     type: "website",
     images: ["/og-image.png"],
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kontakt — pogotowie kanalizacyjne Wrocław",
     description:
-      "Kontakt do ZIEBUD Expert we Wrocławiu w sprawie WUKO, udrażniania rur, inspekcji TV, separatorów i przepompowni.",
+      "Kontakt do ZIĘBUD Expert we Wrocławiu w sprawie WUKO, udrażniania rur, inspekcji TV, separatorów i przepompowni.",
     images: ["/og-image.png"],
   },
 };
@@ -57,7 +57,7 @@ export default function KontaktPage() {
             Kontakt
           </span>
           <h1 className="mt-5 max-w-4xl font-display text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-[56px]">
-            Kontakt do ZIEBUD Expert i aktywne zgłoszenie serwisowe
+            Kontakt do ZIĘBUD Expert i aktywne zgłoszenie serwisowe
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-navy-100">
             Jeśli wolisz, możesz od razu wysłać zgłoszenie. Jeśli chcesz

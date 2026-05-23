@@ -11,7 +11,7 @@ type Params = Promise<{ dzielnica: string; usluga: string }>;
 const HERO_MAP: Record<string, { src: string; alt: string }> = {
   krzyki: {
     src: "/images/task04/dzielnica-krzyki.webp",
-    alt: "Pogotowie kanalizacyjne Wrocław Krzyki — blokowiska i osiedla Borek, ekipa ZIEBUD Expert",
+    alt: "Pogotowie kanalizacyjne Wrocław Krzyki — blokowiska i osiedla Borek, ekipa ZIĘBUD Expert",
   },
   fabryczna: {
     src: "/images/task04/dzielnica-fabryczna.webp",
@@ -19,7 +19,7 @@ const HERO_MAP: Record<string, { src: string; alt: string }> = {
   },
   "psie-pole": {
     src: "/images/task04/dzielnica-psie-pole.webp",
-    alt: "WUKO Wrocław Psie Pole — domy jednorodzinne, szybki dojazd ZIEBUD Expert",
+    alt: "WUKO Wrocław Psie Pole — domy jednorodzinne, szybki dojazd ZIĘBUD Expert",
   },
   srodmiescie: {
     src: "/images/task04/dzielnica-srodmiescie.webp",

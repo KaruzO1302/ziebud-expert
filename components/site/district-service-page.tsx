@@ -61,7 +61,7 @@ export function DistrictServicePage({ service, hero }: Props) {
             <span>{service.serviceName}</span>
           </nav>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-aqua-200">
-            ZIEBUD Expert · Wrocław · {service.districtName}
+            ZIĘBUD Expert · Wrocław · {service.districtName}
           </p>
           <h1 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight md:text-5xl">
             {service.h1}

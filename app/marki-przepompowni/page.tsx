@@ -12,7 +12,7 @@ const page = getTrustPage("marki-przepompowni");
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: { absolute: page?.title ?? "Marki przepompowni | ZIEBUD Expert" },
+    title: { absolute: page?.title ?? "Marki przepompowni | ZIĘBUD Expert" },
     description: page?.description,
     alternates: { canonical: "/marki-przepompowni" },
     openGraph: {

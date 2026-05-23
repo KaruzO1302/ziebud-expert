@@ -20,15 +20,15 @@ import { FOUNDER_LINKEDIN_URL, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "O nas — ZIEBUD Expert Wrocław | WUKO i kanalizacja od 1991 roku",
+    absolute: "O nas — ZIĘBUD Expert Wrocław | WUKO i kanalizacja od 1991 roku",
   },
   description:
-    "ZIEBUD Expert działa od 1991 roku. Łączymy wieloletnie doświadczenie branżowe z nowoczesną obsługą WUKO, kanalizacji, separatorów i przepompowni we Wrocławiu.",
+    "ZIĘBUD Expert działa od 1991 roku. Łączymy wieloletnie doświadczenie branżowe z nowoczesną obsługą WUKO, kanalizacji, separatorów i przepompowni we Wrocławiu.",
   alternates: { canonical: "/o-nas" },
   openGraph: {
-    title: "O nas — ZIEBUD Expert Wrocław | WUKO i kanalizacja od 1991 roku",
+    title: "O nas — ZIĘBUD Expert Wrocław | WUKO i kanalizacja od 1991 roku",
     description:
-      "ZIEBUD Expert działa od 1991 roku. Łączymy wieloletnie doświadczenie branżowe z nowoczesną obsługą WUKO, kanalizacji, separatorów i przepompowni we Wrocławiu.",
+      "ZIĘBUD Expert działa od 1991 roku. Łączymy wieloletnie doświadczenie branżowe z nowoczesną obsługą WUKO, kanalizacji, separatorów i przepompowni we Wrocławiu.",
     type: "website",
     locale: "pl_PL",
     url: `${SITE_URL}/o-nas`,
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "O nas — ZIEBUD Expert Wrocław | WUKO i kanalizacja od 1991 roku",
+    title: "O nas — ZIĘBUD Expert Wrocław | WUKO i kanalizacja od 1991 roku",
     description:
-      "ZIEBUD Expert działa od 1991 roku. Łączymy wieloletnie doświadczenie branżowe z nowoczesną obsługą WUKO, kanalizacji, separatorów i przepompowni we Wrocławiu.",
+      "ZIĘBUD Expert działa od 1991 roku. Łączymy wieloletnie doświadczenie branżowe z nowoczesną obsługą WUKO, kanalizacji, separatorów i przepompowni we Wrocławiu.",
     images: [`${SITE_URL}/opengraph-image`],
   },
 };
@@ -105,7 +105,7 @@ export default function ONasPage() {
                 O firmie
               </span>
               <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl">
-                ZIEBUD Expert — doświadczenie od 1991 roku, dziś ustawione pod nowoczesny serwis lokalny
+                ZIĘBUD Expert — doświadczenie od 1991 roku, dziś ustawione pod nowoczesny serwis lokalny
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-navy-100">
                 Firma została założona przez Leszka Ziębę 8 maja 1991 roku.
@@ -123,7 +123,7 @@ export default function ONasPage() {
               <div className="overflow-hidden rounded-2xl border border-white/10 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)]">
                 <Image
                   src="/photos/leszek.webp"
-                  alt="Leszek Zięba — założyciel ZIEBUD Expert"
+                  alt="Leszek Zięba — założyciel ZIĘBUD Expert"
                   width={400}
                   height={500}
                   className="h-auto w-full object-cover"
@@ -158,7 +158,7 @@ export default function ONasPage() {
               </h2>
               <div className="mt-6 space-y-4 text-navy-700">
                 <p>
-                  ZIEBUD wyrósł na solidnym fundamencie prac sanitarnych i
+                  ZIĘBUD wyrósł na solidnym fundamencie prac sanitarnych i
                   wykonawczych. Dzięki temu w codziennej obsłudze lokalnej nie
                   jesteśmy przypadkowym numerem telefonu, tylko firmą, która
                   rozumie kanalizację, obiekt i skutki źle zamkniętej awarii.
@@ -179,12 +179,12 @@ export default function ONasPage() {
             <div className="grid grid-cols-2 gap-4">
               <GalleryTile
                 src="/photos/nagroda-25lat.jpg"
-                alt="Wyróżnienie za długoletnią działalność firmy ZIEBUD"
+                alt="Wyróżnienie za długoletnią działalność firmy ZIĘBUD"
                 caption="Lata doświadczenia i ciągłość działania"
               />
               <GalleryTile
                 src="/photos/siedziba.webp"
-                alt="Siedziba ZIEBUD Expert"
+                alt="Siedziba ZIĘBUD Expert"
                 caption="Zaplecze firmy i lokalna obecność"
               />
             </div>
@@ -254,13 +254,13 @@ export default function ONasPage() {
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             <PhotoCard
               src="/photos/ziebud-wuko-hero.jpg"
-              alt="Samochód WUKO ZIEBUD Expert"
+              alt="Samochód WUKO ZIĘBUD Expert"
               title="Sprzęt do obsługi kanalizacji"
               subtitle="WUKO i serwis terenowy"
             />
             <PhotoCard
               src="/photos/ziebud-wuko-serwis.webp"
-              alt="Samochody serwisowe ZIEBUD Expert"
+              alt="Samochody serwisowe ZIĘBUD Expert"
               title="Obsługa obiektów i wspólnot"
               subtitle="Rzeczywista, nie stockowa warstwa zaufania"
             />
@@ -287,7 +287,7 @@ export default function ONasPage() {
               <p className="mt-5 text-base leading-relaxed text-navy-700">
                 Inaczej wygląda interwencja w mieszkaniu, inaczej awaria w
                 gastronomii, a jeszcze inaczej stała opieka nad wspólnotą albo
-                obiektem technicznym. ZIEBUD Expert pracuje w tych światach
+                obiektem technicznym. ZIĘBUD Expert pracuje w tych światach
                 równolegle, dlatego potrafimy dobrać nie tylko usługę, ale też
                 model współpracy.
               </p>

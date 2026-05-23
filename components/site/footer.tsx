@@ -73,7 +73,7 @@ export function Footer() {
               </p>
             </div>
             <div className="mt-6 rounded-2xl border border-aqua-400/20 bg-aqua-400/5 p-5 text-sm leading-relaxed text-navy-200">
-              <p className="font-semibold text-white">Powiązane serwisy ZIEBUD</p>
+              <p className="font-semibold text-white">Powiązane serwisy ZIĘBUD</p>
               <p className="mt-2">
                 Dla pilnych awarii lokalnych sprawdź{" "}
                 <a
@@ -102,7 +102,7 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col gap-4 border-t border-navy-800 pt-8 text-xs text-navy-300 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {year} ZIEBUD Expert Sp. z o.o. Wszystkie prawa zastrzeżone.
+            © {year} ZIĘBUD Expert Sp. z o.o. Wszystkie prawa zastrzeżone.
           </p>
           <p className="flex flex-wrap items-center gap-x-4 gap-y-1">
             <span>35 lat doświadczenia · Wrocław i Dolny Śląsk · od 1991</span>

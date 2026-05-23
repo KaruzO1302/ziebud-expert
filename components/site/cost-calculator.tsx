@@ -241,7 +241,7 @@ export function CostCalculator() {
                       {item.label}
                       {item.highlight && (
                         <span className="ml-2 rounded bg-aqua-500/15 px-1.5 py-0.5 text-[10px] font-semibold uppercase text-aqua-300">
-                          ZIEBUD
+                          ZIĘBUD
                         </span>
                       )}
                     </span>

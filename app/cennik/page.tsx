@@ -253,7 +253,7 @@ export default function CennikPage() {
               <div className="mt-6 rounded-2xl border border-aqua-100 bg-aqua-50/60 p-5 text-sm leading-relaxed text-navy-800">
                 <div className="flex items-center gap-2 font-semibold text-navy-900">
                   <BadgeInfo className="h-4 w-4 text-aqua-700" />
-                  Dobra praktyka ZIEBUD Expert
+                  Dobra praktyka ZIĘBUD Expert
                 </div>
                 <p className="mt-2">
                   Najpierw rozpoznanie i akceptacja zakresu, potem działanie.

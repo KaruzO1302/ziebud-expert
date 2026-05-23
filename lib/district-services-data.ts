@@ -193,7 +193,7 @@ function titleFor(district: DistrictConfig, service: ServiceConfig) {
 }
 
 function descriptionFor(district: DistrictConfig, service: ServiceConfig) {
-  return `${service.name} Wrocław ${district.name}. ${service.intent}. Dojazd 30-60 min, ZIEBUD Expert, tel. 602 481 688.`;
+  return `${service.name} Wrocław ${district.name}. ${service.intent}. Dojazd 30-60 min, ZIĘBUD Expert, tel. 602 481 688.`;
 }
 
 function h1For(district: DistrictConfig, service: ServiceConfig) {

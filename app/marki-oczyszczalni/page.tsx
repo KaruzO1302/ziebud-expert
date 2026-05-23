@@ -12,7 +12,7 @@ const page = getTrustPage("marki-oczyszczalni");
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: { absolute: page?.title ?? "Marki oczyszczalni | ZIEBUD Expert" },
+    title: { absolute: page?.title ?? "Marki oczyszczalni | ZIĘBUD Expert" },
     description: page?.description,
     alternates: { canonical: "/marki-oczyszczalni" },
     openGraph: {

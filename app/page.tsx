@@ -26,7 +26,7 @@ import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Usługi kanalizacyjne Wrocław — WUKO, serwis, czyszczenie | ZIEBUD Expert",
+    absolute: "Usługi kanalizacyjne Wrocław — WUKO, serwis, czyszczenie | ZIĘBUD Expert",
   },
   description:
     "Usługi kanalizacyjne we Wrocławiu. WUKO, udrażnianie rur, inspekcja TV, separatory i przepompownie. Doświadczenie od 1991 roku. Zadzwoń: 602-481-688.",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Usługi kanalizacyjne Wrocław — WUKO, serwis, czyszczenie | ZIEBUD Expert",
+    title: "Usługi kanalizacyjne Wrocław — WUKO, serwis, czyszczenie | ZIĘBUD Expert",
     description:
       "Usługi kanalizacyjne we Wrocławiu. WUKO, udrażnianie rur, inspekcja TV, separatory i przepompownie. Doświadczenie od 1991 roku. Zadzwoń: 602-481-688.",
     type: "website",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Usługi kanalizacyjne Wrocław — WUKO, serwis, czyszczenie | ZIEBUD Expert",
+    title: "Usługi kanalizacyjne Wrocław — WUKO, serwis, czyszczenie | ZIĘBUD Expert",
     description:
       "Usługi kanalizacyjne we Wrocławiu. WUKO, udrażnianie rur, inspekcja TV, separatory i przepompownie. Doświadczenie od 1991 roku. Zadzwoń: 602-481-688.",
     images: [
@@ -143,13 +143,13 @@ export default function HomePage() {
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
-                ZIEBUD Expert
+                ZIĘBUD Expert
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
                 Usługi kanalizacyjne we Wrocławiu dla obiektów wymagających szybkiej i odpowiedzialnej reakcji
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-navy-700">
-                ZIEBUD Expert obsługuje Wrocław i okolice w zakresie WUKO,
+                ZIĘBUD Expert obsługuje Wrocław i okolice w zakresie WUKO,
                 udrażniania rur, inspekcji TV, separatorów i przepompowni.
                 Pracujemy dla wspólnot mieszkaniowych, firm, domów
                 jednorodzinnych, deweloperów i obiektów technicznych, które

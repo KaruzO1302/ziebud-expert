@@ -6,7 +6,7 @@ import { COMPANY_EMAIL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Kariera",
   description:
-    "Szukamy osób do pracy terenowej, serwisowej i technicznej. Zobacz aktualny status rekrutacji w ZIEBUD Expert.",
+    "Szukamy osób do pracy terenowej, serwisowej i technicznej. Zobacz aktualny status rekrutacji w ZIĘBUD Expert.",
   alternates: { canonical: "/kariera" },
   robots: { index: false, follow: false },
 };

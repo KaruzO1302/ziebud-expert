@@ -30,7 +30,7 @@ export const trustPages: TrustPage[] = [
   {
     slug: "marki-separatorow",
     title:
-      "Serwis separatorów we Wrocławiu — PIPELIFE, KESSEL, ECOL-UNICON, AWADUKT, Wavin | ZIEBUD Expert",
+      "Serwis separatorów we Wrocławiu — PIPELIFE, KESSEL, ECOL-UNICON, AWADUKT, Wavin | ZIĘBUD Expert",
     description:
       "Czyszczenie, montaż i serwis separatorów tłuszczu oraz ropopochodnych we Wrocławiu. Obsługujemy marki PIPELIFE, KESSEL, ECOL-UNICON, AWADUKT i Wavin.",
     eyebrow: "Marki separatorów",
@@ -39,7 +39,7 @@ export const trustPages: TrustPage[] = [
       "Serwisujemy, czyścimy, dobieramy i montujemy separatory tłuszczu, skrobi oraz substancji ropopochodnych. Pracujemy ostrożnie: bez obietnic na wyrost, z dokumentacją po usłudze i doborem zakresu do konkretnego obiektu.",
     image: {
       src: "/images/task03/hero-marki-separatorow.webp",
-      alt: "Separator tłuszczu w hali gastronomicznej — przegląd marek stosowanych przez ZIEBUD Expert",
+      alt: "Separator tłuszczu w hali gastronomicznej — przegląd marek stosowanych przez ZIĘBUD Expert",
     },
     icon: Factory,
     brands: [
@@ -99,7 +99,7 @@ export const trustPages: TrustPage[] = [
   {
     slug: "marki-przepompowni",
     title:
-      "Serwis i montaż przepompowni Wrocław — KESSEL, Grundfos, Wilo, Sulzer, Xylem | ZIEBUD Expert",
+      "Serwis i montaż przepompowni Wrocław — KESSEL, Grundfos, Wilo, Sulzer, Xylem | ZIĘBUD Expert",
     description:
       "Serwis i montaż przepompowni ścieków we Wrocławiu. Obsługujemy rozwiązania KESSEL, Grundfos, Wilo, Sulzer i Xylem. Tel: 602 481 688.",
     eyebrow: "Marki przepompowni",
@@ -108,7 +108,7 @@ export const trustPages: TrustPage[] = [
       "Dobieramy, montujemy i serwisujemy przepompownie sanitarne, deszczowe i drenażowe. Nie deklarujemy parametrów bez rozpoznania: wydajność, automatyka i serwis zależą od wysokości podnoszenia, ilości ścieków, armatury i warunków terenowych.",
     image: {
       src: "/images/task03/hero-marki-przepompowni.webp",
-      alt: "Przepompownia z pompą zatapialną w studni betonowej — instalacje wykonywane przez ZIEBUD",
+      alt: "Przepompownia z pompą zatapialną w studni betonowej — instalacje wykonywane przez ZIĘBUD",
     },
     icon: Settings2,
     brands: [
@@ -174,7 +174,7 @@ export const trustPages: TrustPage[] = [
   {
     slug: "marki-oczyszczalni",
     title:
-      "Przydomowe oczyszczalnie Wrocław — BIOTOP, EkoSAM, BioDisc, Sotralentz, ROTH | ZIEBUD Expert",
+      "Przydomowe oczyszczalnie Wrocław — BIOTOP, EkoSAM, BioDisc, Sotralentz, ROTH | ZIĘBUD Expert",
     description:
       "Dobór, montaż i serwis przydomowych oczyszczalni ścieków we Wrocławiu. Marki BIOTOP, EkoSAM, BioDisc, Sotralentz i ROTH.",
     eyebrow: "Marki oczyszczalni",

@@ -10,15 +10,15 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Serwis kanalizacji dla branż Wrocław | ZIEBUD Expert",
+      "Serwis kanalizacji dla branż Wrocław | ZIĘBUD Expert",
   },
   description:
     "Pogotowie kanalizacyjne, WUKO, separatory i inspekcja TV dla gastronomii, hoteli, deweloperów, magazynów, szkół, szpitali i fabryk.",
   alternates: { canonical: "/dla-branz" },
   openGraph: {
-    title: "Serwis kanalizacji dla branż Wrocław | ZIEBUD Expert",
+    title: "Serwis kanalizacji dla branż Wrocław | ZIĘBUD Expert",
     description:
-      "ZIEBUD Expert obsługuje kanalizację w obiektach B2B: gastronomia, hotele, magazyny, szkoły, szpitale, fabryki i galerie.",
+      "ZIĘBUD Expert obsługuje kanalizację w obiektach B2B: gastronomia, hotele, magazyny, szkoły, szpitale, fabryki i galerie.",
     type: "website",
     locale: "pl_PL",
     url: `${SITE_URL}/dla-branz`,

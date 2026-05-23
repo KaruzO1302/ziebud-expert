@@ -14,7 +14,7 @@ type Message = {
 const WELCOME: Message = {
   id: "welcome",
   role: "assistant",
-  text: "Cześć! Jestem asystentem ZIEBUD Expert. Mogę pomóc ze zgłoszeniem awarii, wyceną WUKO, kamery, separatora albo serwisu obiektu. Od czego zaczynamy?",
+  text: "Cześć! Jestem asystentem ZIĘBUD Expert. Mogę pomóc ze zgłoszeniem awarii, wyceną WUKO, kamery, separatora albo serwisu obiektu. Od czego zaczynamy?",
 };
 
 const QUICK_REPLIES = [

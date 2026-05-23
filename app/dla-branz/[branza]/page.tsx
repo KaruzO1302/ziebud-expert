@@ -103,7 +103,7 @@ export default async function BranzaPage({
               <span>{page.branza_name}</span>
             </nav>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-200">
-              ZIEBUD Expert · Wrocław · B2B
+              ZIĘBUD Expert · Wrocław · B2B
             </p>
             <h1 className="mt-4 max-w-4xl font-display text-4xl font-semibold tracking-tight sm:text-5xl">
               {page.h1}

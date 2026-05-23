@@ -19,10 +19,10 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Sprzęt do kanalizacji we Wrocławiu | Pojazdy WUKO, kamery TV, roboty frezujące | ZIEBUD Expert",
+      "Sprzęt do kanalizacji we Wrocławiu | Pojazdy WUKO, kamery TV, roboty frezujące | ZIĘBUD Expert",
   },
   description:
-    "Pojazdy WUKO, kamery samojezdne i wpychane do inspekcji TV, roboty frezujące DN 90–150. Profesjonalny park sprzętowy ZIEBUD Expert we Wrocławiu.",
+    "Pojazdy WUKO, kamery samojezdne i wpychane do inspekcji TV, roboty frezujące DN 90–150. Profesjonalny park sprzętowy ZIĘBUD Expert we Wrocławiu.",
   alternates: { canonical: "/sprzet" },
 };
 
@@ -131,11 +131,11 @@ const brandLinks = [
 const equipmentJsonLd = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  name: "Sprzęt ZIEBUD Expert — pojazdy WUKO, kamery TV, roboty frezujące",
+  name: "Sprzęt ZIĘBUD Expert — pojazdy WUKO, kamery TV, roboty frezujące",
   url: "https://pogotowie-kanalizacyjne-wroclaw.com/sprzet",
   about: {
     "@type": "LocalBusiness",
-    name: "ZIEBUD Expert Sp. z o.o.",
+    name: "ZIĘBUD Expert Sp. z o.o.",
     telephone: "+48602481688",
   },
 };
@@ -159,7 +159,7 @@ export default function SprzetPage() {
       <section className="relative overflow-hidden bg-navy-900 text-white">
         <Image
           src="/images/task03/hero-sprzet-flota.webp"
-          alt="Samochód WUKO ZIEBUD Expert w Wrocławiu z ekipą pracującą przy otwartej studzience"
+          alt="Samochód WUKO ZIĘBUD Expert w Wrocławiu z ekipą pracującą przy otwartej studzience"
           fill
           priority
           sizes="100vw"

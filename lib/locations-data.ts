@@ -82,7 +82,7 @@ function buildVoivodeshipPage(seed: VoivodeshipSeed): LocationPage {
     eyebrow: "Obsługa regionalna",
     title: `Sieci zewnętrzne ${seed.name} — wykonawca wod-kan i retencji`,
     metaTitle: `${seed.name} — sieci wodociągowe, kanalizacja i retencja`,
-    metaDescription: `ZIEBUD Expert realizuje ${listServices(seed.serviceSlugs)} ${seed.areaLabel}. Obsługa inwestycji dla gmin, deweloperów, przemysłu i ZWiK. ${seed.capital} i cały region.`,
+    metaDescription: `ZIĘBUD Expert realizuje ${listServices(seed.serviceSlugs)} ${seed.areaLabel}. Obsługa inwestycji dla gmin, deweloperów, przemysłu i ZWiK. ${seed.capital} i cały region.`,
     lead: `Prowadzimy inwestycje w zakresie sieci zewnętrznych ${seed.areaLabel}. Obsługujemy projekty dla samorządów, zakładów wodociągowych, deweloperów i przemysłu z naciskiem na sprawną analizę dokumentacji i mobilizację ekip na cały region.`,
     intro: [
       `Najczęściej obsługujemy ${seed.marketFocus}. Dzięki temu przygotowujemy ofertę pod realny zakres robót, a nie pod ogólnikowe założenia.`,

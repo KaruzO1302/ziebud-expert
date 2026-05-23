@@ -206,7 +206,7 @@ export const articles: Article[] = [
         ],
         paragraphs: [
           "Kamera daje największą wartość tam, gdzie samo objawowe udrażnianie nie wystarcza. Dzięki niej można zawęzić problem do konkretnego odcinka i uniknąć prac prowadzonych na ślepo.",
-          "W ZIEBUD Expert regularnie wykonujemy takie inspekcje na terenie Wrocławia w blokach, domach jednorodzinnych i obiektach komercyjnych, gdy klient chce najpierw dobrze rozpoznać problem, a dopiero potem wejść w czyszczenie albo naprawę.",
+          "W ZIĘBUD Expert regularnie wykonujemy takie inspekcje na terenie Wrocławia w blokach, domach jednorodzinnych i obiektach komercyjnych, gdy klient chce najpierw dobrze rozpoznać problem, a dopiero potem wejść w czyszczenie albo naprawę.",
         ],
         inlineCta: {
           title: "Chcesz sprawdzić stan swojej kanalizacji?",
@@ -649,7 +649,7 @@ export const articles: Article[] = [
     ],
     cta: {
       title: "Ustaw obsługę kanalizacji dla firmy lub wspólnoty",
-      text: "ZIEBUD Expert obsługuje awarie, WUKO, inspekcje kamerowe i czyszczenie kanalizacji dla wspólnot, zarządców, lokali i obiektów firmowych we Wrocławiu.",
+      text: "ZIĘBUD Expert obsługuje awarie, WUKO, inspekcje kamerowe i czyszczenie kanalizacji dla wspólnot, zarządców, lokali i obiektów firmowych we Wrocławiu.",
       primaryLabel: "Zadzwoń: 602 481 688",
       primaryHref: "tel:+48602481688",
       secondaryLabel: "Wyślij zapytanie",

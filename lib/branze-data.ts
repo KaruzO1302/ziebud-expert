@@ -41,12 +41,12 @@ export const branzePages: IndustryPage[] = [
     slug: "gastronomia",
     branza_name: "Gastronomia",
     h1: "Pogotowie kanalizacyjne dla restauracji i gastronomii Wrocław",
-    meta_title: "Kanalizacja dla gastronomii Wrocław | ZIEBUD Expert",
+    meta_title: "Kanalizacja dla gastronomii Wrocław | ZIĘBUD Expert",
     meta_description:
       "Serwis separatorów tłuszczu, WUKO i pogotowie kanalizacyjne dla restauracji we Wrocławiu. HACCP, sanepid, szybka reakcja.",
     image: {
       src: "/images/task05/b2b-gastronomia.webp",
-      alt: "Serwis separatorów tłuszczu dla gastronomii Wrocław — ZIEBUD Expert, montaż i czyszczenie",
+      alt: "Serwis separatorów tłuszczu dla gastronomii Wrocław — ZIĘBUD Expert, montaż i czyszczenie",
     },
     intro: [
       "Restauracja nie może czekać do poniedziałku, kiedy w kuchni wybija odpływ albo separator tłuszczu zaczyna cofać zapach. W gastronomii kanalizacja jest częścią operacji: wpływa na sanepid, HACCP, ciągłość pracy kuchni i komfort gości.",
@@ -90,7 +90,7 @@ export const branzePages: IndustryPage[] = [
       "Dyskretny serwis kanalizacji dla hoteli we Wrocławiu. Prace nocne, WUKO, inspekcja TV, separatory i awarie bez utrudnień dla gości.",
     image: {
       src: "/images/task05/b2b-hotel.webp",
-      alt: "Pogotowie kanalizacyjne dla hoteli Wrocław — serwis 24h, dyskretny dojazd ZIEBUD Expert",
+      alt: "Pogotowie kanalizacyjne dla hoteli Wrocław — serwis 24h, dyskretny dojazd ZIĘBUD Expert",
     },
     intro: [
       "Hotel potrzebuje serwisu, którego gość najlepiej w ogóle nie zauważy. Awarie odpływów, zapach z pionu albo przeciążona kanalizacja kuchni hotelowej muszą być rozwiązane dyskretnie, szybko i z szacunkiem do pracy recepcji.",
@@ -178,7 +178,7 @@ export const branzePages: IndustryPage[] = [
       "Serwis kanalizacji dla magazynów, hal i logistyki we Wrocławiu. Odwodnienia placów, TIR, separatory, WUKO, dokumentacja.",
     image: {
       src: "/images/task05/b2b-magazyn.webp",
-      alt: "Udrażnianie odwodnień magazynów i hal logistycznych Wrocław — ZIEBUD Expert",
+      alt: "Udrażnianie odwodnień magazynów i hal logistycznych Wrocław — ZIĘBUD Expert",
     },
     intro: [
       "Magazyn i hala logistyczna mają kanalizację pracującą pod ciężkim ruchem. Place manewrowe, rampy, kratki odwodnieniowe i separatory zbierają piasek, sól, osad z kół oraz wodę z dużych powierzchni utwardzonych.",
@@ -217,12 +217,12 @@ export const branzePages: IndustryPage[] = [
     slug: "stacja-paliw",
     branza_name: "Stacja paliw",
     h1: "Serwis separatorów ropopochodnych na stacjach paliw Wrocław",
-    meta_title: "Separatory stacje paliw Wrocław | ZIEBUD Expert",
+    meta_title: "Separatory stacje paliw Wrocław | ZIĘBUD Expert",
     meta_description:
       "Serwis separatorów ropopochodnych, WUKO i dokumentacja dla stacji paliw we Wrocławiu. Przeglądy, RDOŚ, odwodnienia.",
     image: {
       src: "/images/task05/b2b-stacja-paliw.webp",
-      alt: "Serwis separatorów ropopochodnych na stacjach paliw Wrocław — ZIEBUD Expert",
+      alt: "Serwis separatorów ropopochodnych na stacjach paliw Wrocław — ZIĘBUD Expert",
     },
     intro: [
       "Stacja paliw pracuje pod szczególnym ryzykiem środowiskowym. Separator ropopochodny, odwodnienia placu, kratki przy dystrybutorach i kanalizacja deszczowa muszą być pod kontrolą, bo awaria dotyka nie tylko sprzedaży, ale też wymogów formalnych.",
@@ -310,7 +310,7 @@ export const branzePages: IndustryPage[] = [
       "Serwis kanalizacji dla szpitali i przychodni we Wrocławiu. Awarie krytyczne, prace nocne, NFZ, sterylność i dokumentacja.",
     image: {
       src: "/images/task05/b2b-szpital.webp",
-      alt: "Kanalizacja dla szpitali i przychodni Wrocław — serwis sanitarny ZIEBUD Expert",
+      alt: "Kanalizacja dla szpitali i przychodni Wrocław — serwis sanitarny ZIĘBUD Expert",
     },
     intro: [
       "W placówce medycznej awaria kanalizacji jest zdarzeniem krytycznym. Liczy się bezpieczeństwo pacjentów, sterylność stref, ciągłość pracy oddziałów i szybka komunikacja z administracją oraz technicznym.",
@@ -354,7 +354,7 @@ export const branzePages: IndustryPage[] = [
       "Serwis kanalizacji dla szkół, przedszkoli i żłobków we Wrocławiu. Prace w wakacje, ferie, bezpieczeństwo dzieci, dyrektor i administracja.",
     image: {
       src: "/images/task05/b2b-szkola.webp",
-      alt: "Pogotowie kanalizacyjne dla szkół i przedszkoli Wrocław — ZIEBUD Expert",
+      alt: "Pogotowie kanalizacyjne dla szkół i przedszkoli Wrocław — ZIĘBUD Expert",
     },
     intro: [
       "W szkole kanalizacja musi działać przewidywalnie, bo awaria toalety lub pionu uderza od razu w bezpieczeństwo dzieci i organizację zajęć. Decyzję podejmuje zwykle dyrektor, administracja albo zarządca techniczny, więc potrzebna jest jasna wycena i termin.",
@@ -398,7 +398,7 @@ export const branzePages: IndustryPage[] = [
       "Serwis kanalizacji dla centrów handlowych we Wrocławiu. Najemcy, food court, separatory, WUKO, krótkie okna serwisowe 24/7.",
     image: {
       src: "/images/task05/b2b-centrum-handlowe.webp",
-      alt: "Serwis kanalizacji centrów handlowych Wrocław — pogotowie 24/7 ZIEBUD Expert",
+      alt: "Serwis kanalizacji centrów handlowych Wrocław — pogotowie 24/7 ZIĘBUD Expert",
     },
     intro: [
       "Centrum handlowe nie ma komfortu długiego przestoju. Kanalizacja pracuje dla food courtu, najemców, toalet, parkingu i zaplecza technicznego, a okna serwisowe są krótkie i często wypadają nocą.",

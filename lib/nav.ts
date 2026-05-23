@@ -130,7 +130,7 @@ export const footerNav = {
     { label: "Marki separatorów", href: "/marki-separatorow" },
     { label: "Marki przepompowni", href: "/marki-przepompowni" },
     { label: "Marki oczyszczalni", href: "/marki-oczyszczalni" },
-    { label: "Sprzęt ZIEBUD Expert", href: "/sprzet" },
+    { label: "Sprzęt ZIĘBUD Expert", href: "/sprzet" },
   ],
   prawne: [
     { label: "Polityka prywatności", href: "/polityka-prywatnosci" },

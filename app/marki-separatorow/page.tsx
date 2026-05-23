@@ -12,7 +12,7 @@ const page = getTrustPage("marki-separatorow");
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: { absolute: page?.title ?? "Marki separatorów | ZIEBUD Expert" },
+    title: { absolute: page?.title ?? "Marki separatorów | ZIĘBUD Expert" },
     description: page?.description,
     alternates: { canonical: "/marki-separatorow" },
     openGraph: {

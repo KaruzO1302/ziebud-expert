@@ -635,7 +635,7 @@ export const localServices: LocalService[] = [
     tagline:
       "Awaria nie musi oznaczać rozkucia drogi. Naprawiamy kanalizację bez wykopu: pakerami, rękawami CIPP i renowacją studni rewizyjnych.",
     metaTitle:
-      "Bezwykopowe naprawy kanalizacji Wrocław | Pakery, rękawy CIPP | ZIEBUD Expert",
+      "Bezwykopowe naprawy kanalizacji Wrocław | Pakery, rękawy CIPP | ZIĘBUD Expert",
     metaDescription:
       "Bezwykopowa naprawa kanalizacji we Wrocławiu. Pakery, rękawy CIPP DN 80–600, renowacja studni rewizyjnych. Tańsza i szybsza od wykopu. Tel: 602 481 688.",
     keywords: [
@@ -648,7 +648,7 @@ export const localServices: LocalService[] = [
     icon: Construction,
     trenchless: true,
     overview: [
-      "Awaria kanalizacji nie musi oznaczać rozkucia drogi, parkingu czy chodnika. ZIEBUD Expert wykonuje bezwykopowe naprawy kanalizacji we Wrocławiu i okolicach metodami, które są tańsze, szybsze i mniej uciążliwe od tradycyjnego wykopu.",
+      "Awaria kanalizacji nie musi oznaczać rozkucia drogi, parkingu czy chodnika. ZIĘBUD Expert wykonuje bezwykopowe naprawy kanalizacji we Wrocławiu i okolicach metodami, które są tańsze, szybsze i mniej uciążliwe od tradycyjnego wykopu.",
       "Metody bezwykopowe sprawdzają się szczególnie tam, gdzie pod ziemią biegnie gęsta sieć przewodów, w drogach o wysokim natężeniu ruchu, na parkingach obiektów i w centrach miast. Dobieramy technologię po inspekcji TV, żeby naprawić dokładnie ten odcinek, który tego wymaga.",
       "Wykonujemy pakerowanie punktowe, naprawy liniowe rękawami CIPP oraz renowację studni rewizyjnych. Po naprawie potwierdzamy efekt kamerą i przekazujemy materiał, który może zostać w dokumentacji wspólnoty, firmy albo zarządcy drogi.",
     ],
@@ -754,7 +754,7 @@ export const localServices: LocalService[] = [
     tagline:
       "Korzenie, beton, stwardniały tłuszcz i twarde osady. Tam, gdzie WUKO i spirala nie dają rady, wjeżdża robot frezujący.",
     metaTitle:
-      "Frezowanie kanalizacji Wrocław | Robot frezujący DN 90–150 | ZIEBUD Expert",
+      "Frezowanie kanalizacji Wrocław | Robot frezujący DN 90–150 | ZIĘBUD Expert",
     metaDescription:
       "Frezowanie kanalizacji we Wrocławiu — robot frezujący usuwa korzenie, beton, twarde osady. DN 90–150 mm. Faktura VAT, 24/7. Tel: 602 481 688.",
     keywords: [
@@ -768,7 +768,7 @@ export const localServices: LocalService[] = [
     trenchless: true,
     overview: [
       "Czasem WUKO i spirala to za mało. Kiedy w kanalizacji utknęły korzenie, beton, kamień albo stwardniały tłuszcz, jedyną skuteczną metodą jest frezowanie.",
-      "ZIEBUD Expert wykonuje frezowanie kanalizacji we Wrocławiu i okolicach robotem frezującym z kamerą i sterowaniem przez operatora. Pracujemy precyzyjnie, tylko w miejscu przeszkody, bez niepotrzebnego uszkadzania rury od wewnątrz.",
+      "ZIĘBUD Expert wykonuje frezowanie kanalizacji we Wrocławiu i okolicach robotem frezującym z kamerą i sterowaniem przez operatora. Pracujemy precyzyjnie, tylko w miejscu przeszkody, bez niepotrzebnego uszkadzania rury od wewnątrz.",
       "Często łączymy frezowanie z inspekcją TV i WUKO: kamera potwierdza przyczynę, robot usuwa twardą przeszkodę, a hydrodynamiczne czyszczenie domywa przewód po pracy.",
     ],
     variants: [
@@ -867,7 +867,7 @@ export const localServices: LocalService[] = [
     tagline:
       "Wyrównanie do poziomu jezdni nawet z dokładnością do 1 mm. Naprawa jednej studzienki zwykle trwa 1–2 godziny.",
     metaTitle:
-      "Regulacja studzienek i włazów kanalizacyjnych Wrocław | Naprawa w 1–2 h | ZIEBUD Expert",
+      "Regulacja studzienek i włazów kanalizacyjnych Wrocław | Naprawa w 1–2 h | ZIĘBUD Expert",
     metaDescription:
       "Regulacja i wymiana studzienek oraz włazów kanalizacyjnych we Wrocławiu. Szybkowiążące masy, naprawa 1 studzienki w 1–2 h. Tel: 602 481 688.",
     keywords: [
@@ -880,7 +880,7 @@ export const localServices: LocalService[] = [
     icon: ArrowDownToLine,
     trenchless: false,
     overview: [
-      "ZIEBUD Expert wykonuje regulację i wymianę studzienek oraz włazów kanalizacyjnych we Wrocławiu i okolicach. Pracujemy na drogach, parkingach, chodnikach, terenach wspólnot i obiektach firmowych.",
+      "ZIĘBUD Expert wykonuje regulację i wymianę studzienek oraz włazów kanalizacyjnych we Wrocławiu i okolicach. Pracujemy na drogach, parkingach, chodnikach, terenach wspólnot i obiektach firmowych.",
       "Stosujemy szybkowiążące, elastyczne masy wyrównawczo-naprawcze na bazie cementów oraz pneumatyczne szalunki, dzięki czemu naprawa jednej studzienki trwa zwykle od 1 do 2 godzin.",
       "Celem jest równa, trwała i szczelna regulacja zwieńczenia: bez stukających włazów, zapadnięć, niszczenia żeliwa i ponownej naprawy po pierwszym sezonie zimowym.",
     ],
@@ -974,7 +974,7 @@ export const localServices: LocalService[] = [
     tagline:
       "Doradzimy, dobierzemy, zamontujemy i serwisujemy oczyszczalnię dopasowaną do działki, liczby mieszkańców i warunków gruntowych.",
     metaTitle:
-      "Przydomowe oczyszczalnie ścieków Wrocław — sprzedaż, montaż, serwis | ZIEBUD Expert",
+      "Przydomowe oczyszczalnie ścieków Wrocław — sprzedaż, montaż, serwis | ZIĘBUD Expert",
     metaDescription:
       "Przydomowe oczyszczalnie ścieków we Wrocławiu i okolicach. Sprzedaż, montaż, serwis i przeglądy. Dobór do warunków gruntowych. Tel: 602 481 688.",
     keywords: [
@@ -987,7 +987,7 @@ export const localServices: LocalService[] = [
     icon: Droplets,
     trenchless: false,
     overview: [
-      "ZIEBUD Expert sprzedaje, montuje i serwisuje przydomowe oraz przyzakładowe oczyszczalnie ścieków we Wrocławiu i okolicach.",
+      "ZIĘBUD Expert sprzedaje, montuje i serwisuje przydomowe oraz przyzakładowe oczyszczalnie ścieków we Wrocławiu i okolicach.",
       "Pracujemy zarówno z klientami indywidualnymi, jak i z firmami, gospodarstwami agroturystycznymi oraz obiektami przy drogach. Dobieramy rozwiązanie do typu gruntu, poziomu wód gruntowych, liczby użytkowników i obciążenia hydraulicznego.",
       "Po montażu zostajemy przy instalacji serwisowo: robimy przeglądy, czyszczenie zbiorników, regulację natlenienia, kontrolę osadu i wymianę elementów eksploatacyjnych.",
     ],
@@ -1095,7 +1095,7 @@ export const localServices: LocalService[] = [
     tagline:
       "Zalewane piwnice, namokłe fundamenty, niedrożny system rynnowy. Diagnozujemy, dobieramy metodę i wykonujemy odwodnienie, które naprawdę działa.",
     metaTitle:
-      "Odwodnienia budynków Wrocław | Drenaż opaskowy i liniowy | ZIEBUD Expert",
+      "Odwodnienia budynków Wrocław | Drenaż opaskowy i liniowy | ZIĘBUD Expert",
     metaDescription:
       "Odwadnianie budynków, garaży, parkingów, posesji. Drenaż opaskowy i liniowy, renowacja drenaży poniemieckich. Wrocław i okolice. Tel: 602 481 688.",
     keywords: [
@@ -1108,7 +1108,7 @@ export const localServices: LocalService[] = [
     icon: Waves,
     trenchless: false,
     overview: [
-      "Jeżeli masz powracający problem z zalewanymi piwnicami, namokłymi fundamentami, podtopionym garażem albo parkingiem po opadach — ZIEBUD Expert rozwiąże to systemowo.",
+      "Jeżeli masz powracający problem z zalewanymi piwnicami, namokłymi fundamentami, podtopionym garażem albo parkingiem po opadach — ZIĘBUD Expert rozwiąże to systemowo.",
       "Specjalizujemy się w odwadnianiu budynków, garaży, parkingów, posesji oraz w odprowadzaniu wody z rynien w przypadku niedrożności systemu. Pracujemy również przy poszukiwaniu i renowacji starych drenaży, w tym instalacji poniemieckich i pokomunistycznych.",
       "Najpierw diagnozujemy, czy problem wynika z wód gruntowych, wód opadowych, ukształtowania terenu czy błędnego odprowadzenia deszczówki. Dopiero potem dobieramy drenaż opaskowy, liniowy, studnię chłonną albo kombinację rozwiązań.",
     ],
@@ -1212,7 +1212,7 @@ export const localServices: LocalService[] = [
     tagline:
       "Dobierzemy separator do Twojego obiektu, dostarczymy, zamontujemy, uruchomimy i obejmiemy serwisem. Pełna obsługa od projektu do faktury.",
     metaTitle:
-      "Montaż separatorów tłuszczu i ropopochodnych Wrocław | KESSEL, ACO, DELFIN | ZIEBUD Expert",
+      "Montaż separatorów tłuszczu i ropopochodnych Wrocław | KESSEL, ACO, DELFIN | ZIĘBUD Expert",
     metaDescription:
       "Sprzedaż i montaż separatorów tłuszczu, skrobi i substancji ropopochodnych we Wrocławiu. Marki: KESSEL, ACO, DELFIN, HAURATON, ECOL-UNICON. Tel: 602 481 688.",
     keywords: [
@@ -1225,7 +1225,7 @@ export const localServices: LocalService[] = [
     icon: Container,
     trenchless: false,
     overview: [
-      "ZIEBUD Expert dostarcza, montuje i serwisuje separatory tłuszczu, skrobi i substancji ropopochodnych w obiektach we Wrocławiu i na Dolnym Śląsku.",
+      "ZIĘBUD Expert dostarcza, montuje i serwisuje separatory tłuszczu, skrobi i substancji ropopochodnych w obiektach we Wrocławiu i na Dolnym Śląsku.",
       "Pracujemy z gastronomią, stacjami paliw, myjniami, warsztatami, parkingami i obiektami przemysłowymi. Współpracujemy z renomowanymi producentami, między innymi KESSEL, ACO, DELFIN, HAURATON i ECOL-UNICON.",
       "Pełna usługa obejmuje dobór, dostawę, transport, prace ziemne, posadowienie separatora, wpięcie w instalację, rozruch próbny i przekazanie do użytkowania. Po montażu możemy przejąć regularny serwis i dokumentację.",
     ],
@@ -1329,7 +1329,7 @@ export const localServices: LocalService[] = [
     tagline:
       "Dobierzemy przepompownię do warunków, zamontujemy, uruchomimy i obejmiemy serwisem. Sanitarne, deszczowe, drenażowe — komplet usług w jednej firmie.",
     metaTitle:
-      "Montaż przepompowni ścieków Wrocław | Sprzedaż i serwis | ZIEBUD Expert",
+      "Montaż przepompowni ścieków Wrocław | Sprzedaż i serwis | ZIĘBUD Expert",
     metaDescription:
       "Sprzedaż i montaż przepompowni ścieków sanitarnych i deszczowych we Wrocławiu. Dobór, dostawa, instalacja, rozruch i serwis. Tel: 602 481 688.",
     keywords: [
@@ -1559,7 +1559,7 @@ localServices.push(
       eyebrow: "Sieci wod-kan",
       tagline:
         "Przyłącza, rozbudowy i modernizacje wodociągów dla inwestycji, firm i zarządców we Wrocławiu oraz na Dolnym Śląsku.",
-      metaTitle: "Budowa sieci wodociągowych Wrocław — ZIEBUD Expert",
+      metaTitle: "Budowa sieci wodociągowych Wrocław — ZIĘBUD Expert",
       metaDescription:
         "Budowa i modernizacja sieci wodociągowych we Wrocławiu. Przyłącza, rozbudowy, odbiory, dokumentacja i wycena po zakresie.",
       keywords: ["budowa wodociągu wrocław", "sieci wodociągowe", "przyłącze wodociągowe"],
@@ -1583,7 +1583,7 @@ localServices.push(
       eyebrow: "Sieci zewnętrzne",
       tagline:
         "Kanalizacja sanitarna grawitacyjna i tłoczna: przyłącza, studnie, odcinki zbiorcze, odbiory i inspekcja.",
-      metaTitle: "Budowa kanalizacji sanitarnej Wrocław — ZIEBUD Expert",
+      metaTitle: "Budowa kanalizacji sanitarnej Wrocław — ZIĘBUD Expert",
       metaDescription:
         "Budowa kanalizacji sanitarnej we Wrocławiu. Przyłącza, studnie, kanalizacja tłoczna, odbiory, inspekcja TV i dokumentacja.",
       keywords: ["kanalizacja sanitarna wrocław", "budowa kanalizacji", "przyłącze kanalizacyjne"],
@@ -1655,7 +1655,7 @@ localServices.push(
       eyebrow: "Bezwykopowo",
       tagline:
         "Przeciski dla krótszych przejść pod drogami, chodnikami i wjazdami, gdy trzeba ograniczyć rozbiórkę nawierzchni.",
-      metaTitle: "Przeciski pod drogami Wrocław — ZIEBUD Expert",
+      metaTitle: "Przeciski pod drogami Wrocław — ZIĘBUD Expert",
       metaDescription:
         "Przeciski pod drogami, chodnikami i wjazdami we Wrocławiu. Bezwykopowe przejścia dla przyłączy i instalacji wod-kan.",
       keywords: ["przeciski wrocław", "przecisk pod drogą", "bezwykopowe przejście"],

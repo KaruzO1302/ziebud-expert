@@ -68,7 +68,7 @@ export function Hero() {
         <div className="grid gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:items-end">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 rounded-full border border-aqua-400/30 bg-aqua-500/10 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-aqua-200">
-              ZIEBUD Expert · Wrocław i okolice
+              ZIĘBUD Expert · Wrocław i okolice
             </span>
             <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.03] tracking-tight text-white sm:text-5xl lg:text-[60px]">
               Pogotowie kanalizacyjne Wrocław.

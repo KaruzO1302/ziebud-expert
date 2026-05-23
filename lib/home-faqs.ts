@@ -81,7 +81,7 @@ export const homeFaqs: HomeFaqItem[] = [
     a: "Tak. To jeden z naszych najmocniejszych segmentów. Obsługujemy wspólnoty i zarządców, zakłady, lokale gastronomiczne, retail i obiekty techniczne.",
   },
   {
-    q: "Od kiedy działa firma ZIEBUD Expert?",
+    q: "Od kiedy działa firma ZIĘBUD Expert?",
     a: "Firma działa od 1991 roku. Łączymy wieloletnie doświadczenie terenowe z nowoczesnym podejściem do zgłoszeń, diagnostyki i obsługi obiektów.",
   },
 ];
