@@ -30,8 +30,8 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "ZIEBUD Expert — Pogotowie Kanalizacyjne Wrocław 24/7",
-    template: "%s | ZIEBUD Expert",
+    default: "ZIĘBUD Expert — Pogotowie Kanalizacyjne Wrocław 24/7",
+    template: "%s | ZIĘBUD Expert",
   },
   description:
     "ZIĘBUD Expert obsługuje Wrocław i Dolny Śląsk: WUKO, czyszczenie kanalizacji, udrażnianie rur, inspekcja TV, separatory i serwis przepompowni.",
@@ -41,8 +41,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pl_PL",
     url: SITE_URL,
-    siteName: "ZIEBUD Expert",
-    title: "ZIEBUD Expert — Pogotowie Kanalizacyjne Wrocław 24/7",
+    siteName: "ZIĘBUD Expert",
+    title: "ZIĘBUD Expert — Pogotowie Kanalizacyjne Wrocław 24/7",
     description:
       "WUKO, czyszczenie kanalizacji, udrażnianie rur, inspekcja TV, separatory i serwis przepompowni dla Wrocławia oraz Dolnego Śląska.",
     images: [
