@@ -102,7 +102,7 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col gap-4 border-t border-navy-800 pt-8 text-xs text-navy-300 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {year} ZIĘBUD Expert Sp. z o.o. Wszystkie prawa zastrzeżone.
+            © {year} ZIĘBUD Expert sp. z o.o. Wszystkie prawa zastrzeżone.
           </p>
           <p className="flex flex-wrap items-center gap-x-4 gap-y-1">
             <span>35 lat doświadczenia · Wrocław i Dolny Śląsk · od 1991</span>

@@ -135,7 +135,7 @@ const equipmentJsonLd = {
   url: "https://pogotowie-kanalizacyjne-wroclaw.com/sprzet",
   about: {
     "@type": "LocalBusiness",
-    name: "ZIĘBUD Expert Sp. z o.o.",
+    name: "ZIĘBUD Expert sp. z o.o.",
     telephone: "+48602481688",
   },
 };
