@@ -29,14 +29,14 @@ export const metadata: Metadata = {
     absolute: "Usługi kanalizacyjne Wrocław — WUKO, serwis, czyszczenie | ZIĘBUD Expert",
   },
   description:
-    "Usługi kanalizacyjne we Wrocławiu. WUKO, udrażnianie rur, inspekcja TV, separatory i przepompownie. Doświadczenie od 1991 roku. Zadzwoń: 602-481-688.",
+    "Usługi kanalizacyjne we Wrocławiu. WUKO, udrażnianie rur, inspekcja TV, separatory i przepompownie. Doświadczenie od 1991 roku. Zadzwoń: 602 481 688.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Usługi kanalizacyjne Wrocław — WUKO, serwis, czyszczenie | ZIĘBUD Expert",
     description:
-      "Usługi kanalizacyjne we Wrocławiu. WUKO, udrażnianie rur, inspekcja TV, separatory i przepompownie. Doświadczenie od 1991 roku. Zadzwoń: 602-481-688.",
+      "Usługi kanalizacyjne we Wrocławiu. WUKO, udrażnianie rur, inspekcja TV, separatory i przepompownie. Doświadczenie od 1991 roku. Zadzwoń: 602 481 688.",
     type: "website",
     locale: "pl_PL",
     url: "https://pogotowie-kanalizacyjne-wroclaw.com",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Usługi kanalizacyjne Wrocław — WUKO, serwis, czyszczenie | ZIĘBUD Expert",
     description:
-      "Usługi kanalizacyjne we Wrocławiu. WUKO, udrażnianie rur, inspekcja TV, separatory i przepompownie. Doświadczenie od 1991 roku. Zadzwoń: 602-481-688.",
+      "Usługi kanalizacyjne we Wrocławiu. WUKO, udrażnianie rur, inspekcja TV, separatory i przepompownie. Doświadczenie od 1991 roku. Zadzwoń: 602 481 688.",
     images: [
       "https://pogotowie-kanalizacyjne-wroclaw.com/opengraph-image",
     ],
