@@ -75,9 +75,16 @@ export function Footer() {
             <div className="mt-6 rounded-2xl border border-aqua-400/20 bg-aqua-400/5 p-5 text-sm leading-relaxed text-navy-200">
               <p className="font-semibold text-white">Powiązane serwisy ZIĘBUD</p>
               <p className="mt-2">
-                Dla pilnych awarii lokalnych sprawdź{" "}
+                Strona firmowa działa pod adresem{" "}
                 <a
-                  href="https://www.kanalizacja-wroclaw.pl/" target="_blank" rel="noopener noreferrer"
+                  href="https://ziebud-expert.pl/" target="_blank" rel="noopener noreferrer"
+                  className="font-semibold text-aqua-300 underline-offset-4 hover:underline"
+                >
+                  ziebud-expert.pl
+                </a>
+                , a dla pilnych awarii lokalnych sprawdź{" "}
+                <a
+                  href="https://pogotowie-kanalizacyjne-wroclaw.com/" target="_blank" rel="noopener noreferrer"
                   className="font-semibold text-aqua-300 underline-offset-4 hover:underline"
                 >
                   pogotowie kanalizacyjne Wrocław

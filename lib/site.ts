@@ -66,8 +66,10 @@ export const COMPANY_AREAS_SERVED = [
 ] as const;
 
 export const COMPANY_SAME_AS_URLS: string[] = [
+  "https://ziebud-expert.pl",
+  "https://pogotowie-kanalizacyjne-wroclaw.com",
   "https://www.wuko-wroclaw.pl",
-  "https://www.kanalizacja-wroclaw.pl",
+  "https://serwis-kanalizacji.com",
   "https://wodociagi-kanalizacja.com",
 ];
 

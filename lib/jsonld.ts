@@ -94,7 +94,7 @@ const coreServices: Array<{
 const coreServiceNames = coreServices.map((s) => s.name);
 
 const ORG_BASE = {
-  "@type": "Plumber",
+  "@type": ["LocalBusiness", "Organization", "Plumber"],
   "@id": `${SITE_URL}/#organization`,
   name: ORG_NAME,
   alternateName: [...ORG_ALTERNATE_NAMES],

@@ -30,6 +30,20 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "ziebud-expert.vercel.app" }],
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow, noarchive",
+          },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       {
