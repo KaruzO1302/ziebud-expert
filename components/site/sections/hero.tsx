@@ -54,7 +54,7 @@ const clientTypes = [
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#f7fbff] text-navy-900">
+    <section className="relative overflow-hidden bg-navy-50 text-navy-900">
       <HeroPhoto
         photo={photos.heroHomepageZiebud}
         priority
@@ -62,7 +62,7 @@ export function Hero() {
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(ellipse_45%_42%_at_72%_16%,rgba(0,212,255,0.18),transparent_70%),radial-gradient(ellipse_40%_36%_at_20%_88%,rgba(245,158,11,0.14),transparent_72%)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_42%_36%_at_74%_18%,rgba(0,212,255,0.1),transparent_72%),linear-gradient(to_bottom,rgba(255,255,255,0),rgba(255,255,255,0.2))]"
       />
       <Container className="relative py-20 sm:py-28 lg:py-32">
         <div className="grid gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:items-end">
