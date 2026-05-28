@@ -197,12 +197,24 @@ const nextConfig: NextConfig = {
       {
         source: "/blog/:slug*",
         has: [{ type: "host", value: "ziebud-expert.pl" }],
-        destination: "https://pogotowie-kanalizacyjne-wroclaw.com/blog",
+        destination: "https://pogotowie-kanalizacyjne-wroclaw.com/blog/:slug*",
         permanent: true,
       },
       {
         source: "/blog/:slug*",
         has: [{ type: "host", value: "www.ziebud-expert.pl" }],
+        destination: "https://pogotowie-kanalizacyjne-wroclaw.com/blog/:slug*",
+        permanent: true,
+      },
+      {
+        source: "/blog/index.html",
+        has: [{ type: "host", value: "kanalizacja-wroclaw.pl" }],
+        destination: "https://pogotowie-kanalizacyjne-wroclaw.com/blog",
+        permanent: true,
+      },
+      {
+        source: "/blog/index.html",
+        has: [{ type: "host", value: "www.kanalizacja-wroclaw.pl" }],
         destination: "https://pogotowie-kanalizacyjne-wroclaw.com/blog",
         permanent: true,
       },
@@ -282,6 +294,20 @@ const nextConfig: NextConfig = {
       {
         source: "/:path*",
         has: [{ type: "host", value: "www.pogotowie-kanalizacyjne-wroclaw.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "kanalizacja-wroclaw.pl" }],
+        destination:
+          "https://pogotowie-kanalizacyjne-wroclaw.com/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.kanalizacja-wroclaw.pl" }],
         destination:
           "https://pogotowie-kanalizacyjne-wroclaw.com/:path*",
         permanent: true,
