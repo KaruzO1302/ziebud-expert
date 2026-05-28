@@ -42,6 +42,148 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    slug: "czyszczenie-separatorow-tluszczu-wroclaw",
+    title:
+      "Czyszczenie separatorów tłuszczu Wrocław — kiedy robić serwis i jak uniknąć cofki",
+    category: "Separatory tłuszczu",
+    metaTitle:
+      "Czyszczenie separatorów tłuszczu Wrocław — serwis dla gastronomii",
+    metaDescription:
+      "Czyszczenie separatorów tłuszczu we Wrocławiu. Sprawdź, kiedy zamówić serwis, jak wygląda odbiór osadu i jak ograniczyć ryzyko zatorów w gastronomii.",
+    excerpt:
+      "Separator tłuszczu chroni kanalizację tylko wtedy, gdy jest regularnie czyszczony. Przepełniony zbiornik przepuszcza tłuszcz dalej, powoduje zapachy, cofki i kosztowne awarie zaplecza kuchennego.",
+    lead:
+      "Czyszczenie separatorów tłuszczu to obowiązkowy element utrzymania kanalizacji w restauracjach, hotelach, barach, kuchniach cateringowych i obiektach zbiorowego żywienia. Separator działa jak bufor między zapleczem kuchennym a kanalizacją, ale jego skuteczność kończy się w momencie przepełnienia. Wtedy tłuszcz, osad i resztki organiczne zaczynają przechodzić dalej do rur, tworząc twarde zatory i nieprzyjemne zapachy.",
+    publishedAt: "2026-05-28",
+    readTime: "9 min",
+    photoKey: "ziebudCzyszczenieSeparatorow",
+    serviceSlugs: ["separatory-tluszczu", "wuko-wroclaw", "uslugi-kanalizacyjne"],
+    citySlugs: ["wroclaw"],
+    sections: [
+      {
+        title: "Po co czyści się separator tłuszczu",
+        paragraphs: [
+          "Separator zatrzymuje tłuszcze, oleje i zawiesiny zanim trafią do kanalizacji. W praktyce chroni odpływy kuchenne, przyłącze i dalszą sieć przed narastającym osadem. Jeżeli zbiornik nie jest regularnie opróżniany, przestaje pełnić tę funkcję i zaczyna być źródłem problemu.",
+          "Najczęstszy scenariusz w gastronomii wygląda podobnie: odpływy działają coraz wolniej, na zapleczu czuć zapach z kanalizacji, a po większym ruchu w kuchni pojawia się cofka. W takiej sytuacji samo przepchanie odpływu zwykle nie wystarcza, bo przyczyna leży w separatorze albo w odcinku za separatorem.",
+        ],
+        inlineCta: {
+          title: "Masz zapach albo cofkę na zapleczu kuchni?",
+          text: "Zadzwoń i opisz objawy. Sprawdzimy, czy potrzebne jest czyszczenie separatora, WUKO odpływów czy pełna diagnostyka instalacji.",
+          primaryLabel: "Zadzwoń: 602 481 688",
+          primaryHref: "tel:+48602481688",
+          secondaryLabel: "Wyślij zapytanie",
+          secondaryHref: "/zapytanie",
+        },
+      },
+      {
+        title: "Kiedy zamówić czyszczenie separatora tłuszczu",
+        bullets: [
+          "odpływy z kuchni zaczynają wolniej odbierać wodę",
+          "na zapleczu pojawia się zapach tłuszczu lub kanalizacji",
+          "separator jest blisko maksymalnego poziomu napełnienia",
+          "lokal przygotowuje się do kontroli albo odbioru sanitarnego",
+          "po większym obciążeniu kuchni pojawiają się cofki",
+          "ostatni serwis separatora nie ma potwierdzenia w dokumentacji",
+        ],
+        paragraphs: [
+          "Nie warto czekać, aż separator będzie całkowicie przepełniony. Wtedy czyszczenie jest trudniejsze, a tłuszcz często zdąży już wejść w instalację za separatorem. Dla restauracji i kuchni produkcyjnych najbezpieczniejszy jest harmonogram serwisowy dopasowany do realnej liczby posiłków, rodzaju kuchni i pojemności urządzenia.",
+        ],
+      },
+      {
+        title: "Jak wygląda profesjonalny serwis separatora",
+        bullets: [
+          "ocena dostępu do pokrywy, komory i króćców przyłączeniowych",
+          "odpompowanie warstwy tłuszczu, osadu i wody technologicznej",
+          "mechaniczne lub ciśnieniowe oczyszczenie ścian i dna zbiornika",
+          "kontrola drożności dopływu i odpływu z separatora",
+          "wskazanie, czy potrzebne jest dodatkowe WUKO odcinka za separatorem",
+          "przekazanie informacji dla właściciela, zarządcy lub osoby odpowiedzialnej za lokal",
+        ],
+        paragraphs: [
+          "Dobry serwis nie kończy się na samym wypompowaniu zawartości. Kluczowe jest sprawdzenie, czy dopływ i odpływ pracują prawidłowo oraz czy tłuszcz nie przeszedł dalej w kanalizację. Jeżeli odcinek za separatorem jest już oblepiony osadem, warto wykonać czyszczenie hydrodynamiczne.",
+          "W lokalach działających bez przerwy prace planujemy tak, aby ograniczyć przestój kuchni. Najczęściej można ustalić termin poza godzinami największego ruchu, wcześnie rano albo po zamknięciu lokalu.",
+        ],
+      },
+      {
+        title: "Separator tłuszczu a WUKO — kiedy potrzebne są obie usługi",
+        paragraphs: [
+          "Czyszczenie separatora usuwa tłuszcz i osad z samego urządzenia. WUKO czyści przewody kanalizacyjne przed separatorem lub za separatorem. Jeżeli tłuszcz zdążył przejść dalej, samo opróżnienie zbiornika nie rozwiąże problemu na długo.",
+          "Dlatego przy nawracających zapachach, bulgotaniu w odpływach albo wolnym odbiorze wody z kilku stanowisk kuchennych warto potraktować instalację całościowo. Najpierw separator, potem kontrola drożności i ewentualne czyszczenie ciśnieniowe przewodów.",
+        ],
+        table: {
+          headers: ["Objaw", "Najczęstsza przyczyna", "Rozsądne działanie"],
+          rows: [
+            [
+              "Zapach na zapleczu",
+              "przepełniony separator lub osad w odpływie",
+              "czyszczenie separatora i kontrola odpływu",
+            ],
+            [
+              "Wolny odpływ ze zlewów",
+              "tłuszcz w przewodach kuchennych",
+              "WUKO odpływów plus serwis separatora",
+            ],
+            [
+              "Cofka po dużym ruchu w kuchni",
+              "brak rezerwy w separatorze i osad za separatorem",
+              "pilne czyszczenie oraz ocena instalacji",
+            ],
+            [
+              "Problem wraca co kilka tygodni",
+              "za rzadki harmonogram serwisu",
+              "stały plan czyszczenia dopasowany do lokalu",
+            ],
+          ],
+        },
+        afterTableParagraphs: [
+          "Największy błąd to traktowanie separatora jak elementu, który działa bezobsługowo. W obiektach gastronomicznych jest to urządzenie eksploatacyjne i musi mieć regularny serwis.",
+        ],
+      },
+      {
+        title: "Jak często czyścić separator tłuszczu",
+        paragraphs: [
+          "Częstotliwość zależy od pojemności separatora, liczby wydawanych posiłków, rodzaju kuchni i sposobu pracy zaplecza. Lokal smażący dużo mięsa, ryb lub dań z dużą ilością oleju będzie wymagał częstszej obsługi niż mała kawiarnia z lekkim zapleczem.",
+          "W praktyce warto zacząć od krótszego interwału, obserwować ilość zebranego tłuszczu i dopiero potem ustalić docelowy harmonogram. Dzięki temu nie przepłacasz za zbyt częste wizyty, ale też nie ryzykujesz przepełnienia separatora.",
+        ],
+        bullets: [
+          "mała gastronomia: kontrola po pierwszych tygodniach pracy i korekta harmonogramu",
+          "restauracje z kuchnią gorącą: regularny serwis według obciążenia",
+          "hotele i kuchnie zbiorowe: planowe czyszczenie z dokumentacją",
+          "lokale po awarii: krótszy interwał do czasu potwierdzenia stabilnej pracy",
+        ],
+      },
+      {
+        title: "Dokumentacja i odpowiedzialność właściciela lokalu",
+        paragraphs: [
+          "Właściciel lub zarządca lokalu powinien wiedzieć, kiedy separator był czyszczony, kto wykonał usługę i czy po serwisie wskazano dodatkowe zalecenia. To ważne nie tylko organizacyjnie, ale też przy rozmowach z administracją budynku, zarządcą sieci lub podczas kontroli.",
+          "Brak regularnego serwisu separatora może prowadzić do awarii, której koszty są znacznie wyższe niż planowe czyszczenie. Dochodzi wtedy ryzyko przestoju kuchni, sprzątania zalania, interwencji awaryjnej i naprawy dalszej kanalizacji.",
+        ],
+      },
+      {
+        title: "Dla kogo wykonujemy czyszczenie separatorów we Wrocławiu",
+        bullets: [
+          "restauracje, bary i bistra",
+          "hotele, hostele i aparthotele",
+          "kuchnie cateringowe i produkcyjne",
+          "stołówki szkolne, pracownicze i obiekty zbiorowego żywienia",
+          "galerie handlowe i lokale w pasażach gastronomicznych",
+          "zarządcy nieruchomości z lokalami usługowymi",
+        ],
+        paragraphs: [
+          "Obsługujemy zarówno pojedyncze interwencje, jak i stałe harmonogramy czyszczenia. Przy obiektach B2B warto połączyć serwis separatora z okresowym WUKO odpływów, bo te dwie usługi razem najlepiej ograniczają ryzyko tłustych zatorów.",
+        ],
+      },
+    ],
+    cta: {
+      title: "Zamów czyszczenie separatora tłuszczu",
+      text: "ZIĘBUD Expert wykonuje czyszczenie separatorów tłuszczu, kontrolę odpływów i WUKO instalacji gastronomicznych we Wrocławiu. Zadzwoń, jeśli chcesz ustalić termin jednorazowy albo stały harmonogram serwisu.",
+      primaryLabel: "Zadzwoń: 602 481 688",
+      primaryHref: "tel:+48602481688",
+      secondaryLabel: "Wyślij zapytanie",
+      secondaryHref: "/zapytanie",
+    },
+  },
+  {
     slug: "wuko-wroclaw-dlaczego-to-najskuteczniejsza-metoda",
     title:
       "Czyszczenie hydrodynamiczne kanalizacji Wrocław — metoda WUKO",

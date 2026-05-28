@@ -122,7 +122,7 @@ export default async function ArticleDetailPage({
       <section className="bg-white py-20">
         <Container>
           <div className="grid gap-12 lg:grid-cols-[1fr_280px]">
-            <article className="space-y-10">
+            <article className="min-w-0 space-y-10">
               {article.sections.map((section) => (
                 <section key={section.title}>
                   <h2 className="font-display text-3xl font-semibold tracking-tight text-navy-900">
@@ -302,7 +302,7 @@ export default async function ArticleDetailPage({
               )}
             </article>
 
-            <aside className="h-fit rounded-3xl border border-border bg-muted p-6">
+            <aside className="min-w-0 h-fit rounded-3xl border border-border bg-muted p-6">
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-aqua-700">
                 Dla kogo
               </p>
