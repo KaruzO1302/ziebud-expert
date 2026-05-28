@@ -142,7 +142,7 @@ export default function HomePage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 ZIĘBUD Expert
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -197,7 +197,7 @@ export default function HomePage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Dla kogo pracujemy
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -250,7 +250,7 @@ export default function HomePage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Najczęstsze sytuacje
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -306,7 +306,7 @@ export default function HomePage() {
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Co nas odróżnia
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -349,7 +349,7 @@ export default function HomePage() {
               />
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Technicznie i sprzedażowo
               </p>
               <h3 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900">
@@ -383,7 +383,7 @@ export default function HomePage() {
 
           <div className="mt-14 grid gap-10 rounded-[32px] border border-border bg-muted p-8 shadow-soft lg:grid-cols-[1fr_0.95fr] lg:items-start">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Lokalnie pod Wrocław
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -411,7 +411,7 @@ export default function HomePage() {
               <ul className="mt-5 space-y-3 text-sm leading-relaxed text-navy-700">
                 {coverageAreas.map((item) => (
                   <li key={item} className="flex gap-2.5">
-                    <span className="mt-1 text-aqua-600">•</span>
+                    <span className="mt-1 text-aqua-700">•</span>
                     <span>{item}</span>
                   </li>
                 ))}

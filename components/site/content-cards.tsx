@@ -29,7 +29,7 @@ export function ArticleCard({ article }: { article: Article }) {
       </p>
       <Link
         href={`/blog/${article.slug}`}
-        className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-navy-900 transition hover:text-aqua-600"
+        className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-navy-900 transition hover:text-aqua-700"
       >
         Czytaj artykuł
         <ArrowUpRight className="h-4 w-4" />
@@ -62,7 +62,7 @@ export function CaseStudyCard({ caseStudy }: { caseStudy: CaseStudy }) {
       </p>
       <Link
         href={`/realizacje/${caseStudy.slug}`}
-        className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-navy-900 transition hover:text-aqua-600"
+        className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-navy-900 transition hover:text-aqua-700"
       >
         Zobacz realizację
         <ArrowUpRight className="h-4 w-4" />
@@ -90,7 +90,7 @@ export function LocationCard({ location }: { location: LocationPage }) {
       </p>
       <Link
         href={href}
-        className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-navy-900 transition hover:text-aqua-600"
+        className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-navy-900 transition hover:text-aqua-700"
       >
         Zobacz stronę lokalną
         <ArrowRight className="h-4 w-4" />

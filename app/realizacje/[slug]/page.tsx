@@ -115,7 +115,7 @@ export default async function CaseStudyPage({
         <Container>
           <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr]">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Kontekst inwestycji
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -127,7 +127,7 @@ export default async function CaseStudyPage({
             </div>
 
             <aside className="rounded-3xl border border-border bg-muted p-7">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Efekt dla inwestora
               </p>
               <ul className="mt-5 space-y-3 text-sm leading-relaxed text-navy-800">
@@ -144,7 +144,7 @@ export default async function CaseStudyPage({
         <Container>
           <div className="grid gap-10 lg:grid-cols-2">
             <div className="rounded-3xl border border-border bg-white p-7 shadow-soft">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Zakres prac
               </p>
               <ul className="mt-5 space-y-3 text-sm leading-relaxed text-navy-800">
@@ -154,7 +154,7 @@ export default async function CaseStudyPage({
               </ul>
             </div>
             <div className="rounded-3xl border border-border bg-white p-7 shadow-soft">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Podsumowanie
               </p>
               <p className="mt-5 text-sm leading-relaxed text-navy-700">
@@ -164,7 +164,7 @@ export default async function CaseStudyPage({
               </p>
               <Link
                 href="/zapytanie"
-                className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-navy-900 hover:text-aqua-600"
+                className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-navy-900 hover:text-aqua-700"
               >
                 Prześlij dokumentację
               </Link>

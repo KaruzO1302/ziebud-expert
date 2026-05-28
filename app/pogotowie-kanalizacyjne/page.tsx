@@ -139,7 +139,7 @@ export default function PogotowieKanalizacyjnePage() {
       <section className="bg-white py-20">
         <Container>
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
               Szybka pomoc na miejscu
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -178,7 +178,7 @@ export default function PogotowieKanalizacyjnePage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Zadzwoń i opisz problem
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -227,7 +227,7 @@ export default function PogotowieKanalizacyjnePage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Kiedy dzwonić
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -249,7 +249,7 @@ export default function PogotowieKanalizacyjnePage() {
               <ul className="mt-5 space-y-3 text-sm leading-relaxed text-navy-700">
                 {alarmSituations.map((item) => (
                   <li key={item} className="flex gap-2.5">
-                    <span className="mt-1 text-aqua-600">•</span>
+                    <span className="mt-1 text-aqua-700">•</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -288,7 +288,7 @@ export default function PogotowieKanalizacyjnePage() {
 
       <section className="bg-white py-20">
         <Container>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
             Najkrótsza droga do rozwiązania
           </p>
           <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -313,7 +313,7 @@ export default function PogotowieKanalizacyjnePage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Dla wspólnot, firm i lokali
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -350,7 +350,7 @@ export default function PogotowieKanalizacyjnePage() {
               <ul className="mt-5 space-y-3 text-sm leading-relaxed text-navy-700">
                 {businessCases.map((item) => (
                   <li key={item} className="flex gap-2.5">
-                    <span className="mt-1 text-aqua-600">•</span>
+                    <span className="mt-1 text-aqua-700">•</span>
                     <span>{item}</span>
                   </li>
                 ))}

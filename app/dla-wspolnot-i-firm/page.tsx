@@ -122,7 +122,7 @@ export default function DlaWspolnotIFirmPage() {
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Co dostajesz
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -151,7 +151,7 @@ export default function DlaWspolnotIFirmPage() {
 
       <section className="bg-white py-20">
         <Container>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
             Najczęstsze zakresy
           </p>
           <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -162,7 +162,7 @@ export default function DlaWspolnotIFirmPage() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="inline-flex items-center gap-1 rounded-full border border-border bg-muted px-4 py-2 text-sm font-medium text-navy-900 transition hover:border-aqua-300 hover:text-aqua-600"
+                className="inline-flex items-center gap-1 rounded-full border border-border bg-muted px-4 py-2 text-sm font-medium text-navy-900 transition hover:border-aqua-300 hover:text-aqua-700"
               >
                 {link.label}
                 <ArrowRight className="h-4 w-4" />

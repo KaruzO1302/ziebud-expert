@@ -290,7 +290,7 @@ export default async function ArticleDetailPage({
                           <p className="mt-3 text-sm leading-relaxed text-navy-700 line-clamp-4">
                             {service.tagline}
                           </p>
-                          <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-navy-900 transition group-hover:text-aqua-600">
+                          <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-navy-900 transition group-hover:text-aqua-700">
                             Zobacz usługę
                             <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
                           </span>
@@ -313,7 +313,7 @@ export default async function ArticleDetailPage({
               </p>
               <Link
                 href="/zapytanie"
-                className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-navy-900 hover:text-aqua-600"
+                className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-navy-900 hover:text-aqua-700"
               >
                 Zgłoś temat
               </Link>

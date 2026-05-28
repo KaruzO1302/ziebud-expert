@@ -77,9 +77,8 @@ export function Chatbot() {
         aria-label={open ? "Zamknij czat" : "Otwórz czat z ekspertem AI"}
         onClick={() => setOpen((o) => !o)}
         className={cn(
-          "fixed bottom-5 right-5 z-50 hidden items-center gap-2 rounded-full shadow-[0_10px_30px_-6px_rgba(0,212,255,0.55)] transition md:flex",
+          "fixed bottom-5 right-5 z-50 hidden h-14 w-14 items-center justify-center rounded-full shadow-[0_10px_30px_-6px_rgba(0,212,255,0.55)] transition md:flex",
           "bg-navy-900 text-white hover:bg-navy-800",
-          "px-4 py-3 sm:px-5 sm:py-3.5",
         )}
       >
         {open ? (
@@ -89,9 +88,6 @@ export function Chatbot() {
             <span className="relative flex h-7 w-7 items-center justify-center rounded-full bg-aqua-500 text-navy-900">
               <MessageCircle className="h-4 w-4" />
               <span className="absolute inset-0 animate-ping rounded-full bg-aqua-400 opacity-30" />
-            </span>
-            <span className="hidden pr-1 text-sm font-semibold sm:inline">
-              Ekspert AI
             </span>
           </>
         )}

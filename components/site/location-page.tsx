@@ -83,7 +83,7 @@ export function LocationPage({ location, articles, caseStudies }: Props) {
         <Container>
           <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr]">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Lokalny kontekst
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -97,7 +97,7 @@ export function LocationPage({ location, articles, caseStudies }: Props) {
             </div>
 
             <aside className="rounded-3xl border border-border bg-muted p-7">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Co liczy się najczęściej
               </p>
               <ul className="mt-5 space-y-3 text-sm leading-relaxed text-navy-800">
@@ -118,7 +118,7 @@ export function LocationPage({ location, articles, caseStudies }: Props) {
       <section className="bg-muted py-20">
         <Container>
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
               Zakres prac
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -154,7 +154,7 @@ export function LocationPage({ location, articles, caseStudies }: Props) {
         <Container>
           <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr]">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Dlaczego my
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -185,7 +185,7 @@ export function LocationPage({ location, articles, caseStudies }: Props) {
           <Container>
             <div className="flex items-end justify-between gap-4">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                   Realizacje
                 </p>
                 <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -194,7 +194,7 @@ export function LocationPage({ location, articles, caseStudies }: Props) {
               </div>
               <Link
                 href="/realizacje"
-                className="hidden text-sm font-semibold text-navy-900 hover:text-aqua-600 sm:inline-flex"
+                className="hidden text-sm font-semibold text-navy-900 hover:text-aqua-700 sm:inline-flex"
               >
                 Wszystkie realizacje
               </Link>
@@ -214,7 +214,7 @@ export function LocationPage({ location, articles, caseStudies }: Props) {
           <Container>
             <div className="flex items-end justify-between gap-4">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                   Wiedza
                 </p>
                 <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -223,7 +223,7 @@ export function LocationPage({ location, articles, caseStudies }: Props) {
               </div>
               <Link
                 href="/blog"
-                className="hidden text-sm font-semibold text-navy-900 hover:text-aqua-600 sm:inline-flex"
+                className="hidden text-sm font-semibold text-navy-900 hover:text-aqua-700 sm:inline-flex"
               >
                 Zobacz wiedzę
               </Link>

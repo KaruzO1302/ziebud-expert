@@ -18,7 +18,7 @@ const overlayClass: Record<NonNullable<HeroPhotoProps["overlay"]>, string> = {
   "aqua-glow":
     "bg-[radial-gradient(ellipse_70%_55%_at_10%_-10%,rgba(0,212,255,0.25),transparent_60%),linear-gradient(to_bottom,rgba(10,22,40,0.55),rgba(10,22,40,0.9))]",
   "bright-soft":
-    "bg-[linear-gradient(to_right,rgba(255,255,255,0.94),rgba(255,255,255,0.82)_34%,rgba(255,255,255,0.36)_58%,rgba(255,255,255,0.05)_78%),linear-gradient(to_bottom,rgba(255,255,255,0.12),rgba(255,255,255,0.2))]",
+    "bg-[linear-gradient(to_right,rgba(255,255,255,0.97),rgba(255,255,255,0.9)_52%,rgba(255,255,255,0.34)_76%,rgba(255,255,255,0.04)_92%),linear-gradient(to_bottom,rgba(255,255,255,0.2),rgba(255,255,255,0.32))]",
   none: "",
 };
 

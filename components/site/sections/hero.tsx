@@ -1,7 +1,5 @@
-import Link from "next/link";
 import {
   ArrowRight,
-  ArrowUpRight,
   Building2,
   Camera,
   Factory,
@@ -14,20 +12,6 @@ import { LinkButton } from "@/components/site/link-button";
 import { HeroPhoto } from "@/components/site/hero-photo";
 import { SlaBadge } from "@/components/site/sla-badge";
 import { photos } from "@/lib/photos";
-
-const quickLinks = [
-  { label: "Usługi kanalizacyjne", href: "/uslugi/uslugi-kanalizacyjne" },
-  { label: "WUKO Wrocław", href: "/uslugi/wuko-wroclaw" },
-  { label: "Udrażnianie rur", href: "/uslugi/udraznianie-rur" },
-  { label: "Awarie wodociągowe", href: "/uslugi/naprawa-sieci-wodociagowych" },
-  { label: "Inspekcja TV", href: "/uslugi/inspekcja-tv-kanalizacji" },
-  { label: "Separatory tłuszczu", href: "/uslugi/separatory-tluszczu" },
-  {
-    label: "Separatory ropopochodne",
-    href: "/uslugi/separatory-ropopochodne",
-  },
-  { label: "Serwis przepompowni", href: "/uslugi/serwis-przepompowni" },
-];
 
 const clientTypes = [
   {
@@ -70,38 +54,23 @@ export function Hero() {
             <span className="inline-flex items-center gap-2 rounded-full border border-aqua-200 bg-white/85 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-aqua-800 shadow-soft">
               ZIĘBUD Expert · Wrocław i okolice
             </span>
-            <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.03] tracking-tight text-navy-950 sm:text-5xl lg:text-[60px]">
-              Pogotowie kanalizacyjne Wrocław.
-              {" "}
-              <span className="text-aqua-700">WUKO, czyszczenie kanalizacji</span>
-              {" "}
-              i udrażnianie rur
+            <h1 className="mt-5 max-w-3xl text-balance font-display text-4xl font-semibold leading-[1.03] tracking-tight text-navy-950 sm:text-5xl lg:text-[60px]">
+              Pogotowie kanalizacyjne Wrocław{" "}
+              <span className="block text-aqua-700">WUKO i udrażnianie rur</span>
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-700">
               Profesjonalne usługi kanalizacyjne we Wrocławiu i okolicach.
-              Obsługujemy WUKO, inspekcję TV, separatory i przepompownie.
-              Pracujemy w oparciu o doświadczenie od 1991 roku.
+              Obsługujemy czyszczenie kanalizacji WUKO, inspekcję TV,
+              separatory i przepompownie. Pracujemy w oparciu o doświadczenie
+              od 1991 roku.
             </p>
 
             <div className="mt-6">
               <SlaBadge variant="hero" />
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-3 text-sm text-navy-700">
-              {["WUKO", "kamera TV", "wspólnoty", "gastronomia", "przepompownie"].map(
-                (item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-aqua-100 bg-white/80 px-3 py-1.5 shadow-[0_12px_30px_-24px_rgba(10,22,40,0.25)]"
-                  >
-                    {item}
-                  </span>
-                ),
-              )}
-            </div>
-
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-9 hidden flex-col gap-3 sm:flex-row md:flex">
               <LinkButton
                 href="tel:+48602481688"
                 size="lg"
@@ -119,31 +88,6 @@ export function Hero() {
                 Zgłoś awarię
                 <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
               </LinkButton>
-            </div>
-
-            <div className="mt-8 grid gap-3 sm:grid-cols-3">
-              <HeroStat value="Od 1991" label="wieloletnia praktyka na rynku wrocławskim" />
-              <HeroStat value="WUKO + TV" label="nowoczesne pojazdy i diagnostyka kamerowa" />
-              <HeroStat value="Faktura VAT" label="pełna dokumentacja na każdą usługę" />
-            </div>
-
-            <div className="mt-8 flex flex-wrap gap-2">
-              {quickLinks.map((link, index) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={[
-                    "inline-flex items-center gap-1 rounded-full border border-navy-100 bg-white/80 px-3.5 py-2 text-sm font-medium text-navy-800 shadow-[0_10px_24px_-22px_rgba(10,22,40,0.35)] transition hover:border-aqua-300 hover:bg-aqua-50 hover:text-navy-950",
-                    index > 3 ? "hidden md:inline-flex" : "",
-                    index > 5 ? "md:hidden xl:inline-flex" : "",
-                  ]
-                    .filter(Boolean)
-                    .join(" ")}
-                >
-                  {link.label}
-                  <ArrowUpRight className="h-3.5 w-3.5" />
-                </Link>
-              ))}
             </div>
           </div>
 
@@ -215,7 +159,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-navy-100 pt-8 text-xs font-medium uppercase tracking-wider text-navy-500">
+        <div className="mt-14 hidden flex-wrap items-center gap-x-6 gap-y-2 border-t border-navy-100 pt-8 text-xs font-medium uppercase tracking-wider text-navy-500 lg:flex">
           <span>Krzyki</span>
           <span className="text-aqua-500">·</span>
           <span>Fabryczna</span>
@@ -227,29 +171,8 @@ export function Hero() {
           <span>Stare Miasto</span>
           <span className="text-aqua-500">·</span>
           <span>Nadodrze</span>
-          <span className="text-aqua-500">·</span>
-          <span>WUKO</span>
-          <span className="text-aqua-500">·</span>
-          <span>Udrażnianie rur</span>
-          <span className="text-aqua-500">·</span>
-          <span>Inspekcja TV</span>
-          <span className="text-aqua-500">·</span>
-          <span>Separatory tłuszczu</span>
-          <span className="text-aqua-500">·</span>
-          <span>Separatory ropopochodne</span>
-          <span className="text-aqua-500">·</span>
-          <span>Przepompownie</span>
         </div>
       </Container>
     </section>
-  );
-}
-
-function HeroStat({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="rounded-2xl border border-white bg-white/82 p-4 shadow-soft backdrop-blur-sm">
-      <p className="font-display text-2xl font-semibold text-navy-950">{value}</p>
-      <p className="mt-1 text-sm leading-relaxed text-navy-600">{label}</p>
-    </div>
   );
 }

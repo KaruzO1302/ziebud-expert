@@ -215,7 +215,7 @@ export default function SprzetPage() {
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr]">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Dlaczego to ważne
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -251,7 +251,7 @@ export default function SprzetPage() {
                   className="rounded-[24px] border border-border bg-white p-5 shadow-soft"
                 >
                   <div className="flex items-start gap-3">
-                    <ShieldCheck className="mt-0.5 h-5 w-5 text-aqua-600" />
+                    <ShieldCheck className="mt-0.5 h-5 w-5 text-aqua-700" />
                     <p className="text-sm font-semibold leading-relaxed text-navy-900">
                       {item}
                     </p>
@@ -266,7 +266,7 @@ export default function SprzetPage() {
       <section className="bg-white py-20">
         <Container>
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
               Co umiemy
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -307,7 +307,7 @@ export default function SprzetPage() {
                   <ul className="mt-5 space-y-3 text-sm text-navy-800">
                     {item.bullets.map((bullet) => (
                       <li key={bullet} className="flex gap-2.5">
-                        <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-aqua-600" />
+                        <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-aqua-700" />
                         <span>{bullet}</span>
                       </li>
                     ))}
@@ -328,7 +328,7 @@ export default function SprzetPage() {
 
       <section className="bg-white py-20">
         <Container>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
             Dobór metody
           </p>
           <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -356,7 +356,7 @@ export default function SprzetPage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-start">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Marki i urządzenia
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">

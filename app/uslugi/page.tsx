@@ -73,7 +73,7 @@ export default function UslugiIndexPage() {
         <Container>
           <div className="flex items-end justify-between gap-6">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Najczęściej wybierane
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -88,7 +88,7 @@ export default function UslugiIndexPage() {
       <section className="bg-muted py-20">
         <Container>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
               Obsługa obiektów
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -151,7 +151,7 @@ function ServiceGrid({ items }: { items: LocalService[] }) {
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-navy-700 line-clamp-3">
                   {service.tagline}
                 </p>
-                <span className="mt-5 inline-flex items-center gap-1 text-xs font-semibold text-navy-900 transition group-hover:text-aqua-600">
+                <span className="mt-5 inline-flex items-center gap-1 text-xs font-semibold text-navy-900 transition group-hover:text-aqua-700">
                   Zobacz szczegóły
                   <ArrowUpRight className="h-3.5 w-3.5" />
                 </span>

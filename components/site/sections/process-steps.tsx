@@ -53,7 +53,7 @@ export function ProcessSteps() {
       <Container>
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
               Jak pracujemy
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -74,7 +74,7 @@ export function ProcessSteps() {
                 <ul className="mt-4 space-y-3 text-sm leading-relaxed text-navy-700">
                   {startChecklist.map((item) => (
                     <li key={item} className="flex gap-2.5">
-                      <span className="mt-1 text-aqua-600">•</span>
+                      <span className="mt-1 text-aqua-700">•</span>
                       <span>{item}</span>
                     </li>
                   ))}
@@ -88,7 +88,7 @@ export function ProcessSteps() {
                 <ul className="mt-4 space-y-3 text-sm leading-relaxed text-navy-700">
                   {serviceModel.map((item) => (
                     <li key={item} className="flex gap-2.5">
-                      <span className="mt-1 text-aqua-600">•</span>
+                      <span className="mt-1 text-aqua-700">•</span>
                       <span>{item}</span>
                     </li>
                   ))}

@@ -38,7 +38,7 @@ export function ServicesGrid() {
       <Container>
         <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
               Zakres usług
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -90,7 +90,7 @@ function ServiceGroup({
 }) {
   return (
     <div className="mt-14 first:mt-12">
-      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
         {eyebrow}
       </p>
       <div className="mt-3 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
@@ -160,7 +160,7 @@ function ServiceGroup({
                   </div>
                 ) : null}
 
-                <span className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-navy-900 transition group-hover:text-aqua-600">
+                <span className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-navy-900 transition group-hover:text-aqua-700">
                   Zobacz stronę usługi
                   <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </span>

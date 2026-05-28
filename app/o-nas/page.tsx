@@ -196,7 +196,7 @@ export default function ONasPage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Jak pracujemy
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -278,7 +278,7 @@ export default function ONasPage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:items-start">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Dla kogo pracujemy
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -312,7 +312,7 @@ export default function ONasPage() {
 
       <section className="bg-white pb-20 sm:pb-28">
         <Container>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
             Co buduje zaufanie
           </p>
           <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">

@@ -144,7 +144,7 @@ export function ServicePage({ service }: { service: LocalService }) {
         <Container>
           <div className="grid gap-14 lg:grid-cols-[1.4fr_1fr]">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Na czym polega usługa
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -179,7 +179,7 @@ export function ServicePage({ service }: { service: LocalService }) {
       <section className="bg-muted py-20">
         <Container>
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
               Warianty i zakres
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -214,7 +214,7 @@ export function ServicePage({ service }: { service: LocalService }) {
         <Container>
           <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Widełki cenowe
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -271,7 +271,7 @@ export function ServicePage({ service }: { service: LocalService }) {
       <section className="bg-muted py-20">
         <Container>
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
               Przebieg
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -285,7 +285,7 @@ export function ServicePage({ service }: { service: LocalService }) {
                 key={step.title}
                 className="rounded-2xl border border-border bg-white p-5"
               >
-                <span className="font-display text-xs font-bold tracking-wider text-aqua-600">
+                <span className="font-display text-xs font-bold tracking-wider text-aqua-700">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <h3 className="mt-4 font-display text-base font-semibold leading-tight text-navy-900">
@@ -304,7 +304,7 @@ export function ServicePage({ service }: { service: LocalService }) {
         <Container>
           <div className="grid gap-14 lg:grid-cols-[1fr_1.4fr]">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 FAQ
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -324,7 +324,7 @@ export function ServicePage({ service }: { service: LocalService }) {
                     value={`faq-${index}`}
                     className="rounded-none border-b border-border/60 px-1 transition data-[state=open]:rounded-lg data-[state=open]:bg-muted data-[state=open]:px-4 data-[state=open]:shadow-sm"
                   >
-                    <AccordionTrigger className="py-5 text-left font-display text-base font-semibold text-navy-900 hover:text-aqua-600">
+                    <AccordionTrigger className="py-5 text-left font-display text-base font-semibold text-navy-900 hover:text-aqua-700">
                       {faq.q}
                     </AccordionTrigger>
                     <AccordionContent className="pb-5 text-sm leading-relaxed text-navy-700">
@@ -343,7 +343,7 @@ export function ServicePage({ service }: { service: LocalService }) {
           <Container>
             <div className="flex items-end justify-between gap-4">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                   Powiązane usługi
                 </p>
                 <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -352,7 +352,7 @@ export function ServicePage({ service }: { service: LocalService }) {
               </div>
               <Link
                 href="/uslugi"
-                className="hidden items-center gap-1 text-sm font-semibold text-navy-900 hover:text-aqua-600 sm:inline-flex"
+                className="hidden items-center gap-1 text-sm font-semibold text-navy-900 hover:text-aqua-700 sm:inline-flex"
               >
                 Wszystkie usługi
                 <ArrowRight className="h-4 w-4" />
@@ -391,7 +391,7 @@ export function ServicePage({ service }: { service: LocalService }) {
         <section className="bg-white py-20">
           <Container>
             <div className="max-w-2xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Marki i zaplecze
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">

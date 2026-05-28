@@ -60,7 +60,7 @@ export function Header() {
         <div className="hidden items-center gap-2 xl:flex">
           <Link
             href="tel:+48602481688"
-            className="inline-flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium text-navy-800 hover:text-aqua-600 transition"
+            className="inline-flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium text-navy-800 hover:text-aqua-700 transition"
           >
             <Phone className="h-4 w-4" aria-hidden />
             <span className="tabular-nums">602 481 688</span>
@@ -196,7 +196,7 @@ function NavLink({ item }: { item: (typeof primaryNav)[number] }) {
     return (
       <Link
         href={item.href}
-        className="rounded-md px-3 py-2 text-sm font-medium text-navy-800 hover:text-aqua-600 hover:bg-navy-50/60 transition"
+        className="rounded-md px-3 py-2 text-sm font-medium text-navy-800 hover:text-aqua-700 hover:bg-navy-50/60 transition"
       >
         {item.label}
       </Link>
@@ -254,7 +254,7 @@ function NavLink({ item }: { item: (typeof primaryNav)[number] }) {
           "inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition",
           open
             ? "bg-navy-50/80 text-aqua-700"
-            : "text-navy-800 hover:bg-navy-50/60 hover:text-aqua-600",
+            : "text-navy-800 hover:bg-navy-50/60 hover:text-aqua-700",
         )}
       >
         {item.label}
@@ -366,7 +366,7 @@ function NavLink({ item }: { item: (typeof primaryNav)[number] }) {
                                 <Icon
                                   className={cn(
                                     "h-4 w-4 shrink-0",
-                                    isActive ? "text-aqua-300" : "text-aqua-600",
+                                    isActive ? "text-aqua-300" : "text-aqua-700",
                                   )}
                                   aria-hidden
                                 />
@@ -394,7 +394,7 @@ function NavLink({ item }: { item: (typeof primaryNav)[number] }) {
                               "h-4 w-4 shrink-0 transition",
                               isActive
                                 ? "text-aqua-300"
-                                : "text-navy-400 group-hover/service:text-aqua-600 group-hover/service:translate-x-0.5",
+                                : "text-navy-400 group-hover/service:text-aqua-700 group-hover/service:translate-x-0.5",
                             )}
                           />
                         </Link>

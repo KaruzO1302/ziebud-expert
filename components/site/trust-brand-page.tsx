@@ -94,7 +94,7 @@ export function TrustBrandPage({ page }: { page: TrustPage }) {
       <section className="bg-white py-20">
         <Container>
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
               Lista marek
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -156,7 +156,7 @@ export function TrustBrandPage({ page }: { page: TrustPage }) {
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Zakres obsługi
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -174,7 +174,7 @@ export function TrustBrandPage({ page }: { page: TrustPage }) {
                   key={item}
                   className="rounded-2xl border border-border bg-white p-5 shadow-soft"
                 >
-                  <CheckCircle2 className="h-5 w-5 text-aqua-600" />
+                  <CheckCircle2 className="h-5 w-5 text-aqua-700" />
                   <p className="mt-3 text-sm font-semibold leading-relaxed text-navy-900">
                     {item}
                   </p>
@@ -188,7 +188,7 @@ export function TrustBrandPage({ page }: { page: TrustPage }) {
       <section className="bg-white py-20">
         <Container>
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
               Powiązane usługi
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">

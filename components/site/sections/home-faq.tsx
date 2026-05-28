@@ -37,7 +37,7 @@ export function HomeFaq() {
       <Container className="relative">
         <div className="grid gap-10 xl:grid-cols-[360px_minmax(0,1fr)] xl:items-start">
           <div className="xl:sticky xl:top-28">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
               FAQ i szybki kontakt
             </p>
             <h2 className="font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">

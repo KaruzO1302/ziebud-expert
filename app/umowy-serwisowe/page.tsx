@@ -111,7 +111,7 @@ export default function UmowySerwisowePage() {
                 key={pkg.name}
                 className="rounded-[28px] border border-border bg-muted p-6 shadow-soft"
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                   {pkg.name}
                 </p>
                 <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight text-navy-900">
@@ -137,7 +137,7 @@ export default function UmowySerwisowePage() {
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr]">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Kto korzysta najmocniej
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -180,7 +180,7 @@ export default function UmowySerwisowePage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-start">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Co zyskujesz
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -195,7 +195,7 @@ export default function UmowySerwisowePage() {
                   className="rounded-[24px] border border-border bg-muted p-5 shadow-soft"
                 >
                   <div className="flex items-start gap-3">
-                    <ClipboardCheck className="mt-0.5 h-5 w-5 text-aqua-600" />
+                    <ClipboardCheck className="mt-0.5 h-5 w-5 text-aqua-700" />
                     <p className="text-sm font-semibold leading-relaxed text-navy-900">
                       {item}
                     </p>

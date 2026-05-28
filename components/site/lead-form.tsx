@@ -482,7 +482,7 @@ function Field({
     <label className={["block", className].filter(Boolean).join(" ")}>
       <span className="mb-1.5 block text-sm font-medium text-navy-900">
         {label}
-        {required ? <span className="ml-1 text-aqua-600">*</span> : null}
+        {required ? <span className="ml-1 text-aqua-700">*</span> : null}
       </span>
       {children}
     </label>

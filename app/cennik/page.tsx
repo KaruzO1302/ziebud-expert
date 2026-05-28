@@ -238,7 +238,7 @@ export default function CennikPage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1fr_1.15fr] lg:items-start">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Jak czytać cennik
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -318,7 +318,7 @@ export default function CennikPage() {
 
       <section className="bg-muted py-20">
         <Container>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
             Ceny według typu usługi
           </p>
           <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -371,7 +371,7 @@ export default function CennikPage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
                 Co wpływa na koszt
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -415,7 +415,7 @@ export default function CennikPage() {
 
       <section className="bg-white pb-20">
         <Container>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
             Jak dobieramy zakres
           </p>
           <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
@@ -441,7 +441,7 @@ export default function CennikPage() {
 
       <section className="bg-white pb-20">
         <Container>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-600">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
             FAQ o cenach
           </p>
           <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
