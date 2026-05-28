@@ -6,7 +6,7 @@ type HeroPhotoProps = {
   photo: Photo;
   priority?: boolean;
   className?: string;
-  overlay?: "navy-deep" | "navy-soft" | "aqua-glow" | "none";
+  overlay?: "navy-deep" | "navy-soft" | "aqua-glow" | "bright-soft" | "none";
   sizes?: string;
 };
 
@@ -17,6 +17,8 @@ const overlayClass: Record<NonNullable<HeroPhotoProps["overlay"]>, string> = {
     "bg-[linear-gradient(to_right,rgba(10,22,40,0.85),rgba(10,22,40,0.55)_50%,rgba(10,22,40,0.25))]",
   "aqua-glow":
     "bg-[radial-gradient(ellipse_70%_55%_at_10%_-10%,rgba(0,212,255,0.25),transparent_60%),linear-gradient(to_bottom,rgba(10,22,40,0.55),rgba(10,22,40,0.9))]",
+  "bright-soft":
+    "bg-[linear-gradient(to_right,rgba(255,255,255,0.98),rgba(255,255,255,0.92)_38%,rgba(255,255,255,0.62)_68%,rgba(255,255,255,0.28)),linear-gradient(to_bottom,rgba(240,249,255,0.78),rgba(255,255,255,0.9))]",
   none: "",
 };
 

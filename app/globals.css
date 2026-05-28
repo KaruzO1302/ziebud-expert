@@ -28,6 +28,13 @@
   --color-aqua-800: #005466;
   --color-aqua-900: #002a33;
 
+  --color-sun-50: #fff7e6;
+  --color-sun-100: #ffe9b8;
+  --color-sun-200: #ffd47a;
+  --color-sun-300: #ffbf45;
+  --color-sun-400: #f59e0b;
+  --color-sun-500: #d97706;
+
   --color-success-500: #10b981;
   --color-success-600: #0ea371;
 
@@ -49,9 +56,9 @@
   --popover-foreground: #0a1628;
   --primary: #0a1628;
   --primary-foreground: #f8fafc;
-  --secondary: #f1f5f9;
+  --secondary: #eef7fb;
   --secondary-foreground: #0a1628;
-  --muted: #f8fafc;
+  --muted: #f3f9fc;
   --muted-foreground: #475569;
   --accent: #00d4ff;
   --accent-foreground: #0a1628;

@@ -54,31 +54,31 @@ const clientTypes = [
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-navy-900 text-white">
+    <section className="relative overflow-hidden bg-[#f7fbff] text-navy-900">
       <HeroPhoto
         photo={photos.heroHomepageZiebud}
         priority
-        overlay="navy-soft"
+        overlay="bright-soft"
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(0,212,255,0.18),transparent_65%)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_45%_42%_at_72%_16%,rgba(0,212,255,0.18),transparent_70%),radial-gradient(ellipse_40%_36%_at_20%_88%,rgba(245,158,11,0.14),transparent_72%)]"
       />
       <Container className="relative py-20 sm:py-28 lg:py-32">
         <div className="grid gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:items-end">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-aqua-400/30 bg-aqua-500/10 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-aqua-200">
+            <span className="inline-flex items-center gap-2 rounded-full border border-aqua-200 bg-white/85 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-aqua-800 shadow-soft">
               ZIĘBUD Expert · Wrocław i okolice
             </span>
-            <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.03] tracking-tight text-white sm:text-5xl lg:text-[60px]">
+            <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.03] tracking-tight text-navy-950 sm:text-5xl lg:text-[60px]">
               Pogotowie kanalizacyjne Wrocław.
               {" "}
-              <span className="text-white">WUKO, czyszczenie kanalizacji</span>
+              <span className="text-aqua-700">WUKO, czyszczenie kanalizacji</span>
               {" "}
               i udrażnianie rur
             </h1>
 
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-100">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-700">
               Profesjonalne usługi kanalizacyjne we Wrocławiu i okolicach.
               Obsługujemy WUKO, inspekcję TV, separatory i przepompownie.
               Pracujemy w oparciu o doświadczenie od 1991 roku.
@@ -88,12 +88,12 @@ export function Hero() {
               <SlaBadge variant="hero" />
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-3 text-sm text-navy-100">
+            <div className="mt-8 flex flex-wrap gap-3 text-sm text-navy-700">
               {["WUKO", "kamera TV", "wspólnoty", "gastronomia", "przepompownie"].map(
                 (item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-white/15 bg-white/8 px-3 py-1.5"
+                    className="rounded-full border border-aqua-100 bg-white/80 px-3 py-1.5 shadow-[0_12px_30px_-24px_rgba(10,22,40,0.25)]"
                   >
                     {item}
                   </span>
@@ -105,7 +105,7 @@ export function Hero() {
               <LinkButton
                 href="tel:+48602481688"
                 size="lg"
-                className="group bg-aqua-500 text-navy-900 hover:bg-aqua-400 shadow-[0_10px_40px_-12px_rgba(0,212,255,0.55)]"
+                className="group bg-aqua-500 text-navy-950 hover:bg-aqua-400 shadow-[0_16px_40px_-18px_rgba(0,126,153,0.65)]"
               >
                 <Phone className="h-4 w-4" />
                 Zadzwoń: 602 481 688
@@ -114,7 +114,7 @@ export function Hero() {
                 href="/zapytanie"
                 size="lg"
                 variant="outline"
-                className="border-white/20 bg-white/5 text-white hover:bg-white/10"
+                className="border-navy-200 bg-white/85 text-navy-900 hover:bg-white"
               >
                 Zgłoś awarię
                 <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
@@ -133,7 +133,7 @@ export function Hero() {
                   key={link.href}
                   href={link.href}
                   className={[
-                    "inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/6 px-3.5 py-2 text-sm font-medium text-white/88 transition hover:border-aqua-400/40 hover:bg-aqua-500/12 hover:text-white",
+                    "inline-flex items-center gap-1 rounded-full border border-navy-100 bg-white/80 px-3.5 py-2 text-sm font-medium text-navy-800 shadow-[0_10px_24px_-22px_rgba(10,22,40,0.35)] transition hover:border-aqua-300 hover:bg-aqua-50 hover:text-navy-950",
                     index > 3 ? "hidden md:inline-flex" : "",
                     index > 5 ? "md:hidden xl:inline-flex" : "",
                   ]
@@ -148,23 +148,23 @@ export function Hero() {
           </div>
 
           <div className="relative">
-            <div className="relative overflow-hidden rounded-[34px] border border-white/12 bg-white/7 p-6 shadow-[0_30px_80px_-38px_rgba(0,0,0,0.75)] backdrop-blur-md">
+            <div className="relative overflow-hidden rounded-[34px] border border-white bg-white/88 p-6 shadow-[0_28px_80px_-42px_rgba(10,22,40,0.42)] backdrop-blur-md">
               <div
                 aria-hidden
-                className="absolute inset-x-0 top-0 h-24 bg-[radial-gradient(ellipse_65%_90%_at_50%_0%,rgba(0,212,255,0.28),transparent_75%)]"
+                className="absolute inset-x-0 top-0 h-24 bg-[radial-gradient(ellipse_65%_90%_at_50%_0%,rgba(0,212,255,0.18),transparent_75%)]"
               />
-              <div className="relative rounded-[28px] border border-white/10 bg-navy-950/50 p-6">
+              <div className="relative rounded-[28px] border border-navy-100 bg-white p-6">
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-aqua-300">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-aqua-700">
                       Jak działamy
                     </p>
-                    <h2 className="mt-3 font-display text-2xl font-semibold leading-tight text-white">
+                    <h2 className="mt-3 font-display text-2xl font-semibold leading-tight text-navy-950">
                       Zgłoszenie, diagnoza, akceptacja zakresu i wykonanie
                       usługi bez zbędnego chaosu.
                     </h2>
                   </div>
-                  <Camera className="h-6 w-6 shrink-0 text-aqua-300" />
+                  <Camera className="h-6 w-6 shrink-0 text-aqua-700" />
                 </div>
 
                 <div className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -176,32 +176,32 @@ export function Hero() {
                   ].map((item) => (
                     <div
                       key={item}
-                      className="rounded-2xl border border-white/10 bg-white/6 px-4 py-4 text-sm leading-relaxed text-white/82"
+                      className="rounded-2xl border border-aqua-100 bg-aqua-50/70 px-4 py-4 text-sm leading-relaxed text-navy-800"
                     >
                       {item}
                     </div>
                   ))}
                 </div>
 
-                <div className="mt-6 border-t border-white/10 pt-6">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-aqua-300">
+                <div className="mt-6 border-t border-navy-100 pt-6">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-aqua-700">
                     Główne segmenty klientów
                   </p>
                   <div className="mt-4 grid gap-3 sm:grid-cols-2">
                     {clientTypes.map((item) => (
                       <div
                         key={item.label}
-                        className="rounded-2xl border border-white/10 bg-white/5 p-4"
+                        className="rounded-2xl border border-navy-100 bg-white p-4 shadow-[0_16px_34px_-28px_rgba(10,22,40,0.3)]"
                       >
                         <div className="flex items-center gap-3">
-                          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/8 text-aqua-300">
+                          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-sun-50 text-sun-500 ring-1 ring-inset ring-sun-100">
                             <item.icon className="h-4.5 w-4.5" />
                           </span>
                           <div>
-                            <p className="text-sm font-semibold text-white">
+                            <p className="text-sm font-semibold text-navy-950">
                               {item.label}
                             </p>
-                            <p className="mt-1 text-xs leading-relaxed text-white/68">
+                            <p className="mt-1 text-xs leading-relaxed text-navy-600">
                               {item.desc}
                             </p>
                           </div>
@@ -215,7 +215,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-white/10 pt-8 text-xs font-medium uppercase tracking-wider text-navy-300">
+        <div className="mt-14 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-navy-100 pt-8 text-xs font-medium uppercase tracking-wider text-navy-500">
           <span>Krzyki</span>
           <span className="text-aqua-500">·</span>
           <span>Fabryczna</span>
@@ -247,9 +247,9 @@ export function Hero() {
 
 function HeroStat({ value, label }: { value: string; label: string }) {
   return (
-    <div className="rounded-2xl border border-white/12 bg-white/7 p-4 backdrop-blur-sm">
-      <p className="font-display text-2xl font-semibold text-white">{value}</p>
-      <p className="mt-1 text-sm leading-relaxed text-navy-200">{label}</p>
+    <div className="rounded-2xl border border-white bg-white/82 p-4 shadow-soft backdrop-blur-sm">
+      <p className="font-display text-2xl font-semibold text-navy-950">{value}</p>
+      <p className="mt-1 text-sm leading-relaxed text-navy-600">{label}</p>
     </div>
   );
 }

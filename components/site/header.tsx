@@ -68,7 +68,7 @@ export function Header() {
           <LinkButton
             href="/zapytanie"
             size="sm"
-            className="bg-navy-900 text-white hover:bg-navy-800"
+            className="bg-aqua-500 text-navy-950 hover:bg-aqua-400"
           >
             Zgłoś awarię / wyceń serwis
           </LinkButton>
@@ -148,7 +148,7 @@ export function Header() {
                 <LinkButton
                   href="/zapytanie"
                   onClick={() => setMobileOpen(false)}
-                  className="w-full bg-navy-900 text-white hover:bg-navy-800"
+                  className="w-full bg-aqua-500 text-navy-950 hover:bg-aqua-400"
                 >
                   Zgłoś awarię / wyceń serwis
                 </LinkButton>

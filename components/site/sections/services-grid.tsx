@@ -124,7 +124,7 @@ function ServiceGroup({
                   sizes="(min-width: 1280px) 24rem, (min-width: 768px) 50vw, 100vw"
                   className="object-cover transition duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,22,40,0.05),rgba(10,22,40,0.66))]" />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,22,40,0.02),rgba(10,22,40,0.44))]" />
                 <span className="absolute right-4 top-4 rounded-full bg-white/92 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-navy-900 shadow-sm">
                   {service.eyebrow}
                 </span>
@@ -132,7 +132,7 @@ function ServiceGroup({
 
               <div className="flex flex-1 flex-col p-6">
                 <div className="flex items-center justify-between gap-3">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy-50 text-navy-900 ring-1 ring-inset ring-navy-100 transition group-hover:bg-navy-900 group-hover:text-aqua-400 group-hover:ring-navy-900">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-aqua-50 text-aqua-800 ring-1 ring-inset ring-aqua-100 transition group-hover:bg-aqua-500 group-hover:text-navy-950 group-hover:ring-aqua-500">
                     <Icon className="h-5 w-5" aria-hidden />
                   </span>
                   <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-aqua-700">

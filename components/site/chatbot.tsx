@@ -77,7 +77,7 @@ export function Chatbot() {
         aria-label={open ? "Zamknij czat" : "Otwórz czat z ekspertem AI"}
         onClick={() => setOpen((o) => !o)}
         className={cn(
-          "fixed bottom-24 right-5 z-50 flex items-center gap-2 rounded-full shadow-[0_10px_30px_-6px_rgba(0,212,255,0.55)] transition md:bottom-5",
+          "fixed bottom-5 right-5 z-50 hidden items-center gap-2 rounded-full shadow-[0_10px_30px_-6px_rgba(0,212,255,0.55)] transition md:flex",
           "bg-navy-900 text-white hover:bg-navy-800",
           "px-4 py-3 sm:px-5 sm:py-3.5",
         )}
@@ -101,7 +101,7 @@ export function Chatbot() {
         id="chatbot"
         aria-hidden={!open}
         className={cn(
-          "fixed inset-x-3 bottom-24 z-40 origin-bottom-right overflow-hidden rounded-3xl border border-border bg-white shadow-[0_40px_80px_-20px_rgba(10,22,40,0.35)] transition-all sm:inset-auto sm:bottom-24 sm:right-5 sm:w-[420px]",
+          "fixed inset-x-3 bottom-24 z-40 hidden origin-bottom-right overflow-hidden rounded-3xl border border-border bg-white shadow-[0_40px_80px_-20px_rgba(10,22,40,0.35)] transition-all sm:inset-auto sm:bottom-24 sm:right-5 sm:w-[420px] md:block",
           "md:bottom-24",
           open
             ? "scale-100 opacity-100"
