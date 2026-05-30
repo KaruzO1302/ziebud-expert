@@ -372,6 +372,22 @@ const nextConfig: NextConfig = {
         destination: "/uslugi/bezwykopowe-naprawy-kanalizacji",
         permanent: true,
       },
+      // Naprawa 404 wykrytych w GSC (stare/sklejone URL-e w cache Google)
+      {
+        source: "/regulaminRegulamin",
+        destination: "/regulamin",
+        permanent: true,
+      },
+      {
+        source: "/cookiesCookies",
+        destination: "/cookies",
+        permanent: true,
+      },
+      {
+        source: "/blog/inspekcja-kamera-tv-kanalizacji-wroclaw",
+        destination: "/blog/inspekcja-kamera-tv-kanalizacji-we-wroclawiu",
+        permanent: true,
+      },
     ];
   },
 };
