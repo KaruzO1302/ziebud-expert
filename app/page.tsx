@@ -26,10 +26,10 @@ import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Pogotowie kanalizacyjne Wrocław | ZIĘBUD Expert",
+    absolute: "Pogotowie kanalizacyjne Wrocław 24/7 — dojazd 60 min | ZIĘBUD",
   },
   description:
-    "Usługi kanalizacyjne we Wrocławiu. WUKO, udrażnianie rur, inspekcja TV, separatory i przepompownie. Doświadczenie od 1991 roku. Zadzwoń: 602 481 688.",
+    "Pogotowie kanalizacyjne Wrocław 24/7. Udrażnianie rur, WUKO, inspekcja TV kamerą, separatory i przepompownie. Szybki dojazd, wycena przez telefon. Od 1991 r. Zadzwoń: 602 481 688.",
   alternates: {
     canonical: "/",
   },
