@@ -98,6 +98,59 @@ export function Footer() {
                 </a>
                 .
               </p>
+              <p className="mt-4 font-semibold text-white">Firmy z naszej grupy</p>
+              <ul className="mt-2 space-y-1.5">
+                <li>
+                  <a
+                    href="https://wuko-wroclaw.pl/"
+                    target="_blank"
+                    rel="noopener"
+                    className="font-semibold text-aqua-300 underline-offset-4 hover:underline"
+                  >
+                    Pogotowie kanalizacyjne 24/7 — WUKO Wrocław
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://serwis-kanalizacji.com/"
+                    target="_blank"
+                    rel="noopener"
+                    className="text-aqua-300 underline-offset-4 hover:underline"
+                  >
+                    Serwis kanalizacji Wrocław
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://sekor.com.pl/"
+                    target="_blank"
+                    rel="noopener"
+                    className="text-aqua-300 underline-offset-4 hover:underline"
+                  >
+                    Sekor — pogotowie hydrauliczne
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://wodociagi-kanalizacja.com/"
+                    target="_blank"
+                    rel="noopener"
+                    className="text-aqua-300 underline-offset-4 hover:underline"
+                  >
+                    Wodociągi i kanalizacja — sieci wod-kan
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://nurtex.pl/"
+                    target="_blank"
+                    rel="noopener"
+                    className="text-aqua-300 underline-offset-4 hover:underline"
+                  >
+                    NURTEX — klimatyzacja Wrocław
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
 
