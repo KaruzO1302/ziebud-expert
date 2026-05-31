@@ -318,6 +318,81 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/wuko-wroclaw",
+        destination: "/uslugi/wuko-wroclaw",
+        permanent: true,
+      },
+      {
+        source: "/pogotowie-kanalizacyjne-wroclaw",
+        destination: "/pogotowie-kanalizacyjne",
+        permanent: true,
+      },
+      {
+        source: "/udraznianie-rur-wroclaw",
+        destination: "/uslugi/udraznianie-rur",
+        permanent: true,
+      },
+      {
+        source: "/czyszczenie-kanalizacji-wroclaw",
+        destination: "/uslugi/czyszczenie-kanalizacji-wroclaw",
+        permanent: true,
+      },
+      {
+        source: "/inspekcja-kanalizacji-kamera-wroclaw",
+        destination: "/uslugi/inspekcja-tv-kanalizacji",
+        permanent: true,
+      },
+      {
+        source: "/czyszczenie-separatorow-wroclaw",
+        destination: "/uslugi/separatory-tluszczu",
+        permanent: true,
+      },
+      {
+        source: "/frezowanie-kanalizacji-wroclaw",
+        destination: "/uslugi/frezowanie-kanalizacji",
+        permanent: true,
+      },
+      {
+        source: "/czyszczenie-studzienek-wroclaw",
+        destination: "/uslugi/czyszczenie-studzienek-wroclaw",
+        permanent: true,
+      },
+      {
+        source: "/czyszczenie-kanalizacji-deszczowej-wroclaw",
+        destination: "/uslugi/czyszczenie-kanalizacji-deszczowej-wroclaw",
+        permanent: true,
+      },
+      {
+        source: "/usuwanie-zatorow-kanalizacyjnych-wroclaw",
+        destination: "/uslugi/usuwanie-zatorow-kanalizacyjnych-wroclaw",
+        permanent: true,
+      },
+      {
+        source: "/wuko-krzyki",
+        destination: "/wroclaw/krzyki/wuko",
+        permanent: true,
+      },
+      {
+        source: "/wuko-fabryczna",
+        destination: "/wroclaw/fabryczna/wuko",
+        permanent: true,
+      },
+      {
+        source: "/wuko-psie-pole",
+        destination: "/wroclaw/psie-pole/wuko",
+        permanent: true,
+      },
+      {
+        source: "/wuko-srodmiescie",
+        destination: "/wroclaw/srodmiescie/wuko",
+        permanent: true,
+      },
+      {
+        source: "/wuko-stare-miasto",
+        destination: "/wroclaw/stare-miasto/wuko",
+        permanent: true,
+      },
+      {
         source: "/awarie-:slug",
         destination: "/pogotowie-kanalizacyjne",
         permanent: true,
