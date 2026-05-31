@@ -26,9 +26,19 @@ export const primaryNav: NavItem[] = [
         description: "Czyszczenie kanalizacji i serwis WUKO",
       },
       {
+        label: "Czyszczenie kanalizacji",
+        href: "/uslugi/czyszczenie-kanalizacji-wroclaw",
+        description: "Piony, poziomy, przyłącza i studnie",
+      },
+      {
         label: "Udrażnianie rur",
         href: "/uslugi/udraznianie-rur",
         description: "Usuwanie zatorów i szybki serwis",
+      },
+      {
+        label: "Usuwanie zatorów",
+        href: "/uslugi/usuwanie-zatorow-kanalizacyjnych-wroclaw",
+        description: "Cofki, zatkane piony i awarie kanalizacji",
       },
       {
         label: "Naprawa sieci wodociągowych 24h",
@@ -56,6 +66,11 @@ export const primaryNav: NavItem[] = [
         description: "Włazy, zwieńczenia i szybkie naprawy nawierzchni",
       },
       {
+        label: "Czyszczenie studzienek",
+        href: "/uslugi/czyszczenie-studzienek-wroclaw",
+        description: "Studnie, wpusty, osadniki i deszczówka",
+      },
+      {
         label: "Przydomowe oczyszczalnie",
         href: "/uslugi/przydomowe-oczyszczalnie-sciekow",
         description: "Sprzedaż, montaż, serwis i przeglądy",
@@ -64,6 +79,11 @@ export const primaryNav: NavItem[] = [
         label: "Odwodnienia budynków",
         href: "/uslugi/odwodnienia-budynkow",
         description: "Drenaż opaskowy, liniowy i odprowadzenie deszczówki",
+      },
+      {
+        label: "Czyszczenie deszczówki",
+        href: "/uslugi/czyszczenie-kanalizacji-deszczowej-wroclaw",
+        description: "Wpusty, parkingi, osady i kanalizacja deszczowa",
       },
       {
         label: "Montaż separatorów",
@@ -102,14 +122,18 @@ export const footerNav = {
   uslugi: [
     { label: "Usługi kanalizacyjne", href: "/uslugi/uslugi-kanalizacyjne" },
     { label: "WUKO Wrocław", href: "/uslugi/wuko-wroclaw" },
+    { label: "Czyszczenie kanalizacji", href: "/uslugi/czyszczenie-kanalizacji-wroclaw" },
     { label: "Udrażnianie rur", href: "/uslugi/udraznianie-rur" },
+    { label: "Usuwanie zatorów", href: "/uslugi/usuwanie-zatorow-kanalizacyjnych-wroclaw" },
     { label: "Naprawa sieci wodociągowych 24h", href: "/uslugi/naprawa-sieci-wodociagowych" },
     { label: "Inspekcja TV kanalizacji", href: "/uslugi/inspekcja-tv-kanalizacji" },
     { label: "Naprawy bezwykopowe", href: "/uslugi/bezwykopowe-naprawy-kanalizacji" },
     { label: "Frezowanie kanalizacji", href: "/uslugi/frezowanie-kanalizacji" },
     { label: "Regulacja studzienek", href: "/uslugi/regulacja-studzienek-i-wlazow" },
+    { label: "Czyszczenie studzienek", href: "/uslugi/czyszczenie-studzienek-wroclaw" },
     { label: "Przydomowe oczyszczalnie", href: "/uslugi/przydomowe-oczyszczalnie-sciekow" },
     { label: "Odwodnienia budynków", href: "/uslugi/odwodnienia-budynkow" },
+    { label: "Czyszczenie kanalizacji deszczowej", href: "/uslugi/czyszczenie-kanalizacji-deszczowej-wroclaw" },
     { label: "Montaż separatorów", href: "/uslugi/montaz-separatorow" },
     { label: "Montaż przepompowni", href: "/uslugi/montaz-przepompowni-sciekow" },
     { label: "Separatory tłuszczu", href: "/uslugi/separatory-tluszczu" },

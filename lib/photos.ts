@@ -476,6 +476,10 @@ export const servicePhotos: Record<string, PhotoKey> = {
   "separatory-ropopochodne": "ziebudSeparatorRopopochodny",
   "serwis-przepompowni": "ziebudPrzepompownie",
   "lokalizacja-nieszczelnosci": "ziebudLokalizacjaWyciekow",
+  "czyszczenie-kanalizacji-wroclaw": "ziebudUslugiKanalizacyjne",
+  "czyszczenie-studzienek-wroclaw": "adobeUdraznianieManhole",
+  "czyszczenie-kanalizacji-deszczowej-wroclaw": "ziebudAwarieKanalizacji",
+  "usuwanie-zatorow-kanalizacyjnych-wroclaw": "ziebudAwarieWodKan",
 };
 
 export const pagePhotos: Record<string, PhotoKey> = {

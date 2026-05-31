@@ -1435,6 +1435,502 @@ export const localServices: LocalService[] = [
     ],
     related: ["serwis-przepompowni", "przydomowe-oczyszczalnie-sciekow", "odwodnienia-budynkow"],
   },
+  {
+    slug: "czyszczenie-kanalizacji-wroclaw",
+    title: "Czyszczenie kanalizacji Wrocław",
+    heroTitle: "Czyszczenie kanalizacji Wrocław — WUKO, osady, tłuszcz i zatory",
+    eyebrow: "Czyszczenie przewodów",
+    tagline:
+      "Czyszczenie kanalizacji sanitarnej, deszczowej, pionów, poziomów, studni i przyłączy dla wspólnot, firm, lokali oraz domów we Wrocławiu.",
+    metaTitle: "Czyszczenie kanalizacji Wrocław — WUKO i serwis 24h",
+    metaDescription:
+      "Czyszczenie kanalizacji we Wrocławiu: WUKO, piony, poziomy, studnie, przyłącza i deszczówka. ZIĘBUD Expert, tel. 602 481 688.",
+    keywords: [
+      "czyszczenie kanalizacji wrocław",
+      "czyszczenie rur kanalizacyjnych wrocław",
+      "czyszczenie pionów kanalizacyjnych",
+      "wuko czyszczenie kanalizacji",
+      "serwis kanalizacji wrocław",
+    ],
+    icon: Waves,
+    trenchless: false,
+    schemaServiceType: "Czyszczenie kanalizacji",
+    overview: [
+      "Czyszczenie kanalizacji we Wrocławiu nie powinno kończyć się tylko na przepchaniu pierwszego zatoru. W budynkach wielorodzinnych, lokalach gastronomicznych, halach, magazynach i starszych kamienicach problem często zaczyna się wcześniej: od odkładającego się tłuszczu, piasku, szlamu, korzeni, zaprawy po remoncie albo złego spadku przewodu.",
+      "Dlatego przyjmując zgłoszenie pytamy o objawy, miejsce wybicia, typ budynku, dostęp do rewizji, studni oraz to, czy awaria wraca cyklicznie. Inaczej czyści się krótki odpływ w lokalu, inaczej pion kuchenny w bloku, a jeszcze inaczej długi poziom piwniczny albo kanalizację deszczową przy parkingu.",
+      "ZIĘBUD Expert łączy czyszczenie WUKO, udrażnianie mechaniczne, inspekcję TV i ocenę dalszego ryzyka. Po usłudze klient dostaje prostą informację: co było przyczyną, czy odcinek wymaga kontroli kamerą i kiedy warto zaplanować czyszczenie profilaktyczne zamiast kolejnej awarii.",
+    ],
+    variants: [
+      {
+        name: "Czyszczenie pionów i poziomów",
+        desc: "Usuwanie tłuszczu, osadów i zatorów w budynkach wielorodzinnych, lokalach oraz obiektach usługowych.",
+      },
+      {
+        name: "Czyszczenie przyłączy i studni",
+        desc: "Przewody od budynku do sieci, studnie rewizyjne, wpusty, osady mineralne i piasek.",
+      },
+      {
+        name: "Czyszczenie profilaktyczne",
+        desc: "Planowany serwis dla wspólnot, restauracji, hoteli i firm, które chcą unikać awarii w godzinach pracy.",
+      },
+    ],
+    whenToUse: [
+      "gdy kanalizacja wolno odbiera wodę lub ścieki cofają się przez najniższy odpływ",
+      "gdy zator powtarza się mimo wcześniejszego przepychania",
+      "gdy w budynku są stare piony, poziomy piwniczne albo problematyczne przyłącze",
+      "gdy lokal gastronomiczny lub obiekt B2B potrzebuje czyszczenia poza godzinami pracy",
+      "gdy po remoncie w przewodach mogła zostać zaprawa, gruz, piasek albo resztki materiałów",
+    ],
+    costs: [
+      {
+        scope: "Punktowe czyszczenie odpływu lub krótkiego odcinka",
+        range: "250-500 zł",
+        note: "lokal, mieszkanie, mały zator lub krótki poziom",
+      },
+      {
+        scope: "Czyszczenie pionu lub poziomu w budynku",
+        range: "500-1200 zł",
+        note: "wspólnoty, lokale usługowe, piwnice, kilka punktów dostępu",
+      },
+      {
+        scope: "Czyszczenie przyłącza lub studni WUKO",
+        range: "700-1800 zł",
+        note: "dłuższy odcinek, osad, piasek, studnie i przykanaliki",
+      },
+      {
+        scope: "Czyszczenie profilaktyczne obiektu",
+        range: "od 1200 zł",
+        note: "wycena po zakresie, harmonogramie i liczbie punktów",
+      },
+    ],
+    costNote:
+      "Cena zależy od długości odcinka, rodzaju osadu, dostępu do rewizji i tego, czy potrzebna jest inspekcja TV. Przy stałej obsłudze obiektu przygotowujemy harmonogram i cenę okresową.",
+    process: [
+      {
+        title: "Rozpoznanie objawów",
+        desc: "Ustalamy, czy problem dotyczy odpływu, pionu, poziomu, przyłącza, studni czy kanalizacji deszczowej.",
+      },
+      {
+        title: "Dobór punktu wejścia",
+        desc: "Sprawdzamy rewizje, studnie, kratki i dostęp, żeby nie czyścić przypadkowo od złej strony.",
+      },
+      {
+        title: "Czyszczenie właściwe",
+        desc: "W zależności od problemu używamy WUKO, sprężyny mechanicznej lub kombinacji metod.",
+      },
+      {
+        title: "Ocena efektu",
+        desc: "Po czyszczeniu sprawdzamy przepływ i wskazujemy, czy potrzebna jest kamera albo naprawa docelowa.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Czym różni się czyszczenie kanalizacji od udrażniania?",
+        a: "Udrażnianie usuwa konkretny zator. Czyszczenie kanalizacji jest szersze: usuwa osady z odcinka, poprawia przepływ i zmniejsza ryzyko nawrotu awarii.",
+      },
+      {
+        q: "Czy czyszczenie kanalizacji zawsze wymaga WUKO?",
+        a: "Nie zawsze. Krótkie odpływy i niektóre piony można czyścić mechanicznie. Dłuższe poziomy, studnie, przyłącza i deszczówkę zwykle czyścimy hydrodynamicznie.",
+      },
+      {
+        q: "Jak często czyścić kanalizację w budynku wspólnoty?",
+        a: "Przy budynkach z powtarzającymi się zatorami warto robić przegląd i czyszczenie profilaktyczne raz na 6-12 miesięcy. Dokładną częstotliwość dobieramy po pierwszej usłudze.",
+      },
+      {
+        q: "Czy czyścicie kanalizację w lokalach gastronomicznych?",
+        a: "Tak. Czyścimy odpływy kuchenne, odcinki za separatorem, piony, poziomy i studnie. Możemy pracować rano, wieczorem lub w krótkim oknie serwisowym.",
+      },
+      {
+        q: "Czy po czyszczeniu warto wykonać inspekcję kamerą?",
+        a: "Jeżeli zator wraca, instalacja jest stara albo podejrzewamy pęknięcie, przeciwspadek lub korzenie, kamera jest najlepszym kolejnym krokiem.",
+      },
+      {
+        q: "Czy czyszczenie kanalizacji pomaga przy nieprzyjemnym zapachu?",
+        a: "Często tak, jeśli zapach wynika z osadów i fermentacji w przewodzie. Jeśli przyczyną jest wentylacja pionu albo wyschnięty syfon, wskażemy to po rozpoznaniu.",
+      },
+      {
+        q: "Czy wystawiacie fakturę i opis prac?",
+        a: "Tak. Dla firm, zarządców i wspólnot wystawiamy fakturę VAT oraz krótką informację o zakresie i zaleceniach.",
+      },
+      {
+        q: "Czy obsługujecie cały Wrocław?",
+        a: "Tak. Dojeżdżamy na Krzyki, Fabryczną, Psie Pole, Śródmieście, Stare Miasto i okolice Wrocławia.",
+      },
+    ],
+    related: ["wuko-wroclaw", "udraznianie-rur", "inspekcja-tv-kanalizacji"],
+  },
+  {
+    slug: "czyszczenie-studzienek-wroclaw",
+    title: "Czyszczenie studzienek Wrocław",
+    heroTitle: "Czyszczenie studzienek kanalizacyjnych i deszczowych Wrocław",
+    eyebrow: "Studnie i wpusty",
+    tagline:
+      "Czyszczenie studzienek, wpustów, osadników i komór kanalizacyjnych dla wspólnot, firm, parkingów, magazynów i obiektów technicznych.",
+    metaTitle: "Czyszczenie studzienek Wrocław — kanalizacja i deszczówka",
+    metaDescription:
+      "Czyszczenie studzienek kanalizacyjnych i deszczowych we Wrocławiu. Osady, piasek, wpusty, komory, WUKO i raport dla zarządcy.",
+    keywords: [
+      "czyszczenie studzienek wrocław",
+      "czyszczenie studni kanalizacyjnych",
+      "czyszczenie wpustów deszczowych",
+      "studzienki kanalizacyjne wrocław",
+      "czyszczenie osadników wrocław",
+    ],
+    icon: Container,
+    trenchless: false,
+    schemaServiceType: "Czyszczenie studzienek kanalizacyjnych",
+    overview: [
+      "Studzienka kanalizacyjna lub deszczowa jest miejscem, w którym zbiera się piasek, liście, tłuszcz, osad mineralny i materiał niesiony przez wodę. Dopóki ma zapas pojemności, problem jest niewidoczny. Gdy osad podnosi się do poziomu odpływu, pojawiają się cofki, zalane wpusty, zapach albo brak odbioru wody po deszczu.",
+      "We Wrocławiu czyszczenie studzienek jest szczególnie ważne przy parkingach, rampach, garażach podziemnych, wspólnotach mieszkaniowych i obiektach z dużą powierzchnią utwardzoną. Jeden zapchany osadnik potrafi zablokować cały odcinek odwodnienia, a potem klient widzi wodę na placu i szuka awarii dopiero po fakcie.",
+      "ZIĘBUD Expert czyści studzienki punktowo i w ramach większej obsługi kanalizacji. Odpompowujemy osad, płuczemy komorę, sprawdzamy dopływ i odpływ oraz wskazujemy, czy problem jest tylko eksploatacyjny, czy wynika z uszkodzenia, złego spadku albo przeciążenia kanalizacji deszczowej.",
+    ],
+    variants: [
+      {
+        name: "Studzienki kanalizacji sanitarnej",
+        desc: "Komory rewizyjne, osad, tłuszcz, cofki i punkty dostępu do przyłączy budynku.",
+      },
+      {
+        name: "Wpusty i studzienki deszczowe",
+        desc: "Piasek, liście, szlam, parkingi, drogi wewnętrzne, rampy i place manewrowe.",
+      },
+      {
+        name: "Czyszczenie okresowe dla zarządców",
+        desc: "Harmonogram dla wspólnot, obiektów handlowych, magazynów i firm produkcyjnych.",
+      },
+    ],
+    whenToUse: [
+      "gdy po deszczu woda stoi przy wpustach, rampach lub na parkingu",
+      "gdy w studni widać piasek, szlam, tłuszcz albo podniesiony osad",
+      "gdy z kanalizacji pojawia się zapach przy studzienkach lub kratkach",
+      "gdy zarządca chce przygotować obiekt przed sezonem opadowym",
+      "gdy studnia jest punktem wejścia do dalszego czyszczenia WUKO",
+    ],
+    costs: [
+      {
+        scope: "Pojedyncza mała studzienka lub wpust",
+        range: "250-500 zł",
+        note: "prosty dostęp, niewielka ilość osadu",
+      },
+      {
+        scope: "Studzienka z odpompowaniem osadu",
+        range: "500-1000 zł",
+        note: "osad, szlam, płukanie komory i odpływu",
+      },
+      {
+        scope: "Kilka studni na obiekcie",
+        range: "1000-2800 zł",
+        note: "parking, wspólnota, magazyn lub układ deszczowy",
+      },
+      {
+        scope: "Stała obsługa obiektu",
+        range: "wycena indywidualna",
+        note: "harmonogram przed sezonem deszczowym i po większych opadach",
+      },
+    ],
+    costNote:
+      "Największy wpływ na cenę ma ilość osadu, możliwość podjazdu pojazdu, liczba studni i konieczność płukania dalszego odcinka.",
+    process: [
+      {
+        title: "Oględziny i dostęp",
+        desc: "Sprawdzamy właz, głębokość, poziom osadu, bezpieczeństwo i możliwość ustawienia sprzętu.",
+      },
+      {
+        title: "Odpompowanie osadu",
+        desc: "Usuwamy wodę z zawiesiną, piasek, szlam oraz materiał blokujący przepływ.",
+      },
+      {
+        title: "Płukanie i kontrola odpływu",
+        desc: "Czyścimy komorę i sprawdzamy, czy odpływ ze studni odbiera wodę bez cofania.",
+      },
+      {
+        title: "Wnioski dla zarządcy",
+        desc: "Wskazujemy, czy wystarczy czyszczenie okresowe, czy trzeba sprawdzić dalszy odcinek kamerą.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Jak często czyścić studzienki deszczowe?",
+        a: "Na parkingach, rampach i placach warto robić przegląd minimum raz w roku, najlepiej przed sezonem intensywnych opadów. Przy dużej ilości piasku częściej.",
+      },
+      {
+        q: "Czy czyszczenie studzienek wymaga zamykania parkingu?",
+        a: "Zwykle nie. Najczęściej wystarczy wygrodzić fragment przy włazie lub wpustach. Przy większych obiektach ustalamy kolejność prac tak, żeby nie blokować ruchu.",
+      },
+      {
+        q: "Czy usuwacie osad i szlam ze studzienki?",
+        a: "Tak. Odpompowujemy zawartość i usuwamy osady, które ograniczają pojemność oraz blokują odpływ.",
+      },
+      {
+        q: "Czy można połączyć czyszczenie studzienek z WUKO?",
+        a: "Tak i często ma to sens. Studnia bywa punktem wejścia do czyszczenia dalszego przewodu ciśnieniowo.",
+      },
+      {
+        q: "Czy czyścicie wpusty przy garażach podziemnych?",
+        a: "Tak. Obsługujemy wpusty, kratki, osadniki i odwodnienia liniowe przy garażach, rampach i halach.",
+      },
+      {
+        q: "Co jeśli studzienka szybko zapełnia się ponownie?",
+        a: "To sygnał, że trzeba sprawdzić dopływy, spadek, uszkodzenie odcinka albo nadmierny napływ piasku z terenu. Wtedy proponujemy kamerę lub szerszy przegląd.",
+      },
+      {
+        q: "Czy wystawiacie dokument dla wspólnoty lub firmy?",
+        a: "Tak. Wystawiamy fakturę VAT, a przy większym zakresie przekazujemy informację o wykonanych punktach i zaleceniach.",
+      },
+      {
+        q: "Czy pracujecie po godzinach działania obiektu?",
+        a: "Tak. Przy parkingach, centrach handlowych, hotelach i magazynach możemy zaplanować prace w krótkim oknie serwisowym.",
+      },
+    ],
+    related: ["kanalizacja-deszczowa", "wuko-wroclaw", "odwodnienia-budynkow"],
+  },
+  {
+    slug: "czyszczenie-kanalizacji-deszczowej-wroclaw",
+    title: "Czyszczenie kanalizacji deszczowej Wrocław",
+    heroTitle: "Czyszczenie kanalizacji deszczowej Wrocław — wpusty, studnie, odwodnienia",
+    eyebrow: "Deszczówka",
+    tagline:
+      "Czyszczenie kanalizacji deszczowej, wpustów, odwodnień liniowych, osadników i studni przed opadami oraz po zalaniach.",
+    metaTitle: "Czyszczenie kanalizacji deszczowej Wrocław — WUKO",
+    metaDescription:
+      "Czyszczenie kanalizacji deszczowej we Wrocławiu: wpusty, studnie, odwodnienia parkingów, piasek i osad. ZIĘBUD Expert.",
+    keywords: [
+      "czyszczenie kanalizacji deszczowej wrocław",
+      "czyszczenie deszczówki wrocław",
+      "czyszczenie wpustów deszczowych wrocław",
+      "odwodnienia parkingów wrocław",
+      "wuko kanalizacja deszczowa",
+    ],
+    icon: CloudRain,
+    trenchless: false,
+    schemaServiceType: "Czyszczenie kanalizacji deszczowej",
+    overview: [
+      "Kanalizacja deszczowa zaczyna sprawiać problemy dopiero wtedy, gdy pada mocniej. Wtedy okazuje się, że wpusty są pełne liści, studzienki mają za dużo piasku, a przewody nie odbierają wody z parkingu, rampy albo drogi wewnętrznej. Awaria deszczówki bardzo szybko zmienia się w zalany garaż, podtopioną piwnicę lub przestój na obiekcie.",
+      "Czyszczenie kanalizacji deszczowej we Wrocławiu wykonujemy dla wspólnot, magazynów, zakładów, parkingów, myjni, stacji paliw, obiektów handlowych i deweloperów. Interesuje nas cały układ: wpust, osadnik, studnia, przewód, wylot oraz ewentualne połączenie z retencją albo separatorem.",
+      "Nie traktujemy deszczówki jak zwykłego odpływu. Piasek, kruszywo, liście, błoto i zawiesiny wymagają innego podejścia niż zator sanitarny. Używamy płukania WUKO, odpompowania osadu i kontroli drożności, a przy nawrotach wskazujemy, czy problemem jest zły spadek, niedrożny odcinek, przeciążenie układu czy brak retencji.",
+    ],
+    variants: [
+      {
+        name: "Deszczówka przy budynkach",
+        desc: "Wpusty, studnie, rury spustowe, odwodnienia garaży i terenów przy wspólnotach.",
+      },
+      {
+        name: "Deszczówka dla parkingów i magazynów",
+        desc: "Place manewrowe, rampy, kratki liniowe, duża ilość piasku i osadów z nawierzchni.",
+      },
+      {
+        name: "Czyszczenie przed sezonem opadów",
+        desc: "Przegląd i płukanie układu zanim intensywne deszcze pokażą słabe punkty instalacji.",
+      },
+    ],
+    whenToUse: [
+      "gdy po deszczu woda stoi przy kratkach, rampach lub w garażu",
+      "gdy wpusty deszczowe wolno odbierają wodę",
+      "gdy kanalizacja deszczowa nie była czyszczona od kilku sezonów",
+      "gdy obiekt ma parking, plac manewrowy, myjnię lub stację paliw",
+      "gdy po ulewie pojawiło się zalanie piwnicy albo garażu",
+    ],
+    costs: [
+      {
+        scope: "Punktowe czyszczenie wpustu",
+        range: "250-600 zł",
+        note: "mała ilość osadu, prosty dostęp",
+      },
+      {
+        scope: "Studnia i krótki odcinek deszczówki",
+        range: "600-1400 zł",
+        note: "płukanie, odpompowanie i kontrola odpływu",
+      },
+      {
+        scope: "Parking, garaż lub kilka wpustów",
+        range: "1400-4000 zł",
+        note: "wycena po liczbie punktów i ilości osadu",
+      },
+      {
+        scope: "Obsługa okresowa obiektu",
+        range: "wycena indywidualna",
+        note: "harmonogram roczny lub sezonowy",
+      },
+    ],
+    costNote:
+      "Przy deszczówce koszt zależy głównie od liczby wpustów, ilości piasku, możliwości podjazdu oraz tego, czy trzeba czyścić tylko punkty odbioru, czy cały odcinek przewodu.",
+    process: [
+      {
+        title: "Mapa punktów odbioru wody",
+        desc: "Ustalamy, które wpusty, kratki i studnie odpowiadają za problematyczny obszar.",
+      },
+      {
+        title: "Usuwanie piasku i osadów",
+        desc: "Odpompowujemy i wybieramy osad, który zabiera pojemność studni oraz blokuje przewody.",
+      },
+      {
+        title: "Płukanie przewodów WUKO",
+        desc: "Czyścimy odcinki między studniami, żeby przywrócić przepływ do odpływu, retencji lub separatora.",
+      },
+      {
+        title: "Test odbioru i zalecenia",
+        desc: "Sprawdzamy przepływ i podpowiadamy, czy potrzebna jest retencja, remont odcinka albo czyszczenie cykliczne.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Czy kanalizację deszczową czyści się tak samo jak sanitarną?",
+        a: "Nie. W deszczówce dominuje piasek, liście, kruszywo i błoto. Dlatego poza płukaniem ważne jest usunięcie osadu ze studni i wpustów.",
+      },
+      {
+        q: "Kiedy najlepiej czyścić kanalizację deszczową?",
+        a: "Najlepiej przed sezonem intensywnych opadów oraz po okresach, w których na nawierzchni zbiera się dużo liści, piasku albo błota.",
+      },
+      {
+        q: "Czy obsługujecie parkingi i place manewrowe?",
+        a: "Tak. To jeden z najczęstszych zakresów: wpusty, odwodnienia liniowe, studnie, osadniki oraz odcinki między punktami.",
+      },
+      {
+        q: "Czy czyszczenie deszczówki pomoże przy zalewaniu garażu?",
+        a: "Jeżeli przyczyną jest brak odbioru wody przez wpusty lub przewody, tak. Jeżeli problem wynika z gruntu, izolacji albo zbyt małej retencji, wskażemy dalszy kierunek.",
+      },
+      {
+        q: "Czy możecie sprawdzić, gdzie deszczówka ma odpływ?",
+        a: "Tak. Sprawdzamy studnie, przebieg odcinków, przepływ i punkty wylotu. W razie potrzeby dokładamy kamerę.",
+      },
+      {
+        q: "Czy działacie przy stacjach paliw i myjniach?",
+        a: "Tak. Przy takich obiektach często łączymy deszczówkę z kontrolą separatora ropopochodnego i dokumentacją dla zarządcy.",
+      },
+      {
+        q: "Czy można podpisać stałą umowę na czyszczenie deszczówki?",
+        a: "Tak. Dla firm, wspólnot i obiektów z dużą powierzchnią utwardzoną ustawiamy harmonogram prac okresowych.",
+      },
+      {
+        q: "Czy po czyszczeniu dostanę raport?",
+        a: "Przy większych zleceniach przekazujemy informację o punktach, zakresie, problemach i zaleceniach dotyczących kolejnych prac.",
+      },
+    ],
+    related: ["kanalizacja-deszczowa", "czyszczenie-studzienek-wroclaw", "retencja"],
+  },
+  {
+    slug: "usuwanie-zatorow-kanalizacyjnych-wroclaw",
+    title: "Usuwanie zatorów kanalizacyjnych Wrocław",
+    heroTitle: "Usuwanie zatorów kanalizacyjnych Wrocław — szybka diagnoza i udrożnienie",
+    eyebrow: "Zatory i cofki",
+    tagline:
+      "Usuwanie zatorów w odpływach, pionach, poziomach, przyłączach i studniach. Awaryjnie oraz planowo, dla mieszkań, wspólnot, lokali i firm.",
+    metaTitle: "Usuwanie zatorów kanalizacyjnych Wrocław — 24h",
+    metaDescription:
+      "Usuwanie zatorów kanalizacyjnych we Wrocławiu: cofka, zatkany pion, odpływ, przyłącze, WUKO i inspekcja TV. Tel. 602 481 688.",
+    keywords: [
+      "usuwanie zatorów kanalizacyjnych wrocław",
+      "zatkana kanalizacja wrocław",
+      "cofka kanalizacji wrocław",
+      "zatkany pion kanalizacyjny wrocław",
+      "awaria kanalizacji wrocław",
+    ],
+    icon: RefreshCw,
+    trenchless: false,
+    schemaServiceType: "Usuwanie zatorów kanalizacyjnych",
+    overview: [
+      "Zator kanalizacyjny nie zawsze jest tam, gdzie widać objaw. Ścieki mogą wyjść przez brodzik, wannę, kratkę w piwnicy albo WC na parterze, ale przyczyna bywa kilka metrów dalej: w pionie, poziomie piwnicznym, przyłączu, studni lub na odcinku za separatorem. Dlatego szybka diagnoza jest ważniejsza niż przypadkowe przepychanie.",
+      "Usuwamy zatory kanalizacyjne we Wrocławiu dla mieszkań, domów, wspólnot, restauracji, hoteli, biur, magazynów i obiektów technicznych. W awarii liczy się czas, ale jeszcze bardziej liczy się dobór metody. Spirala, WUKO i kamera TV mają różne zastosowania i źle dobrany sprzęt potrafi tylko przesunąć problem dalej.",
+      "Pracujemy tak, żeby klient dostał nie tylko odpływ, ale też odpowiedź, czy zator był jednorazowy, czy instalacja będzie wymagała kontroli. Przy nawracających awariach rekomendujemy inspekcję TV, bo wtedy widać korzenie, pęknięcia, przeciwspadek, przesunięcie kielicha albo materiał po remoncie.",
+    ],
+    variants: [
+      {
+        name: "Zatory w mieszkaniach i lokalach",
+        desc: "WC, brodziki, zlewy, kratki, podejścia i krótkie odcinki odpływowe.",
+      },
+      {
+        name: "Zatory w budynkach wielorodzinnych",
+        desc: "Piony, poziomy piwniczne, cofki i problemy wymagające współpracy z zarządcą.",
+      },
+      {
+        name: "Zatory w przyłączach i studniach",
+        desc: "Dłuższe odcinki, osady, korzenie, piasek i czyszczenie WUKO z kontrolą efektu.",
+      },
+    ],
+    whenToUse: [
+      "gdy ścieki cofają się przez najniższy punkt w mieszkaniu lub piwnicy",
+      "gdy WC, brodzik albo zlew nie odbiera wody mimo prób domowych",
+      "gdy w bloku problem dotyczy kilku mieszkań lub pionu",
+      "gdy zator wraca po kilku tygodniach lub miesiącach",
+      "gdy problem pojawił się po remoncie, budowie albo intensywnym użytkowaniu lokalu",
+    ],
+    costs: [
+      {
+        scope: "Prosty zator punktowy",
+        range: "250-450 zł",
+        note: "krótki odcinek, lokal lub mieszkanie",
+      },
+      {
+        scope: "Zator w pionie lub poziomie",
+        range: "450-1100 zł",
+        note: "budynek wielorodzinny, wspólnota, piwnica",
+      },
+      {
+        scope: "Zator w przyłączu lub studni",
+        range: "700-1800 zł",
+        note: "WUKO, dłuższy odcinek, osad albo korzenie",
+      },
+      {
+        scope: "Zator z inspekcją TV",
+        range: "od 900 zł",
+        note: "diagnostyka przy nawrotach i problemach strukturalnych",
+      },
+    ],
+    costNote:
+      "Podane ceny są orientacyjne. Ostateczny koszt zależy od miejsca zatoru, dostępu, długości odcinka, trybu awaryjnego i potrzeby użycia kamery.",
+    process: [
+      {
+        title: "Telefon i objawy",
+        desc: "Ustalamy, gdzie wychodzi woda, czy problem dotyczy jednego lokalu, całego pionu albo przyłącza.",
+      },
+      {
+        title: "Dobór metody",
+        desc: "Wybieramy spiralę, WUKO lub wariant łączony. Przy podejrzeniu uszkodzenia planujemy kamerę.",
+      },
+      {
+        title: "Usunięcie zatoru",
+        desc: "Udrażniamy przewód od najlepszego punktu dostępu, bez niepotrzebnego rozkuwania.",
+      },
+      {
+        title: "Rekomendacja po pracy",
+        desc: "Mówimy, czy temat jest zakończony, czy zator najpewniej wróci bez naprawy przyczyny.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Czy przy zatorze kanalizacji można użyć środka chemicznego?",
+        a: "Przy drobnym odpływie czasem pomaga, ale przy cofce, pionie lub przyłączu zwykle nie. Może też utrudnić pracę technikowi i zwiększyć ryzyko uszkodzenia instalacji.",
+      },
+      {
+        q: "Jak rozpoznać, że zator jest w pionie, a nie w mieszkaniu?",
+        a: "Jeśli problem dotyczy kilku odpływów, ścieki cofają się w najniższym punkcie albo sąsiedzi mają podobne objawy, prawdopodobnie chodzi o pion lub poziom wspólny.",
+      },
+      {
+        q: "Czy usuwanie zatoru wymaga rozkuwania ścian lub posadzki?",
+        a: "Najczęściej nie. Zaczynamy od rewizji, odpływów i studni. Rozkuwanie rozważa się dopiero po diagnozie, gdy przewód jest uszkodzony lub niedostępny.",
+      },
+      {
+        q: "Czy działacie w trybie awaryjnym?",
+        a: "Tak. Przy cofce, wybiciu ścieków lub zalaniu traktujemy zgłoszenie jako pilne i ustalamy najszybszy możliwy dojazd.",
+      },
+      {
+        q: "Czy zator może wrócić po udrożnieniu?",
+        a: "Może, jeśli przyczyną jest pęknięta rura, korzenie, przeciwspadek, zapadnięty odcinek albo błąd po remoncie. Wtedy potrzebna jest kamera i naprawa docelowa.",
+      },
+      {
+        q: "Czy usuwacie zatory w gastronomii?",
+        a: "Tak. Przy gastronomii często problemem jest tłuszcz oraz odcinek za separatorem. Możemy połączyć udrożnienie z czyszczeniem separatora i planem serwisowym.",
+      },
+      {
+        q: "Czy po usłudze można dostać opis dla ubezpieczyciela lub zarządcy?",
+        a: "Tak. Przy awariach dla wspólnot, firm i szkód zalaniowych przekazujemy informację o zakresie i prawdopodobnej przyczynie.",
+      },
+      {
+        q: "Jakie dzielnice obejmujecie?",
+        a: "Obsługujemy cały Wrocław i okolice: Krzyki, Fabryczną, Psie Pole, Śródmieście, Stare Miasto, Nadodrze, Bielany Wrocławskie, Siechnice i Długołękę.",
+      },
+    ],
+    related: ["udraznianie-rur", "wuko-wroclaw", "inspekcja-tv-kanalizacji"],
+  },
 ];
 
 type InfrastructureServiceConfig = {
