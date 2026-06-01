@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   ArrowRight,
   Building2,
@@ -23,6 +24,8 @@ import { ServicesGrid } from "@/components/site/sections/services-grid";
 import { homeFaqSchema, jsonLdBreadcrumb, jsonLdScript } from "@/lib/jsonld";
 import { getPhoto } from "@/lib/photos";
 import { SITE_URL } from "@/lib/site";
+
+type PhotoKey = Parameters<typeof getPhoto>[0];
 
 export const metadata: Metadata = {
   title: {
@@ -91,26 +94,88 @@ const differentiators = [
   },
   {
     icon: ClipboardList,
-    title: "Faktura VAT i dokumentacja",
-    desc: "Każdą usługę kończymy czytelnym zakresem wykonanych prac, raportem i dokumentem sprzedażowym.",
+    title: "Raport dla zarządcy i właściciela",
+    desc: "Po pracy zostaje jasny zakres wykonanych czynności, zalecenia techniczne i dokument, który można przekazać wspólnocie lub ubezpieczycielowi.",
   },
 ];
 
-const commonSituations = [
+const commonSituations: {
+  icon: typeof Wrench;
+  title: string;
+  desc: string;
+  href: string;
+  badge: string;
+  photoKey: PhotoKey;
+}[] = [
   {
     icon: Wrench,
-    title: "Zatkany odpływ w kuchni lub łazience",
-    desc: "Najczęściej chodzi o tłuszcz, włosy, papier albo drobne osady. W takich tematach zwykle zaczynamy od precyzyjnego udrażniania, a dopiero przy większym problemie przechodzimy do szerszego czyszczenia.",
+    title: "Zalana piwnica lub lokal techniczny",
+    desc: "Najpierw zabezpieczamy miejsce, rozpoznajemy źródło wody i dobieramy sprzęt: pompa, WUKO, kamera albo serwis instalacji.",
+    href: "/pogotowie-kanalizacyjne",
+    badge: "Awaria",
+    photoKey: "realAwariaKanalizacji",
   },
   {
     icon: TriangleAlert,
-    title: "Cofka ścieków w piwnicy albo lokalu",
-    desc: "To sygnał, że problem może siedzieć głębiej: w pionie, poziomie albo na przyłączu. Tu liczy się szybkie rozpoznanie i decyzja, czy kończymy na udrożnieniu, czy trzeba sięgnąć po WUKO lub kamerę.",
+    title: "Cofka kanalizacji i wybicie z WC",
+    desc: "To nie jest zwykły zator. Sprawdzamy pion, poziom, przyłącze i decydujemy, czy wystarczy udrożnienie, czy potrzebne jest WUKO.",
+    href: "/uslugi/usuwanie-zatorow-kanalizacyjnych-wroclaw",
+    badge: "Pilne",
+    photoKey: "realPrzepompownieSerwis",
   },
   {
     icon: Waves,
-    title: "Studzienka lub deszczówka nie odbiera wody",
-    desc: "Przy opadach i osadach często wychodzi problem z wpustami, studniami lub przewodem deszczowym. To typowy temat dla czyszczenia odcinka, studni i sprawdzenia, czy układ jest dalej drożny.",
+    title: "Niedrożna kanalizacja deszczowa",
+    desc: "Po intensywnych opadach wychodzą problemy z wpustami, studniami i przewodami deszczowymi. Czyścimy i sprawdzamy odpływ.",
+    href: "/uslugi/czyszczenie-kanalizacji-deszczowej-wroclaw",
+    badge: "Deszczówka",
+    photoKey: "realAwariaWodociagu",
+  },
+  {
+    icon: Camera,
+    title: "Zapchany pion lub problem w studni",
+    desc: "Przy wspólnotach i budynkach wielorodzinnych lokalizujemy problem, czyścimy odcinek i zostawiamy jasną informację dla zarządcy.",
+    href: "/uslugi/czyszczenie-studzienek-wroclaw",
+    badge: "Wspólnoty",
+    photoKey: "realKanalizacjaSeparatory",
+  },
+  {
+    icon: Factory,
+    title: "Przepełniony separator lub zbiornik",
+    desc: "Gastronomia, zakłady i obiekty techniczne potrzebują szybkiej obsługi, dokumentacji i pracy bez zatrzymania całego obiektu.",
+    href: "/uslugi/separatory-tluszczu",
+    badge: "B2B",
+    photoKey: "realCzyszczenieZbiornikow",
+  },
+];
+
+const recentWorks: {
+  title: string;
+  eyebrow: string;
+  desc: string;
+  photoKey: PhotoKey;
+  href: string;
+}[] = [
+  {
+    eyebrow: "Awaria w budynku",
+    title: "Zalana piwnica techniczna",
+    desc: "Rozpoznanie źródła zalania, wypompowanie wody i wskazanie dalszego zakresu prac dla zarządcy.",
+    photoKey: "realAwariaKanalizacji",
+    href: "/pogotowie-kanalizacyjne",
+  },
+  {
+    eyebrow: "Diagnostyka TV",
+    title: "Kamera i robot w samochodzie serwisowym",
+    desc: "Mobilne zaplecze do inspekcji przewodów, raportowania i decyzji, czy potrzebna jest naprawa docelowa.",
+    photoKey: "realInspekcjaTvVan",
+    href: "/uslugi/inspekcja-tv-kanalizacji",
+  },
+  {
+    eyebrow: "Przepompownie i studnie",
+    title: "Serwis komory na terenie obiektu",
+    desc: "Prace przy studni, wężach ssących i armaturze, gdzie liczy się bezpieczeństwo oraz szybkie przywrócenie pracy układu.",
+    photoKey: "realPrzepompownieSerwis",
+    href: "/uslugi/serwis-przepompowni",
   },
 ];
 
@@ -140,6 +205,71 @@ export default function HomePage() {
 
       <section className="bg-white py-16 sm:py-20">
         <Container>
+          <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
+                Typowe awarie
+              </p>
+              <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
+                Klient dzwoni, gdy już czuć wodę, zapach albo ryzyko zalania
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-navy-700">
+                Dlatego pokazujemy objawy, nie tylko nazwy usług. Zgłoszenie
+                zaczyna się od tego, co widać na obiekcie: cofka, pełna
+                studnia, mokra piwnica, zapach z kanalizacji albo separator,
+                który przestał przyjmować ścieki.
+              </p>
+            </div>
+            <LinkButton
+              href="/pogotowie-kanalizacyjne"
+              className="bg-navy-900 text-white hover:bg-navy-800"
+            >
+              Zgłoś awarię 24/7
+              <ArrowRight className="h-4 w-4" />
+            </LinkButton>
+          </div>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-5">
+            {commonSituations.map((item) => (
+              <Link
+                key={item.title}
+                href={item.href}
+                className="group flex min-h-full flex-col overflow-hidden rounded-[28px] border border-border bg-white shadow-soft transition hover:-translate-y-0.5 hover:border-aqua-300 hover:shadow-[0_26px_60px_-30px_rgba(10,22,40,0.24)]"
+              >
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <PhotoFrame
+                    photo={getPhoto(item.photoKey)}
+                    aspectRatio="4 / 3"
+                    className="h-full rounded-none ring-0"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-navy-950/12 to-transparent" />
+                  <span className="absolute left-3 top-3 rounded-full bg-white/92 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-navy-900 shadow-sm">
+                    {item.badge}
+                  </span>
+                  <span className="absolute bottom-3 left-3 flex h-10 w-10 items-center justify-center rounded-2xl bg-aqua-500 text-navy-950 shadow-soft">
+                    <item.icon className="h-5 w-5" />
+                  </span>
+                </div>
+                <div className="flex flex-1 flex-col p-5">
+                  <h3 className="font-display text-lg font-semibold leading-tight text-navy-900">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-navy-700">
+                    {item.desc}
+                  </p>
+                  <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-navy-900 transition group-hover:text-aqua-700">
+                    Co robimy w takiej sytuacji
+                    <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-white py-16 sm:py-20">
+        <Container>
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
@@ -159,7 +289,7 @@ export default function HomePage() {
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
                 <TrustStat value="Od 1991" label="wieloletnia praktyka na rynku wrocławskim" />
                 <TrustStat value="WUKO + TV" label="nowoczesne pojazdy i diagnostyka kamerowa" />
-                <TrustStat value="Faktura VAT" label="pełna dokumentacja na każdą usługę" />
+                <TrustStat value="Raport" label="zakres prac, zalecenia i dokumentacja dla zarządcy" />
               </div>
             </div>
 
@@ -187,6 +317,65 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-muted py-20 sm:py-28">
+        <Container>
+          <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
+                Ostatnie realizacje
+              </p>
+              <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
+                Zdjęcia z terenu zamiast pustych obietnic
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-navy-700">
+                Wysoko pokazujemy realne sceny z pracy: zalania, sprzęt do
+                inspekcji TV, studnie i komory techniczne. To buduje zaufanie
+                szybciej niż kolejny akapit o doświadczeniu.
+              </p>
+            </div>
+            <LinkButton
+              href="/realizacje"
+              variant="outline"
+              className="border-navy-200 bg-white text-navy-900 hover:bg-navy-50"
+            >
+              Zobacz wszystkie realizacje
+              <ArrowRight className="h-4 w-4" />
+            </LinkButton>
+          </div>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+            {recentWorks.map((item) => (
+              <Link
+                key={item.title}
+                href={item.href}
+                className="group overflow-hidden rounded-[30px] border border-border bg-white shadow-soft transition hover:-translate-y-0.5 hover:border-aqua-300 hover:shadow-[0_26px_60px_-30px_rgba(10,22,40,0.24)]"
+              >
+                <PhotoFrame
+                  photo={getPhoto(item.photoKey)}
+                  aspectRatio="16 / 10"
+                  className="rounded-none ring-0"
+                />
+                <div className="p-6">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-aqua-700">
+                    {item.eyebrow}
+                  </p>
+                  <h3 className="mt-3 font-display text-xl font-semibold leading-tight text-navy-900">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-navy-700">
+                    {item.desc}
+                  </p>
+                  <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-navy-900 transition group-hover:text-aqua-700">
+                    Zobacz powiązaną usługę
+                    <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
+                  </span>
+                </div>
+              </Link>
+            ))}
           </div>
         </Container>
       </section>
@@ -248,62 +437,6 @@ export default function HomePage() {
 
       <section className="bg-white py-20 sm:py-28">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
-                Najczęstsze sytuacje
-              </p>
-              <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
-                Z takimi tematami klienci dzwonią do nas najczęściej
-              </h2>
-              <p className="mt-5 text-base leading-relaxed text-navy-700">
-                Nie każdy problem kanalizacyjny wygląda tak samo. Czasem chodzi
-                o prosty zator, a czasem o objaw większej usterki w pionie,
-                przyłączu albo odwodnieniu terenu. Dlatego patrzymy najpierw na
-                objaw, a dopiero potem dobieramy właściwą usługę i sprzęt.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <LinkButton
-                  href="/pogotowie-kanalizacyjne"
-                  className="bg-navy-900 text-white hover:bg-navy-800"
-                >
-                  Zobacz stronę awaryjną
-                  <ArrowRight className="h-4 w-4" />
-                </LinkButton>
-                <LinkButton
-                  href="/cennik"
-                  variant="outline"
-                  className="border-navy-200 bg-white text-navy-900 hover:bg-navy-50"
-                >
-                  Sprawdź orientacyjne koszty
-                </LinkButton>
-              </div>
-            </div>
-
-            <div className="grid gap-4">
-              {commonSituations.map((item) => (
-                <div
-                  key={item.title}
-                  className="rounded-[28px] border border-border bg-muted p-6 shadow-soft"
-                >
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-navy-900 text-aqua-400">
-                    <item.icon className="h-5 w-5" />
-                  </span>
-                  <h3 className="mt-5 font-display text-xl font-semibold text-navy-900">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-navy-700">
-                    {item.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className="bg-white py-20 sm:py-28">
-        <Container>
           <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
@@ -343,14 +476,14 @@ export default function HomePage() {
           <div className="mt-12 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div className="overflow-hidden rounded-[30px]">
               <PhotoFrame
-                photo={getPhoto("ziebudInspekcjaKanalu")}
+                photo={getPhoto("realInspekcjaTvVan")}
                 aspectRatio="16 / 10"
                 className="ring-0"
               />
             </div>
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-aqua-700">
-                Technicznie i sprzedażowo
+                Sprzęt i diagnostyka
               </p>
               <h3 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy-900">
                 Usługi kanalizacyjne Wrocław i okolice

@@ -433,6 +433,48 @@ export const photos = {
     source: "owned",
   } satisfies Photo,
 
+  realAwariaKanalizacji: {
+    src: "/photos/real-awaria-kanalizacji.jpg",
+    alt: "Zalana piwnica techniczna po awarii kanalizacji w budynku we Wrocławiu",
+    source: "owned",
+  } satisfies Photo,
+
+  realAwariaWodociagu: {
+    src: "/photos/real-awaria-wodociagu.jpg",
+    alt: "Zabezpieczony wykop i prace przy awarii wodociągu obok budynku mieszkalnego",
+    source: "owned",
+  } satisfies Photo,
+
+  realAwariaWody: {
+    src: "/photos/real-awaria-wody.jpg",
+    alt: "Naprawa elementu instalacji wodnej pod ciśnieniem podczas awarii",
+    source: "owned",
+  } satisfies Photo,
+
+  realCzyszczenieZbiornikow: {
+    src: "/photos/real-czyszczenie-zbiornikow.jpg",
+    alt: "Ekipa techniczna czyści zbiornik i instalację w pomieszczeniu technicznym",
+    source: "owned",
+  } satisfies Photo,
+
+  realInspekcjaTvVan: {
+    src: "/photos/real-inspekcja-tv-van.jpg",
+    alt: "Mobilne zaplecze do inspekcji TV kanalizacji w samochodzie serwisowym ZIĘBUD",
+    source: "owned",
+  } satisfies Photo,
+
+  realKanalizacjaSeparatory: {
+    src: "/photos/real-kanalizacja-separatory.jpg",
+    alt: "Pracownicy ZIĘBUD przy studni kanalizacyjnej i wężach serwisowych",
+    source: "owned",
+  } satisfies Photo,
+
+  realPrzepompownieSerwis: {
+    src: "/photos/real-przepompownie-serwis.jpg",
+    alt: "Serwis przepompowni i prace przy studni kanalizacyjnej na terenie obiektu",
+    source: "owned",
+  } satisfies Photo,
+
   ziebudInspekcjaKanalu: {
     src: "/photos/ziebud-inspekcja-kanalu.jpg",
     alt: "Inspekcja wnętrza przewodu kanalizacyjnego kamerą i oświetleniem technicznym",
@@ -468,18 +510,18 @@ export type PhotoKey = keyof typeof photos;
 
 export const servicePhotos: Record<string, PhotoKey> = {
   "uslugi-kanalizacyjne": "ziebudUslugiKanalizacyjne",
-  "wuko-wroclaw": "adobeWukoUlica",
+  "wuko-wroclaw": "ziebudWukoBlok",
   "udraznianie-rur": "ziebudUdraznianieKuchnia",
   "naprawa-sieci-wodociagowych": "ziebudNaprawaSieciWodociagowych",
-  "inspekcja-tv-kanalizacji": "ziebudVideoInspekcje",
-  "separatory-tluszczu": "ziebudCzyszczenieSeparatorow",
+  "inspekcja-tv-kanalizacji": "realInspekcjaTvVan",
+  "separatory-tluszczu": "realCzyszczenieZbiornikow",
   "separatory-ropopochodne": "ziebudSeparatorRopopochodny",
-  "serwis-przepompowni": "ziebudPrzepompownie",
+  "serwis-przepompowni": "realPrzepompownieSerwis",
   "lokalizacja-nieszczelnosci": "ziebudLokalizacjaWyciekow",
-  "czyszczenie-kanalizacji-wroclaw": "ziebudUslugiKanalizacyjne",
-  "czyszczenie-studzienek-wroclaw": "adobeUdraznianieManhole",
-  "czyszczenie-kanalizacji-deszczowej-wroclaw": "ziebudAwarieKanalizacji",
-  "usuwanie-zatorow-kanalizacyjnych-wroclaw": "ziebudAwarieWodKan",
+  "czyszczenie-kanalizacji-wroclaw": "realPrzepompownieSerwis",
+  "czyszczenie-studzienek-wroclaw": "realKanalizacjaSeparatory",
+  "czyszczenie-kanalizacji-deszczowej-wroclaw": "realAwariaWodociagu",
+  "usuwanie-zatorow-kanalizacyjnych-wroclaw": "realAwariaKanalizacji",
 };
 
 export const pagePhotos: Record<string, PhotoKey> = {

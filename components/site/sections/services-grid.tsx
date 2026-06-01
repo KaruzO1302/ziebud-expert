@@ -45,8 +45,9 @@ export function ServicesGrid() {
               Oferta ustawiona pod lokalne zgłoszenia i obiekty do stałej obsługi
             </h2>
             <p className="mt-4 text-base leading-relaxed text-navy-700">
-                          Obsługujemy zgłoszenia awaryjne i planowy serwis obiektów we Wrocławiu i okolicach.
-                              Pracujemy dla wspólnot, firm, gastronomii i klientów indywidualnych.
+              Obsługujemy zgłoszenia awaryjne i planowy serwis obiektów we
+              Wrocławiu i okolicach. Pracujemy dla wspólnot, firm,
+              gastronomii i klientów indywidualnych.
             </p>
           </div>
           <LinkButton
@@ -62,14 +63,14 @@ export function ServicesGrid() {
         <ServiceGroup
           eyebrow="Interwencje i diagnostyka"
           title="Od tych tematów zaczyna się większość telefonów"
-          intro="Tu łapiemy wysoką intencję zakupową: szeroki serwis kanalizacji, zatory, wybicia ścieków, potrzebę czyszczenia, kamerę i szybkie rozpoznanie problemu."
+          intro="Najczęściej zaczynamy od telefonu o cofce, zatorze, zapachu, wolnym odpływie albo zalanej piwnicy. Najpierw rozpoznajemy objaw, potem dobieramy metodę: WUKO, spiralę, kamerę TV lub serwis na obiekcie."
           items={responseServices}
         />
 
         <ServiceGroup
           eyebrow="Obsługa obiektów"
           title="Usługi, które najlepiej pracują w modelu B2B"
-          intro="Separatory i przepompownie budują powtarzalny biznes, bo klient wraca nie tylko po awarii, ale też po planowy serwis i regularną opiekę nad obiektem."
+          intro="Separatory, przepompownie i kanalizacja techniczna wymagają regularnej obsługi, dokumentacji i szybkiej reakcji, gdy obiekt nie może stanąć. Dlatego prowadzimy też stałe serwisy dla firm i wspólnot."
           items={b2bServices}
         />
       </Container>
