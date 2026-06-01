@@ -25,30 +25,30 @@ const proofPoints = ["WUKO", "kamera TV", "studnie i separatory"];
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-navy-50 text-navy-900">
+    <section className="relative overflow-hidden bg-navy-950 text-white">
       <HeroPhoto
         photo={photos.heroHomepageZiebud}
         priority
-        overlay="bright-soft"
+        overlay="navy-soft"
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(ellipse_42%_36%_at_74%_18%,rgba(0,212,255,0.1),transparent_72%),linear-gradient(to_bottom,rgba(255,255,255,0),rgba(255,255,255,0.2))]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_42%_36%_at_74%_18%,rgba(0,212,255,0.18),transparent_72%),linear-gradient(to_bottom,rgba(10,22,40,0.12),rgba(10,22,40,0.58))]"
       />
       <Container className="relative py-16 sm:py-20 lg:py-16">
         <div className="grid gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:items-end">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-aqua-200 bg-white/85 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-aqua-800 shadow-soft">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-aqua-100 shadow-soft backdrop-blur">
               ZIĘBUD Expert · Wrocław i okolice
             </span>
-            <h1 className="mt-5 max-w-3xl text-balance font-display text-4xl font-semibold leading-[1.03] tracking-tight text-navy-950 sm:text-5xl lg:text-[60px]">
+            <h1 className="mt-5 max-w-3xl text-balance font-display text-4xl font-semibold leading-[1.03] tracking-tight text-white sm:text-5xl lg:text-[60px]">
               WUKO Wrocław 24/7.
-              <span className="block text-aqua-700">
+              <span className="block text-aqua-200">
                 Kanalizacja, cofki i awarie bez czekania
               </span>
             </h1>
 
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-700">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/84">
               Zalana piwnica, cofka z WC, zapchany pion, pełny separator albo
               awaria przepompowni? Przyjeżdża ekipa ZIĘBUD Expert z WUKO,
               kamerą TV i sprzętem do pracy na budynkach, firmach i obiektach
@@ -72,7 +72,7 @@ export function Hero() {
                 href="/zapytanie"
                 size="lg"
                 variant="outline"
-                className="border-navy-200 bg-white/85 text-navy-900 hover:bg-white"
+                className="border-white/28 bg-white/10 text-white hover:bg-white/18"
               >
                 Zgłoś awarię
                 <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
@@ -154,17 +154,17 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="mt-10 hidden flex-wrap items-center gap-x-6 gap-y-2 border-t border-navy-100 pt-6 text-xs font-medium uppercase tracking-wider text-navy-500 lg:flex">
+        <div className="mt-10 hidden flex-wrap items-center gap-x-6 gap-y-2 border-t border-white/18 pt-6 text-xs font-medium uppercase tracking-wider text-white/62 lg:flex">
           <span>Krzyki</span>
-          <span className="text-aqua-500">·</span>
+          <span className="text-aqua-300">·</span>
           <span>Fabryczna</span>
-          <span className="text-aqua-500">·</span>
+          <span className="text-aqua-300">·</span>
           <span>Śródmieście</span>
-          <span className="text-aqua-500">·</span>
+          <span className="text-aqua-300">·</span>
           <span>Psie Pole</span>
-          <span className="text-aqua-500">·</span>
+          <span className="text-aqua-300">·</span>
           <span>Stare Miasto</span>
-          <span className="text-aqua-500">·</span>
+          <span className="text-aqua-300">·</span>
           <span>Nadodrze</span>
         </div>
       </Container>
