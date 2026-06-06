@@ -91,6 +91,20 @@ export function DistrictServicePage({ service, hero }: Props) {
           ))}
         </div>
 
+        {/* Lokalny kontekt — unikalna treść per dzielnica × usługa */}
+        {service.localContext.length > 0 && (
+          <section className="mb-12">
+            <h2 className="mb-5 text-xl font-semibold">
+              {service.serviceName} {service.districtName} — jak to wygląda w praktyce
+            </h2>
+            <div className="space-y-5 leading-relaxed text-gray-700">
+              {service.localContext.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* Sections */}
         <section className="mb-12 rounded-2xl border border-gray-200 bg-gray-50 p-6">
           <h2 className="mb-5 text-xl font-semibold">
