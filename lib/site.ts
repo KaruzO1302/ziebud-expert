@@ -7,7 +7,6 @@ export const ORG_ALTERNATE_NAMES = [
   "ZIĘBUD Expert",
   "ZIĘBUD",
   "Pogotowie Kanalizacyjne Wrocław",
-  "WUKO Wrocław",
 ] as const;
 export const FOUNDER_NAME = "Leszek Zięba";
 export const FOUNDER_LINKEDIN_URL =
@@ -15,7 +14,7 @@ export const FOUNDER_LINKEDIN_URL =
 export const COMPANY_FOUNDING_DATE = "1991-01-01";
 export const COMPANY_PHONE = "+48602481688";
 export const COMPANY_PHONE_DISPLAY = "602 481 688";
-export const COMPANY_EMAIL = "biuro@serwis-kanalizacji.com";
+export const COMPANY_EMAIL = "biuro@awarie24h.pl";
 export const COMPANY_STREET_ADDRESS = "ul. Polna 2F";
 export const COMPANY_POSTAL_CODE = "51-180";
 export const COMPANY_LOCALITY = "Krzyżanowice";
@@ -66,11 +65,8 @@ export const COMPANY_AREAS_SERVED = [
 ] as const;
 
 export const COMPANY_SAME_AS_URLS: string[] = [
-  "https://ziebud-expert.pl",
   "https://pogotowie-kanalizacyjne-wroclaw.com",
   "https://www.wuko-wroclaw.pl",
-  "https://serwis-kanalizacji.com",
-  "https://wodociagi-kanalizacja.com",
 ];
 
 // Dane do schema aggregateRating

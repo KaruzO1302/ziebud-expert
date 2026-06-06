@@ -151,21 +151,19 @@ export const localServices: LocalService[] = [
   },
   {
     slug: "wuko-wroclaw",
-    title: "WUKO Wrocław i czyszczenie kanalizacji",
-    heroTitle: "WUKO Wrocław i czyszczenie kanalizacji",
+    title: "Hydrodynamiczne czyszczenie kanalizacji we Wrocławiu",
+    heroTitle: "Hydrodynamiczne czyszczenie kanalizacji we Wrocławiu",
     eyebrow: "Pogotowie kanalizacyjne",
     tagline:
       "Hydrodynamiczne czyszczenie kanalizacji sanitarnej, deszczowej i przyłączy we Wrocławiu oraz okolicach.",
-    metaTitle: "WUKO Wrocław — czyszczenie hydrodynamiczne kanalizacji",
+    metaTitle: "Hydrodynamiczne czyszczenie kanalizacji Wrocław — pogotowie",
     metaDescription:
-      "Czyszczenie kanalizacji metodą WUKO we Wrocławiu. Skuteczne usuwanie osadów, tłuszczu, piasku i zatorów na przewodach kanalizacyjnych.",
+      "Hydrodynamiczne czyszczenie kanalizacji we Wrocławiu — szybkie usuwanie osadów, tłuszczu, piasku i zatorów. Pogotowie 24/7 dla wspólnot i firm.",
     keywords: [
-      "wuko wrocław",
       "czyszczenie kanalizacji wrocław",
       "pogotowie kanalizacyjne wrocław",
       "hydrodynamiczne czyszczenie kanalizacji",
       "czyszczenie rur wrocław",
-      "wuko cena wrocław",
       "czyszczenie kanalizacji deszczowej wrocław",
     ],
     icon: Construction,

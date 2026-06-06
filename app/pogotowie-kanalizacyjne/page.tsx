@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 const services = [
   {
     icon: Waves,
-    title: "WUKO Wrocław",
+    title: "Hydrodynamiczne czyszczenie kanalizacji",
     text: "Hydrodynamiczne czyszczenie kanalizacji wodą pod ciśnieniem. Skutecznie usuwamy tłuszcz, korzenie, piasek i osady z przewodów wymagających mocniejszej interwencji.",
   },
   {
@@ -65,7 +65,7 @@ const services = [
 
 const serviceLinks = [
   { label: "Usługi kanalizacyjne", href: "/uslugi/uslugi-kanalizacyjne" },
-  { label: "WUKO Wrocław", href: "/uslugi/wuko-wroclaw" },
+  { label: "Hydrodynamiczne czyszczenie kanalizacji", href: "/uslugi/wuko-wroclaw" },
   { label: "Udrażnianie rur", href: "/uslugi/udraznianie-rur" },
   { label: "Naprawa sieci wodociągowych 24h", href: "/uslugi/naprawa-sieci-wodociagowych" },
   { label: "Inspekcja TV kanalizacji", href: "/uslugi/inspekcja-tv-kanalizacji" },
