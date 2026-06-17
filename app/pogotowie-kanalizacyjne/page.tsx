@@ -17,13 +17,13 @@ import { getPagePhoto } from "@/lib/photos";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Pogotowie kanalizacyjne Wrocław 24h 24h — szybki dojazd | ZIĘBUD Expert",
+  title: "Pogotowie kanalizacyjne Wrocław 24h — szybki dojazd",
   description:
     "Profesjonalna pomoc w awariach kanalizacji we Wrocławiu. Metoda WUKO, inspekcja TV, serwis separatorów i udrażnianie rur dla budynków, firm oraz wspólnot.",
   alternates: { canonical: "/pogotowie-kanalizacyjne" },
   openGraph: {
     title:
-      "Pogotowie kanalizacyjne Wrocław 24h 24h — szybki dojazd | ZIĘBUD Expert",
+      "Pogotowie kanalizacyjne Wrocław 24h — szybki dojazd | ZIĘBUD Expert",
     description:
       "Profesjonalna pomoc w awariach kanalizacji we Wrocławiu. Metoda WUKO, inspekcja TV, serwis separatorów i udrażnianie rur dla budynków, firm oraz wspólnot.",
     url: `${SITE_URL}/pogotowie-kanalizacyjne`,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Pogotowie kanalizacyjne Wrocław 24h 24h — szybki dojazd | ZIĘBUD Expert",
+      "Pogotowie kanalizacyjne Wrocław 24h — szybki dojazd | ZIĘBUD Expert",
     description:
       "Profesjonalna pomoc w awariach kanalizacji we Wrocławiu. Metoda WUKO, inspekcja TV, serwis separatorów i udrażnianie rur dla budynków, firm oraz wspólnot.",
     images: [`${SITE_URL}/pogotowie-kanalizacyjne/opengraph-image`],
