@@ -1,5 +1,18 @@
 import type { NextConfig } from "next";
 
+const kanalizacjaLegacyHosts = [
+  "kanalizacja-wroclaw.pl",
+  "www.kanalizacja-wroclaw.pl",
+] as const;
+
+const kanalizacjaLegacyRedirect = (source: string, destination: string) =>
+  kanalizacjaLegacyHosts.map((host) => ({
+    source,
+    has: [{ type: "host" as const, value: host }],
+    destination,
+    permanent: true,
+  }));
+
 const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
@@ -229,6 +242,134 @@ const nextConfig: NextConfig = {
         destination: "https://pogotowie-kanalizacyjne-wroclaw.com/blog",
         permanent: true,
       },
+      ...kanalizacjaLegacyRedirect(
+        "/index.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/uslugi.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/kontakt.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/kontakt"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/cennik.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/cennik"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/o-nas.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/o-nas"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/wuko-wroclaw.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/wuko-wroclaw"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/czyszczenie-kanalizacji-wroclaw.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/czyszczenie-kanalizacji-wroclaw"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/udraznianie-rur-wroclaw.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/udraznianie-rur"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/czyszczenie-odplywow.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/udraznianie-rur"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/pogotowie-kanalizacyjne-24h.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/pogotowie-kanalizacyjne"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/hydraulik-wroclaw.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/pogotowie-kanalizacyjne"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/czyszczenie-kanalow-burzowych.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/wuko-wroclaw"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/inspekcja-kamer-tv.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/inspekcja-tv-kanalizacji"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/inspekcja-tv-kanalizacji-wroclaw.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/inspekcja-tv-kanalizacji"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/czyszczenie-separatorow-wroclaw.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/separatory-tluszczu"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/uslugi/czyszczenie-separatorow.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/separatory-tluszczu"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/uslugi/inspekcja-tv.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/inspekcja-tv-kanalizacji"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/uslugi/pogotowie-wodno-kanalizacyjne.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/pogotowie-kanalizacyjne"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/uslugi/renowacja-bezwykopowa.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/bezwykopowe-naprawy-kanalizacji"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/uslugi/serwis-przepompowni.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/uslugi/serwis-przepompowni"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/wuko-wroclaw-fabryczna",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/wroclaw/fabryczna/wuko"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/wuko-wroclaw-krzyki",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/wroclaw/krzyki/wuko"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/wuko-wroclaw-psie-pole",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/wroclaw/psie-pole/wuko"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/wuko-wroclaw-srodmiescie",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/wroclaw/srodmiescie/wuko"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/wuko-wroclaw-stare-miasto",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/wroclaw/stare-miasto/wuko"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/pogotowie-kanalizacyjne-wroclaw-nadodrze.html",
+        "https://www.wuko-wroclaw.pl/wroclaw/srodmiescie"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/kanalizacja-katy-wroclawskie.html",
+        "https://www.wuko-wroclaw.pl/wuko-katy-wroclawskie"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/kanalizacja-olawa.html",
+        "https://www.wuko-wroclaw.pl/wuko-olawa"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/kanalizacja-dlugoleka.html",
+        "https://www.wuko-wroclaw.pl/wuko-dlugoleka"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/kanalizacja-sobotka.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/pogotowie-kanalizacyjne"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/kanalizacja-sroda-slaska.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/pogotowie-kanalizacyjne"
+      ),
+      ...kanalizacjaLegacyRedirect(
+        "/kanalizacja-jelcz-laskowice.html",
+        "https://pogotowie-kanalizacyjne-wroclaw.com/pogotowie-kanalizacyjne"
+      ),
       {
         source: "/kanalizacja",
         has: [{ type: "host", value: "ziebud-expert.pl" }],
