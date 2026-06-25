@@ -1941,7 +1941,7 @@ export const localServices: LocalService[] = [
     tagline:
       "Cofka z kanalizacji miejskiej podczas ulewy zalewa piwnicę, garaż albo parter? Montujemy klapy zwrotne, zasuwy burzowe i podwójne zawory KESSEL — zabezpieczenie, które naprawdę działa.",
     metaTitle:
-      "Zawory przeciwzalewowe Wrocław | Zasuwy burzowe, klapy zwrotne KESSEL | ZIĘBUD Expert",
+      "Zawory przeciwzalewowe Wrocław — zasuwy burzowe i klapy zwrotne KESSEL",
     metaDescription:
       "Montaż zasuw burzowych i zaworów przeciwzalewowych we Wrocławiu. Klapy zwrotne KESSEL, podwójne zabezpieczenie przed cofką, norma PN-EN 13564. Tel: 602 481 688.",
     keywords: [
