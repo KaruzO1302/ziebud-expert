@@ -7,6 +7,7 @@ import {
   Container,
   Droplets,
   RefreshCw,
+  ShieldAlert,
   Waves,
 } from "lucide-react";
 
@@ -1930,6 +1931,153 @@ export const localServices: LocalService[] = [
       },
     ],
     related: ["udraznianie-rur", "wuko-wroclaw", "inspekcja-tv-kanalizacji"],
+  },
+  {
+    slug: "zawory-przeciwzalewowe",
+    title: "Montaż zasuw burzowych i zaworów przeciwzalewowych",
+    heroTitle:
+      "Zasuwy burzowe i zawory przeciwzalewowe we Wrocławiu — ochrona przed cofką z kanalizacji",
+    eyebrow: "Ochrona przed zalaniem",
+    tagline:
+      "Cofka z kanalizacji miejskiej podczas ulewy zalewa piwnicę, garaż albo parter? Montujemy klapy zwrotne, zasuwy burzowe i podwójne zawory KESSEL — zabezpieczenie, które naprawdę działa.",
+    metaTitle:
+      "Zawory przeciwzalewowe Wrocław | Zasuwy burzowe, klapy zwrotne KESSEL | ZIĘBUD Expert",
+    metaDescription:
+      "Montaż zasuw burzowych i zaworów przeciwzalewowych we Wrocławiu. Klapy zwrotne KESSEL, podwójne zabezpieczenie przed cofką, norma PN-EN 13564. Tel: 602 481 688.",
+    keywords: [
+      "zawór przeciwzalewowy wrocław",
+      "zasuwa burzowa wrocław",
+      "klapa zwrotna kanalizacja wrocław",
+      "kessel wrocław",
+      "ochrona przed zalaniem piwnicy wrocław",
+    ],
+    icon: ShieldAlert,
+    trenchless: false,
+    overview: [
+      "Podczas intensywnych opadów kanalizacja miejska we Wrocławiu nie nadąża z odbiorem wody deszczowej. Woda i ścieki cofają się przewodami i wypływają z odpływów w piwnicach, garażach oraz lokalach poniżej poziomu zalewania. To nie jest rzadki scenariusz — to powtarzający się problem w kamienicach, domach jednorodzinnych z piwnicą i budynkach z pomieszczeniami poniżej terenu.",
+      "ZIĘBUD Expert montuje zawory i zasuwy przeciwzalewowe, które mechanicznie blokują przepływ zwrotny ścieków. Stosujemy urządzenia zgodne z normą PN-EN 13564, w tym klapy zwrotne pojedyncze i podwójne (double flap), zasuwy burzowe z napędem ręcznym i elektrycznym oraz kompletne stacje zabezpieczające z alarmem.",
+      "Dobieramy urządzenie do średnicy przewodu, rodzaju kanalizacji (sanitarna, deszczowa, ogólnospławna), głębokości posadowienia i warunków zabudowy. Montaż wykonujemy w piwnicy, w studzience rewizyjnej albo w komorze zewnętrznej — tam, gdzie zabezpieczenie jest najskuteczniejsze.",
+    ],
+    variants: [
+      {
+        name: "Klapa zwrotna pojedyncza",
+        desc: "Standardowe zabezpieczenie na przewodzie kanalizacyjnym — jedna klapa blokuje przepływ zwrotny ścieków. Montaż w piwnicy lub studzience.",
+        specs: "Średnice DN 100–200, korpus PVC/ABS, norma PN-EN 13564 Typ 1",
+      },
+      {
+        name: "Podwójna klapa zwrotna (double flap)",
+        desc: "Dwa niezależne elementy zamykające — podwójne zabezpieczenie przed cofką. Druga klapa działa jako rezerwowa, gdy pierwsza jest zablokowana przez osady.",
+        specs: "DN 100–200, norma PN-EN 13564 Typ 2, zalecane przy kanalizacji ogólnospławnej",
+      },
+      {
+        name: "Zasuwa burzowa z napędem elektrycznym",
+        desc: "Automatyczna zasuwa z siłownikiem i czujnikiem poziomu — zamyka się samoczynnie po wykryciu cofki. Zintegrowany alarm powiadamia właściciela.",
+        specs: "DN 150–300, zasilanie 230V, czujnik ultradźwiękowy, SMS/wiadomość push",
+      },
+      {
+        name: "Zasuwa ręczna (burzowa)",
+        desc: "Mechaniczna zasuwa zamykana ręcznie przed zapowiedzianym opadem. Rozwiązanie ekonomiczne dla budynków z dostępem do studzienki.",
+        specs: "DN 100–300, korpus żeliwny lub PVC",
+      },
+      {
+        name: "Stacja zabezpieczająca z pompą",
+        desc: "Kompleksowe rozwiązanie: zawór przeciwzalewowy + pompa zatapialna + alarm. Dla obiektów z pomieszczeniami głęboko poniżej poziomu zalewania.",
+        specs: "Zbiornik PE, pompa z pływakiem, zawór zwrotny, panel sterowania",
+      },
+    ],
+    whenToUse: [
+      "gdy piwnica, garaż albo parter były już zalewane podczas ulewy",
+      "gdy budynek ma pomieszczenia poniżej poziomu terenu (piwnica, sutereny)",
+      "gdy ubezpieczyciel wymaga zabezpieczenia przed cofką jako warunek wypłaty odszkodowania",
+      "gdy w okolicy powtarzają się podtopienia kanalizacji deszczowej lub ogólnospławnej",
+      "gdy przy nowym przyłączu kanalizacyjnym projektant wymaga zaworu przeciwzalewowego",
+      "dla garaży podziemnych, archiwów, serwerowni i pomieszczeń technicznych poniżej terenu",
+    ],
+    costs: [
+      {
+        scope: "Klapa zwrotna pojedyncza z montażem",
+        range: "1 200–2 500 zł",
+        note: "DN 100–150, montaż w piwnicy na istniejącym przewodzie",
+      },
+      {
+        scope: "Podwójna klapa zwrotna (double flap) z montażem",
+        range: "2 200–4 000 zł",
+        note: "DN 100–200, podwójne zabezpieczenie",
+      },
+      {
+        scope: "Zasuwa burzowa elektryczna z alarmem",
+        range: "4 500–9 000 zł",
+        note: "z siłownikiem, czujnikiem i automatyką",
+      },
+      {
+        scope: "Stacja zabezpieczająca (zawór + pompa)",
+        range: "8 000–18 000 zł",
+        note: "kompletny układ z pompą zatapialną i panelem sterowania",
+      },
+      {
+        scope: "Przegląd i serwis zaworu przeciwzalewowego",
+        range: "250–500 zł",
+        note: "czyszczenie, sprawdzenie szczelności, regulacja",
+      },
+    ],
+    costNote:
+      "Cena zależy od średnicy przewodu, typu urządzenia (klapa, zasuwa ręczna, zasuwa elektryczna), warunków zabudowy i tego, czy montaż odbywa się w piwnicy czy w studzience zewnętrznej. Wycenę podajemy po wizji lokalnej.",
+    process: [
+      {
+        title: "Wizja lokalna i dobór",
+        desc: "Sprawdzamy warunki zabudowy, średnicę przewodu, rodzaj kanalizacji i historię cofek. Dobieramy typ urządzenia i miejsce montażu.",
+      },
+      {
+        title: "Wycena i zamówienie",
+        desc: "Przedstawiamy kosztorys z wariantami. Po akceptacji zamawiamy urządzenie (KESSEL, ACO lub równoważne) i ustalamy termin montażu.",
+      },
+      {
+        title: "Montaż i próba",
+        desc: "Montujemy zawór lub zasuwy, podłączamy automatykę (jeśli dotyczy), wykonujemy próbę szczelności i test działania przy symulacji cofki.",
+      },
+      {
+        title: "Przekazanie i serwis",
+        desc: "Przekazujemy urządzenie z instrukcją obsługi, protokołem próby i fakturą VAT. Oferujemy roczne przeglądy i serwis pogwarancyjny.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Skąd się bierze cofka z kanalizacji podczas ulewy?",
+        a: "Podczas intensywnego opadu kanalizacja deszczowa lub ogólnospławna nie nadąża z odbiorem wody. Poziom ścieków w kolektorze rośnie i woda zaczyna przepływać wstecznie — cofa się przewodami przykanalików do piwnic i pomieszczeń poniżej terenu. Im niżej położony odpływ, tym większe ryzyko zalania.",
+      },
+      {
+        q: "Czy podwójna klapa zwrotna jest lepsza od pojedynczej?",
+        a: "Tak. Podwójna klapa (double flap, PN-EN 13564 Typ 2) ma dwa niezależne elementy zamykające. Jeśli pierwsza klapa zostanie zablokowana przez osady albo ciało stałe, druga nadal chroni przed cofką. Ubezpieczyciele często wymagają podwójnego zabezpieczenia przy wypłacie odszkodowania za zalanie.",
+      },
+      {
+        q: "Gdzie montuje się zawór przeciwzalewowy?",
+        a: "Najczęściej w piwnicy budynku, na przewodzie kanalizacyjnym tuż przed wyjściem z budynku. Alternatywnie w studzience rewizyjnej na zewnątrz albo w dedykowanej komorze. Miejsce montażu dobieramy po wizji lokalnej — kluczowy jest dostęp do serwisu i skuteczność zabezpieczenia.",
+      },
+      {
+        q: "Ile kosztuje zawór przeciwzalewowy z montażem we Wrocławiu?",
+        a: "Podstawowa klapa zwrotna z montażem to 1 200–2 500 zł. Podwójna klapa (double flap) to 2 200–4 000 zł. Zasuwa elektryczna z alarmem to 4 500–9 000 zł. Dokładna cena zależy od średnicy, warunków zabudowy i miejsca montażu.",
+      },
+      {
+        q: "Czy zawór przeciwzalewowy jest wymagany przy ubezpieczeniu?",
+        a: "Coraz częściej tak. Ubezpieczyciele nieruchomości z pomieszczeniami poniżej terenu wymagają certyfikowanego zabezpieczenia przed cofką jako warunek wypłaty odszkodowania za zalanie. Montaż urządzenia zgodnego z PN-EN 13564 i udokumentowany przegląd to najlepsza ochrona prawna.",
+      },
+    ],
+    related: [
+      "odwodnienia-budynkow",
+      "czyszczenie-kanalizacji-deszczowej-wroclaw",
+      "uslugi-kanalizacyjne",
+    ],
+    schemaServiceType: "InstallService",
+    trustLinks: [
+      {
+        label: "KESSEL — zawory i zasuwy przeciwzalewowe",
+        href: "/marki-separatorow",
+      },
+      {
+        label: "ACO — systemy odwodnień i zabezpieczeń",
+        href: "/marki-separatorow",
+      },
+    ],
   },
 ];
 

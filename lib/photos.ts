@@ -504,6 +504,12 @@ export const photos = {
     alt: "Drugie zdjęcie terenowe z realizacji ZIĘBUD po konwersji z HEIC",
     source: "owned",
   } satisfies Photo,
+
+  zaworyPrzeciwzalewoweHero: {
+    src: "/photos/zawory-przeciwzalewowe-cofka.webp",
+    alt: "Ciemna ulica w ulewie — ze studzienki kanalizacyjnej bije woda do góry, cofka zalewa drogę w stronę domów",
+    source: "owned",
+  } satisfies Photo,
 } as const;
 
 export type PhotoKey = keyof typeof photos;
@@ -522,6 +528,7 @@ export const servicePhotos: Record<string, PhotoKey> = {
   "czyszczenie-studzienek-wroclaw": "realKanalizacjaSeparatory",
   "czyszczenie-kanalizacji-deszczowej-wroclaw": "realAwariaWodociagu",
   "usuwanie-zatorow-kanalizacyjnych-wroclaw": "realAwariaKanalizacji",
+  "zawory-przeciwzalewowe": "zaworyPrzeciwzalewoweHero",
 };
 
 export const pagePhotos: Record<string, PhotoKey> = {

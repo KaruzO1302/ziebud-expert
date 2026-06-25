@@ -81,6 +81,11 @@ export const primaryNav: NavItem[] = [
         description: "Drenaż opaskowy, liniowy i odprowadzenie deszczówki",
       },
       {
+        label: "Zawory przeciwzalewowe",
+        href: "/uslugi/zawory-przeciwzalewowe",
+        description: "Zasuwy burzowe, klapy zwrotne KESSEL — ochrona przed cofką",
+      },
+      {
         label: "Czyszczenie deszczówki",
         href: "/uslugi/czyszczenie-kanalizacji-deszczowej-wroclaw",
         description: "Wpusty, parkingi, osady i kanalizacja deszczowa",
@@ -133,6 +138,7 @@ export const footerNav = {
     { label: "Czyszczenie studzienek", href: "/uslugi/czyszczenie-studzienek-wroclaw" },
     { label: "Przydomowe oczyszczalnie", href: "/uslugi/przydomowe-oczyszczalnie-sciekow" },
     { label: "Odwodnienia budynków", href: "/uslugi/odwodnienia-budynkow" },
+    { label: "Zawory przeciwzalewowe", href: "/uslugi/zawory-przeciwzalewowe" },
     { label: "Czyszczenie kanalizacji deszczowej", href: "/uslugi/czyszczenie-kanalizacji-deszczowej-wroclaw" },
     { label: "Montaż separatorów", href: "/uslugi/montaz-separatorow" },
     { label: "Montaż przepompowni", href: "/uslugi/montaz-przepompowni-sciekow" },
