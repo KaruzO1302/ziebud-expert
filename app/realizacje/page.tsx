@@ -3,7 +3,6 @@ import { Container } from "@/components/site/container";
 import { CaseStudyCard } from "@/components/site/content-cards";
 import { HeroPhoto } from "@/components/site/hero-photo";
 import { caseStudies } from "@/lib/case-studies-data";
-import { getPagePhoto } from "@/lib/photos";
 
 export const metadata: Metadata = {
   title: "Realizacje — sieci zewnętrzne, retencja i obiekty techniczne",
@@ -18,7 +17,11 @@ export default function RealizacjePage() {
     <>
       <section className="relative overflow-hidden bg-navy-900 text-white">
         <HeroPhoto
-          photo={getPagePhoto("realizacje")}
+          photo={{
+            src: "/photos/banery/realizacje-udraznianie-spirala.webp",
+            alt: "Udrażnianie rur kanalizacyjnych spiralą elektryczną — realizacja ZIĘBUD Expert Wrocław",
+            source: "owned",
+          }}
           priority
           overlay="navy-soft"
         />

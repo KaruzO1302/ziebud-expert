@@ -3,7 +3,6 @@ import { Calculator, Clock3, FileText } from "lucide-react";
 import { Container } from "@/components/site/container";
 import { HeroPhoto } from "@/components/site/hero-photo";
 import { LeadForm } from "@/components/site/lead-form";
-import { getPagePhoto } from "@/lib/photos";
 
 export const metadata: Metadata = {
   title: "Wycena serwisu kanalizacji Wrocław",
@@ -34,7 +33,15 @@ export default function WycenaPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-navy-900 text-white">
-        <HeroPhoto photo={getPagePhoto("wycena")} priority overlay="navy-soft" />
+        <HeroPhoto
+          photo={{
+            src: "/photos/biuro-wycena.jpg",
+            alt: "Przygotowanie wyceny robót kanalizacyjnych w biurze ZIĘBUD Expert Wrocław",
+            source: "owned",
+          }}
+          priority
+          overlay="navy-soft"
+        />
         <div
           aria-hidden
           className="absolute inset-0 bg-[radial-gradient(ellipse_75%_55%_at_10%_-10%,rgba(0,212,255,0.18),transparent_70%)]"

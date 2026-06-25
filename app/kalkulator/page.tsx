@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/site/container";
 import { HeroPhoto } from "@/components/site/hero-photo";
-import { photos } from "@/lib/photos";
 import { CostCalculator } from "@/components/site/cost-calculator";
 import { CtaPanel } from "@/components/site/sections/cta-panel";
 
@@ -17,7 +16,15 @@ export default function KalkulatorPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-navy-900 text-white">
-        <HeroPhoto photo={photos.excavatorRoad} priority overlay="navy-deep" />
+        <HeroPhoto
+          photo={{
+            src: "/photos/adobe-panorama-budowy.jpeg",
+            alt: "Plac budowy sieci wod-kan we Wrocławiu — kalkulator kosztów usług",
+            source: "owned",
+          }}
+          priority
+          overlay="navy-deep"
+        />
         <div
           aria-hidden
           className="absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_50%_-10%,rgba(0,212,255,0.18),transparent_70%)]"

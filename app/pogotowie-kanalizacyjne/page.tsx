@@ -13,7 +13,6 @@ import { HeroPhoto } from "@/components/site/hero-photo";
 import { LinkButton } from "@/components/site/link-button";
 import { SlaBadge } from "@/components/site/sla-badge";
 import { CtaPanel } from "@/components/site/sections/cta-panel";
-import { getPagePhoto } from "@/lib/photos";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -91,7 +90,11 @@ export default function PogotowieKanalizacyjnePage() {
     <>
       <section className="relative overflow-hidden bg-navy-900 text-white">
         <HeroPhoto
-          photo={getPagePhoto("zapytanie")}
+          photo={{
+            src: "/photos/banery/pogotowie-zespol-przepompownia.webp",
+            alt: "Zespół ZIĘBUD Expert przy przepompowni ścieków — pogotowie kanalizacyjne 24h we Wrocławiu",
+            source: "owned",
+          }}
           priority
           overlay="navy-soft"
         />
