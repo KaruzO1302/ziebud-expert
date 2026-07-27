@@ -7,7 +7,6 @@ import {
   COMPANY_AREAS_SERVED,
   COMPANY_COUNTRY_CODE,
   COMPANY_EMAIL,
-  COMPANY_FEATURED_REVIEWS,
   COMPANY_FOUNDING_DATE,
   COMPANY_KRS,
   COMPANY_LATITUDE,
@@ -16,7 +15,6 @@ import {
   COMPANY_NIP,
   COMPANY_POSTAL_CODE,
   COMPANY_PRICE_RANGE,
-  COMPANY_RATING,
   COMPANY_REGION,
   COMPANY_REGON,
   COMPANY_PHONE,
@@ -242,26 +240,6 @@ const ORG_BASE = {
         : {}),
     })),
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: COMPANY_RATING.value,
-    reviewCount: COMPANY_RATING.count,
-    bestRating: COMPANY_RATING.best,
-    worstRating: COMPANY_RATING.worst,
-  },
-  review: COMPANY_FEATURED_REVIEWS.map((r) => ({
-    "@type": "Review",
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: r.rating,
-      bestRating: COMPANY_RATING.best,
-    },
-    author: {
-      "@type": "Person",
-      name: r.author,
-    },
-    reviewBody: r.text,
-  })),
   ...(COMPANY_SAME_AS_URLS.length ? { sameAs: COMPANY_SAME_AS_URLS } : {}),
 };
 
