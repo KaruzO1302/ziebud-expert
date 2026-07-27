@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     absolute: "Pogotowie kanalizacyjne Wrocław 24/7 — dojazd 60 min | ZIĘBUD",
   },
   description:
-    "Pogotowie kanalizacyjne Wrocław 24/7. Udrażnianie rur, WUKO, inspekcja TV kamerą, separatory i przepompownie. Szybki dojazd, wycena przez telefon. Od 1991 r. Zadzwoń: 602 481 688.",
+    "Pogotowie kanalizacyjne Wrocław 24/7: cofki, zalania, WUKO, inspekcja TV, separatory. Dojazd 60 min. Od 1991 r. Zadzwoń: 602 481 688.",
   alternates: {
     canonical: "/",
   },
