@@ -24,6 +24,7 @@ export default function UslugiIndexPage() {
       "uslugi-kanalizacyjne",
       "wuko-wroclaw",
       "udraznianie-rur",
+      "pogotowie-hydrauliczne",
       "naprawa-sieci-wodociagowych",
       "inspekcja-tv-kanalizacji",
       "lokalizacja-nieszczelnosci",

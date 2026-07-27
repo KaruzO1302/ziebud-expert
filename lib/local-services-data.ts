@@ -9,6 +9,7 @@ import {
   RefreshCw,
   ShieldAlert,
   Waves,
+  Wrench,
 } from "lucide-react";
 
 export type ServiceVariant = {
@@ -274,10 +275,69 @@ export const localServices: LocalService[] = [
       { q: "Czy po udrożnieniu można od razu stwierdzić, czy rura jest pęknięta?", a: "Najpewniejsza odpowiedź jest po kamerze. Jeśli widzimy ryzyko uszkodzenia, od razu to rekomendujemy." },
       { q: "Czy przywracacie tylko drożność, czy też czyścicie przewód?", a: "Jeśli sytuacja tego wymaga, nie kończymy na przebiciu zatoru, tylko czyścimy odcinek tak, żeby temat nie wrócił po tygodniu." },
       { q: "Ile kosztuje udrażnianie rur we Wrocławiu?", a: "Proste punktowe udrożnienie spiralą: 180–350 zł. Pion lub poziom wspólnoty: 350–700 zł. Trudniejsze zatory wymagające sprzętu ciężkiego: 700–1400 zł. Ostateczna cena po ocenie na miejscu." },
-      { q: "Jaka jest różnica między spiralą a WUKO?", a: "Spirala to metoda mechaniczna — idealna do punktowych zatorów w mieszkaniu lub lokaluRury. WUKO to czyszczenie ciśnieniem wody — stosujemy je do dłuższych odcinków, nagromadzonych osadów i przewodów zbiorczych. Często łączymy obie metody." },
+      { q: "Jaka jest różnica między spiralą a WUKO?", a: "Spirala to metoda mechaniczna — idealna do punktowych zatorów w mieszkaniu lub lokalu. WUKO to czyszczenie ciśnieniem wody — stosujemy je do dłuższych odcinków, nagromadzonych osadów i przewodów zbiorczych. Często łączymy obie metody." },
       { q: "Jak szybko możecie przyjechać?", a: "W obrębie Wrocławia oddzwaniamy w 15 minut i ustalamy termin. Przy pilnych awariach staramy się być na miejscu w ciągu 1–2 godzin." },
     ],
     related: ["wuko-wroclaw", "inspekcja-tv-kanalizacji", "lokalizacja-nieszczelnosci"],
+  },
+  {
+    slug: "pogotowie-hydrauliczne",
+    title: "Pogotowie hydrauliczne",
+    heroTitle: "Pogotowie hydrauliczne Wrocław 24/7",
+    eyebrow: "Awarie wod-kan",
+    tagline:
+      "Pogotowie hydrauliczne we Wrocławiu: pęknięte rury, przecieki, awarie zaworów, spłuczek i podłączeń oraz zatkane odpływy. Jedna ekipa od hydrauliki i kanalizacji.",
+    metaTitle: "Pogotowie hydrauliczne Wrocław 24/7 — awarie wod-kan",
+    metaDescription:
+      "Pogotowie hydrauliczne Wrocław: pęknięta rura, przeciek, awaria zaworu, zatkany odpływ. Interwencje 24/7, cena przed rozpoczęciem pracy, faktura.",
+    keywords: [
+      "pogotowie hydrauliczne wrocław",
+      "hydraulik awaryjny wrocław",
+      "hydraulik 24h wrocław",
+      "awaria hydrauliczna wrocław",
+      "pęknięta rura wrocław",
+      "pogotowie wodno-kanalizacyjne wrocław",
+    ],
+    icon: Wrench,
+    trenchless: false,
+    overview: [
+      "Awaria hydrauliczna rzadko przychodzi w godzinach pracy. Pęknięty wężyk, cieknący zawór albo rura, która puściła w ścianie, potrafią w godzinę zalać mieszkanie i sufit sąsiada. Dlatego telefon działa 24/7, a cenę podajemy przed rozpoczęciem pracy.",
+      "Łączymy dwie kompetencje, które przy awariach zwykle idą w parze: hydraulikę (woda, zawory, podłączenia, przecieki) i kanalizację (odpływy, piony, przyłącza). Nie musisz zgadywać, czy problem jest od wody, czy od ścieków — przyjeżdża ekipa, która ogarnia oba tematy.",
+      "Po opanowaniu awarii mówimy wprost, co było przyczyną i czy potrzebna jest naprawa docelowa. Nie zostawiamy prowizorki bez informacji, co dalej.",
+    ],
+    variants: [
+      { name: "Woda i przecieki", desc: "Pęknięte rury i wężyki, cieknące zawory, awarie spłuczek, podłączeń baterii i pralek." },
+      { name: "Kanalizacja", desc: "Zatkane odpływy, cofki, zapach z kanalizacji, awarie pionów i przyłączy." },
+      { name: "Wspólnoty i firmy", desc: "Awarie w częściach wspólnych, lokalach usługowych i na zapleczach — z fakturą i raportem." },
+    ],
+    whenToUse: [
+      "gdy woda leje się z instalacji i trzeba natychmiast zatrzymać wyciek",
+      "gdy zawór, spłuczka albo podłączenie przecieka i szkoda rośnie",
+      "gdy awaria łączy wodę i kanalizację i nie wiadomo, od czego zacząć",
+    ],
+    costs: [
+      { scope: "Interwencja awaryjna w mieszkaniu (dzień)", range: "250–500 zł" },
+      { scope: "Interwencja nocna, weekend lub święto", range: "400–800 zł" },
+      { scope: "Awaria pionu, poziomu lub części wspólnej", range: "500–1200 zł" },
+    ],
+    costNote:
+      "Cena zależy od pory, dostępu do instalacji i zakresu: co innego wymiana wężyka, co innego rura w ścianie. Widełki potwierdzamy telefonicznie, ostateczną cenę przed rozpoczęciem pracy.",
+    process: [
+      { title: "Telefon i pierwsza pomoc", desc: "Mówimy od razu, jak zakręcić wodę i ograniczyć szkodę, zanim dojedziemy." },
+      { title: "Zatrzymanie awarii", desc: "Zamykamy wyciek, zabezpieczamy instalację i sprawdzamy, czy woda nie poszła dalej." },
+      { title: "Naprawa", desc: "Wymieniamy uszkodzony element albo wykonujemy naprawę docelową, jeśli jest możliwa od ręki." },
+      { title: "Informacja co dalej", desc: "Jeżeli potrzebna jest większa naprawa, dostajesz konkretny zakres i wycenę — bez wciskania." },
+    ],
+    faqs: [
+      { q: "Jak szybko przyjeżdża pogotowie hydrauliczne we Wrocławiu?", a: "Przy czynnym wycieku traktujemy zgłoszenie priorytetowo — w obrębie Wrocławia zwykle jesteśmy na miejscu w 60–90 minut, często szybciej. Przez telefon od razu mówimy, jak zakręcić wodę." },
+      { q: "Co zrobić, zanim przyjedziecie?", a: "Zakręć zawór przy urządzeniu, a jeśli wyciek jest większy — zawór główny mieszkania (zwykle przy wodomierzu). Odsuń rzeczy z podłogi i zrób zdjęcia do ubezpieczenia." },
+      { q: "Ile kosztuje pogotowie hydrauliczne?", a: "Typowa interwencja dzienna w mieszkaniu to 250–500 zł, nocna lub świąteczna 400–800 zł. Cenę podajemy przed rozpoczęciem pracy — bez niespodzianek na fakturze." },
+      { q: "Czy naprawiacie też kanalizację?", a: "Tak, to nasza główna specjalizacja. Jeżeli awaria okazuje się zatorem albo cofką, mamy na miejscu sprzęt do udrażniania — nie musisz wzywać drugiej firmy." },
+      { q: "Czy wystawiacie fakturę i dokument dla ubezpieczyciela?", a: "Tak. Po interwencji możemy opisać przyczynę i zakres prac — to zwykle wystarcza do zgłoszenia szkody z polisy mieszkania albo OC." },
+      { q: "Czy obsługujecie wspólnoty i zarządców?", a: "Tak, również w stałej współpracy: awarie części wspólnych, piony, poziomy piwniczne i lokale usługowe, z raportem dla zarządcy." },
+    ],
+    related: ["udraznianie-rur", "naprawa-sieci-wodociagowych", "lokalizacja-nieszczelnosci"],
+    schemaServiceType: "EmergencyService",
   },
   {
     slug: "naprawa-sieci-wodociagowych",
