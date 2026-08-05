@@ -251,7 +251,7 @@ export function LeadForm({
 
       <div className="mt-4 grid gap-4 md:grid-cols-2">
         <Field label="E-mail" required>
-          <Input name="email" type="email" placeholder="biuro@firma.pl" required />
+          <Input name="email" type="email" placeholder="twoj@adres.pl" required />
         </Field>
         <Field label="Preferowany termin">
           <Input name="plannedTerm" placeholder="np. dziś / jutro / w tym tygodniu" />
