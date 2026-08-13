@@ -153,18 +153,18 @@ export const localServices: LocalService[] = [
   },
   {
     slug: "wuko-wroclaw",
-    title: "Hydrodynamiczne czyszczenie kanalizacji we Wrocławiu",
-    heroTitle: "Hydrodynamiczne czyszczenie kanalizacji we Wrocławiu",
+    title: "WUKO Wrocław — hydrodynamiczne czyszczenie kanalizacji",
+    heroTitle: "WUKO Wrocław — hydrodynamiczne czyszczenie kanalizacji",
     eyebrow: "Pogotowie kanalizacyjne",
     tagline:
-      "Hydrodynamiczne czyszczenie kanalizacji sanitarnej, deszczowej i przyłączy we Wrocławiu oraz okolicach.",
-    metaTitle: "Hydrodynamiczne czyszczenie kanalizacji Wrocław — pogotowie",
+      "Metoda WUKO — czyszczenie kanalizacji sanitarnej, deszczowej i przyłączy wodą pod wysokim ciśnieniem we Wrocławiu oraz okolicach.",
+    metaTitle: "WUKO Wrocław — hydrodynamiczne czyszczenie kanalizacji 24/7",
     metaDescription:
-      "Hydrodynamiczne czyszczenie kanalizacji we Wrocławiu — szybkie usuwanie osadów, tłuszczu, piasku i zatorów. Pogotowie 24/7 dla wspólnot i firm.",
+      "WUKO Wrocław — hydrodynamiczne czyszczenie kanalizacji wodą pod ciśnieniem. Szybkie usuwanie osadów, tłuszczu, piasku i zatorów. Pogotowie 24/7 dla wspólnot i firm.",
     keywords: [
-      "czyszczenie kanalizacji wrocław",
-      "pogotowie kanalizacyjne wrocław",
+      "wuko wrocław",
       "hydrodynamiczne czyszczenie kanalizacji",
+      "pogotowie kanalizacyjne wrocław",
       "czyszczenie rur wrocław",
       "czyszczenie kanalizacji deszczowej wrocław",
     ],
@@ -233,11 +233,10 @@ export const localServices: LocalService[] = [
       "Udrażnianie rur we Wrocławiu metodą mechaniczną i ciśnieniową. Skuteczne usuwanie zatorów dla mieszkań, wspólnot, lokali i firm.",
     keywords: [
       "udrażnianie rur wrocław",
-      "usuwanie zatorów kanalizacji wrocław",
-      "zatkana kanalizacja wrocław",
       "udrażnianie rur cena wrocław",
-      "zatkany odpływ wrocław",
       "spirala kanalizacyjna wrocław",
+      "czyszczenie rur mechaniczne wrocław",
+      "udrażnianie przyłącza wrocław",
     ],
     icon: RefreshCw,
     trenchless: false,
@@ -278,7 +277,7 @@ export const localServices: LocalService[] = [
       { q: "Jaka jest różnica między spiralą a WUKO?", a: "Spirala to metoda mechaniczna — idealna do punktowych zatorów w mieszkaniu lub lokalu. WUKO to czyszczenie ciśnieniem wody — stosujemy je do dłuższych odcinków, nagromadzonych osadów i przewodów zbiorczych. Często łączymy obie metody." },
       { q: "Jak szybko możecie przyjechać?", a: "W obrębie Wrocławia oddzwaniamy w 15 minut i ustalamy termin. Przy pilnych awariach staramy się być na miejscu w ciągu 1–2 godzin." },
     ],
-    related: ["wuko-wroclaw", "inspekcja-tv-kanalizacji", "lokalizacja-nieszczelnosci"],
+    related: ["usuwanie-zatorow-kanalizacyjnych-wroclaw", "wuko-wroclaw", "inspekcja-tv-kanalizacji"],
   },
   {
     slug: "pogotowie-hydrauliczne",

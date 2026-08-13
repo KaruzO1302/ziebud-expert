@@ -42,9 +42,9 @@ export function Hero() {
               ZIĘBUD Expert · Wrocław i okolice
             </span>
             <h1 className="mt-5 max-w-3xl text-balance font-display text-4xl font-semibold leading-[1.03] tracking-tight text-white sm:text-5xl lg:text-[60px]">
-              Pogotowie kanalizacyjne Wrocław 24/7.
+              Kanalizacja i wodociągi Wrocław.
               <span className="block text-aqua-200">
-                Cofki i awarie bez czekania
+                Pogotowie, WUKO i przeglądy — od 1991 roku
               </span>
             </h1>
 

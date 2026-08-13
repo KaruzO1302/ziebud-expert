@@ -613,6 +613,14 @@ const nextConfig: NextConfig = {
         destination: "/blog/inspekcja-kamera-tv-kanalizacji-we-wroclawiu",
         permanent: true,
       },
+      // SEO fix 13.08.2026: 2 artykuły o separatorach tłuszczu były
+      // niemal identyczną treścią (duplicate content) — starszy, słabszy
+      // (28.04) scalony przekierowaniem do nowszego, obszerniejszego (28.05).
+      {
+        source: "/blog/czyszczenie-separatora-tluszczu-dlaczego-jest-wazne",
+        destination: "/blog/czyszczenie-separatorow-tluszczu-wroclaw",
+        permanent: true,
+      },
     ];
   },
 };

@@ -29,15 +29,15 @@ type PhotoKey = Parameters<typeof getPhoto>[0];
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Pogotowie kanalizacyjne Wrocław 24/7 — dojazd 60 min | ZIĘBUD",
+    absolute: "Kanalizacja i wodociągi Wrocław — WUKO, przeglądy, serwis | ZIĘBUD Expert",
   },
   description:
-    "Pogotowie kanalizacyjne Wrocław 24/7: cofki, zalania, WUKO, inspekcja TV, separatory. Dojazd 60 min. Od 1991 r. Zadzwoń: 602 481 688.",
+    "Kanalizacja i wodociągi we Wrocławiu: pogotowie 24/7, WUKO, inspekcja TV, separatory, przepompownie. Od 1991 r. Zadzwoń: 602 481 688.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Pogotowie kanalizacyjne Wrocław | ZIĘBUD Expert",
+    title: "Kanalizacja i wodociągi Wrocław | ZIĘBUD Expert",
     description:
       "Usługi kanalizacyjne we Wrocławiu. WUKO, udrażnianie rur, inspekcja TV, separatory i przepompownie. Doświadczenie od 1991 roku. Zadzwoń: 602 481 688.",
     type: "website",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pogotowie kanalizacyjne Wrocław | ZIĘBUD Expert",
+    title: "Kanalizacja i wodociągi Wrocław | ZIĘBUD Expert",
     description:
       "Usługi kanalizacyjne we Wrocławiu. WUKO, udrażnianie rur, inspekcja TV, separatory i przepompownie. Doświadczenie od 1991 roku. Zadzwoń: 602 481 688.",
     images: [
