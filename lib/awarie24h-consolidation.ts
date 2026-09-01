@@ -111,10 +111,19 @@ function hostPathAndCatchAll(
         permanent: true,
       });
     }
+    // Jawny "/" — Next.js nie zawsze matchuje root na "/:path*"
     entries.push({
-      source: "/:path*",
+      source: "/",
       has: [{ type: "host", value: host }],
       destination: catchAll,
+      permanent: true,
+    });
+    entries.push({
+      source: "/:path+",
+      has: [{ type: "host", value: host }],
+      destination: catchAll.endsWith("/")
+        ? `${catchAll}:path*`
+        : `${catchAll}/:path*`,
       permanent: true,
     });
   }
