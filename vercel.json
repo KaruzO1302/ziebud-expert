@@ -26,30 +26,6 @@
     },
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "pogotowie-kanalizacyjne-wroclaw.com" }],
-      "destination": "https://awarie24h.pl/",
-      "statusCode": 301
-    },
-    {
-      "source": "/:path+",
-      "has": [{ "type": "host", "value": "pogotowie-kanalizacyjne-wroclaw.com" }],
-      "destination": "https://awarie24h.pl/:path*",
-      "statusCode": 301
-    },
-    {
-      "source": "/",
-      "has": [{ "type": "host", "value": "www.pogotowie-kanalizacyjne-wroclaw.com" }],
-      "destination": "https://awarie24h.pl/",
-      "statusCode": 301
-    },
-    {
-      "source": "/:path+",
-      "has": [{ "type": "host", "value": "www.pogotowie-kanalizacyjne-wroclaw.com" }],
-      "destination": "https://awarie24h.pl/:path*",
-      "statusCode": 301
-    },
-    {
-      "source": "/",
       "has": [{ "type": "host", "value": "pogotowie-kanalizacyjne-wroclaw.pl" }],
       "destination": "https://awarie24h.pl/",
       "statusCode": 301
