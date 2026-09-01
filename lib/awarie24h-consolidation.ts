@@ -1,5 +1,6 @@
-/** Konsolidacja portfela ZIĘBUD → awarie24h.pl (301). */
+/** Konsolidacja satelitów ZIĘBUD — dwie żywe witryny: wuko-wroclaw.pl + awarie24h.pl */
 export const AWARIE24H = "https://awarie24h.pl";
+export const WUKO = "https://www.wuko-wroclaw.pl";
 
 type HostRedirect = {
   source: string;
@@ -11,18 +12,47 @@ type HostRedirect = {
 const POGOTOWIE_HOSTS = [
   "pogotowie-kanalizacyjne-wroclaw.com",
   "www.pogotowie-kanalizacyjne-wroclaw.com",
-] as const;
-
-const LEGACY_HOSTS = [
   "ziebud-expert.pl",
   "www.ziebud-expert.pl",
-  "kanalizacja-wroclaw.pl",
-  "www.kanalizacja-wroclaw.pl",
   "pogotowie-kanalizacyjne-wroclaw.pl",
   "www.pogotowie-kanalizacyjne-wroclaw.pl",
 ] as const;
 
-const POGOTOWIE_PATH_MAP: { source: string; destination: string }[] = [
+const KANALIZACJA_HOSTS = [
+  "kanalizacja-wroclaw.pl",
+  "www.kanalizacja-wroclaw.pl",
+] as const;
+
+/** Kanalizacja / WUKO → wuko-wroclaw.pl */
+const WUKO_PATH_MAP: { source: string; destination: string }[] = [
+  {
+    source: "/uslugi/wuko-wroclaw",
+    destination: `${WUKO}/uslugi/wuko-czyszczenie-cisnieniowe`,
+  },
+  {
+    source: "/uslugi/czyszczenie-kanalizacji-wroclaw",
+    destination: `${WUKO}/uslugi/udraznianie-rur-i-kanalizacji`,
+  },
+  {
+    source: "/uslugi/udraznianie-rur",
+    destination: `${WUKO}/uslugi/udraznianie-rur-i-kanalizacji`,
+  },
+  {
+    source: "/uslugi/inspekcja-tv-kanalizacji",
+    destination: `${WUKO}/uslugi/inspekcja-tv-kanalizacji`,
+  },
+  {
+    source: "/uslugi/separatory-tluszczu",
+    destination: `${WUKO}/uslugi/serwis-separatorow-tluszczu`,
+  },
+  {
+    source: "/pogotowie-kanalizacyjne",
+    destination: `${WUKO}/uslugi/pogotowie-kanalizacyjne-24h`,
+  },
+];
+
+/** Awarie wod-kan → awarie24h.pl */
+const AWARIE_PATH_MAP: { source: string; destination: string }[] = [
   {
     source: "/uslugi/wuko-wroclaw",
     destination: `${AWARIE24H}/uslugi-wuko-czyszczenie-kanalizacji/`,
@@ -67,7 +97,8 @@ const POGOTOWIE_PATH_MAP: { source: string; destination: string }[] = [
 
 function hostPathAndCatchAll(
   hosts: readonly string[],
-  pathMap: { source: string; destination: string }[]
+  pathMap: { source: string; destination: string }[],
+  catchAll: string
 ): HostRedirect[] {
   const entries: HostRedirect[] = [];
 
@@ -83,7 +114,7 @@ function hostPathAndCatchAll(
     entries.push({
       source: "/:path*",
       has: [{ type: "host", value: host }],
-      destination: `${AWARIE24H}/`,
+      destination: catchAll,
       permanent: true,
     });
   }
@@ -91,10 +122,10 @@ function hostPathAndCatchAll(
   return entries;
 }
 
-/** Na początek tablicy redirects() — przejmuje ruch z domen satelitarnych. */
+/** Na początek tablicy redirects() — satelity, nie wuko-wroclaw.pl. */
 export function consolidationRedirects(): HostRedirect[] {
   return [
-    ...hostPathAndCatchAll(POGOTOWIE_HOSTS, POGOTOWIE_PATH_MAP),
-    ...hostPathAndCatchAll(LEGACY_HOSTS, POGOTOWIE_PATH_MAP),
+    ...hostPathAndCatchAll(KANALIZACJA_HOSTS, WUKO_PATH_MAP, `${WUKO}/`),
+    ...hostPathAndCatchAll(POGOTOWIE_HOSTS, AWARIE_PATH_MAP, `${AWARIE24H}/`),
   ];
 }
