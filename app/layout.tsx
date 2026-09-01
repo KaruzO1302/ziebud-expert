@@ -30,11 +30,11 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "ZIĘBUD Expert — Pogotowie Kanalizacyjne Wrocław 24/7",
+    default: "ZIĘBUD Expert — serwis wod-kan dla wspólnot i firm | Wrocław",
     template: "%s | ZIĘBUD Expert",
   },
   description:
-    "ZIĘBUD Expert obsługuje Wrocław i Dolny Śląsk: WUKO, czyszczenie kanalizacji, udrażnianie rur, inspekcja TV, separatory i serwis przepompowni.",
+    "ZIĘBUD Expert obsługuje Wrocław i Dolny Śląsk: WUKO, serwis przewodów, inspekcja TV, separatory i przepompownie. Tel. 602 481 688.",
   applicationName: ORG_SHORT_NAME,
   authors: [{ name: ORG_NAME }],
   openGraph: {
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     locale: "pl_PL",
     url: SITE_URL,
     siteName: "ZIĘBUD Expert",
-    title: "ZIĘBUD Expert — Pogotowie Kanalizacyjne Wrocław 24/7",
+    title: "ZIĘBUD Expert — serwis wod-kan Wrocław",
     description:
       "WUKO, czyszczenie kanalizacji, udrażnianie rur, inspekcja TV, separatory i serwis przepompowni dla Wrocławia oraz Dolnego Śląska.",
     images: [
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ZIĘBUD Expert Wrocław — WUKO i pogotowie kanalizacyjne",
+    title: "ZIĘBUD Expert Wrocław — WUKO i serwis dla wspólnot",
     description:
       "WUKO, udrażnianie rur, inspekcja TV, separatory i serwis przepompowni dla Wrocławia i okolic.",
     images: ["/opengraph-image"],
