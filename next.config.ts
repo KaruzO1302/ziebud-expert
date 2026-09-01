@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+import { consolidationRedirects } from "@/lib/awarie24h-consolidation";
+
 const kanalizacjaLegacyHosts = [
   "kanalizacja-wroclaw.pl",
   "www.kanalizacja-wroclaw.pl",
@@ -70,6 +72,7 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      ...consolidationRedirects(),
       {
         source: "/blog/cennik-orientacyjny-uslug",
         has: [{ type: "host", value: "ziebud-expert.pl" }],
